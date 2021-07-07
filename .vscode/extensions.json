@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "github.vscode-pull-request-github",
+        "dart-code.flutter",
+        "dart-code.dart-code",
+        "mhutchie.git-graph",
+        "flutterando.flutter-mobx"
+    ]
+}
