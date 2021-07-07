@@ -1,5 +1,5 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/maua-dev/system_maua_front/badge)](https://www.codefactor.io/repository/github/maua-dev/system_maua_front)
-
+[![codecov](https://codecov.io/gh/Maua-Dev/System_Maua_Front/branch/develop/graph/badge.svg?token=DUL3UPD6I6)](https://codecov.io/gh/Maua-Dev/System_Maua_Front)
 # Sistema da Mauá de Alunos
 
 Projeto do Dev Community Mauá
