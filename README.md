@@ -1,6 +1,8 @@
-# system_maua_front
+[![CodeFactor](https://www.codefactor.io/repository/github/maua-dev/system_maua_front/badge)](https://www.codefactor.io/repository/github/maua-dev/system_maua_front)
 
-A new Flutter project.
+# Sistema da Mauá de Alunos
+
+Projeto do Dev Community Mauá
 
 ## Getting Started
 
