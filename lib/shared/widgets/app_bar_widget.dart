@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:system_maua_front/shared/themes/app_gradients.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
-  final Text title;
-  final AppBar appBar;
-  final Widget leadingWidget;
-  final Widget iconBar;
-  final Widget actionWidget;
+  final Text? title;
+  final double? toolbarHeight;
+  final Widget? leadingWidget;
+  final Widget? iconBar;
+  final Widget? actionWidget;
 
   const AppBarWidget({
     Key? key,
-    required this.title,
-    required this.appBar,
-    required this.leadingWidget,
-    required this.iconBar,
-    required this.actionWidget,
+    this.title,
+    this.leadingWidget,
+    this.iconBar,
+    this.actionWidget,
+    this.toolbarHeight,
   }) : super(key: key);
 
   @override
@@ -25,7 +25,9 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            iconBar,
+            Container(
+              child: iconBar,
+            ),
             SizedBox(
               width: 10,
             ),
@@ -38,7 +40,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       leading: leadingWidget,
       actions: <Widget>[
         Padding(
-          padding: const EdgeInsets.all(14.0),
+          padding: const EdgeInsets.only(right: 15.0),
           child: Container(
             child: actionWidget,
           ),
@@ -53,5 +55,5 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(appBar.preferredSize.height);
+  Size get preferredSize => Size.fromHeight(toolbarHeight ?? kToolbarHeight);
 }
