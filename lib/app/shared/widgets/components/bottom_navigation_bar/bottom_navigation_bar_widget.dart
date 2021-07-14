@@ -98,7 +98,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               NavigationBarButtonsWidget(
-                                  titulo: 'ICs', icon: FontAwesome5.flask),
+                                  titulo: 'ICs', icon: Icons.biotech_rounded),
                               NavigationBarButtonsWidget(
                                   titulo: 'Estágios', icon: Icons.person),
                             ],
