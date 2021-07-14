@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/shared/widgets/components/bottom_navigation_bar/bottom_navigation_bar_widget.dart';
+import 'package:system_maua_front/app/shared/widgets/components/bottom_navigation_bar/navigation_bar_buttons_widget.dart';
 import 'package:system_maua_front/app/shared/widgets/components/floating_action_button_custom_widget.dart';
 
 import 'home_controller.dart';
@@ -25,7 +26,9 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Observer(builder: (_) {
         return FloatingActionButtonCustomWidget(
-          onPressed: controller.trocaOpen,
+          onPressed: () {
+            controller.trocaOpen();
+          },
         );
       }),
     );
