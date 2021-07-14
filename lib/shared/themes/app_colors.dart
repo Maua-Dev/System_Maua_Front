@@ -10,5 +10,6 @@ class AppColors {
   static final background = Color(0xFFF5F5FA);
   static final strongLetter = Color(0xFF514766);
   static final thinLetter = Color(0xFF6E6680);
+  static final lightLetter = Color(0xFFA6A1B2);
   static final red = Color(0xFFFF0000);
 }
