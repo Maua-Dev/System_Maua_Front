@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:system_maua_front/app/shared/widgets/components/bottom_navigation_bar/icon_buttom_custom_widget.dart';
 import 'package:system_maua_front/app/shared/widgets/components/bottom_navigation_bar/navigation_bar_buttons_widget.dart';
 
