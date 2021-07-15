@@ -30,14 +30,13 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - run: flutter pub get
       - run: flutter analyze
-      
       # Report:
       - name: Install lcov
         run: sudo apt-get install lcov
       - name: Flutter Test
         run: flutter test --coverage
       - name: Create report
-        run: genhtml coverage/lcov.info -o coverage/html     
+        run: genhtml coverage/lcov.info -o coverage/html  
       - uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
