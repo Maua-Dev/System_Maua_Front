@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:system_maua_front/shared/themes/app_colors.dart';
 
 class IconButtonCustomWidget extends StatelessWidget {
   final Icon icon;
@@ -13,7 +14,7 @@ class IconButtonCustomWidget extends StatelessWidget {
       padding: const EdgeInsets.only(top: 16),
       iconSize: 32,
       icon: icon,
-      color: Colors.white,
+      color: AppColors.white,
       onPressed: onPressed,
     );
   }

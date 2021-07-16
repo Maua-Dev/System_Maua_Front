@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:system_maua_front/shared/themes/app_colors.dart';
 
 class FloatingActionButtonCustomWidget extends StatefulWidget {
   final Function()? onPressed;
@@ -33,7 +34,7 @@ class _FloatingActionButtonCustomWidgetState
       child: GestureDetector(
         child: FloatingActionButton(
           elevation: 10,
-          backgroundColor: Colors.white,
+          backgroundColor: AppColors.white,
           onPressed: () {
             if (widget.onPressed != null) {
               widget.onPressed!();
@@ -45,7 +46,7 @@ class _FloatingActionButtonCustomWidgetState
             size: 30,
             icon: AnimatedIcons.menu_close,
             progress: controller,
-            color: Color(0xff022690),
+            color: AppColors.darkBlue,
           ),
         ),
       ),

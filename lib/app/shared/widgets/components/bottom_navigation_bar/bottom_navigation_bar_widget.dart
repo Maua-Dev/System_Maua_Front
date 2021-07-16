@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/shared/widgets/components/bottom_navigation_bar/icon_buttom_custom_widget.dart';
 import 'package:system_maua_front/app/shared/widgets/components/bottom_navigation_bar/navigation_bar_buttons_widget.dart';
+import 'package:system_maua_front/shared/themes/app_gradients.dart';
 
 class BottomNavigationBarWidget extends StatelessWidget {
   final bool isOpen;
@@ -17,11 +18,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
         child: BottomAppBar(
           shape: CircularNotchedRectangle(),
           child: Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                    colors: [Color(0xff02268f), Color(0xff0264FF)])),
+            decoration: BoxDecoration(gradient: AppGradients.blueGradient),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -48,11 +45,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
         child: BottomAppBar(
           shape: CircularNotchedRectangle(),
           child: Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                    colors: [Color(0xff02268f), Color(0xff0264FF)])),
+            decoration: BoxDecoration(gradient: AppGradients.blueGradient),
             child: SingleChildScrollView(
               physics: NeverScrollableScrollPhysics(),
               child: Column(
@@ -86,9 +79,13 @@ class BottomNavigationBarWidget extends StatelessWidget {
                             NavigationBarButtonsWidget(
                               titulo: 'Matérias',
                               icon: Icons.library_books,
+                              onTap: () {},
                             ),
                             NavigationBarButtonsWidget(
-                                titulo: 'Mural', icon: Icons.language),
+                              titulo: 'Mural',
+                              icon: Icons.language,
+                              onTap: () {},
+                            ),
                           ],
                         ),
                         Padding(
@@ -97,9 +94,15 @@ class BottomNavigationBarWidget extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               NavigationBarButtonsWidget(
-                                  titulo: 'ICs', icon: Icons.biotech_rounded),
+                                titulo: 'ICs',
+                                icon: Icons.biotech_rounded,
+                                onTap: () {},
+                              ),
                               NavigationBarButtonsWidget(
-                                  titulo: 'Estágios', icon: Icons.person),
+                                titulo: 'Estágios',
+                                icon: Icons.person,
+                                onTap: () {},
+                              ),
                             ],
                           ),
                         ),
