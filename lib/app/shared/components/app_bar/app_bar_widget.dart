@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/shared/themes/app_gradients.dart';
+import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final Text? title;
