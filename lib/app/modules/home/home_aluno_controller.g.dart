@@ -61,12 +61,11 @@ mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
     return _$getAlunoAsyncAction.run(() => super.getAluno());
   }
 
-  final _$getMateriaAsyncAction =
-      AsyncAction('HomeAlunoControllerBase.getMateria');
+  final _$getAulaAsyncAction = AsyncAction('HomeAlunoControllerBase.getAula');
 
   @override
-  Future<void> getMateria() {
-    return _$getMateriaAsyncAction.run(() => super.getMateria());
+  Future<void> getAula() {
+    return _$getAulaAsyncAction.run(() => super.getAula());
   }
 
   final _$trocaOpenAsyncAction =

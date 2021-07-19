@@ -10,7 +10,7 @@ abstract class HomeAlunoControllerBase with Store {
 
   HomeAlunoControllerBase(this.repository) {
     getAluno();
-    getMateria();
+    getAula();
   }
 
   @observable
@@ -19,18 +19,18 @@ abstract class HomeAlunoControllerBase with Store {
   @observable
   var materia;
 
+  @observable
+  bool isOpen = false;
+
   @action
   Future<void> getAluno() async {
     aluno = await repository.getAluno();
   }
 
   @action
-  Future<void> getMateria() async {
-    materia = await repository.getMateria();
+  Future<void> getAula() async {
+    materia = await repository.getAula();
   }
-
-  @observable
-  bool isOpen = false;
 
   @action
   Future<void> trocaOpen() async {

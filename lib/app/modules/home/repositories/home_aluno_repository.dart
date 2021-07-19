@@ -17,7 +17,7 @@ class HomeAlunoRepository implements IHomeAlunoRepository {
   }
 
   @override
-  Future<AulaModel> getMateria() {
+  Future<AulaModel> getAula() {
     return Future.value(materia);
   }
 }

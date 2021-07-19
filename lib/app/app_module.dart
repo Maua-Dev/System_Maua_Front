@@ -8,6 +8,6 @@ class AppModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ModuleRoute(Modular.initialRoute, module: HomeAlunoModule()),
+    ModuleRoute('/home', module: HomeAlunoModule()),
   ];
 }
