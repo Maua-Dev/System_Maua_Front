@@ -54,7 +54,3 @@ jobs:
         with:
           name: report
           path: coverage/html/
-
-      - uses: VeryGoodOpenSource/very_good_coverage@v1.1.1
-        with:
-          min_coverage: 0
