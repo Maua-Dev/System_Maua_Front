@@ -24,14 +24,21 @@ class BottomNavigationBarWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButtonCustomWidget(
-                    icon: Icon(Icons.home), onPressed: () {}),
+                    size: 32, icon: Icon(Icons.home), onPressed: () {}),
                 IconButtonCustomWidget(
-                    icon: Icon(Icons.date_range), onPressed: () {}),
-                SizedBox(),
+                    size: 32, icon: Icon(Icons.date_range), onPressed: () {}),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: SizedBox(),
+                ),
                 IconButtonCustomWidget(
-                    icon: Icon(Icons.playlist_add_check), onPressed: () {}),
+                    size: 36,
+                    icon: Icon(Icons.playlist_add_check),
+                    onPressed: () {}),
                 IconButtonCustomWidget(
-                    icon: Icon(Icons.help_outline_outlined), onPressed: () {}),
+                    size: 36,
+                    icon: Icon(Icons.help_outline_outlined),
+                    onPressed: () {}),
               ],
             ),
           ),
@@ -55,21 +62,28 @@ class BottomNavigationBarWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       IconButtonCustomWidget(
-                          icon: Icon(Icons.home), onPressed: () {}),
+                          size: 32, icon: Icon(Icons.home), onPressed: () {}),
                       IconButtonCustomWidget(
-                          icon: Icon(Icons.date_range), onPressed: () {}),
-                      SizedBox(),
+                          size: 32,
+                          icon: Icon(Icons.date_range),
+                          onPressed: () {}),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        child: SizedBox(),
+                      ),
                       IconButtonCustomWidget(
+                          size: 36,
                           icon: Icon(Icons.playlist_add_check),
                           onPressed: () {}),
                       IconButtonCustomWidget(
+                          size: 36,
                           icon: Icon(Icons.help_outline_outlined),
                           onPressed: () {}),
                     ],
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 84, vertical: 24),
+                        horizontal: 24, vertical: 24),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [

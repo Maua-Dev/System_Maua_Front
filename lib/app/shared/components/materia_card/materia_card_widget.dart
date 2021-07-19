@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class MateriaCardWidget extends StatelessWidget {
-  final TipoMateriaEnum materia;
+  final String materia;
   final String duracao;
   final String local;
   const MateriaCardWidget(
@@ -50,7 +49,7 @@ class MateriaCardWidget extends StatelessWidget {
                                 style: AppTextStyles.bodyBold,
                               ),
                               Text(
-                                materia.name,
+                                materia,
                                 style: AppTextStyles.body,
                               )
                             ]),

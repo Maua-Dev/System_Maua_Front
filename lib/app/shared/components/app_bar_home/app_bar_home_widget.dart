@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/shared/components/materia_card/materia_card_widget.dart';
-import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
@@ -8,7 +7,7 @@ import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 class AppBarHomeWidget extends PreferredSize {
   final String usuario;
   final String ra;
-  final TipoMateriaEnum materia;
+  final String materia;
   final String duracao;
   final String local;
 
@@ -27,7 +26,6 @@ class AppBarHomeWidget extends PreferredSize {
                   Container(
                     height: 190,
                     padding: const EdgeInsets.symmetric(horizontal: 20),
-                    width: double.maxFinite,
                     decoration:
                         BoxDecoration(gradient: AppGradients.blueGradient),
                     child: Padding(
