@@ -12,12 +12,12 @@ class AppTextStyles {
 
   static final TextStyle appBarHomeTitle = GoogleFonts.notoSans(
     color: AppColors.white,
-    fontSize: 26,
+    fontSize: 24,
     fontWeight: FontWeight.bold,
   );
 
   static final TextStyle appBarHomeBody = GoogleFonts.notoSans(
-      color: AppColors.white, fontSize: 24, fontWeight: FontWeight.w100);
+      color: AppColors.white, fontSize: 22, fontWeight: FontWeight.w100);
 
   static final TextStyle bodyBold = GoogleFonts.notoSans(
     color: AppColors.strongLetter,

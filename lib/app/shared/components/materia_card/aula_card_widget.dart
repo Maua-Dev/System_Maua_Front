@@ -48,10 +48,10 @@ class AulaCardWidget extends StatelessWidget {
                                 'Próxima aula',
                                 style: AppTextStyles.bodyBold,
                               ),
-                              Text(
-                                materia,
-                                style: AppTextStyles.body,
-                              )
+                              Text(materia,
+                                  style: AppTextStyles.lightBody.copyWith(
+                                    fontSize: 20,
+                                  ))
                             ]),
                       )
                     ],
@@ -61,32 +61,37 @@ class AulaCardWidget extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.12,
-                    decoration: BoxDecoration(
-                        color: AppColors.white,
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(right: 8),
-                            child: Icon(
-                              Icons.alarm,
-                              size: 40,
-                              color: AppColors.thinLetter,
+                  Expanded(
+                    child: Container(
+                      height: MediaQuery.of(context).size.height * 0.12,
+                      decoration: BoxDecoration(
+                          color: AppColors.white,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 8),
+                              child: Icon(
+                                Icons.alarm,
+                                size: 40,
+                                color: AppColors.thinLetter,
+                              ),
                             ),
-                          ),
-                          Text(
-                            duracao,
-                            style: AppTextStyles.body,
-                          )
-                        ],
+                            Text(
+                              duracao,
+                              style: AppTextStyles.lightBody
+                                  .copyWith(fontSize: 20),
+                            )
+                          ],
+                        ),
                       ),
                     ),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.height * 0.02,
                   ),
                   Container(
                     height: MediaQuery.of(context).size.height * 0.12,
@@ -108,7 +113,8 @@ class AulaCardWidget extends StatelessWidget {
                           ),
                           Text(
                             local,
-                            style: AppTextStyles.body,
+                            style:
+                                AppTextStyles.lightBody.copyWith(fontSize: 20),
                           )
                         ],
                       ),

@@ -5,15 +5,15 @@ import 'package:system_maua_front/app/shared/models/aula_model.dart';
 
 class HomeAlunoRepository implements IHomeAlunoRepository {
   var aluno = AlunoModel(
-    nome: 'Darth Broxa',
-    ra: '27.00163-3',
+    nome: 'Ronaldinho',
+    ra: '15.01310-3',
   );
 
   var materia = AulaModel(
       local: 'H101',
       tipoMateriaEnum: TipoMateriaEnum.RESMAT,
       horario: '14:00h',
-      duracao: '14:00 - 15:45');
+      duracao: '14:00 - 15:40');
 
   @override
   Future<AlunoModel> getAluno() {

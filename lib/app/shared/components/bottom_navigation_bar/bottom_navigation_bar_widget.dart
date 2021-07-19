@@ -14,7 +14,9 @@ class BottomNavigationBarWidget extends StatelessWidget {
       return AnimatedContainer(
         curve: Curves.easeInOut,
         duration: Duration(seconds: 1),
-        height: isOpen ? 340 : 70,
+        height: isOpen
+            ? MediaQuery.of(context).size.height * 0.4
+            : MediaQuery.of(context).size.height * 0.1,
         child: BottomAppBar(
           shape: CircularNotchedRectangle(),
           child: Container(
@@ -24,19 +26,23 @@ class BottomNavigationBarWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButtonCustomWidget(
-                    size: 32, icon: Icon(Icons.home), onPressed: () {}),
+                    size: MediaQuery.of(context).size.height * 0.044,
+                    icon: Icon(Icons.home),
+                    onPressed: () {}),
                 IconButtonCustomWidget(
-                    size: 32, icon: Icon(Icons.date_range), onPressed: () {}),
+                    size: MediaQuery.of(context).size.height * 0.044,
+                    icon: Icon(Icons.date_range),
+                    onPressed: () {}),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: SizedBox(),
                 ),
                 IconButtonCustomWidget(
-                    size: 36,
+                    size: MediaQuery.of(context).size.height * 0.049,
                     icon: Icon(Icons.playlist_add_check),
                     onPressed: () {}),
                 IconButtonCustomWidget(
-                    size: 36,
+                    size: MediaQuery.of(context).size.height * 0.049,
                     icon: Icon(Icons.help_outline_outlined),
                     onPressed: () {}),
               ],
@@ -48,7 +54,9 @@ class BottomNavigationBarWidget extends StatelessWidget {
       return AnimatedContainer(
         curve: Curves.easeInOut,
         duration: Duration(seconds: 1),
-        height: isOpen ? 340 : 70,
+        height: isOpen
+            ? MediaQuery.of(context).size.height * 0.4
+            : MediaQuery.of(context).size.height * 0.1,
         child: BottomAppBar(
           shape: CircularNotchedRectangle(),
           child: Container(
@@ -62,9 +70,11 @@ class BottomNavigationBarWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       IconButtonCustomWidget(
-                          size: 32, icon: Icon(Icons.home), onPressed: () {}),
+                          size: MediaQuery.of(context).size.height * 0.044,
+                          icon: Icon(Icons.home),
+                          onPressed: () {}),
                       IconButtonCustomWidget(
-                          size: 32,
+                          size: MediaQuery.of(context).size.height * 0.044,
                           icon: Icon(Icons.date_range),
                           onPressed: () {}),
                       Padding(
@@ -72,18 +82,18 @@ class BottomNavigationBarWidget extends StatelessWidget {
                         child: SizedBox(),
                       ),
                       IconButtonCustomWidget(
-                          size: 36,
+                          size: MediaQuery.of(context).size.height * 0.049,
                           icon: Icon(Icons.playlist_add_check),
                           onPressed: () {}),
                       IconButtonCustomWidget(
-                          size: 36,
+                          size: MediaQuery.of(context).size.height * 0.049,
                           icon: Icon(Icons.help_outline_outlined),
                           onPressed: () {}),
                     ],
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 24, vertical: 24),
+                        horizontal: 24, vertical: 12),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [

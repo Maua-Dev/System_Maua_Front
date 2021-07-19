@@ -20,15 +20,15 @@ class AppBarHomeWidget extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
       child: Stack(
         children: [
           Container(
-            height: 190,
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            height: MediaQuery.of(context).size.height * 0.24,
+            padding: const EdgeInsets.symmetric(horizontal: 24),
             decoration: BoxDecoration(gradient: AppGradients.blueGradient),
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 20),
+              padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).size.height * 0.03),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -51,8 +51,8 @@ class AppBarHomeWidget extends StatelessWidget implements PreferredSizeWidget {
                     ],
                   ),
                   Container(
-                    width: 90,
-                    height: 90,
+                    width: MediaQuery.of(context).size.width * 0.23,
+                    height: MediaQuery.of(context).size.height * 0.13,
                     decoration: BoxDecoration(
                       border: Border.all(width: 2, color: AppColors.white),
                       borderRadius: BorderRadius.circular(100),
@@ -60,8 +60,8 @@ class AppBarHomeWidget extends StatelessWidget implements PreferredSizeWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(3),
                       child: Container(
-                          width: 80,
-                          height: 80,
+                          width: MediaQuery.of(context).size.width * 0.20,
+                          height: MediaQuery.of(context).size.height * 0.115,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(100),
                               image: DecorationImage(
@@ -75,7 +75,8 @@ class AppBarHomeWidget extends StatelessWidget implements PreferredSizeWidget {
             ),
           ),
           Align(
-            alignment: Alignment(0.0, 3.1),
+            alignment:
+                Alignment(0.0, MediaQuery.of(context).size.height * 0.006),
             child: AulaCardWidget(
               materia: materia,
               duracao: duracao,

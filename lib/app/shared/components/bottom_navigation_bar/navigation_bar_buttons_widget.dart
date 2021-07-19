@@ -12,8 +12,8 @@ class NavigationBarButtonsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 115,
-      width: 150,
+      height: MediaQuery.of(context).size.height * 0.13,
+      width: MediaQuery.of(context).size.width * 0.35,
       child: ElevatedButton(
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
@@ -23,17 +23,24 @@ class NavigationBarButtonsWidget extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.only(top: 4),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+          child: Row(
             children: [
-              Icon(
-                icon,
-                color: AppColors.darkBlue,
-                size: 70,
-              ),
-              Text(
-                titulo,
-                style: TextStyle(color: AppColors.darkBlue, fontSize: 22),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      icon,
+                      color: AppColors.darkBlue,
+                      size: MediaQuery.of(context).size.width * 0.132,
+                    ),
+                    Text(
+                      titulo,
+                      style: TextStyle(color: AppColors.darkBlue, fontSize: 22),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
