@@ -4,9 +4,9 @@ name: Flutter CI Linter
 on:
   # Triggers the workflow on push or pull request events but only for the develop branch
   push:
-    branches: [develop master]
+    branches: [develop, master]
   pull_request:
-    branches: [develop master]
+    branches: [develop, master]
 jobs:
   flutter_analyze:
     name: Run flutter analyze
