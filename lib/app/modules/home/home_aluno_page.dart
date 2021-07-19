@@ -12,19 +12,20 @@ class HomeAlunoPage extends StatefulWidget {
   const HomeAlunoPage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomeAlunoPageState createState() => _HomeAlunoPageState();
 }
 
-class _HomePageState extends ModularState<HomeAlunoPage, HomeAlunoController> {
+class _HomeAlunoPageState
+    extends ModularState<HomeAlunoPage, HomeAlunoController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarHomeWidget(
-        usuario: controller.aluno!.nome,
-        ra: controller.aluno!.ra,
-        materia: controller.aula!.tipoMateriaEnum.name,
-        duracao: controller.aula!.duracao,
-        local: controller.aula!.local!,
+        usuario: controller.aluno.nome,
+        ra: controller.aluno.ra,
+        materia: controller.aula.tipoMateriaEnum!.name,
+        duracao: controller.aula.duracao,
+        local: controller.aula.local!,
       ),
       bottomNavigationBar: Observer(builder: (_) {
         return BottomNavigationBarWidget(
@@ -32,13 +33,11 @@ class _HomePageState extends ModularState<HomeAlunoPage, HomeAlunoController> {
         );
       }),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: Observer(builder: (_) {
-        return FloatingActionButtonCustomWidget(
-          onPressed: () {
-            controller.trocaOpen();
-          },
-        );
-      }),
+      floatingActionButton: FloatingActionButtonCustomWidget(
+        onPressed: () {
+          controller.trocaOpen();
+        },
+      ),
     );
   }
 }

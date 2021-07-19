@@ -12,13 +12,13 @@ mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
   final _$alunoAtom = Atom(name: 'HomeAlunoControllerBase.aluno');
 
   @override
-  AlunoModel? get aluno {
+  AlunoModel get aluno {
     _$alunoAtom.reportRead();
     return super.aluno;
   }
 
   @override
-  set aluno(AlunoModel? value) {
+  set aluno(AlunoModel value) {
     _$alunoAtom.reportWrite(value, super.aluno, () {
       super.aluno = value;
     });
@@ -27,13 +27,13 @@ mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
   final _$aulaAtom = Atom(name: 'HomeAlunoControllerBase.aula');
 
   @override
-  AulaModel? get aula {
+  AulaModel get aula {
     _$aulaAtom.reportRead();
     return super.aula;
   }
 
   @override
-  set aula(AulaModel? value) {
+  set aula(AulaModel value) {
     _$aulaAtom.reportWrite(value, super.aula, () {
       super.aula = value;
     });

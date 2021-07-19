@@ -16,10 +16,10 @@ abstract class HomeAlunoControllerBase with Store {
   }
 
   @observable
-  AlunoModel? aluno;
+  AlunoModel aluno = AlunoModel.newInstance();
 
   @observable
-  AulaModel? aula;
+  AulaModel aula = AulaModel.newInstance();
 
   @observable
   bool isOpen = false;
