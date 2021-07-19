@@ -15,7 +15,10 @@ void main() {
   late HomeAlunoController homeAlunoController;
   var alunoTeste = AlunoModel(nome: 'Gabriel', ra: '17.00163-3');
   var aulaTeste = AulaModel(
-      tipoMateriaEnum: TipoMateriaEnum.FT, horario: '12:00', duracao: '1:40');
+      tipoMateriaEnum: TipoMateriaEnum.FT,
+      horario: '12:00',
+      duracao: '1:40',
+      local: 'H201');
 
   setUpAll(() {
     when(repository.getAluno()).thenAnswer((_) async => alunoTeste);

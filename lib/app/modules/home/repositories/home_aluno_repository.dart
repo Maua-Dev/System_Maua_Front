@@ -21,7 +21,8 @@ class HomeAlunoRepository implements IHomeAlunoRepository {
   }
 
   @override
-  Future<AulaModel> getAula() {
+  Future<AulaModel> getAula() async {
+    await Future.delayed(Duration(seconds: 1));
     return Future.value(materia);
   }
 }

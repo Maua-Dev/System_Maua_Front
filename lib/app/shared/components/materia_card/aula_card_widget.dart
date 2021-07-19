@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
-class MateriaCardWidget extends StatelessWidget {
+class AulaCardWidget extends StatelessWidget {
   final String materia;
   final String duracao;
   final String local;
-  const MateriaCardWidget(
+  const AulaCardWidget(
       {Key? key,
       required this.materia,
       required this.duracao,
@@ -18,7 +18,7 @@ class MateriaCardWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.28,
+        height: MediaQuery.of(context).size.height * 0.3,
         decoration: BoxDecoration(
           border: Border.all(width: 2, color: AppColors.white),
           borderRadius: BorderRadius.circular(10),
@@ -30,7 +30,7 @@ class MateriaCardWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                height: MediaQuery.of(context).size.width * 0.25,
+                height: MediaQuery.of(context).size.height * 0.15,
                 decoration: BoxDecoration(
                     color: AppColors.white,
                     borderRadius: BorderRadius.circular(10)),
@@ -62,7 +62,7 @@ class MateriaCardWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    height: MediaQuery.of(context).size.width * 0.22,
+                    height: MediaQuery.of(context).size.height * 0.12,
                     decoration: BoxDecoration(
                         color: AppColors.white,
                         borderRadius: BorderRadius.circular(10)),
@@ -89,7 +89,7 @@ class MateriaCardWidget extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: MediaQuery.of(context).size.width * 0.22,
+                    height: MediaQuery.of(context).size.height * 0.12,
                     decoration: BoxDecoration(
                         color: AppColors.white,
                         borderRadius: BorderRadius.circular(10)),

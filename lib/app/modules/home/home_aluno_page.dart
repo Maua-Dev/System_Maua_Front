@@ -23,9 +23,9 @@ class _HomeAlunoPageState
       appBar: AppBarHomeWidget(
         usuario: controller.aluno.nome,
         ra: controller.aluno.ra,
-        materia: controller.aula.tipoMateriaEnum!.name,
+        materia: controller.aula.tipoMateriaEnum?.name ?? '',
         duracao: controller.aula.duracao,
-        local: controller.aula.local!,
+        local: controller.aula.local,
       ),
       bottomNavigationBar: Observer(builder: (_) {
         return BottomNavigationBarWidget(
