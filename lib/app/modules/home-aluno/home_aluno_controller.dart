@@ -1,5 +1,5 @@
 import 'package:mobx/mobx.dart';
-import 'package:system_maua_front/app/modules/home/repositories/home_aluno_repository_interface.dart';
+import 'package:system_maua_front/app/modules/home-aluno/repositories/home_aluno_repository_interface.dart';
 import 'package:system_maua_front/app/shared/models/aluno_model.dart';
 import 'package:system_maua_front/app/shared/models/aula_model.dart';
 

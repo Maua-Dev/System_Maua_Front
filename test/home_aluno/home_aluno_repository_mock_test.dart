@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:system_maua_front/app/modules/home/repositories/home_aluno_repository.dart';
+import 'package:system_maua_front/app/modules/home-aluno/repositories/home_aluno_repository.dart';
 
 void main() {
   late HomeAlunoRepository homeAlunoRepository;

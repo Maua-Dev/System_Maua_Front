@@ -5,7 +5,7 @@
 import 'dart:async' as _i5;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:system_maua_front/app/modules/home/repositories/home_aluno_repository_interface.dart'
+import 'package:system_maua_front/app/modules/home-aluno/repositories/home_aluno_repository_interface.dart'
     as _i4;
 import 'package:system_maua_front/app/shared/models/aluno_model.dart' as _i2;
 import 'package:system_maua_front/app/shared/models/aula_model.dart' as _i3;

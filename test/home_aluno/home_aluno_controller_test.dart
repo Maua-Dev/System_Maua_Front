@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:system_maua_front/app/modules/home/home_aluno_controller.dart';
-import 'package:system_maua_front/app/modules/home/repositories/home_aluno_repository_interface.dart';
+import 'package:system_maua_front/app/modules/home-aluno/home_aluno_controller.dart';
+import 'package:system_maua_front/app/modules/home-aluno/repositories/home_aluno_repository_interface.dart';
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 import 'package:system_maua_front/app/shared/models/aluno_model.dart';
 import 'package:system_maua_front/app/shared/models/aula_model.dart';
