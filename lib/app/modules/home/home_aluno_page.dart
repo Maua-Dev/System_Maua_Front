@@ -18,7 +18,13 @@ class _HomePageState extends ModularState<HomeAlunoPage, HomeAlunoController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarHomeWidget(),
+      appBar: AppBarHomeWidget(
+        usuario: controller.aluno!.nome,
+        ra: controller.aluno!.ra,
+        materia: controller.aula!.tipoMateriaEnum,
+        duracao: controller.aula!.duracao,
+        local: controller.aula!.local!,
+      ),
       bottomNavigationBar: Observer(builder: (_) {
         return BottomNavigationBarWidget(
           isOpen: controller.isOpen,

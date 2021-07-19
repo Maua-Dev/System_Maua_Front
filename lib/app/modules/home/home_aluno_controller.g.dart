@@ -12,30 +12,30 @@ mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
   final _$alunoAtom = Atom(name: 'HomeAlunoControllerBase.aluno');
 
   @override
-  dynamic get aluno {
+  AlunoModel? get aluno {
     _$alunoAtom.reportRead();
     return super.aluno;
   }
 
   @override
-  set aluno(dynamic value) {
+  set aluno(AlunoModel? value) {
     _$alunoAtom.reportWrite(value, super.aluno, () {
       super.aluno = value;
     });
   }
 
-  final _$materiaAtom = Atom(name: 'HomeAlunoControllerBase.materia');
+  final _$aulaAtom = Atom(name: 'HomeAlunoControllerBase.aula');
 
   @override
-  dynamic get materia {
-    _$materiaAtom.reportRead();
-    return super.materia;
+  AulaModel? get aula {
+    _$aulaAtom.reportRead();
+    return super.aula;
   }
 
   @override
-  set materia(dynamic value) {
-    _$materiaAtom.reportWrite(value, super.materia, () {
-      super.materia = value;
+  set aula(AulaModel? value) {
+    _$aulaAtom.reportWrite(value, super.aula, () {
+      super.aula = value;
     });
   }
 
@@ -80,7 +80,7 @@ mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
   String toString() {
     return '''
 aluno: ${aluno},
-materia: ${materia},
+aula: ${aula},
 isOpen: ${isOpen}
     ''';
   }

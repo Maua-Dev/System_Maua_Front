@@ -30,7 +30,7 @@ void main() {
 
   test('[TEST] - getAula', () async {
     await homeAlunoController.getAula();
-    expect(homeAlunoController.materia, aulaTeste);
+    expect(homeAlunoController.aula, aulaTeste);
   });
 
   test('[TEST] - trocaOpen', () {

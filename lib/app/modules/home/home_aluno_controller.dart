@@ -1,5 +1,7 @@
 import 'package:mobx/mobx.dart';
 import 'package:system_maua_front/app/modules/home/repositories/home_aluno_repository_interface.dart';
+import 'package:system_maua_front/app/shared/models/aluno_model.dart';
+import 'package:system_maua_front/app/shared/models/aula_model.dart';
 
 part 'home_aluno_controller.g.dart';
 
@@ -14,10 +16,10 @@ abstract class HomeAlunoControllerBase with Store {
   }
 
   @observable
-  var aluno;
+  AlunoModel? aluno;
 
   @observable
-  var materia;
+  AulaModel? aula;
 
   @observable
   bool isOpen = false;
@@ -29,7 +31,7 @@ abstract class HomeAlunoControllerBase with Store {
 
   @action
   Future<void> getAula() async {
-    materia = await repository.getAula();
+    aula = await repository.getAula();
   }
 
   @action

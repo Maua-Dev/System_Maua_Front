@@ -7,9 +7,10 @@ class HomeAlunoRepository implements IHomeAlunoRepository {
   var aluno = AlunoModel(nome: 'Ronaldinho', ra: '17.00163-3');
 
   var materia = AulaModel(
+      local: 'H102',
       tipoMateriaEnum: TipoMateriaEnum.RESMAT,
-      horario: '14:00',
-      duracao: '1:40');
+      horario: '14:00h',
+      duracao: '14:00 - 15:40');
 
   @override
   Future<AlunoModel> getAluno() {
