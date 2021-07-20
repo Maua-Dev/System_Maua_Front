@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/splash/splash_module.dart';
 
-import 'modules/home/home_module.dart';
+import 'modules/home-aluno/home_aluno_module.dart';
 
 class AppModule extends Module {
   @override
@@ -9,7 +9,7 @@ class AppModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
+    ModuleRoute('/home', module: HomeAlunoModule()),
     ModuleRoute(Modular.initialRoute, module: SplashModule()),
-    ModuleRoute('/home', module: HomeModule())
   ];
 }
