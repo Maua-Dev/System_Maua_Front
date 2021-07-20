@@ -61,11 +61,12 @@ class BottomNavigationBarWidget extends StatelessWidget {
           shape: CircularNotchedRectangle(),
           child: Container(
             decoration: BoxDecoration(gradient: AppGradients.blueGradient),
-            child: SingleChildScrollView(
-              physics: NeverScrollableScrollPhysics(),
-              child: Column(
-                children: [
-                  Row(
+            child: ListView(
+              shrinkWrap: true,
+              children: [
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.09,
+                  child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -91,50 +92,80 @@ class BottomNavigationBarWidget extends StatelessWidget {
                           onPressed: () {}),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 24, vertical: 12),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.31,
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Expanded(
+                        child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            NavigationBarButtonsWidget(
-                              titulo: 'Matérias',
-                              icon: Icons.library_books,
-                              onTap: () {},
+                            Expanded(
+                              child: AspectRatio(
+                                aspectRatio: 1.5,
+                                child: NavigationBarButtonsWidget(
+                                  titulo: 'Matérias',
+                                  icon: Icons.library_books,
+                                  onTap: () {},
+                                ),
+                              ),
                             ),
-                            NavigationBarButtonsWidget(
-                              titulo: 'Mural',
-                              icon: Icons.language,
-                              onTap: () {},
+                            SizedBox(
+                              width: 16,
+                            ),
+                            Expanded(
+                              child: AspectRatio(
+                                aspectRatio: 1.5,
+                                child: NavigationBarButtonsWidget(
+                                  titulo: 'Mural',
+                                  icon: Icons.language,
+                                  onTap: () {},
+                                ),
+                              ),
                             ),
                           ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 16),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              NavigationBarButtonsWidget(
-                                titulo: 'ICs',
-                                icon: Icons.biotech_rounded,
-                                onTap: () {},
+                      ),
+                      SizedBox(
+                        height: 16,
+                      ),
+                      Expanded(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(
+                              child: AspectRatio(
+                                aspectRatio: 1.5,
+                                child: NavigationBarButtonsWidget(
+                                  titulo: 'ICs',
+                                  icon: Icons.biotech_rounded,
+                                  onTap: () {},
+                                ),
                               ),
-                              NavigationBarButtonsWidget(
-                                titulo: 'Estágios',
-                                icon: Icons.person,
-                                onTap: () {},
+                            ),
+                            SizedBox(
+                              width: 16,
+                            ),
+                            Expanded(
+                              child: AspectRatio(
+                                aspectRatio: 1.5,
+                                child: NavigationBarButtonsWidget(
+                                  titulo: 'Estágios',
+                                  icon: Icons.person,
+                                  onTap: () {},
+                                ),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),

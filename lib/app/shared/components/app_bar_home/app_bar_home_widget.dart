@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/shared/components/materia_card/aula_card_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
+
 import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
-class AppBarHomeWidget extends StatelessWidget implements PreferredSizeWidget {
+class AppBarHomeWidget extends StatelessWidget {
   final String usuario;
   final String ra;
   final String materia;
@@ -36,14 +37,17 @@ class AppBarHomeWidget extends StatelessWidget implements PreferredSizeWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text.rich(TextSpan(
-                        text: 'Olá, ',
-                        style: AppTextStyles.appBarHomeBody,
-                        children: [
-                          TextSpan(
-                              text: usuario,
-                              style: AppTextStyles.appBarHomeTitle),
-                        ])),
+                    Text.rich(
+                      TextSpan(
+                          text: 'Olá, ',
+                          style: AppTextStyles.appBarHomeBody,
+                          children: [
+                            TextSpan(
+                                text: usuario,
+                                style: AppTextStyles.appBarHomeTitle),
+                          ]),
+                      key: ValueKey('titleUser'),
+                    ),
                     Text(
                       ra,
                       style: AppTextStyles.appBarHomeBody,
@@ -51,7 +55,7 @@ class AppBarHomeWidget extends StatelessWidget implements PreferredSizeWidget {
                   ],
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.23,
+                  width: MediaQuery.of(context).size.height * 0.13,
                   height: MediaQuery.of(context).size.height * 0.13,
                   decoration: BoxDecoration(
                     border: Border.all(width: 2, color: AppColors.white),
@@ -60,7 +64,7 @@ class AppBarHomeWidget extends StatelessWidget implements PreferredSizeWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(3),
                     child: Container(
-                        width: MediaQuery.of(context).size.width * 0.20,
+                        width: MediaQuery.of(context).size.height * 0.115,
                         height: MediaQuery.of(context).size.height * 0.115,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(100),
@@ -87,7 +91,4 @@ class AppBarHomeWidget extends StatelessWidget implements PreferredSizeWidget {
       ],
     );
   }
-
-  @override
-  Size get preferredSize => Size.fromHeight(250);
 }

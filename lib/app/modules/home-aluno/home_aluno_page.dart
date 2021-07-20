@@ -20,12 +20,18 @@ class _HomeAlunoPageState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarHomeWidget(
-        usuario: controller.aluno.nome,
-        ra: controller.aluno.ra,
-        materia: controller.aula.tipoMateriaEnum?.name ?? '',
-        duracao: controller.aula.duracao,
-        local: controller.aula.local,
+      body: Column(
+        children: [
+          Observer(builder: (_) {
+            return AppBarHomeWidget(
+              usuario: controller.aluno.nome,
+              ra: controller.aluno.ra,
+              materia: controller.aula.tipoMateriaEnum?.name ?? '',
+              duracao: controller.aula.duracao,
+              local: controller.aula.local,
+            );
+          }),
+        ],
       ),
       bottomNavigationBar: Observer(builder: (_) {
         return BottomNavigationBarWidget(
@@ -34,6 +40,7 @@ class _HomeAlunoPageState
       }),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButtonCustomWidget(
+        key: ValueKey('actionButton'),
         onPressed: () {
           controller.trocaOpen();
         },

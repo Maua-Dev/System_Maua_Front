@@ -3,12 +3,13 @@ import 'package:system_maua_front/app/modules/home-aluno/repositories/home_aluno
 import 'home_aluno_controller.dart';
 
 import 'home_aluno_page.dart';
+import 'repositories/home_aluno_repository_interface.dart';
 
 class HomeAlunoModule extends Module {
   @override
   final List<Bind> binds = [
     Bind.lazySingleton((i) => HomeAlunoController(i())),
-    Bind.lazySingleton((i) => HomeAlunoRepository())
+    Bind.lazySingleton<IHomeAlunoRepository>((i) => HomeAlunoRepository())
   ];
 
   @override
