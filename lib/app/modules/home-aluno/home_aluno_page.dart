@@ -39,6 +39,7 @@ class _HomeAlunoPageState
             controller.trocaOpen();
           },
         ),
+
       ),
     );
   }
