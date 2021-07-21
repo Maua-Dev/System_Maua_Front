@@ -29,7 +29,7 @@ void main() {
         horario: '14h',
         duracao: '14 - 15'));
   });
-  testWidgets('[TEST] [home aluno page] - findy title user',
+  testWidgets('[TEST] [home aluno page] - find title user',
       (WidgetTester tester) async {
     await mockNetworkImagesFor(
         () => tester.pumpWidget(buildTestableWidget(HomeAlunoPage())));
