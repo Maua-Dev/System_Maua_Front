@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:system_maua_front/shared/components/app_bar/app_bar_widget.dart';
 
 import 'home_store.dart';
 
@@ -16,8 +17,11 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Counter'),
+      appBar: AppBarWidget(
+        iconBar: Icon(Icons.check),
+        title: Text('Entregas'),
+        actionWidget: Icon(Icons.ac_unit),
+        leadingWidget: Icon(Icons.ac_unit),
       ),
       body: Observer(
         builder: (context) => Text('${store.counter}'),
