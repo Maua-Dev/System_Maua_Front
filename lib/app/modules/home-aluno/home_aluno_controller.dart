@@ -21,9 +21,6 @@ abstract class HomeAlunoControllerBase with Store {
   @observable
   AulaModel aula = AulaModel.newInstance();
 
-  @observable
-  bool isOpen = false;
-
   @action
   Future<void> getAluno() async {
     aluno = await repository.getAluno();
@@ -32,10 +29,5 @@ abstract class HomeAlunoControllerBase with Store {
   @action
   Future<void> getAula() async {
     aula = await repository.getAula();
-  }
-
-  @action
-  Future<void> trocaOpen() async {
-    isOpen = !isOpen;
   }
 }
