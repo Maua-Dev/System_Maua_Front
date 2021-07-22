@@ -2,10 +2,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:system_maua_front/app/modules/notas-aluno/notas_aluno_controller.dart';
 
 void main() {
-  late NotasAlunoStore store;
+  late NotasAlunoController store;
 
   setUpAll(() {
-    store = NotasAlunoStore();
+    store = NotasAlunoController();
   });
 
   test('increment count', () async {
