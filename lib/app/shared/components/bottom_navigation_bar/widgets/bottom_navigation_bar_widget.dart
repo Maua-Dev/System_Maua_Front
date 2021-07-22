@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
-import '../icon_buttom_custom_widget.dart';
-import '../navigation_bar_buttons_widget.dart';
+import 'icon_buttom_custom_widget.dart';
+import 'navigation_bar_buttons_widget.dart';
 
 class BottomNavigationBarWidget extends StatelessWidget {
   final bool isOpen;
