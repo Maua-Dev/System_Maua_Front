@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/shared/components/app_bar_home/app_bar_home_widget.dart';
-import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_widget.dart';
+import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
+import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
 import 'package:system_maua_front/app/shared/components/floating_action_button_custom/floating_action_button_custom_widget.dart';
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 
@@ -17,6 +18,7 @@ class HomeAlunoPage extends StatefulWidget {
 
 class _HomeAlunoPageState
     extends ModularState<HomeAlunoPage, HomeAlunoController> {
+  var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -36,14 +38,14 @@ class _HomeAlunoPageState
         ),
         bottomNavigationBar: Observer(builder: (_) {
           return BottomNavigationBarWidget(
-            isOpen: controller.isOpen,
+            isOpen: controllerNavigationBar.isOpen,
           );
         }),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButtonCustomWidget(
           key: ValueKey('actionButton'),
           onPressed: () {
-            controller.trocaOpen();
+            controllerNavigationBar.trocaOpen();
           },
         ),
       ),

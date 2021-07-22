@@ -39,21 +39,6 @@ mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
     });
   }
 
-  final _$isOpenAtom = Atom(name: 'HomeAlunoControllerBase.isOpen');
-
-  @override
-  bool get isOpen {
-    _$isOpenAtom.reportRead();
-    return super.isOpen;
-  }
-
-  @override
-  set isOpen(bool value) {
-    _$isOpenAtom.reportWrite(value, super.isOpen, () {
-      super.isOpen = value;
-    });
-  }
-
   final _$getAlunoAsyncAction = AsyncAction('HomeAlunoControllerBase.getAluno');
 
   @override
@@ -68,20 +53,11 @@ mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
     return _$getAulaAsyncAction.run(() => super.getAula());
   }
 
-  final _$trocaOpenAsyncAction =
-      AsyncAction('HomeAlunoControllerBase.trocaOpen');
-
-  @override
-  Future<void> trocaOpen() {
-    return _$trocaOpenAsyncAction.run(() => super.trocaOpen());
-  }
-
   @override
   String toString() {
     return '''
 aluno: ${aluno},
-aula: ${aula},
-isOpen: ${isOpen}
+aula: ${aula}
     ''';
   }
 }
