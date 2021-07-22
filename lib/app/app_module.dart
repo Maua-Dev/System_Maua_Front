@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:system_maua_front/app/modules/help-aluno/help_aluno_module.dart';
 import 'package:system_maua_front/app/modules/splash/splash_module.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 
@@ -14,5 +15,6 @@ class AppModule extends Module {
   final List<ModularRoute> routes = [
     ModuleRoute('/home', module: HomeAlunoModule()),
     ModuleRoute('/splash', module: SplashModule()),
+    ModuleRoute('/help', module: HelpAlunoModule()),
   ];
 }
