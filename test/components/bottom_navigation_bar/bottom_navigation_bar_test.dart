@@ -7,6 +7,7 @@ void main() {
   setUpAll(() {
     controllerNavigationBar = BottomNavigationBarController();
   });
+
   test('[TEST] - Injeção do BottomNavigationBarController', () {
     expect(
         controllerNavigationBar, isInstanceOf<BottomNavigationBarController>());
