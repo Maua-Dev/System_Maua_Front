@@ -6,9 +6,10 @@ class ActivitiesStore = ActivitiesStoreBase with _$ActivitiesStore;
 
 abstract class ActivitiesStoreBase with Store {
   @observable
-  int counter = 0;
+  bool isOpen = false;
 
-  Future<void> increment() async {
-    counter = counter + 1;
+  @action
+  Future<void> trocaOpen() async {
+    isOpen = !isOpen;
   }
 }

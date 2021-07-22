@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/shared/themes/app_colors.dart';
-import 'package:system_maua_front/shared/themes/app_text_styles.dart';
+import 'package:system_maua_front/app/shared/themes/app_colors.dart';
+import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class ActivityCard extends StatelessWidget {
   final bool delivered;

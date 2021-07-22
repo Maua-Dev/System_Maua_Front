@@ -9,25 +9,32 @@ part of 'activities_store.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$ActivitiesStore on ActivitiesStoreBase, Store {
-  final _$counterAtom = Atom(name: 'ActivitiesStoreBase.counter');
+  final _$isOpenAtom = Atom(name: 'ActivitiesStoreBase.isOpen');
 
   @override
-  int get counter {
-    _$counterAtom.reportRead();
-    return super.counter;
+  bool get isOpen {
+    _$isOpenAtom.reportRead();
+    return super.isOpen;
   }
 
   @override
-  set counter(int value) {
-    _$counterAtom.reportWrite(value, super.counter, () {
-      super.counter = value;
+  set isOpen(bool value) {
+    _$isOpenAtom.reportWrite(value, super.isOpen, () {
+      super.isOpen = value;
     });
+  }
+
+  final _$trocaOpenAsyncAction = AsyncAction('ActivitiesStoreBase.trocaOpen');
+
+  @override
+  Future<void> trocaOpen() {
+    return _$trocaOpenAsyncAction.run(() => super.trocaOpen());
   }
 
   @override
   String toString() {
     return '''
-counter: ${counter}
+isOpen: ${isOpen}
     ''';
   }
 }
