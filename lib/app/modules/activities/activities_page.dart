@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_widget.dart';
+import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
+import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
 import 'package:system_maua_front/app/shared/components/floating_action_button_custom/floating_action_button_custom_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
@@ -22,6 +23,7 @@ class ActivitiesPage extends StatefulWidget {
 class _ActivitiesPageState
     extends ModularState<ActivitiesPage, ActivitiesStore> {
   static String get activitiesIcon => 'assets/icons/activitiesIcon.svg';
+  var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
 
   @override
   Widget build(BuildContext context) {
@@ -82,58 +84,60 @@ class _ActivitiesPageState
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 25),
-                child: Container(
-                  // height: MediaQuery.of(context).size.height - 245,
-                  // height: MediaQuery.of(context).size.height - 325,
-                  child: Expanded(
-                    child: ListView(
-                      padding: const EdgeInsets.only(bottom: 8),
-                      children: [
-                        ActivityCard(
-                          delivered: false,
-                          subject: 'Fenomenos de transporte',
-                          activityName: 'Equação de Bernoulli',
-                          date: '10/05/2021',
-                          hour: '20:00',
-                        ),
-                        ActivityCard(
-                          delivered: false,
-                          subject: 'Fenomenos de transporte',
-                          activityName: 'Equação de Bernoulli',
-                          date: '10/05/2021',
-                          hour: '20:00',
-                        ),
-                        ActivityCard(
-                          delivered: false,
-                          subject: 'Fenomenos de transporte',
-                          activityName: 'Equação de Bernoulli',
-                          date: '10/05/2021',
-                          hour: '20:00',
-                        ),
-                        ActivityCard(
-                          delivered: false,
-                          subject: 'Fenomenos de transporte',
-                          activityName: 'Equação de Bernoulli',
-                          date: '10/05/2021',
-                          hour: '20:00',
-                        ),
-                        ActivityCard(
-                          delivered: false,
-                          subject: 'Fenomenos de transporte',
-                          activityName: 'Equação de Bernoulli',
-                          date: '10/05/2021',
-                          hour: '20:00',
-                        ),
-                        ActivityCard(
-                          delivered: false,
-                          subject: 'Fenomenos de transporte',
-                          activityName: 'Equação de Bernoulli',
-                          date: '10/05/2021',
-                          hour: '20:00',
-                        ),
-                      ],
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 25),
+                  child: Container(
+                    // height: MediaQuery.of(context).size.height - 245,
+                    height: MediaQuery.of(context).size.height - 325,
+                    child: Expanded(
+                      child: ListView(
+                        padding: const EdgeInsets.only(bottom: 8),
+                        children: [
+                          ActivityCard(
+                            delivered: false,
+                            subject: 'Fenomenos de transporte',
+                            activityName: 'Equação de Bernoulli',
+                            date: '10/05/2021',
+                            hour: '20:00',
+                          ),
+                          ActivityCard(
+                            delivered: false,
+                            subject: 'Fenomenos de transporte',
+                            activityName: 'Equação de Bernoulli',
+                            date: '10/05/2021',
+                            hour: '20:00',
+                          ),
+                          ActivityCard(
+                            delivered: false,
+                            subject: 'Fenomenos de transporte',
+                            activityName: 'Equação de Bernoulli',
+                            date: '10/05/2021',
+                            hour: '20:00',
+                          ),
+                          ActivityCard(
+                            delivered: false,
+                            subject: 'Fenomenos de transporte',
+                            activityName: 'Equação de Bernoulli',
+                            date: '10/05/2021',
+                            hour: '20:00',
+                          ),
+                          ActivityCard(
+                            delivered: false,
+                            subject: 'Fenomenos de transporte',
+                            activityName: 'Equação de Bernoulli',
+                            date: '10/05/2021',
+                            hour: '20:00',
+                          ),
+                          ActivityCard(
+                            delivered: false,
+                            subject: 'Fenomenos de transporte',
+                            activityName: 'Equação de Bernoulli',
+                            date: '10/05/2021',
+                            hour: '20:00',
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -143,14 +147,14 @@ class _ActivitiesPageState
         ),
         bottomNavigationBar: Observer(builder: (_) {
           return BottomNavigationBarWidget(
-            isOpen: controller.isOpen,
+            isOpen: controllerNavigationBar.isOpen,
           );
         }),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButtonCustomWidget(
           key: ValueKey('actionButton'),
           onPressed: () {
-            controller.trocaOpen();
+            controllerNavigationBar.trocaOpen();
           },
         ),
       ),

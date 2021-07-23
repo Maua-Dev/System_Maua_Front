@@ -35,9 +35,4 @@ void main() {
     await homeAlunoController.getAula();
     expect(homeAlunoController.aula, aulaTeste);
   });
-
-  test('[TEST] - trocaOpen', () {
-    homeAlunoController.trocaOpen();
-    expect(homeAlunoController.isOpen, true);
-  });
 }

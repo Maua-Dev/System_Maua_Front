@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
 import 'icon_buttom_custom_widget.dart';
 import 'navigation_bar_buttons_widget.dart';
@@ -28,7 +29,9 @@ class BottomNavigationBarWidget extends StatelessWidget {
                 IconButtonCustomWidget(
                     size: MediaQuery.of(context).size.height * 0.044,
                     icon: Icon(Icons.home),
-                    onPressed: () {}),
+                    onPressed: () {
+                      Modular.to.navigate('/home');
+                    }),
                 IconButtonCustomWidget(
                     size: MediaQuery.of(context).size.height * 0.044,
                     icon: Icon(Icons.date_range),
@@ -73,7 +76,9 @@ class BottomNavigationBarWidget extends StatelessWidget {
                       IconButtonCustomWidget(
                           size: MediaQuery.of(context).size.height * 0.044,
                           icon: Icon(Icons.home),
-                          onPressed: () {}),
+                          onPressed: () {
+                            Modular.to.navigate('/home');
+                          }),
                       IconButtonCustomWidget(
                           size: MediaQuery.of(context).size.height * 0.044,
                           icon: Icon(Icons.date_range),
