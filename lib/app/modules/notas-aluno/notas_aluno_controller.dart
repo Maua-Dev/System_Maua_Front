@@ -1,4 +1,7 @@
 import 'package:mobx/mobx.dart';
+import 'package:system_maua_front/app/modules/notas-aluno/repositories/notas_aluno_repository_interface.dart';
+
+import 'models/materia_model.dart';
 
 part 'notas_aluno_controller.g.dart';
 
@@ -6,11 +9,17 @@ class NotasAlunoController = _NotasAlunoControllerBase
     with _$NotasAlunoController;
 
 abstract class _NotasAlunoControllerBase with Store {
+  final INotasAlunosRepository repository;
+
+  _NotasAlunoControllerBase(this.repository) {
+    getMateria();
+  }
+
   @observable
-  int value = 0;
+  MateriaModel materia = MateriaModel.newInstance();
 
   @action
-  void increment() {
-    value++;
+  Future<void> getMateria() async {
+    materia = await repository.getMateria();
   }
 }

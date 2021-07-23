@@ -12,8 +12,8 @@ void main() {
     expect(homeAlunoRepository.aluno.nome.isNotEmpty, true);
   });
 
-  test('[TEST] - getMateria', () {
-    expect(homeAlunoRepository.materia.horario.isNotEmpty, true);
-    expect(homeAlunoRepository.materia.duracao.isNotEmpty, true);
+  test('[TEST] - getAula', () {
+    expect(homeAlunoRepository.aula.horario.isNotEmpty, true);
+    expect(homeAlunoRepository.aula.duracao.isNotEmpty, true);
   });
 }
