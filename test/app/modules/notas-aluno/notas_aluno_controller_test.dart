@@ -9,11 +9,11 @@ import 'package:system_maua_front/app/modules/notas-aluno/repositories/notas_alu
 
 import 'notas_aluno_controller_test.mocks.dart';
 
-@GenerateMocks([INotasAlunosRepository])
+@GenerateMocks([INotasAlunoRepository])
 void main() {
-  INotasAlunosRepository repository = MockINotasAlunosRepository();
+  INotasAlunoRepository repository = MockINotasAlunoRepository();
   late NotasAlunoController notasAlunoController;
-  var materiaTeste = MateriaModel(materia: 'Resmat', notaParcial: 9.0, provas: [
+  var materiaTeste = MateriaModel(nome: 'Resmat', notaParcial: 9.0, provas: [
     NotasModel(avaliacao: AvaliacaoEnum.P1, value: 9.0),
     NotasModel(avaliacao: AvaliacaoEnum.P2, value: 9.0),
     NotasModel(avaliacao: AvaliacaoEnum.P3, value: 9.0),

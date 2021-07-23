@@ -9,7 +9,7 @@ void main() {
   });
 
   test('[TEST] - getMateria', () {
-    expect(notasAlunoRepository.materia.provas!.isNotEmpty, true);
-    expect(notasAlunoRepository.materia.trabalhos!.isNotEmpty, true);
+    expect(notasAlunoRepository.materia.provas.isNotEmpty, true);
+    expect(notasAlunoRepository.materia.trabalhos.isNotEmpty, true);
   });
 }

@@ -18,12 +18,12 @@ import 'package:system_maua_front/app/modules/notas-aluno/repositories/notas_alu
 
 class _FakeMateriaModel extends _i1.Fake implements _i2.MateriaModel {}
 
-/// A class which mocks [INotasAlunosRepository].
+/// A class which mocks [INotasAlunoRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockINotasAlunosRepository extends _i1.Mock
-    implements _i3.INotasAlunosRepository {
-  MockINotasAlunosRepository() {
+class MockINotasAlunoRepository extends _i1.Mock
+    implements _i3.INotasAlunoRepository {
+  MockINotasAlunoRepository() {
     _i1.throwOnMissingStub(this);
   }
 

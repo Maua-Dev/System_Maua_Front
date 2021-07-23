@@ -9,10 +9,22 @@ class NotasAlunoController = _NotasAlunoControllerBase
     with _$NotasAlunoController;
 
 abstract class _NotasAlunoControllerBase with Store {
-  final INotasAlunosRepository repository;
+  final INotasAlunoRepository repository;
 
   _NotasAlunoControllerBase(this.repository) {
     getMateria();
+  }
+
+  @action
+  int returnIndex(int index) {
+    var retorno = index == 0 ? 0 : index * 2;
+    return retorno;
+  }
+
+  @action
+  int returnIndexIncremento(int index) {
+    var retorno = index == 0 ? 1 : index * 2 + 1;
+    return retorno;
   }
 
   @observable

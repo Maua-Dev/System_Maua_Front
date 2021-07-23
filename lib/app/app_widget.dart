@@ -7,7 +7,7 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        initialRoute: '/splash',
+        initialRoute: '/notas',
         debugShowCheckedModeBanner: false,
         title: 'Flutter Slidy',
         theme: ThemeData(

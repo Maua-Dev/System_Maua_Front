@@ -32,6 +32,31 @@ mixin _$NotasAlunoController on _NotasAlunoControllerBase, Store {
     return _$getMateriaAsyncAction.run(() => super.getMateria());
   }
 
+  final _$_NotasAlunoControllerBaseActionController =
+      ActionController(name: '_NotasAlunoControllerBase');
+
+  @override
+  int returnIndex(int index) {
+    final _$actionInfo = _$_NotasAlunoControllerBaseActionController
+        .startAction(name: '_NotasAlunoControllerBase.returnIndex');
+    try {
+      return super.returnIndex(index);
+    } finally {
+      _$_NotasAlunoControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  int returnIndexIncremento(int index) {
+    final _$actionInfo = _$_NotasAlunoControllerBaseActionController
+        .startAction(name: '_NotasAlunoControllerBase.returnIndexIncremento');
+    try {
+      return super.returnIndexIncremento(index);
+    } finally {
+      _$_NotasAlunoControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''
