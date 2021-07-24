@@ -24,15 +24,20 @@ class NotasCardWidget extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(tituloAvaliacao.name + ': '),
+              Text(
+                tituloAvaliacao.name + ': ',
+                style: TextStyle(color: AppColors.strongLetter),
+              ),
               Text(
                 notaAvaliacao == null
                     ? ''
                     : notaAvaliacao!.toStringAsFixed(1).replaceAll('.', ','),
                 style: TextStyle(
-                    color: notaAvaliacao! < 6.0
-                        ? Colors.red
-                        : AppColors.strongLetter),
+                    color: notaAvaliacao == null
+                        ? null
+                        : notaAvaliacao! < 6.0
+                            ? Colors.red
+                            : AppColors.strongLetter),
               )
             ],
           ),
