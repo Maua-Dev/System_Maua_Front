@@ -37,7 +37,36 @@ class _HelpAlunoPageState
         ),
       ),
       body: Column(
-        children: <Widget>[Text('datasdsaas')],
+        children: [
+          // RaisedButton(
+          //   onPressed: () {
+          //     setState(() {
+          //       Modular.to.navigate('/home');
+          //     });
+          //   },
+          //   color: AppColors.white,
+          // ),
+          Container(
+            width: 300,
+            height: 50,
+            margin:
+                const EdgeInsets.only(left: 50, right: 50, top: 25, bottom: 25),
+            child: ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  Modular.to.navigate('/home');
+                });
+              },
+              style: ElevatedButton.styleFrom(
+                primary: AppColors.white,
+              ),
+              child: Text(
+                "Avisos",
+                style: AppTextStyles.body,
+              ),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: Observer(builder: (_) {
         return BottomNavigationBarWidget(
