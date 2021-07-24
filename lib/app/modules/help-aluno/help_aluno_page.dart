@@ -3,6 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/help-aluno/help_aluno_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:system_maua_front/app/modules/help-aluno/help_card/help_card.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
@@ -38,34 +39,14 @@ class _HelpAlunoPageState
       ),
       body: Column(
         children: [
-          // RaisedButton(
-          //   onPressed: () {
-          //     setState(() {
-          //       Modular.to.navigate('/home');
-          //     });
-          //   },
-          //   color: AppColors.white,
-          // ),
-          Container(
-            width: 300,
-            height: 50,
-            margin:
-                const EdgeInsets.only(left: 50, right: 50, top: 25, bottom: 25),
-            child: ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  Modular.to.navigate('/home');
-                });
-              },
-              style: ElevatedButton.styleFrom(
-                primary: AppColors.white,
-              ),
-              child: Text(
-                "Avisos",
-                style: AppTextStyles.body,
-              ),
-            ),
-          ),
+          HelpCard(navigate: "/home", title: "Avisos"),
+          HelpCard(navigate: "/home", title: "Video tutorial"),
+          HelpCard(navigate: "/home", title: "Softwares Disponiveis"),
+          HelpCard(navigate: "/home", title: "Bolsas de Estudo"),
+          HelpCard(navigate: "/home", title: "Intercambio"),
+          HelpCard(navigate: "/home", title: "Estágio"),
+          HelpCard(navigate: "/home", title: "Mapa Digital"),
+          HelpCard(navigate: "/home", title: "FAQ"),
         ],
       ),
       bottomNavigationBar: Observer(builder: (_) {
