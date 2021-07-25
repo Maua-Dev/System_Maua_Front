@@ -15,7 +15,7 @@ class HelpCard extends StatelessWidget {
     return Center(
       child: Container(
         width: MediaQuery.of(context).size.width * 0.8,
-        height: MediaQuery.of(context).size.height * 0.06,
+        height: MediaQuery.of(context).size.height * 0.08,
         margin: const EdgeInsets.only(left: 50, right: 50, top: 20),
         child: ElevatedButton(
           onPressed: onPressed,
