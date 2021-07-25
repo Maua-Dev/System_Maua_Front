@@ -27,10 +27,11 @@ class _HelpAlunoPageState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
+        leadingWidget: Icon(Icons.arrow_back),
         iconBar: IconTheme(
             data: IconThemeData(color: AppColors.white),
             child: Icon(
-              Icons.help,
+              Icons.help_outline_outlined,
             )),
         title: Text(
           'Help',
@@ -53,6 +54,9 @@ class _HelpAlunoPageState
               HelpCard(onPressed: () {}, title: 'Estágio'),
               HelpCard(onPressed: () {}, title: 'Mapa Digital'),
               HelpCard(onPressed: () {}, title: 'FAQ'),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.08,
+              )
             ],
           ),
         ],
