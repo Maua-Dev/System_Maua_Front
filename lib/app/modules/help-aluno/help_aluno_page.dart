@@ -3,7 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/help-aluno/help_aluno_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/app/modules/help-aluno/help_card/help_card.dart';
+import 'package:system_maua_front/app/modules/help-aluno/widgets/help_card.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
@@ -37,16 +37,24 @@ class _HelpAlunoPageState
           style: AppTextStyles.appBarTitle,
         ),
       ),
-      body: Column(
+      body: ListView(
         children: [
-          HelpCard(navigate: "/home", title: "Avisos"),
-          HelpCard(navigate: "/home", title: "Video tutorial"),
-          HelpCard(navigate: "/home", title: "Softwares Disponiveis"),
-          HelpCard(navigate: "/home", title: "Bolsas de Estudo"),
-          HelpCard(navigate: "/home", title: "Intercambio"),
-          HelpCard(navigate: "/home", title: "Estágio"),
-          HelpCard(navigate: "/home", title: "Mapa Digital"),
-          HelpCard(navigate: "/home", title: "FAQ"),
+          Column(
+            children: [
+              HelpCard(
+                  onPressed: () {
+                    Modular.to.navigate('/home');
+                  },
+                  title: 'Avisos'),
+              HelpCard(onPressed: () {}, title: 'Video tutorial'),
+              HelpCard(onPressed: () {}, title: 'Softwares Disponiveis'),
+              HelpCard(onPressed: () {}, title: 'Bolsas de Estudo'),
+              HelpCard(onPressed: () {}, title: 'Intercambio'),
+              HelpCard(onPressed: () {}, title: 'Estágio'),
+              HelpCard(onPressed: () {}, title: 'Mapa Digital'),
+              HelpCard(onPressed: () {}, title: 'FAQ'),
+            ],
+          ),
         ],
       ),
       bottomNavigationBar: Observer(builder: (_) {
