@@ -65,21 +65,31 @@ class NotasAlunoPageState
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(bottom: 8.0),
-                              child: Expanded(
-                                child: Center(
-                                  child: Container(
-                                    padding: EdgeInsets.only(
-                                        right: 16.0, left: 16, top: 8),
-                                    child: Text(
-                                      controller.materia.nome,
-                                      style: AppTextStyles.bodyBold,
-                                      textAlign: TextAlign.center,
+                              child: Center(
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          border: Border(
+                                            bottom: BorderSide(
+                                                width: 2.0,
+                                                color: AppColors.stroke),
+                                          ),
+                                        ),
+                                        padding: EdgeInsets.only(
+                                            right: 16.0, left: 16, top: 8),
+                                        child: Text(
+                                          controller.materia.nome,
+                                          style: AppTextStyles.bodyBold,
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ),
                                     ),
-                                  ),
+                                  ],
                                 ),
                               ),
                             ),
-                            Divider(color: Colors.grey),
                             Container(
                               padding: EdgeInsets.only(bottom: 8.0),
                               child: Text('Nota parcial: ' +
