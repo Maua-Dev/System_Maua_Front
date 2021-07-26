@@ -21,34 +21,18 @@ class _HomeAlunoPageState
   var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
-          children: [
-            Observer(builder: (_) {
-              return AppBarHomeWidget(
-                usuario: controller.aluno.nome,
-                ra: controller.aluno.ra,
-                materia: controller.aula.tipoMateriaEnum?.name ?? '',
-                duracao: controller.aula.duracao,
-                local: controller.aula.local,
-              );
-            }),
-          ],
-        ),
-        bottomNavigationBar: Observer(builder: (_) {
-          return BottomNavigationBarWidget(
-            isOpen: controllerNavigationBar.isOpen,
+    return Column(
+      children: [
+        Observer(builder: (_) {
+          return AppBarHomeWidget(
+            usuario: controller.aluno.nome,
+            ra: controller.aluno.ra,
+            materia: controller.aula.tipoMateriaEnum?.name ?? '',
+            duracao: controller.aula.duracao,
+            local: controller.aula.local,
           );
         }),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButtonCustomWidget(
-          key: ValueKey('actionButton'),
-          onPressed: () {
-            controllerNavigationBar.trocaOpen();
-          },
-        ),
-      ),
+      ],
     );
   }
 }

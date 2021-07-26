@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/modules/notas-aluno/enumerates/avaliacao_enum.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
+import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class NotasCardWidget extends StatelessWidget {
   final AvaliacaoEnum tituloAvaliacao;
@@ -27,13 +28,14 @@ class NotasCardWidget extends StatelessWidget {
             children: [
               Text(
                 tituloAvaliacao.name + ': ',
-                style: TextStyle(color: AppColors.strongLetter),
+                style:
+                    AppTextStyles.body.copyWith(color: AppColors.strongLetter),
               ),
               Text(
                 notaAvaliacao == null
                     ? ''
                     : notaAvaliacao!.toStringAsFixed(1).replaceAll('.', ','),
-                style: TextStyle(
+                style: AppTextStyles.body.copyWith(
                     color: notaAvaliacao == null
                         ? null
                         : notaAvaliacao! < 6.0

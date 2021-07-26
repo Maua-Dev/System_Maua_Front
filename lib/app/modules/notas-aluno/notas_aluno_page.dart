@@ -4,10 +4,6 @@ import 'package:system_maua_front/app/modules/notas-aluno/notas_aluno_controller
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/modules/notas-aluno/widgets/grid_avaliacao_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
-import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
-import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
-import 'package:system_maua_front/app/shared/components/floating_action_button_custom/floating_action_button_custom_widget.dart';
-import 'package:system_maua_front/app/shared/components/notas_card/notas_card_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
@@ -19,7 +15,7 @@ class NotasAlunoPage extends StatefulWidget {
 
 class NotasAlunoPageState
     extends ModularState<NotasAlunoPage, NotasAlunoController> {
-  var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
+  // var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,18 +24,6 @@ class NotasAlunoPageState
           title: Text('Notas'),
           iconBar: Icon(Icons.playlist_add_check_outlined),
           actionWidget: Icon(Icons.menu_sharp),
-        ),
-        bottomNavigationBar: Observer(builder: (_) {
-          return BottomNavigationBarWidget(
-            isOpen: controllerNavigationBar.isOpen,
-          );
-        }),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButtonCustomWidget(
-          key: ValueKey('actionButton'),
-          onPressed: () {
-            controllerNavigationBar.trocaOpen();
-          },
         ),
         body: SingleChildScrollView(
           child: Container(
