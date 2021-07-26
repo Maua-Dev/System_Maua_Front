@@ -10,9 +10,9 @@ class NotasAlunoRepository implements INotasAlunoRepository {
       provas: [
         NotasModel(avaliacao: AvaliacaoEnum.P1, value: 9.0),
         NotasModel(avaliacao: AvaliacaoEnum.P2, value: 9.0),
-        NotasModel(avaliacao: AvaliacaoEnum.PS1, value: 6.0),
         NotasModel(avaliacao: AvaliacaoEnum.P3, value: 5.0),
         NotasModel(avaliacao: AvaliacaoEnum.P4, value: 1.0),
+        NotasModel(avaliacao: AvaliacaoEnum.PS1, value: 6.0),
         NotasModel(avaliacao: AvaliacaoEnum.PS2, value: 9.0),
       ],
       trabalhos: [

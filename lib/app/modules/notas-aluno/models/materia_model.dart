@@ -18,9 +18,9 @@ class MateriaModel {
     return MateriaModel(nome: '', notaParcial: 0.0, provas: [
       NotasModel(avaliacao: AvaliacaoEnum.P1, value: null),
       NotasModel(avaliacao: AvaliacaoEnum.P2, value: null),
-      NotasModel(avaliacao: AvaliacaoEnum.PS1, value: null),
       NotasModel(avaliacao: AvaliacaoEnum.P3, value: null),
       NotasModel(avaliacao: AvaliacaoEnum.P4, value: null),
+      NotasModel(avaliacao: AvaliacaoEnum.PS1, value: null),
       NotasModel(avaliacao: AvaliacaoEnum.PS2, value: null),
     ], trabalhos: [
       NotasModel(avaliacao: AvaliacaoEnum.T1, value: null),

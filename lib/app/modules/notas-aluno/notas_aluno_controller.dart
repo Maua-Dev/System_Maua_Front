@@ -15,17 +15,10 @@ abstract class _NotasAlunoControllerBase with Store {
     getMateria();
   }
 
-  @action
-  int returnIndex(int index) {
-    var retorno = index == 0 ? 0 : index * 2;
-    return retorno;
-  }
-
-  @action
-  int returnIndexIncremento(int index) {
-    var retorno = index == 0 ? 1 : index * 2 + 1;
-    return retorno;
-  }
+  @computed
+  String get notaComputada =>
+      'Nota parcial: ' +
+      materia.notaParcial.toStringAsFixed(1).replaceAll('.', ',');
 
   @observable
   MateriaModel materia = MateriaModel.newInstance();
