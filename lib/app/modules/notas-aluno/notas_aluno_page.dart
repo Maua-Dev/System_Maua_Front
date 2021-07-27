@@ -21,9 +21,9 @@ class NotasAlunoPageState
     return SafeArea(
       child: Scaffold(
         appBar: AppBarWidget(
-          title: Text('Notas'),
-          iconBar: Icon(Icons.playlist_add_check_outlined),
-          actionWidget: Icon(Icons.menu_sharp),
+          title: 'Notas',
+          icon: Icons.playlist_add_check_outlined,
+          actionWidget: Icon(Icons.menu_book),
         ),
         body: SingleChildScrollView(
           child: Container(
