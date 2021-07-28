@@ -27,7 +27,7 @@ class _HelpAlunoPageState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
-        leadingWidget: Icon(Icons.arrow_back),
+        //leadingWidget: Icon(Icons.arrow_back),
         iconBar: IconTheme(
             data: IconThemeData(color: AppColors.white),
             child: Icon(
@@ -40,24 +40,20 @@ class _HelpAlunoPageState
       ),
       body: ListView(
         children: [
-          Column(
-            children: [
-              HelpCard(
-                  onPressed: () {
-                    Modular.to.navigate('/home');
-                  },
-                  title: 'Avisos'),
-              HelpCard(onPressed: () {}, title: 'Video tutorial'),
-              HelpCard(onPressed: () {}, title: 'Softwares Disponiveis'),
-              HelpCard(onPressed: () {}, title: 'Bolsas de Estudo'),
-              HelpCard(onPressed: () {}, title: 'Intercambio'),
-              HelpCard(onPressed: () {}, title: 'Estágio'),
-              HelpCard(onPressed: () {}, title: 'Mapa Digital'),
-              HelpCard(onPressed: () {}, title: 'FAQ'),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.08,
-              )
-            ],
+          HelpCard(
+              onPressed: () {
+                Modular.to.pushNamed('/home');
+              },
+              title: 'Avisos'),
+          HelpCard(onPressed: () {}, title: 'Video tutorial'),
+          HelpCard(onPressed: () {}, title: 'Softwares Disponiveis'),
+          HelpCard(onPressed: () {}, title: 'Bolsas de Estudo'),
+          HelpCard(onPressed: () {}, title: 'Intercambio'),
+          HelpCard(onPressed: () {}, title: 'Estágio'),
+          HelpCard(onPressed: () {}, title: 'Mapa Digital'),
+          HelpCard(onPressed: () {}, title: 'FAQ'),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.08,
           ),
         ],
       ),
