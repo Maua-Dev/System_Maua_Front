@@ -6,7 +6,7 @@ import 'mural_divulgacao_page.dart';
 class MuralDivulgacaoModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.lazySingleton((i) => MuralDivulgacaoController()),
+    Bind.lazySingleton((i) => MuralDivulgacaoController(i())),
   ];
 
   @override

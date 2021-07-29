@@ -15,7 +15,7 @@ class LandingModule extends Module {
         children: [
           ModuleRoute('/notas', module: NotasAlunoModule()),
           ModuleRoute('/home', module: HomeAlunoModule()),
-          ModuleRoute('/muralDivulgacao', module: MuralDivulgacaoModule())
+          ModuleRoute('/mural', module: MuralDivulgacaoModule())
         ]),
   ];
 }
