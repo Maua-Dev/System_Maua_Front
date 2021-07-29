@@ -11,30 +11,34 @@ class MuralDivulgacaoRepository implements IMuralDivulgacaoRepository {
   ];
 
   @override
-  Future<int> getInformacaoCaNaoLido() {
+  Future<int> getInformacaoCaNaoLido() async {
     return Future.value(listInformacao
         .where((element) => element.muralEnum == MuralEnum.CA)
-        .length);
+        .first
+        .quantidadeNaoLido);
   }
 
   @override
-  Future<int> getInformacaoEquipesNaoLido() {
+  Future<int> getInformacaoEquipesNaoLido() async {
     return Future.value(listInformacao
         .where((element) => element.muralEnum == MuralEnum.EQUIPES)
-        .length);
+        .first
+        .quantidadeNaoLido);
   }
 
   @override
-  Future<int> getInformacaoEstagioNaoLido() {
+  Future<int> getInformacaoEstagioNaoLido() async {
     return Future.value(listInformacao
         .where((element) => element.muralEnum == MuralEnum.ESTAGIO)
-        .length);
+        .first
+        .quantidadeNaoLido);
   }
 
   @override
   Future<int> getInformacaoVendasNaoLido() {
     return Future.value(listInformacao
         .where((element) => element.muralEnum == MuralEnum.VENDAS)
-        .length);
+        .first
+        .quantidadeNaoLido);
   }
 }

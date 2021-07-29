@@ -9,14 +9,31 @@ class MuralDivulgacaoController = _MuralDivulgacaoControllerBase
 abstract class _MuralDivulgacaoControllerBase with Store {
   final IMuralDivulgacaoRepository repository;
 
-  _MuralDivulgacaoControllerBase(this.repository);
+  _MuralDivulgacaoControllerBase(this.repository) {
+    getCaLength();
+    getVendasLength();
+    getEquipesLength();
+    getEstagioLength();
+  }
 
-  Future<int> get getCaLength async =>
-      await repository.getInformacaoCaNaoLido();
-  Future<int> get getVendasLength async =>
-      await repository.getInformacaoVendasNaoLido();
-  Future<int> get getEquipesLength async =>
-      await repository.getInformacaoEquipesNaoLido();
-  Future<int> get getEstagioLength async =>
-      await repository.getInformacaoEstagioNaoLido();
+  @observable
+  var informacaoCaNaoLido = 0;
+
+  @observable
+  var informacaoVendasNaoLido = 0;
+
+  @observable
+  var informacaoEquipesNaoLido = 0;
+
+  @observable
+  var informacaoEstagioNaoLido = 0;
+
+  Future<int> getCaLength() async =>
+      informacaoCaNaoLido = await repository.getInformacaoCaNaoLido();
+  Future<int> getVendasLength() async =>
+      informacaoVendasNaoLido = await repository.getInformacaoVendasNaoLido();
+  Future<int> getEquipesLength() async =>
+      informacaoEquipesNaoLido = await repository.getInformacaoEquipesNaoLido();
+  Future<int> getEstagioLength() async =>
+      informacaoEquipesNaoLido = await repository.getInformacaoEstagioNaoLido();
 }

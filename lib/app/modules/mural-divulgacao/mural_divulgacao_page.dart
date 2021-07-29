@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/mural_divulgacao_controller.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/widgets/mural_divulgacao_card_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 
@@ -10,7 +12,8 @@ class MuralDivulgacaoPage extends StatefulWidget {
   _MuralDivulgacaoPageState createState() => _MuralDivulgacaoPageState();
 }
 
-class _MuralDivulgacaoPageState extends State<MuralDivulgacaoPage> {
+class _MuralDivulgacaoPageState
+    extends ModularState<MuralDivulgacaoPage, MuralDivulgacaoController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -35,7 +38,7 @@ class _MuralDivulgacaoPageState extends State<MuralDivulgacaoPage> {
                   icon: Icons.shopping_bag_outlined,
                   corContainer: Color(0xFF007FFF).withOpacity(0.2),
                   corContainerIcone: Color(0xFF007FFF),
-                  titulo: 'Vendas de Materiais',
+                  titulo: 'Vendas de Materiais ()',
                   iconSize: 40,
                 ),
                 MuralDivulgacaoCardWidget(
