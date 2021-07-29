@@ -9,11 +9,14 @@ class HomeAlunoModule extends Module {
   @override
   final List<Bind> binds = [
     Bind.lazySingleton((i) => HomeAlunoController(i())),
-    Bind.lazySingleton<IHomeAlunoRepository>((i) => HomeAlunoRepository())
+    Bind.lazySingleton<IHomeAlunoRepository>((i) => HomeAlunoRepository()),
   ];
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute(Modular.initialRoute, child: (_, args) => HomeAlunoPage()),
+    ChildRoute(
+      Modular.initialRoute,
+      child: (_, args) => HomeAlunoPage(),
+    ),
   ];
 }

@@ -73,18 +73,23 @@ class AulaCardWidget extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 8),
-                              child: Icon(
-                                Icons.alarm,
-                                size: 40,
-                                color: AppColors.thinLetter,
+                            Flexible(
+                              child: Padding(
+                                padding: const EdgeInsets.only(right: 8),
+                                child: Icon(
+                                  Icons.alarm,
+                                  size: 40,
+                                  color: AppColors.thinLetter,
+                                ),
                               ),
                             ),
-                            Text(
-                              duracao,
-                              style: AppTextStyles.lightBody
-                                  .copyWith(fontSize: 20),
+                            Expanded(
+                              flex: 2,
+                              child: Text(
+                                duracao,
+                                style: AppTextStyles.lightBody
+                                    .copyWith(fontSize: 20),
+                              ),
                             )
                           ],
                         ),
