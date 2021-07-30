@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:system_maua_front/app/shared/components/filter_period/filter_period_controller.dart';
-import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum%20copy.dart';
+import 'package:system_maua_front/app/shared/enumerates/period_enum.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 
 // ignore: must_be_immutable

@@ -3,26 +3,24 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
+import 'package:system_maua_front/app/shared/components/filter_period/filter_period_widget.dart';
 import 'package:system_maua_front/app/shared/components/floating_action_button_custom/floating_action_button_custom_widget.dart';
-import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 import 'package:system_maua_front/shared/components/activity_card/activity_card_widget.dart';
 import 'package:system_maua_front/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/shared/components/progress_indicator/progress_indicator_widget.dart';
 
-import 'activities_store.dart';
+import 'activities_controller.dart';
 
 class ActivitiesPage extends StatefulWidget {
-  final String title;
-  const ActivitiesPage({Key? key, this.title = 'Deliveries'}) : super(key: key);
+  const ActivitiesPage({Key? key}) : super(key: key);
 
   @override
   _ActivitiesPageState createState() => _ActivitiesPageState();
 }
 
 class _ActivitiesPageState
-    extends ModularState<ActivitiesPage, ActivitiesStore> {
-  static String get activitiesIcon => 'assets/icons/activitiesIcon.svg';
+    extends ModularState<ActivitiesPage, ActivitiesController> {
   var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
 
   @override
@@ -32,114 +30,62 @@ class _ActivitiesPageState
         appBar: AppBarWidget(
           title: Text('Entregas'),
           leadingWidget: BackButton(
-            onPressed: () {},
+            onPressed: () {
+              Modular.to.navigate('/home');
+            },
           ),
-          iconBar: Image.asset(activitiesIcon),
+          iconBar: Icon(Icons.list_alt_rounded),
         ),
         body: Container(
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Semanal',
-                          style: TextStyle(
-                            fontSize: 24,
-                            color: AppColors.strongLetter,
-                          ),
-                        ),
-                        IconButton(
-                          icon: Icon(
-                            Icons.filter_list,
-                            size: 30,
-                          ),
-                          onPressed: () {},
-                        ),
-                      ]),
-                ),
+                padding: const EdgeInsets.only(right: 8.0, left: 8, top: 8),
+                child: FilterPeriodWidget(),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 20),
-                    child: Text(
-                      '3 de 10',
-                      style: AppTextStyles.lightBody,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 16,
+                    child: Observer(builder: (_) {
+                      return Text(
+                        '${controller.activitiesDelivered} de ${controller.activities.length}',
+                        style: AppTextStyles.lightBody,
+                      );
+                    }),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25),
-                    child: ProgressIndicatorWidget(
-                      value: 3 / 10,
-                    ),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 25, vertical: 15),
+                    child: Observer(builder: (_) {
+                      return ProgressIndicatorWidget(
+                        value: controller.activitiesDeliveredPercentual,
+                      );
+                    }),
                   ),
                 ],
               ),
               Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 25),
-                  child: Container(
-                    // height: MediaQuery.of(context).size.height - 245,
-                    height: MediaQuery.of(context).size.height - 325,
-                    child: Expanded(
-                      child: ListView(
-                        padding: const EdgeInsets.only(bottom: 8),
-                        children: [
-                          ActivityCard(
-                            delivered: false,
-                            subject: 'Fenomenos de transporte',
-                            activityName: 'Equação de Bernoulli',
-                            date: '10/05/2021',
-                            hour: '20:00',
-                          ),
-                          ActivityCard(
-                            delivered: false,
-                            subject: 'Fenomenos de transporte',
-                            activityName: 'Equação de Bernoulli',
-                            date: '10/05/2021',
-                            hour: '20:00',
-                          ),
-                          ActivityCard(
-                            delivered: false,
-                            subject: 'Fenomenos de transporte',
-                            activityName: 'Equação de Bernoulli',
-                            date: '10/05/2021',
-                            hour: '20:00',
-                          ),
-                          ActivityCard(
-                            delivered: false,
-                            subject: 'Fenomenos de transporte',
-                            activityName: 'Equação de Bernoulli',
-                            date: '10/05/2021',
-                            hour: '20:00',
-                          ),
-                          ActivityCard(
-                            delivered: false,
-                            subject: 'Fenomenos de transporte',
-                            activityName: 'Equação de Bernoulli',
-                            date: '10/05/2021',
-                            hour: '20:00',
-                          ),
-                          ActivityCard(
-                            delivered: false,
-                            subject: 'Fenomenos de transporte',
-                            activityName: 'Equação de Bernoulli',
-                            date: '10/05/2021',
-                            hour: '20:00',
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                child: Observer(
+                  builder: (_) {
+                    return ListView.separated(
+                      itemCount: controller.activities.length,
+                      itemBuilder: (_, index) {
+                        return ActivityCard(
+                          delivered: controller.activities[index].delivered,
+                          subject: controller.activities[index].subject,
+                          activityName:
+                              controller.activities[index].activityName,
+                          date: controller.activities[index].date,
+                          hour: controller.activities[index].hour,
+                        );
+                      },
+                      separatorBuilder: (BuildContext context, int index) {
+                        return Container();
+                      },
+                    );
+                  },
                 ),
               )
             ],

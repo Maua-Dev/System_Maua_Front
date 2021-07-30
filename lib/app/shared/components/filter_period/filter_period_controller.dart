@@ -1,5 +1,5 @@
 import 'package:mobx/mobx.dart';
-import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum%20copy.dart';
+import 'package:system_maua_front/app/shared/enumerates/period_enum.dart';
 
 part 'filter_period_controller.g.dart';
 

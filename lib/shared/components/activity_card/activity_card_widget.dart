@@ -21,109 +21,126 @@ class ActivityCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+      padding: const EdgeInsets.symmetric(
+        vertical: 5,
+        horizontal: 10,
+      ),
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.27,
+        height: MediaQuery.of(context).size.height * 0.28,
         decoration: BoxDecoration(
           border: Border.all(width: 3, color: AppColors.stroke),
           borderRadius: BorderRadius.circular(10),
         ),
-        child: Container(
-          padding:
-              const EdgeInsets.only(top: 10, left: 12, right: 12, bottom: 10),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 0, left: 0, right: 0),
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.075,
-                  decoration: BoxDecoration(
-                    border: Border.all(width: 1, color: AppColors.stroke),
-                    borderRadius: BorderRadius.circular(10),
-                    color: AppColors.white,
-                  ),
-                  child: Center(
-                    child: Text(
-                      subject,
-                      style: AppTextStyles.bodyBold.copyWith(
-                        fontSize: 20,
+        child: InkWell(
+          onTap: () {
+            print('cliquei');
+          },
+          child: Container(
+            padding:
+                const EdgeInsets.only(top: 10, left: 12, right: 12, bottom: 10),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: subject.length > 45 ? 2 : 1,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 1),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 1, color: AppColors.stroke),
+                        borderRadius: BorderRadius.circular(10),
+                        color: AppColors.white,
+                      ),
+                      child: Center(
+                        child: Text(
+                          subject,
+                          style: AppTextStyles.bodyBold.copyWith(
+                            fontSize: 20,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 0, left: 0, right: 0),
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.075,
-                  decoration: BoxDecoration(
-                    border: Border.all(width: 1, color: AppColors.stroke),
-                    borderRadius: BorderRadius.circular(10),
-                    color: AppColors.white,
-                  ),
-                  child: Center(
-                    child: Text(
-                      activityName,
-                      style: AppTextStyles.body.copyWith(
-                        fontSize: 20,
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1, color: AppColors.stroke),
+                      borderRadius: BorderRadius.circular(10),
+                      color: AppColors.white,
+                    ),
+                    child: Center(
+                      child: Text(
+                        activityName.length < 45
+                            ? activityName
+                            : activityName.substring(0, 25) + '...',
+                        style: AppTextStyles.body.copyWith(
+                          fontSize: 20,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 0, left: 0, right: 0),
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.075,
-                  decoration: BoxDecoration(
-                    border: Border.all(width: 1, color: AppColors.stroke),
-                    borderRadius: BorderRadius.circular(10),
-                    color: AppColors.white,
-                  ),
-                  child: Center(
-                    child: Visibility(
-                      visible: delivered,
-                      replacement: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            '$date - $hour',
-                            style: AppTextStyles.body.copyWith(
-                              fontSize: 20,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Icon(
-                            Icons.alarm,
-                            size: 30,
-                            color: AppColors.strongLetter,
-                          ),
-                        ],
+                Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 1),
+                    child: Container(
+                      // height: MediaQuery.of(context).size.height * 0.075,
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 1, color: AppColors.stroke),
+                        borderRadius: BorderRadius.circular(10),
+                        color: AppColors.white,
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.check_circle_outline,
-                            color: Color(0xFF04D361),
+                      child: Center(
+                        child: Visibility(
+                          visible: delivered,
+                          replacement: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                '$date - $hour',
+                                style: AppTextStyles.body.copyWith(
+                                  fontSize: 20,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Icon(
+                                Icons.alarm,
+                                size: 30,
+                                color: AppColors.strongLetter,
+                              ),
+                            ],
                           ),
-                          SizedBox(
-                            width: 10,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.check_circle_outline,
+                                color: Color(0xFF04D361),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                'Entregue',
+                                style:
+                                    AppTextStyles.body.copyWith(fontSize: 20),
+                              ),
+                            ],
                           ),
-                          Text(
-                            'Entregue',
-                            style: AppTextStyles.body.copyWith(fontSize: 20),
-                          ),
-                        ],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
