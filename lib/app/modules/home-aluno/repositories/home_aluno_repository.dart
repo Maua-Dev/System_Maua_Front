@@ -10,7 +10,7 @@ class HomeAlunoRepository implements IHomeAlunoRepository {
     ra: '15.01310-3',
   );
 
-  var materia = AulaModel(
+  var aula = AulaModel(
       local: 'H101',
       tipoMateriaEnum: TipoMateriaEnum.RESMAT,
       horario: '14:00h',
@@ -24,6 +24,6 @@ class HomeAlunoRepository implements IHomeAlunoRepository {
   @override
   Future<AulaModel> getAula() async {
     await Future.delayed(Duration(seconds: 1));
-    return Future.value(materia);
+    return Future.value(aula);
   }
 }

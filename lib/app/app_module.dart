@@ -3,7 +3,7 @@ import 'package:system_maua_front/app/modules/help-aluno/help_aluno_module.dart'
 import 'package:system_maua_front/app/modules/splash/splash_module.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 
-import 'modules/home-aluno/home_aluno_module.dart';
+import 'modules/landing/landing_module.dart';
 
 class AppModule extends Module {
   @override
@@ -16,5 +16,13 @@ class AppModule extends Module {
     ModuleRoute('/home', module: HomeAlunoModule()),
     ModuleRoute('/splash', module: SplashModule()),
     ModuleRoute('/help', module: HelpAlunoModule()),
+    ModuleRoute(
+      '/',
+      module: LandingModule(),
+    ),
+    ModuleRoute(
+      '/splash',
+      module: SplashModule(),
+    ),
   ];
 }
