@@ -23,13 +23,13 @@ class _ActivitiesPageState
     return SafeArea(
       child: Scaffold(
         appBar: AppBarWidget(
-          title: Text('Entregas'),
+          title: 'Entregas',
           leadingWidget: BackButton(
             onPressed: () {
               Modular.to.navigate('/home');
             },
           ),
-          iconBar: Icon(Icons.list_alt_rounded),
+          icon: Icons.list_alt_rounded,
         ),
         body: Container(
           child: Column(
