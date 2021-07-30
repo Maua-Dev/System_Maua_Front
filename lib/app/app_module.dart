@@ -1,4 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:system_maua_front/app/modules/help-avisos/help_avisos_controller.dart';
+import 'package:system_maua_front/app/modules/help-avisos/help_avisos_module.dart';
 import 'package:system_maua_front/app/modules/splash/splash_module.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 
@@ -19,6 +21,10 @@ class AppModule extends Module {
     ModuleRoute(
       '/splash',
       module: SplashModule(),
+    ),
+    ModuleRoute(
+      '/avisos',
+      module: HelpAvisosModule(),
     ),
   ];
 }
