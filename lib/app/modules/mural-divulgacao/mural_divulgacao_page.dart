@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/mural_divulgacao_controller.dart';
@@ -34,42 +35,50 @@ class _MuralDivulgacaoPageState
               ),
               shrinkWrap: true,
               children: [
-                MuralDivulgacaoCardWidget(
-                  icon: Icons.shopping_bag_outlined,
-                  corContainer: Color(0xFF007FFF).withOpacity(0.2),
-                  corContainerIcone: Color(0xFF007FFF),
-                  titulo: 'Vendas de Materiais',
-                  iconSize: 40,
-                  textController: controller.informacaoVendasNaoLido,
-                  onTap: () {},
-                ),
-                MuralDivulgacaoCardWidget(
-                  icon: Icons.groups,
-                  corContainer: Color(0xFFC1FF43).withOpacity(0.2),
-                  corContainerIcone: Color(0xFFC1FF43),
-                  titulo: 'Equipes Mauá',
-                  iconSize: 40,
-                  textController: controller.informacaoEquipesNaoLido,
-                  onTap: () {},
-                ),
-                MuralDivulgacaoCardWidget(
-                  icon: FontAwesome5.bullhorn,
-                  corContainer: Color(0xFFFFA500).withOpacity(0.2),
-                  corContainerIcone: Color(0xFFFFA500),
-                  titulo: 'Centro Academico',
-                  iconSize: 34,
-                  textController: controller.informacaoCaNaoLido,
-                  onTap: () {},
-                ),
-                MuralDivulgacaoCardWidget(
-                  icon: FontAwesome5.briefcase,
-                  corContainer: Color(0xFFFF2E00).withOpacity(0.2),
-                  corContainerIcone: Color(0xFFFF2E00),
-                  titulo: 'Estágio',
-                  iconSize: 34,
-                  textController: controller.informacaoEstagioNaoLido,
-                  onTap: () {},
-                ),
+                Observer(builder: (_) {
+                  return MuralDivulgacaoCardWidget(
+                    icon: Icons.shopping_bag_outlined,
+                    corContainer: Color(0xFF007FFF).withOpacity(0.2),
+                    corContainerIcone: Color(0xFF007FFF),
+                    titulo: 'Vendas de Materiais',
+                    iconSize: 40,
+                    textController: controller.informacaoVendasNaoLido,
+                    onTap: () {},
+                  );
+                }),
+                Observer(builder: (_) {
+                  return MuralDivulgacaoCardWidget(
+                    icon: Icons.groups,
+                    corContainer: Color(0xFFC1FF43).withOpacity(0.2),
+                    corContainerIcone: Color(0xFFC1FF43),
+                    titulo: 'Equipes Mauá',
+                    iconSize: 40,
+                    textController: controller.informacaoEquipesNaoLido,
+                    onTap: () {},
+                  );
+                }),
+                Observer(builder: (_) {
+                  return MuralDivulgacaoCardWidget(
+                    icon: FontAwesome5.bullhorn,
+                    corContainer: Color(0xFFFFA500).withOpacity(0.2),
+                    corContainerIcone: Color(0xFFFFA500),
+                    titulo: 'Centro Academico',
+                    iconSize: 34,
+                    textController: controller.informacaoCaNaoLido,
+                    onTap: () {},
+                  );
+                }),
+                Observer(builder: (_) {
+                  return MuralDivulgacaoCardWidget(
+                    icon: FontAwesome5.briefcase,
+                    corContainer: Color(0xFFFF2E00).withOpacity(0.2),
+                    corContainerIcone: Color(0xFFFF2E00),
+                    titulo: 'Estágio',
+                    iconSize: 34,
+                    textController: controller.informacaoEstagioNaoLido,
+                    onTap: () {},
+                  );
+                }),
               ],
             ),
           ),

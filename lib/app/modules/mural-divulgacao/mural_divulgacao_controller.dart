@@ -28,12 +28,19 @@ abstract class _MuralDivulgacaoControllerBase with Store {
   @observable
   var informacaoEstagioNaoLido = 0;
 
+  @action
   Future<int> getCaLength() async =>
       informacaoCaNaoLido = await repository.getInformacaoCaNaoLido();
+
+  @action
   Future<int> getVendasLength() async =>
       informacaoVendasNaoLido = await repository.getInformacaoVendasNaoLido();
+
+  @action
   Future<int> getEquipesLength() async =>
       informacaoEquipesNaoLido = await repository.getInformacaoEquipesNaoLido();
+
+  @action
   Future<int> getEstagioLength() async =>
       informacaoEstagioNaoLido = await repository.getInformacaoEstagioNaoLido();
 }
