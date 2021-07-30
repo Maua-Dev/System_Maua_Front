@@ -21,13 +21,13 @@ class AppTextStyles {
 
   static final TextStyle bodyBold = GoogleFonts.notoSans(
     color: AppColors.strongLetter,
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: FontWeight.w600,
   );
 
   static final TextStyle body = GoogleFonts.notoSans(
     color: AppColors.thinLetter,
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: FontWeight.normal,
   );
 

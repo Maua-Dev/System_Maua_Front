@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
-import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/widgets/bottom_navigation_bar_widget.dart';
 import 'package:system_maua_front/app/shared/components/filter_period/filter_period_widget.dart';
-import 'package:system_maua_front/app/shared/components/floating_action_button_custom/floating_action_button_custom_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 import 'package:system_maua_front/shared/components/activity_card/activity_card_widget.dart';
 import 'package:system_maua_front/shared/components/app_bar/app_bar_widget.dart';
@@ -21,8 +18,6 @@ class ActivitiesPage extends StatefulWidget {
 
 class _ActivitiesPageState
     extends ModularState<ActivitiesPage, ActivitiesController> {
-  var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -90,18 +85,6 @@ class _ActivitiesPageState
               )
             ],
           ),
-        ),
-        bottomNavigationBar: Observer(builder: (_) {
-          return BottomNavigationBarWidget(
-            isOpen: controllerNavigationBar.isOpen,
-          );
-        }),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButtonCustomWidget(
-          key: ValueKey('actionButton'),
-          onPressed: () {
-            controllerNavigationBar.trocaOpen();
-          },
         ),
       ),
     );
