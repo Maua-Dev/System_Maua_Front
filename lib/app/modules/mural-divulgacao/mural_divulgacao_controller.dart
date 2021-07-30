@@ -35,5 +35,5 @@ abstract class _MuralDivulgacaoControllerBase with Store {
   Future<int> getEquipesLength() async =>
       informacaoEquipesNaoLido = await repository.getInformacaoEquipesNaoLido();
   Future<int> getEstagioLength() async =>
-      informacaoEquipesNaoLido = await repository.getInformacaoEstagioNaoLido();
+      informacaoEstagioNaoLido = await repository.getInformacaoEstagioNaoLido();
 }

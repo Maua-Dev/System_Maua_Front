@@ -25,7 +25,7 @@ class _MuralDivulgacaoPageState
         body: Center(
           child: SingleChildScrollView(
             child: GridView(
-              padding: const EdgeInsets.all(8),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 16,
@@ -38,8 +38,10 @@ class _MuralDivulgacaoPageState
                   icon: Icons.shopping_bag_outlined,
                   corContainer: Color(0xFF007FFF).withOpacity(0.2),
                   corContainerIcone: Color(0xFF007FFF),
-                  titulo: 'Vendas de Materiais ()',
+                  titulo: 'Vendas de Materiais',
                   iconSize: 40,
+                  textController: controller.informacaoVendasNaoLido,
+                  onTap: () {},
                 ),
                 MuralDivulgacaoCardWidget(
                   icon: Icons.groups,
@@ -47,13 +49,17 @@ class _MuralDivulgacaoPageState
                   corContainerIcone: Color(0xFFC1FF43),
                   titulo: 'Equipes Mauá',
                   iconSize: 40,
+                  textController: controller.informacaoEquipesNaoLido,
+                  onTap: () {},
                 ),
                 MuralDivulgacaoCardWidget(
                   icon: FontAwesome5.bullhorn,
                   corContainer: Color(0xFFFFA500).withOpacity(0.2),
                   corContainerIcone: Color(0xFFFFA500),
-                  titulo: 'Centro Academico ',
+                  titulo: 'Centro Academico',
                   iconSize: 34,
+                  textController: controller.informacaoCaNaoLido,
+                  onTap: () {},
                 ),
                 MuralDivulgacaoCardWidget(
                   icon: FontAwesome5.briefcase,
@@ -61,6 +67,8 @@ class _MuralDivulgacaoPageState
                   corContainerIcone: Color(0xFFFF2E00),
                   titulo: 'Estágio',
                   iconSize: 34,
+                  textController: controller.informacaoEstagioNaoLido,
+                  onTap: () {},
                 ),
               ],
             ),

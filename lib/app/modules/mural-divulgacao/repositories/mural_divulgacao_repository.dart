@@ -5,8 +5,8 @@ import 'package:system_maua_front/app/modules/mural-divulgacao/repositories/mura
 class MuralDivulgacaoRepository implements IMuralDivulgacaoRepository {
   List<InformacaoModel> listInformacao = [
     InformacaoModel(muralEnum: MuralEnum.EQUIPES, quantidadeNaoLido: 9),
-    InformacaoModel(muralEnum: MuralEnum.CA, quantidadeNaoLido: 0),
-    InformacaoModel(muralEnum: MuralEnum.ESTAGIO, quantidadeNaoLido: 2),
+    InformacaoModel(muralEnum: MuralEnum.CA, quantidadeNaoLido: 12),
+    InformacaoModel(muralEnum: MuralEnum.ESTAGIO, quantidadeNaoLido: 0),
     InformacaoModel(muralEnum: MuralEnum.VENDAS, quantidadeNaoLido: 4),
   ];
 
