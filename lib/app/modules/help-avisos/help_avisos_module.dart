@@ -1,5 +1,4 @@
 import 'package:system_maua_front/app/modules/help-avisos/help_avisos_page.dart';
-import 'package:system_maua_front/app/modules/help-avisos/help_avisos_page.dart';
 import 'package:system_maua_front/app/modules/help-avisos/help_avisos_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
