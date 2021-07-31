@@ -29,7 +29,7 @@ class HelpAvisosPageState extends State<HelpAvisosPage> {
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Icon(
-                Icons.warning,
+                Icons.warning_amber_outlined,
                 size: 150,
               ),
             ),
@@ -39,7 +39,7 @@ class HelpAvisosPageState extends State<HelpAvisosPage> {
               padding: const EdgeInsets.all(20.0),
               child: Text(
                 'Avisos Gerais da reitoria',
-                style: AppTextStyles.bodyBold,
+                style: AppTextStyles.lightBody,
               ),
             ),
           ),
@@ -81,6 +81,8 @@ class HelpAvisosPageState extends State<HelpAvisosPage> {
                       value: checkedValue,
                       onChanged: (checkedValue) =>
                           setState(() => this.checkedValue = checkedValue!),
+                      // checkColor: Colors.black,
+                      activeColor: Colors.black,
                     )
                   ],
                 ),
