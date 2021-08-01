@@ -94,7 +94,9 @@ class BottomNavigationBarWidget extends StatelessWidget {
                       IconButtonCustomWidget(
                           size: MediaQuery.of(context).size.height * 0.049,
                           icon: Icon(Icons.playlist_add_check),
-                          onPressed: () {}),
+                          onPressed: () {
+                            Modular.to.pushNamed('/notas');
+                          }),
                       IconButtonCustomWidget(
                           size: MediaQuery.of(context).size.height * 0.049,
                           icon: Icon(Icons.help_outline_outlined),
@@ -131,7 +133,9 @@ class BottomNavigationBarWidget extends StatelessWidget {
                                 child: NavigationBarButtonsWidget(
                                   titulo: 'Mural',
                                   icon: Icons.language,
-                                  onTap: () {},
+                                  onTap: () {
+                                    Modular.to.pushNamed('/mural');
+                                  },
                                 ),
                               ),
                             ),
