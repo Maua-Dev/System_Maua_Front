@@ -28,6 +28,22 @@ abstract class _CalendarioControllerBase with Store {
   @observable
   List<AvaliacaoModel> listaEventos = [];
 
+  @observable
+  bool isOpen = false;
+
+  @observable
+  DateTime selectedDateTime = DateTime.now();
+
+  @action
+  void setDate(DateTime date) {
+    selectedDateTime = date;
+  }
+
+  @action
+  Future<void> trocaOpen() async {
+    isOpen = !isOpen;
+  }
+
   @action
   void setListaEventos(DateTime date) {
     listaEventos.clear();

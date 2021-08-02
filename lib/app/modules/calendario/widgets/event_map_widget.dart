@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 
 class EventMapWidget extends StatelessWidget {
   final String day;
@@ -8,7 +9,7 @@ class EventMapWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: CircleAvatar(
-        backgroundColor: Colors.red,
+        backgroundColor: AppColors.lightLetter,
         child: Text(
           day,
           style: TextStyle(color: Colors.black),

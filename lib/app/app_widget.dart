@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:intl/intl.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'shared/themes/app_text_styles.dart';
 
 class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Intl.defaultLocale = 'pt_BR';
     return MaterialApp(
         initialRoute: '/calendario',
         localizationsDelegates: [
@@ -16,7 +18,7 @@ class AppWidget extends StatelessWidget {
         ],
         supportedLocales: [Locale('pt')],
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Slidy',
+        title: 'Sistema Mauá Alunos',
         theme: ThemeData(
           fontFamily: 'NotoSans',
           colorScheme: ColorScheme.light().copyWith(
