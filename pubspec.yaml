@@ -1,7 +1,7 @@
 name: system_maua_front
 description: A new Flutter project.
 
-publish_to: 'none' 
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
@@ -17,6 +17,10 @@ dependencies:
   flutter_mobx: ^2.0.0
   fluttericon: ^2.0.0
   google_fonts: ^2.0.0
+  flutter_calendar_carousel: ^2.0.2
+  intl: ^0.16.0
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   build_runner: ^2.0.5
@@ -28,12 +32,11 @@ dev_dependencies:
   pedantic: ^1.11.1
   network_image_mock: ^2.0.1
 
-
 flutter:
   uses-material-design: true
   assets:
     - assets/images/logoMaua.png
 
 scripts:
-  mobx_build: flutter pub run build_runner build 
+  mobx_build: flutter pub run build_runner build
   mobx_watch: flutter pub run build_runner watch --delete-conflicting-outputs
