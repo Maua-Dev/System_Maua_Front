@@ -1,20 +1,27 @@
 import 'package:intl/intl.dart';
+import 'package:system_maua_front/app/modules/calendario/enumerates/tipo_evento_enum.dart';
 
-class AvaliacaoModel {
+class EventoModel {
   final String titulo;
   final String descricao;
   late final DateTime? dateTime;
   final String horario;
+  final TipoEventoEnum tipoEventoEnum;
 
-  AvaliacaoModel(
-      {required this.titulo,
+  EventoModel(
+      {required this.tipoEventoEnum,
+      required this.titulo,
       required this.descricao,
       this.dateTime,
       required this.horario});
 
-  factory AvaliacaoModel.newInstance() {
-    return AvaliacaoModel(
-        titulo: '', descricao: '', dateTime: null, horario: '');
+  factory EventoModel.newInstance() {
+    return EventoModel(
+        titulo: '',
+        descricao: '',
+        dateTime: null,
+        horario: '',
+        tipoEventoEnum: TipoEventoEnum.OUTRO);
   }
 
   String _capitalize(String value) {

@@ -1,9 +1,11 @@
 import 'package:flutter_calendar_carousel/classes/event.dart';
 import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart';
 import 'package:mobx/mobx.dart';
-import 'package:system_maua_front/app/modules/calendario/models/avaliacao_model.dart';
+import 'package:system_maua_front/app/modules/calendario/models/evento_model.dart';
 import 'package:system_maua_front/app/modules/calendario/repositories/calendario_repository_interface.dart';
 import 'package:system_maua_front/app/modules/calendario/widgets/event_map_widget.dart';
+
+import 'enumerates/tipo_evento_enum.dart';
 
 part 'calendario_controller.g.dart';
 
@@ -23,10 +25,10 @@ abstract class _CalendarioControllerBase with Store {
   );
 
   @observable
-  List<AvaliacaoModel> avaliacoes = [];
+  List<EventoModel> avaliacoes = [];
 
   @observable
-  List<AvaliacaoModel> listaEventos = [];
+  List<EventoModel> listaEventos = [];
 
   @observable
   bool isOpen = false;
@@ -64,6 +66,7 @@ abstract class _CalendarioControllerBase with Store {
             title: avaliacoes[i].titulo,
             icon: EventMapWidget(
               day: avaliacoes[i].dateTime!.day.toString(),
+              corAtividade: avaliacoes[i].tipoEventoEnum.color,
             )),
       );
     }

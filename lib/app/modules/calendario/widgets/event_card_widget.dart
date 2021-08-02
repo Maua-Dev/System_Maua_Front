@@ -26,8 +26,9 @@ class _EventCardWidgetState extends State<EventCardWidget>
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
         child: ExpansionPanelList(
+            expandedHeaderPadding: EdgeInsets.symmetric(vertical: 8),
             elevation: 4,
             children: [
               ExpansionPanel(
@@ -45,7 +46,14 @@ class _EventCardWidgetState extends State<EventCardWidget>
                     ],
                   ),
                 ),
-                body: Text(widget.descricao),
+                body: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                  child: Text(
+                    widget.descricao,
+                    textAlign: TextAlign.left,
+                  ),
+                ),
               ),
             ],
             expansionCallback: (i, isExpanded) {

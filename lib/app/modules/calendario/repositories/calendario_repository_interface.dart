@@ -1,5 +1,5 @@
-import 'package:system_maua_front/app/modules/calendario/models/avaliacao_model.dart';
+import 'package:system_maua_front/app/modules/calendario/models/evento_model.dart';
 
 abstract class ICalendarioRepository {
-  Future<List<AvaliacaoModel>> getAvaliacoes();
+  Future<List<EventoModel>> getAvaliacoes();
 }

@@ -30,7 +30,6 @@ class _CalendarioPageState
         child: Padding(
           padding: const EdgeInsets.only(bottom: 24),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Observer(builder: (_) {
                 var calendarCarousel = CalendarCarousel<Event>(
@@ -71,21 +70,25 @@ class _CalendarioPageState
                   ),
                 );
                 return Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 8.0, vertical: 20.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: calendarCarousel,
                 );
               }),
               controller.listaEventos.isEmpty
                   ? SizedBox.shrink()
                   : Center(
-                      child: Container(
-                        child: Text(
-                          controller.listaEventos[0].getDiaDaSemana +
-                              '  •  ' +
-                              controller.listaEventos[0].getDataFormatada,
-                          style: AppTextStyles.bodyBold.copyWith(fontSize: 24),
-                          textAlign: TextAlign.center,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 8),
+                        child: Container(
+                          child: Text(
+                            controller.listaEventos[0].getDiaDaSemana +
+                                '  •  ' +
+                                controller.listaEventos[0].getDataFormatada,
+                            style:
+                                AppTextStyles.bodyBold.copyWith(fontSize: 24),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
                     ),

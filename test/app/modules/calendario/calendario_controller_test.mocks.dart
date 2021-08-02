@@ -5,7 +5,7 @@
 import 'dart:async' as _i3;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:system_maua_front/app/modules/calendario/models/avaliacao_model.dart'
+import 'package:system_maua_front/app/modules/calendario/models/evento_model.dart'
     as _i4;
 import 'package:system_maua_front/app/modules/calendario/repositories/calendario_repository_interface.dart'
     as _i2;
@@ -26,9 +26,8 @@ class MockICalendarioRepository extends _i1.Mock
   }
 
   @override
-  _i3.Future<List<_i4.AvaliacaoModel>> getAvaliacoes() => (super.noSuchMethod(
+  _i3.Future<List<_i4.EventoModel>> getAvaliacoes() => (super.noSuchMethod(
           Invocation.method(#getAvaliacoes, []),
-          returnValue:
-              Future<List<_i4.AvaliacaoModel>>.value(<_i4.AvaliacaoModel>[]))
-      as _i3.Future<List<_i4.AvaliacaoModel>>);
+          returnValue: Future<List<_i4.EventoModel>>.value(<_i4.EventoModel>[]))
+      as _i3.Future<List<_i4.EventoModel>>);
 }
