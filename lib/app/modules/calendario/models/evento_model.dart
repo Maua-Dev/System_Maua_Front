@@ -1,12 +1,12 @@
 import 'package:intl/intl.dart';
-import 'package:system_maua_front/app/modules/calendario/enumerates/tipo_evento_enum.dart';
+import 'package:system_maua_front/app/modules/calendario/enumerates/evento_enum.dart';
 
 class EventoModel {
   final String titulo;
   final String descricao;
   late final DateTime? dateTime;
   final String horario;
-  final TipoEventoEnum tipoEventoEnum;
+  final EventoEnum tipoEventoEnum;
 
   EventoModel(
       {required this.tipoEventoEnum,
@@ -21,7 +21,7 @@ class EventoModel {
         descricao: '',
         dateTime: null,
         horario: '',
-        tipoEventoEnum: TipoEventoEnum.OUTRO);
+        tipoEventoEnum: EventoEnum.OUTRO);
   }
 
   String _capitalize(String value) {

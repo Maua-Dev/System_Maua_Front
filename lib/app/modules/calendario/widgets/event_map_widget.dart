@@ -9,13 +9,15 @@ class EventMapWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: CircleAvatar(
-        backgroundColor: corAtividade,
-        child: Text(
-          day,
-          style: TextStyle(color: Colors.black),
-          textAlign: TextAlign.center,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 1),
+      child: Container(
+        height: 8,
+        width: 8,
+        decoration: BoxDecoration(
+          color: corAtividade,
+          shape: BoxShape.rectangle,
+          borderRadius: BorderRadius.all(Radius.circular(8.0)),
         ),
       ),
     );

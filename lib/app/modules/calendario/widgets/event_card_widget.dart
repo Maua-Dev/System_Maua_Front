@@ -6,7 +6,8 @@ class EventCardWidget extends StatefulWidget {
   final String horario;
   final String descricao;
   final Function()? onPressed;
-  late bool isOpen;
+  final Color corEvento;
+  final bool isOpen;
 
   EventCardWidget({
     Key? key,
@@ -15,18 +16,18 @@ class EventCardWidget extends StatefulWidget {
     this.onPressed,
     required this.isOpen,
     required this.descricao,
+    required this.corEvento,
   }) : super(key: key);
 
   @override
   _EventCardWidgetState createState() => _EventCardWidgetState();
 }
 
-class _EventCardWidgetState extends State<EventCardWidget>
-    with SingleTickerProviderStateMixin {
+class _EventCardWidgetState extends State<EventCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 8),
         child: ExpansionPanelList(
             expandedHeaderPadding: EdgeInsets.symmetric(vertical: 8),
             elevation: 4,
@@ -35,13 +36,26 @@ class _EventCardWidgetState extends State<EventCardWidget>
                 canTapOnHeader: true,
                 isExpanded: widget.isOpen,
                 headerBuilder: (context, isExpanded) => Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        widget.titulo + ' - ' + widget.horario,
-                        style: AppTextStyles.bodyBold,
+                      Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: Container(
+                          height: 12,
+                          width: 12,
+                          decoration: BoxDecoration(
+                              color: widget.corEvento,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(30))),
+                        ),
+                      ),
+                      Expanded(
+                        child: Text(
+                          widget.titulo + ' - ' + widget.horario,
+                          style: AppTextStyles.bodyBold,
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ],
                   ),
@@ -51,15 +65,14 @@ class _EventCardWidgetState extends State<EventCardWidget>
                       const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                   child: Text(
                     widget.descricao,
+                    style: AppTextStyles.body.copyWith(fontSize: 16),
                     textAlign: TextAlign.left,
                   ),
                 ),
               ),
             ],
             expansionCallback: (i, isExpanded) {
-              setState(() {
-                widget.isOpen = !widget.isOpen;
-              });
+              widget.onPressed!();
             }));
   }
 }

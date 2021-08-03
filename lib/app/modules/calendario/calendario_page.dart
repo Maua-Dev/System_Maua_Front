@@ -9,6 +9,8 @@ import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.d
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
+import 'enumerates/evento_enum.dart';
+
 class CalendarioPage extends StatefulWidget {
   CalendarioPage({Key? key}) : super(key: key);
 
@@ -28,7 +30,7 @@ class _CalendarioPageState
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 24),
+          padding: const EdgeInsets.only(bottom: 32),
           child: Column(
             children: [
               Observer(builder: (_) {
@@ -36,28 +38,26 @@ class _CalendarioPageState
                   locale: 'pt-BR',
                   onDayPressed: (DateTime date, List<Event> events) {
                     controller.setDate(date);
-                    controller.setListaEventos(date);
+                    controller.setListaEventos();
                     setState(() {});
                   },
-                  selectedDayButtonColor: AppColors.button,
-                  selectedDayTextStyle: TextStyle(color: Colors.black),
+                  selectedDayButtonColor: Colors.blue.shade700,
+                  selectedDayTextStyle: TextStyle(color: Colors.white),
                   weekendTextStyle: TextStyle(color: Colors.red),
                   daysTextStyle: TextStyle(color: Colors.black),
                   nextDaysTextStyle: TextStyle(color: Colors.grey),
                   prevDaysTextStyle: TextStyle(color: Colors.grey),
-                  weekdayTextStyle: TextStyle(color: Colors.grey),
-                  height: MediaQuery.of(context).size.height * 0.52,
+                  weekdayTextStyle: AppTextStyles.appBarHomeTitle
+                      .copyWith(color: AppColors.strongLetter, fontSize: 18),
+                  height: MediaQuery.of(context).size.height * 0.54,
                   selectedDateTime: controller.selectedDateTime,
                   markedDatesMap: controller.markedDateMap,
-                  markedDateIconBuilder: (event) {
-                    return event.icon;
-                  },
                   headerTextStyle: AppTextStyles.appBarHomeTitle
                       .copyWith(color: AppColors.strongLetter),
-                  markedDateShowIcon: true,
                   markedDateIconMaxShown: 1,
-                  markedDateMoreShowTotal: null,
                   todayButtonColor: Color(0x00000000),
+                  todayTextStyle: TextStyle(color: Colors.black),
+                  markedDateIconBuilder: (event) => event.icon,
                   leftButtonIcon: Icon(
                     Icons.arrow_back,
                     color: AppColors.strongLetter,
@@ -70,7 +70,7 @@ class _CalendarioPageState
                   ),
                 );
                 return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: calendarCarousel,
                 );
               }),
@@ -101,15 +101,19 @@ class _CalendarioPageState
                     titulo: controller.listaEventos[index].titulo,
                     horario: controller.listaEventos[index].horario,
                     descricao: controller.listaEventos[index].descricao,
-                    isOpen: controller.isOpen,
-                    onPressed: controller.trocaOpen,
+                    corEvento:
+                        controller.listaEventos[index].tipoEventoEnum.color,
+                    isOpen: controller.isOpen[index],
+                    onPressed: () {
+                      controller.trocaOpen(index);
+                      setState(() {});
+                    },
                   )),
                 ),
               ),
             ],
           ),
         ),
-        // DetalhesAvaliação();
       ),
     ));
   }

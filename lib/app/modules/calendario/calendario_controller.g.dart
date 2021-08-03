@@ -59,13 +59,13 @@ mixin _$CalendarioController on _CalendarioControllerBase, Store {
   final _$isOpenAtom = Atom(name: '_CalendarioControllerBase.isOpen');
 
   @override
-  bool get isOpen {
+  List<bool> get isOpen {
     _$isOpenAtom.reportRead();
     return super.isOpen;
   }
 
   @override
-  set isOpen(bool value) {
+  set isOpen(List<bool> value) {
     _$isOpenAtom.reportWrite(value, super.isOpen, () {
       super.isOpen = value;
     });
@@ -87,14 +87,6 @@ mixin _$CalendarioController on _CalendarioControllerBase, Store {
     });
   }
 
-  final _$trocaOpenAsyncAction =
-      AsyncAction('_CalendarioControllerBase.trocaOpen');
-
-  @override
-  Future<void> trocaOpen() {
-    return _$trocaOpenAsyncAction.run(() => super.trocaOpen());
-  }
-
   final _$getAvaliacoesAsyncAction =
       AsyncAction('_CalendarioControllerBase.getAvaliacoes');
 
@@ -105,6 +97,17 @@ mixin _$CalendarioController on _CalendarioControllerBase, Store {
 
   final _$_CalendarioControllerBaseActionController =
       ActionController(name: '_CalendarioControllerBase');
+
+  @override
+  void setIsOpen() {
+    final _$actionInfo = _$_CalendarioControllerBaseActionController
+        .startAction(name: '_CalendarioControllerBase.setIsOpen');
+    try {
+      return super.setIsOpen();
+    } finally {
+      _$_CalendarioControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
 
   @override
   void setDate(DateTime date) {
@@ -118,11 +121,22 @@ mixin _$CalendarioController on _CalendarioControllerBase, Store {
   }
 
   @override
-  void setListaEventos(DateTime date) {
+  void trocaOpen(int index) {
+    final _$actionInfo = _$_CalendarioControllerBaseActionController
+        .startAction(name: '_CalendarioControllerBase.trocaOpen');
+    try {
+      return super.trocaOpen(index);
+    } finally {
+      _$_CalendarioControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void setListaEventos() {
     final _$actionInfo = _$_CalendarioControllerBaseActionController
         .startAction(name: '_CalendarioControllerBase.setListaEventos');
     try {
-      return super.setListaEventos(date);
+      return super.setListaEventos();
     } finally {
       _$_CalendarioControllerBaseActionController.endAction(_$actionInfo);
     }
