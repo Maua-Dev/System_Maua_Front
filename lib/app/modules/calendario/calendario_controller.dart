@@ -49,24 +49,33 @@ abstract class _CalendarioControllerBase with Store {
 
   @action
   void trocaOpen(int index) {
-    isOpen[index] = !isOpen[index];
+    var listaIsOpen = List<bool>.from(isOpen);
+    listaIsOpen[index] = !listaIsOpen[index];
+    isOpen = listaIsOpen;
   }
 
   @action
   void setListaEventos() {
-    listaEventos.clear();
+    var list = <EventoModel>[];
+
     for (var i = 0; i < avaliacoes.length; i++) {
       if (avaliacoes[i].dateTime == selectedDateTime) {
-        listaEventos.add(avaliacoes[i]);
+        list.add(avaliacoes[i]);
       }
     }
+    listaEventos = list;
     setIsOpen();
+    print(isOpen.length);
+    print(listaEventos.length);
   }
 
   @action
   void mapEvents() {
+    var list = EventList<Event>(
+      events: {},
+    );
     for (var i = 0; i < avaliacoes.length; i++) {
-      markedDateMap.add(
+      list.add(
         avaliacoes[i].dateTime!,
         Event(
           date: avaliacoes[i].dateTime!,
@@ -78,6 +87,7 @@ abstract class _CalendarioControllerBase with Store {
         ),
       );
     }
+    markedDateMap = list;
   }
 
   @action
