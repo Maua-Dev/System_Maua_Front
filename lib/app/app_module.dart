@@ -23,21 +23,5 @@ class AppModule extends Module {
       '/splash',
       module: SplashModule(),
     ),
-    ModuleRoute(
-      '/avisos',
-      module: HelpAvisosModule(),
-    ),
-    ModuleRoute(
-      '/home',
-      module: HomeAlunoModule(),
-    ),
-    ModuleRoute(
-      '/splash',
-      module: SplashModule(),
-    ),
-    ModuleRoute(
-      '/help',
-      module: HelpAlunoModule(),
-    ),
   ];
 }
