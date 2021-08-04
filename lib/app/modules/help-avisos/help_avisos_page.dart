@@ -13,8 +13,8 @@ class HelpAvisosPage extends StatefulWidget {
   HelpAvisosPageState createState() => HelpAvisosPageState();
 }
 
-class HelpAvisosPageState extends State<HelpAvisosPage> {
-  final HelpAvisosController store = Modular.get();
+class HelpAvisosPageState
+    extends ModularState<HelpAvisosPage, HelpAvisosController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,8 +22,8 @@ class HelpAvisosPageState extends State<HelpAvisosPage> {
         title: 'Avisos',
         icon: Icons.help_outline_outlined,
       ),
-      body: ListView(
-        children: <Widget>[
+      body: Column(
+        children: [
           Center(
             child: Padding(
               padding: const EdgeInsets.all(10.0),
@@ -42,18 +42,16 @@ class HelpAvisosPageState extends State<HelpAvisosPage> {
               ),
             ),
           ),
-          AvisosCard(
-            data: '31/08',
-            titulo: 'Provas',
-            descricao:
-                'Gostariamos de dizer que as datas de provas foram adiadas por conta do covid, devido a isso tudo ocorrera remotamente',
+          Expanded(
+            child: ListView.builder(
+              itemCount: controller.avisos.length,
+              itemBuilder: (context, index) => AvisosCard(
+                data: controller.avisos[index].data,
+                titulo: controller.avisos[index].titulo,
+                descricao: controller.avisos[index].descricao,
+              ),
+            ),
           ),
-          AvisosCard(
-            data: '32/18',
-            titulo: 'Provaas subs p4',
-            descricao:
-                'Gostariamos de dizer que as datas de provas foram adiadas por conta do covid, devido a isso tudo ocorrera remotamente',
-          )
         ],
       ),
     );

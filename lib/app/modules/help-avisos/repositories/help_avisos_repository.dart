@@ -13,26 +13,8 @@ class HelpAvisosRepository extends IHelpAvisosRepository {
         descricao: 'Bora voltar meu povo...')
   ];
 
-  // @override
-  // Future<String> getInformacaoData() async {
-  //   return Future.value(listAvisos.where((element) => true).first.data);
-  // }
-
   @override
-  Future<int> getInformacaoDescricao() {
-    // TODO: implement getInformacaoDescricao
-    throw UnimplementedError();
-  }
-
-  @override
-  Future<int> getInformacaoTitulo() {
-    // TODO: implement getInformacaoTitulo
-    throw UnimplementedError();
-  }
-
-  @override
-  Future<int> getInformacaoData() {
-    // TODO: implement getInformacaoData
-    throw UnimplementedError();
+  Future<List<AvisosModel>> getInformacaoAvisos() async {
+    return Future.value(listAvisos);
   }
 }
