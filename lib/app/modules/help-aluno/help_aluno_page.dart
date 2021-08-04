@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:system_maua_front/app/modules/help-aluno/help_aluno_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/modules/help-aluno/widgets/help_card.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
@@ -16,8 +15,7 @@ class HelpAlunoPage extends StatefulWidget {
 
 var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
 
-class _HelpAlunoPageState
-    extends ModularState<HelpAlunoPage, HelpAlunoController> {
+class _HelpAlunoPageState extends State<HelpAlunoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +38,7 @@ class _HelpAlunoPageState
           HelpCard(onPressed: () {}, title: 'Mapa Digital'),
           HelpCard(onPressed: () {}, title: 'FAQ'),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.08,
+            height: 16,
           ),
         ],
       ),
