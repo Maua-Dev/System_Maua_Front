@@ -33,9 +33,11 @@ class BottomNavigationBarWidget extends StatelessWidget {
                       Modular.to.navigate('/home');
                     }),
                 IconButtonCustomWidget(
-                    size: MediaQuery.of(context).size.height * 0.044,
-                    icon: Icon(Icons.date_range),
-                    onPressed: () {}),
+                    size: MediaQuery.of(context).size.height * 0.04,
+                    icon: Icon(Icons.calendar_today),
+                    onPressed: () {
+                      Modular.to.pushNamed('/calendario');
+                    }),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: SizedBox(),
@@ -82,9 +84,11 @@ class BottomNavigationBarWidget extends StatelessWidget {
                             Modular.to.navigate('/home');
                           }),
                       IconButtonCustomWidget(
-                          size: MediaQuery.of(context).size.height * 0.044,
-                          icon: Icon(Icons.date_range),
-                          onPressed: () {}),
+                          size: MediaQuery.of(context).size.height * 0.04,
+                          icon: Icon(Icons.calendar_today),
+                          onPressed: () {
+                            Modular.to.pushNamed('/calendario');
+                          }),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: SizedBox(),

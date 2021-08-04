@@ -30,6 +30,7 @@ class _CalendarioCustomWidgetState extends State<CalendarioCustomWidget> {
         widget.setDate(date);
         widget.setListaEventos();
       },
+      isScrollable: false,
       selectedDayButtonColor: Colors.blue.shade700,
       selectedDayTextStyle: TextStyle(color: Colors.white),
       weekendTextStyle: TextStyle(color: Colors.red),
@@ -38,12 +39,12 @@ class _CalendarioCustomWidgetState extends State<CalendarioCustomWidget> {
       prevDaysTextStyle: TextStyle(color: Colors.grey),
       weekdayTextStyle: AppTextStyles.appBarHomeTitle
           .copyWith(color: AppColors.strongLetter, fontSize: 18),
-      height: MediaQuery.of(context).size.height * 0.54,
+      height: MediaQuery.of(context).size.height < 600 ? 330 : 380,
       selectedDateTime: widget.selectedDateTime,
       markedDatesMap: widget.markedDateMap,
       headerTextStyle:
           AppTextStyles.appBarHomeTitle.copyWith(color: AppColors.strongLetter),
-      markedDateIconMaxShown: 1,
+      markedDateIconMaxShown: 2,
       todayButtonColor: Color(0x00000000),
       todayTextStyle: TextStyle(color: Colors.black),
       markedDateIconBuilder: (event) => event.icon,

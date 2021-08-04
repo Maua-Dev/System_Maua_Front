@@ -14,21 +14,51 @@ void main() {
   late CalendarioController calendarioController;
   var avaliacoesTeste = [
     EventoModel(
-        titulo: 'Prova Química',
-        horario: '15h',
-        descricao: '',
+        titulo: 'Atividade II Moodle dale',
+        descricao: 'Sala H205, Matéria: Hidrostática',
+        dateTime: DateTime(2021, 08, 02),
+        horario: '13h',
         tipoEventoEnum: EventoEnum.CURSO),
     EventoModel(
-        titulo: 'Prova Química',
-        horario: '15h',
-        descricao: '',
+        titulo: 'Prova de Física II',
+        descricao:
+            'Sala H205, Matéria: Hidrostática Sala H205, Matéria: Hidrostática Sala H205, Matéria: Hidrostática Sala H205, Matéria: Hidrostática Sala H205, Matéria: Hidrostática',
+        dateTime: DateTime(2021, 08, 03),
+        horario: '13h',
         tipoEventoEnum: EventoEnum.CURSO),
     EventoModel(
-        titulo: 'Prova Química',
-        horario: '15h',
-        descricao: '',
-        tipoEventoEnum: EventoEnum.CURSO),
+        titulo: 'Prova de Física II',
+        descricao: 'Sala H205, Matéria: Hidrostática',
+        dateTime: DateTime(2021, 08, 03),
+        horario: '13h',
+        tipoEventoEnum: EventoEnum.SITE),
+    EventoModel(
+        titulo: 'Prova de Física II',
+        descricao: 'Sala H205, Matéria: Hidrostática',
+        dateTime: DateTime(2021, 08, 03),
+        horario: '13h',
+        tipoEventoEnum: EventoEnum.SITE),
+    EventoModel(
+        titulo: 'Prova de Física II',
+        descricao: 'Sala H205, Matéria: Hidrostática',
+        dateTime: DateTime(2021, 08, 05),
+        horario: '13h',
+        tipoEventoEnum: EventoEnum.GRUPO),
+    EventoModel(
+        titulo: 'Prova de Física II',
+        descricao: 'Sala H205, Matéria: Hidrostática',
+        dateTime: DateTime(2021, 08, 03),
+        horario: '13h',
+        tipoEventoEnum: EventoEnum.SITE),
+    EventoModel(
+        titulo: 'Prova de Física II',
+        descricao: 'Sala H205, Matéria: Hidrostática',
+        dateTime: DateTime(2021, 08, 06),
+        horario: '13h',
+        tipoEventoEnum: EventoEnum.CATEGORIA),
   ];
+
+  var dateTimeTeste = DateTime(2021, 11, 20);
 
   setUpAll(() {
     when(repository.getAvaliacoes()).thenAnswer((_) async => avaliacoesTeste);
@@ -40,40 +70,23 @@ void main() {
     expect(calendarioController.avaliacoes, avaliacoesTeste);
   });
 
+  test('[TEST] - setListaEventos', () async {
+    calendarioController.setListaEventos();
+    expect(calendarioController.listEventoPanel.isNotEmpty, true);
+  });
+
+  test('[TEST] - trocaOpen', () {
+    calendarioController.trocaOpen(0);
+    expect(calendarioController.listEventoPanel[0].isOpen, true);
+  });
+
   test('[TEST] - mapEvents', () {
-    calendarioController.avaliacoes = [
-      EventoModel(
-          titulo: 'Prova de Física II',
-          descricao: 'Sala H205, Matéria: Hidrostática',
-          dateTime: DateTime(2021, 08, 02),
-          horario: '13h',
-          tipoEventoEnum: EventoEnum.CURSO),
-      EventoModel(
-          titulo: 'Prova de Física II',
-          descricao: 'Sala H205, Matéria: Hidrostática',
-          dateTime: DateTime(2021, 08, 03),
-          horario: '13h',
-          tipoEventoEnum: EventoEnum.CURSO),
-      EventoModel(
-          titulo: 'Prova de Física II',
-          descricao: 'Sala H205, Matéria: Hidrostática',
-          dateTime: DateTime(2021, 08, 04),
-          horario: '13h',
-          tipoEventoEnum: EventoEnum.CURSO),
-      EventoModel(
-          titulo: 'Prova de Física II',
-          descricao: 'Sala H205, Matéria: Hidrostática',
-          dateTime: DateTime(2021, 08, 05),
-          horario: '13h',
-          tipoEventoEnum: EventoEnum.CURSO),
-      EventoModel(
-          titulo: 'Prova de Física II',
-          descricao: 'Sala H205, Matéria: Hidrostática',
-          dateTime: DateTime(2021, 08, 06),
-          horario: '13h',
-          tipoEventoEnum: EventoEnum.CURSO),
-    ];
     calendarioController.mapEvents();
     expect(calendarioController.markedDateMap.events.isNotEmpty, true);
+  });
+
+  test('[TEST] - setDate', () {
+    calendarioController.setDate(dateTimeTeste);
+    expect(calendarioController.selectedDateTime, dateTimeTeste);
   });
 }
