@@ -1,8 +1,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/help-avisos/help_avisos_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:system_maua_front/app/modules/help-avisos/widgets/aviso_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
-import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class HelpAvisosPage extends StatefulWidget {
@@ -15,7 +15,6 @@ class HelpAvisosPage extends StatefulWidget {
 
 class HelpAvisosPageState extends State<HelpAvisosPage> {
   final HelpAvisosController store = Modular.get();
-  bool checkedValue = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,52 +42,18 @@ class HelpAvisosPageState extends State<HelpAvisosPage> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-              height: MediaQuery.of(context).size.height * 0.08,
-              child: ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    Modular.to.navigate('/home');
-                  });
-                },
-                style: ElevatedButton.styleFrom(primary: AppColors.white),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.calendar_today,
-                            color: Colors.black,
-                            size: 20,
-                          ),
-                          Text(
-                            '31/07',
-                            style: TextStyle(color: Colors.black, fontSize: 20),
-                          )
-                        ],
-                      ),
-                    ),
-                    Text(
-                      'Comunicado sobre as provas',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                    Checkbox(
-                      value: checkedValue,
-                      onChanged: (checkedValue) =>
-                          setState(() => this.checkedValue = checkedValue!),
-                      // checkColor: Colors.black,
-                      activeColor: Colors.black,
-                    )
-                  ],
-                ),
-              ),
-            ),
+          AvisosCard(
+            data: '31/08',
+            titulo: 'Provas',
+            descricao:
+                'Gostariamos de dizer que as datas de provas foram adiadas por conta do covid, devido a isso tudo ocorrera remotamente',
           ),
+          AvisosCard(
+            data: '32/18',
+            titulo: 'Provaas subs p4',
+            descricao:
+                'Gostariamos de dizer que as datas de provas foram adiadas por conta do covid, devido a isso tudo ocorrera remotamente',
+          )
         ],
       ),
     );
