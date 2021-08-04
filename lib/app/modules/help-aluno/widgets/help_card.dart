@@ -13,18 +13,20 @@ class HelpCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
-        width: MediaQuery.of(context).size.width * 0.8,
-        height: MediaQuery.of(context).size.height * 0.08,
-        margin: const EdgeInsets.only(left: 50, right: 50, top: 20),
-        child: ElevatedButton(
-          onPressed: onPressed,
-          style: ElevatedButton.styleFrom(
-            primary: AppColors.white,
-          ),
-          child: Text(
-            '$title',
-            style: AppTextStyles.body,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        child: Container(
+          width: MediaQuery.of(context).size.width * 0.8,
+          height: MediaQuery.of(context).size.height * 0.08,
+          child: ElevatedButton(
+            onPressed: onPressed,
+            style: ElevatedButton.styleFrom(
+              primary: AppColors.white,
+            ),
+            child: Text(
+              '$title',
+              style: AppTextStyles.body,
+            ),
           ),
         ),
       ),
