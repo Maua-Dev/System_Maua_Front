@@ -46,7 +46,7 @@ class _CalendarioPageState
                 // future: controller.getAvaliacoes(),
               ),
               Observer(
-                builder: (context) => controller.listaEventos.isEmpty
+                builder: (context) => controller.listEventoPanel.isEmpty
                     ? SizedBox.shrink()
                     : Center(
                         child: Padding(
@@ -54,9 +54,11 @@ class _CalendarioPageState
                               vertical: 8, horizontal: 8),
                           child: Container(
                             child: Text(
-                              controller.listaEventos[0].getDiaDaSemana +
+                              controller.listEventoPanel[0].evento
+                                      .getDiaDaSemana +
                                   '  •  ' +
-                                  controller.listaEventos[0].getDataFormatada,
+                                  controller.listEventoPanel[0].evento
+                                      .getDataFormatada,
                               style:
                                   AppTextStyles.bodyBold.copyWith(fontSize: 24),
                               textAlign: TextAlign.center,
@@ -68,21 +70,22 @@ class _CalendarioPageState
               Observer(builder: (_) {
                 return ListView.builder(
                     shrinkWrap: true,
-                    itemCount: controller.listaEventos.length,
-                    itemBuilder: (context, index) =>
-                        Container(child: Observer(builder: (_) {
-                          return EventCardWidget(
-                            titulo: controller.listaEventos[index].titulo,
-                            horario: controller.listaEventos[index].horario,
-                            descricao: controller.listaEventos[index].descricao,
-                            corEvento: controller
-                                .listaEventos[index].tipoEventoEnum.color,
-                            isOpen: controller.isOpen[index],
-                            onPressed: () {
-                              controller.trocaOpen(index);
-                            },
-                          );
-                        })));
+                    itemCount: controller.listEventoPanel.length,
+                    itemBuilder: (context, index) => Container(
+                            child: EventCardWidget(
+                          titulo:
+                              controller.listEventoPanel[index].evento.titulo,
+                          horario:
+                              controller.listEventoPanel[index].evento.horario,
+                          descricao: controller
+                              .listEventoPanel[index].evento.descricao,
+                          corEvento: controller.listEventoPanel[index].evento
+                              .tipoEventoEnum.color,
+                          isOpen: controller.listEventoPanel[index].isOpen,
+                          onPressed: () {
+                            controller.trocaOpen(index);
+                          },
+                        )));
               }),
             ],
           ),

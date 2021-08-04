@@ -2,6 +2,7 @@ import 'package:flutter_calendar_carousel/classes/event.dart';
 import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart';
 import 'package:mobx/mobx.dart';
 import 'package:system_maua_front/app/modules/calendario/models/evento_model.dart';
+import 'package:system_maua_front/app/modules/calendario/models/evento_panel_model.dart';
 import 'package:system_maua_front/app/modules/calendario/repositories/calendario_repository_interface.dart';
 
 import 'enumerates/evento_enum.dart';
@@ -20,6 +21,9 @@ abstract class _CalendarioControllerBase with Store {
   }
 
   @observable
+  List<EventoPanelModel> listEventoPanel = [];
+
+  @observable
   EventList<Event> markedDateMap = EventList<Event>(
     events: {},
   );
@@ -28,19 +32,8 @@ abstract class _CalendarioControllerBase with Store {
   List<EventoModel> avaliacoes = [];
 
   @observable
-  List<EventoModel> listaEventos = [];
-
-  @observable
-  List<bool> isOpen = [];
-
-  @observable
   DateTime selectedDateTime =
       DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
-
-  @action
-  void setIsOpen() {
-    isOpen = List.filled(listaEventos.length, false);
-  }
 
   @action
   void setDate(DateTime date) {
@@ -49,24 +42,21 @@ abstract class _CalendarioControllerBase with Store {
 
   @action
   void trocaOpen(int index) {
-    var listaIsOpen = List<bool>.from(isOpen);
-    listaIsOpen[index] = !listaIsOpen[index];
-    isOpen = listaIsOpen;
+    var lista = List<EventoPanelModel>.from(listEventoPanel);
+    lista[index].chageStateIsOpen();
+    listEventoPanel = lista;
   }
 
   @action
   void setListaEventos() {
-    var list = <EventoModel>[];
+    var list = <EventoPanelModel>[];
 
     for (var i = 0; i < avaliacoes.length; i++) {
       if (avaliacoes[i].dateTime == selectedDateTime) {
-        list.add(avaliacoes[i]);
+        list.add(EventoPanelModel(evento: avaliacoes[i]));
       }
     }
-    listaEventos = list;
-    setIsOpen();
-    print(isOpen.length);
-    print(listaEventos.length);
+    listEventoPanel = list;
   }
 
   @action
