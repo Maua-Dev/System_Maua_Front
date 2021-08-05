@@ -5,7 +5,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 class LoginModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.lazySingleton((i) => LoginController()),
+    Bind.lazySingleton((i) => LoginController(i())),
   ];
 
   @override

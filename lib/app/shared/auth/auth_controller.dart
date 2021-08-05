@@ -1,15 +1,12 @@
 import 'package:mobx/mobx.dart';
+import 'package:system_maua_front/app/shared/auth/repositories/auth_repository.dart';
 
-part 'auth_store.g.dart';
+part 'auth_controller.g.dart';
 
 class AuthController = _AuthControllerBase with _$AuthController;
 
 abstract class _AuthControllerBase with Store {
-  @observable
-  int value = 0;
+  final AuthRepository repository;
 
-  @action
-  void increment() {
-    value++;
-  }
+  _AuthControllerBase(this.repository);
 }

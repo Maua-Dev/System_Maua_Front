@@ -1,5 +1,5 @@
+import 'package:system_maua_front/app/modules/login/models/user_login_model.dart';
+
 abstract class IAuthRepository {
-  Future getUser();
-  Future getLogIn();
-  Future getEmailPasswordLogIn();
+  Future autenticacaoUsuario(UserLogInModel usuario);
 }
