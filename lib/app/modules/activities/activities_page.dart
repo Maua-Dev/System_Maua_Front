@@ -29,7 +29,7 @@ class _ActivitiesPageState
               Modular.to.navigate('/home');
             },
           ),
-          icon: Icons.list_alt_rounded,
+          icon: Icons.playlist_add_check,
         ),
         body: Container(
           child: Column(
