@@ -1,6 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/help-aluno/help_aluno_module.dart';
 import 'package:system_maua_front/app/modules/help-avisos/help_avisos_module.dart';
+import 'package:system_maua_front/app/modules/calendario/calendario_module.dart';
 import 'package:system_maua_front/app/modules/home-aluno/home_aluno_module.dart';
 import 'package:system_maua_front/app/modules/landing/landing_page.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/mural_divulgacao_module.dart';
@@ -19,7 +20,8 @@ class LandingModule extends Module {
           ModuleRoute('/home', module: HomeAlunoModule()),
           ModuleRoute('/help', module: HelpAlunoModule()),
           ModuleRoute('/avisos', module: HelpAvisosModule()),
-          ModuleRoute('/mural', module: MuralDivulgacaoModule())
+          ModuleRoute('/mural', module: MuralDivulgacaoModule()),
+          ModuleRoute('/calendario', module: CalendarioModule())
         ]),
   ];
 }
