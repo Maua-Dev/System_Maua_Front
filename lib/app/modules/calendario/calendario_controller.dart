@@ -32,8 +32,8 @@ abstract class _CalendarioControllerBase with Store {
   List<EventoModel> avaliacoes = [];
 
   @observable
-  DateTime selectedDateTime = DateTime(
-      DateTime.now().year, DateTime.now().month, DateTime.now().day + 1);
+  DateTime selectedDateTime =
+      DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
 
   @action
   void setDate(DateTime date) {
