@@ -26,4 +26,12 @@ abstract class _LoginStoreController with Store {
       senha: 'teste',
     )
   ];
+
+  @observable
+  bool? isChecked = false;
+
+  @action
+  void setIsChecked(bool? value) {
+    isChecked = value!;
+  }
 }

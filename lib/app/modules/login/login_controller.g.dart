@@ -24,10 +24,40 @@ mixin _$LoginController on _LoginStoreController, Store {
     });
   }
 
+  final _$isCheckedAtom = Atom(name: '_LoginStoreController.isChecked');
+
+  @override
+  bool? get isChecked {
+    _$isCheckedAtom.reportRead();
+    return super.isChecked;
+  }
+
+  @override
+  set isChecked(bool? value) {
+    _$isCheckedAtom.reportWrite(value, super.isChecked, () {
+      super.isChecked = value;
+    });
+  }
+
+  final _$_LoginStoreControllerActionController =
+      ActionController(name: '_LoginStoreController');
+
+  @override
+  void setIsChecked(bool? value) {
+    final _$actionInfo = _$_LoginStoreControllerActionController.startAction(
+        name: '_LoginStoreController.setIsChecked');
+    try {
+      return super.setIsChecked(value);
+    } finally {
+      _$_LoginStoreControllerActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''
-listaUsuarios: ${listaUsuarios}
+listaUsuarios: ${listaUsuarios},
+isChecked: ${isChecked}
     ''';
   }
 }

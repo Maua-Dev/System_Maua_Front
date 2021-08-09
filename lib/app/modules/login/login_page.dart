@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/login/login_controller.dart';
-
+import 'package:system_maua_front/app/shared/themes/app_colors.dart';
+import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
+import 'components/EntrarButtonWidget.dart';
+import 'components/checkBoxWidget.dart';
 import 'login_controller.dart';
 
 class LoginPage extends StatefulWidget {
@@ -13,7 +16,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class LoginPageState extends State<LoginPage> {
-  final LoginController store = Modular.get();
+  final LoginController controller = Modular.get();
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +25,13 @@ class LoginPageState extends State<LoginPage> {
         child: Column(
           children: <Widget>[
             Container(
-              color: Colors.purpleAccent,
-              height: 300,
-              width: 330,
+              height: 292,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(gradient: AppGradients.blueGradient),
+              child: Image.asset('assets/images/logoMaua.png'),
             ),
             SizedBox(
-              height: 32,
+              height: 72,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -35,9 +39,15 @@ class LoginPageState extends State<LoginPage> {
                 onChanged: (text) {},
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Email',
-                    prefixIcon: Icon(Icons.mail)),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  labelStyle: TextStyle(color: AppColors.strongLetter),
+                  labelText: 'Email',
+                  prefixIcon: Icon(
+                    Icons.mail,
+                    color: AppColors.darkBlue,
+                  ),
+                ),
               ),
             ),
             Padding(
@@ -45,22 +55,32 @@ class LoginPageState extends State<LoginPage> {
               child: TextField(
                 obscureText: true,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  labelStyle: TextStyle(color: AppColors.strongLetter),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
                   labelText: 'Senha',
-                  prefixIcon: Icon(Icons.vpn_key),
+                  prefixIcon: Icon(
+                    Icons.vpn_key,
+                    color: AppColors.darkBlue,
+                  ),
                 ),
               ),
             ),
-            Container(
-              width: 180,
-              height: 50,
-              child: ElevatedButton(
-                child: Text('Entrar'),
-                style: ElevatedButton.styleFrom(
-                    onPrimary: Colors.white, primary: Color(0xff025AC8)),
-                onPressed: () {},
+            CheckBoxWidget(controller: controller),
+            SizedBox(
+              height: 72,
+            ),
+            EntrarButtonWidget(),
+            SizedBox(
+              height: 4,
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                'Esqueci minha senha',
+                style: TextStyle(color: AppColors.red),
               ),
-            )
+            ),
           ],
         ),
       ),

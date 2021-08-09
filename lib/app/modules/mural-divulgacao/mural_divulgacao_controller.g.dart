@@ -76,6 +76,38 @@ mixin _$MuralDivulgacaoController on _MuralDivulgacaoControllerBase, Store {
     });
   }
 
+  final _$getCaLengthAsyncAction =
+      AsyncAction('_MuralDivulgacaoControllerBase.getCaLength');
+
+  @override
+  Future<int> getCaLength() {
+    return _$getCaLengthAsyncAction.run(() => super.getCaLength());
+  }
+
+  final _$getVendasLengthAsyncAction =
+      AsyncAction('_MuralDivulgacaoControllerBase.getVendasLength');
+
+  @override
+  Future<int> getVendasLength() {
+    return _$getVendasLengthAsyncAction.run(() => super.getVendasLength());
+  }
+
+  final _$getEquipesLengthAsyncAction =
+      AsyncAction('_MuralDivulgacaoControllerBase.getEquipesLength');
+
+  @override
+  Future<int> getEquipesLength() {
+    return _$getEquipesLengthAsyncAction.run(() => super.getEquipesLength());
+  }
+
+  final _$getEstagioLengthAsyncAction =
+      AsyncAction('_MuralDivulgacaoControllerBase.getEstagioLength');
+
+  @override
+  Future<int> getEstagioLength() {
+    return _$getEstagioLengthAsyncAction.run(() => super.getEstagioLength());
+  }
+
   @override
   String toString() {
     return '''
