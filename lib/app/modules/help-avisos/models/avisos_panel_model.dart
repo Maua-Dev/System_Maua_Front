@@ -1,10 +1,10 @@
 import 'avisos_model.dart';
 
-class AvisosActionModel {
+class AvisosPanelModel {
   bool _isOpen = false;
   final AvisosModel avisos;
 
-  AvisosActionModel({required this.avisos});
+  AvisosPanelModel({required this.avisos});
 
   void changeStateIsOpen() {
     _isOpen = !_isOpen;

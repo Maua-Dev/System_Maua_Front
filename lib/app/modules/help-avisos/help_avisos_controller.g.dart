@@ -28,13 +28,13 @@ mixin _$HelpAvisosController on _HelpAvisosControllerBase, Store {
       Atom(name: '_HelpAvisosControllerBase.avisosAction');
 
   @override
-  List<AvisosActionModel> get avisosAction {
+  List<AvisosPanelModel> get avisosAction {
     _$avisosActionAtom.reportRead();
     return super.avisosAction;
   }
 
   @override
-  set avisosAction(List<AvisosActionModel> value) {
+  set avisosAction(List<AvisosPanelModel> value) {
     _$avisosActionAtom.reportWrite(value, super.avisosAction, () {
       super.avisosAction = value;
     });
