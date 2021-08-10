@@ -66,16 +66,18 @@ void main() {
   });
 
   test('[TEST] - getAvaliacoes', () async {
-    await calendarioController.getAvaliacoes();
     expect(calendarioController.avaliacoes, avaliacoesTeste);
   });
 
   test('[TEST] - setListaEventos', () async {
+    calendarioController.setDate(DateTime(2021, 08, 03));
     calendarioController.setListaEventos();
     expect(calendarioController.listEventoPanel.isNotEmpty, true);
   });
 
   test('[TEST] - trocaOpen', () {
+    calendarioController.setDate(DateTime(2021, 08, 03));
+    calendarioController.setListaEventos();
     calendarioController.trocaOpen(0);
     expect(calendarioController.listEventoPanel[0].isOpen, true);
   });
