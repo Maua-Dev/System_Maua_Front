@@ -35,7 +35,6 @@ abstract class _HelpAvisosControllerBase with Store {
     var lista = List<AvisosPanelModel>.from(avisosAction);
     lista[index].changeStateIsOpen();
     avisosAction = lista;
-    print(avisosAction[index].isOpen);
   }
 
   @action

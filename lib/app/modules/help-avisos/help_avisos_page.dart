@@ -43,10 +43,10 @@ class HelpAvisosPageState
               ),
             ),
           ),
-          Observer(builder: (_) {
-            return Expanded(
-                child: ListView.builder(
-              itemCount: controller.avisos.length,
+          Expanded(child: Observer(builder: (_) {
+            return ListView.builder(
+              shrinkWrap: true,
+              itemCount: controller.avisosAction.length,
               itemBuilder: (context, index) => AvisosCard(
                 data: controller.avisosAction[index].avisos.data,
                 titulo: controller.avisosAction[index].avisos.titulo,
@@ -56,8 +56,8 @@ class HelpAvisosPageState
                   controller.trocaOpen(index);
                 },
               ),
-            ));
-          }),
+            );
+          }))
         ],
       ),
     );
