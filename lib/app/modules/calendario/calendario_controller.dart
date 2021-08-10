@@ -43,7 +43,7 @@ abstract class _CalendarioControllerBase with Store {
   @action
   void trocaOpen(int index) {
     var lista = List<EventoPanelModel>.from(listEventoPanel);
-    lista[index].chageStateIsOpen();
+    lista[index].changeStateIsOpen();
     listEventoPanel = lista;
   }
 

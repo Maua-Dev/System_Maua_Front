@@ -6,7 +6,7 @@ class EventoPanelModel {
 
   EventoPanelModel({required this.evento});
 
-  void chageStateIsOpen() {
+  void changeStateIsOpen() {
     _isOpen = !_isOpen;
   }
 

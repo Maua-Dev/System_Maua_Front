@@ -24,6 +24,22 @@ mixin _$HelpAvisosController on _HelpAvisosControllerBase, Store {
     });
   }
 
+  final _$avisosActionAtom =
+      Atom(name: '_HelpAvisosControllerBase.avisosAction');
+
+  @override
+  List<AvisosActionModel> get avisosAction {
+    _$avisosActionAtom.reportRead();
+    return super.avisosAction;
+  }
+
+  @override
+  set avisosAction(List<AvisosActionModel> value) {
+    _$avisosActionAtom.reportWrite(value, super.avisosAction, () {
+      super.avisosAction = value;
+    });
+  }
+
   final _$getInformacaoAvisosAsyncAction =
       AsyncAction('_HelpAvisosControllerBase.getInformacaoAvisos');
 
@@ -33,10 +49,36 @@ mixin _$HelpAvisosController on _HelpAvisosControllerBase, Store {
         .run(() => super.getInformacaoAvisos());
   }
 
+  final _$_HelpAvisosControllerBaseActionController =
+      ActionController(name: '_HelpAvisosControllerBase');
+
+  @override
+  void setAvisosAction() {
+    final _$actionInfo = _$_HelpAvisosControllerBaseActionController
+        .startAction(name: '_HelpAvisosControllerBase.setAvisosAction');
+    try {
+      return super.setAvisosAction();
+    } finally {
+      _$_HelpAvisosControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void trocaOpen(int index) {
+    final _$actionInfo = _$_HelpAvisosControllerBaseActionController
+        .startAction(name: '_HelpAvisosControllerBase.trocaOpen');
+    try {
+      return super.trocaOpen(index);
+    } finally {
+      _$_HelpAvisosControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''
-avisos: ${avisos}
+avisos: ${avisos},
+avisosAction: ${avisosAction}
     ''';
   }
 }

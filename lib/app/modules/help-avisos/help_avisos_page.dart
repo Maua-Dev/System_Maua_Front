@@ -1,3 +1,4 @@
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/help-avisos/help_avisos_controller.dart';
 import 'package:flutter/material.dart';
@@ -42,16 +43,21 @@ class HelpAvisosPageState
               ),
             ),
           ),
-          Expanded(
-            child: ListView.builder(
+          Observer(builder: (_) {
+            return Expanded(
+                child: ListView.builder(
               itemCount: controller.avisos.length,
               itemBuilder: (context, index) => AvisosCard(
-                data: controller.avisos[index].data,
-                titulo: controller.avisos[index].titulo,
-                descricao: controller.avisos[index].descricao,
+                data: controller.avisosAction[index].avisos.data,
+                titulo: controller.avisosAction[index].avisos.titulo,
+                descricao: controller.avisosAction[index].avisos.descricao,
+                isOpen: controller.avisosAction[index].isOpen,
+                onPressed: () {
+                  controller.trocaOpen(index);
+                },
               ),
-            ),
-          ),
+            ));
+          }),
         ],
       ),
     );
