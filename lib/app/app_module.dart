@@ -1,16 +1,18 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/login/login_module.dart';
 import 'package:system_maua_front/app/modules/splash/splash_module.dart';
-import 'package:system_maua_front/app/shared/auth/repositories/i_auth_repository.dart';
+
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 
+import 'modules/auth/auth_guard.dart';
+import 'modules/auth/auth_module.dart';
 import 'modules/landing/landing_module.dart';
-import 'shared/auth/repositories/auth_repository.dart';
 
 class AppModule extends Module {
   @override
+  final List<Module> imports = [AuthModule()];
+  @override
   final List<Bind> binds = [
-    Bind.lazySingleton((i) => AuthRepository()),
     Bind.lazySingleton((i) => BottomNavigationBarController()),
   ];
 
@@ -23,6 +25,8 @@ class AppModule extends Module {
     ModuleRoute(
       '/',
       module: LandingModule(),
+      guards: [AuthGuard()],
+      guardedRoute: '/login',
     ),
     ModuleRoute(
       '/splash',

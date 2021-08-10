@@ -20,9 +20,7 @@ class CheckBoxWidget extends StatelessWidget {
         Observer(
           builder: (context) => Checkbox(
             value: controller.isChecked,
-            onChanged: (value) {
-              controller.setIsChecked(value);
-            },
+            onChanged: controller.setIsChecked,
             activeColor: AppColors.darkBlue,
             checkColor: AppColors.white,
           ),
