@@ -3,8 +3,8 @@ import 'package:system_maua_front/app/modules/auth/errors/errors.dart';
 import 'auth_repository_interface.dart';
 
 class AuthRepositoryMock implements IAuthRepository {
-  final String _email = 'teste@contato.com';
-  final String _pw = 'testedevmaua';
+  final String _email = 'teste';
+  final String _pw = 'teste';
 
   @override
   Future<String> loginWithEmail(String email, String password) async {

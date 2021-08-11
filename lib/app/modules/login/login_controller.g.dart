@@ -24,6 +24,51 @@ mixin _$LoginController on _LoginController, Store {
     });
   }
 
+  final _$emailAtom = Atom(name: '_LoginController.email');
+
+  @override
+  String get email {
+    _$emailAtom.reportRead();
+    return super.email;
+  }
+
+  @override
+  set email(String value) {
+    _$emailAtom.reportWrite(value, super.email, () {
+      super.email = value;
+    });
+  }
+
+  final _$passwordAtom = Atom(name: '_LoginController.password');
+
+  @override
+  String get password {
+    _$passwordAtom.reportRead();
+    return super.password;
+  }
+
+  @override
+  set password(String value) {
+    _$passwordAtom.reportWrite(value, super.password, () {
+      super.password = value;
+    });
+  }
+
+  final _$isLoggedAtom = Atom(name: '_LoginController.isLogged');
+
+  @override
+  bool get isLogged {
+    _$isLoggedAtom.reportRead();
+    return super.isLogged;
+  }
+
+  @override
+  set isLogged(bool value) {
+    _$isLoggedAtom.reportWrite(value, super.isLogged, () {
+      super.isLogged = value;
+    });
+  }
+
   final _$_LoginControllerActionController =
       ActionController(name: '_LoginController');
 
@@ -39,9 +84,34 @@ mixin _$LoginController on _LoginController, Store {
   }
 
   @override
+  void setEmail(String value) {
+    final _$actionInfo = _$_LoginControllerActionController.startAction(
+        name: '_LoginController.setEmail');
+    try {
+      return super.setEmail(value);
+    } finally {
+      _$_LoginControllerActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void setPassword(String value) {
+    final _$actionInfo = _$_LoginControllerActionController.startAction(
+        name: '_LoginController.setPassword');
+    try {
+      return super.setPassword(value);
+    } finally {
+      _$_LoginControllerActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
-isChecked: ${isChecked}
+isChecked: ${isChecked},
+email: ${email},
+password: ${password},
+isLogged: ${isLogged}
     ''';
   }
 }

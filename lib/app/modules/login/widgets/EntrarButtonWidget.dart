@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 
 class EntrarButtonWidget extends StatelessWidget {
+  final void Function()? onPressed;
   const EntrarButtonWidget({
     Key? key,
+    this.onPressed,
   }) : super(key: key);
 
   @override
@@ -19,7 +21,7 @@ class EntrarButtonWidget extends StatelessWidget {
               primary: AppColors.button,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10))),
-          onPressed: () {},
+          onPressed: onPressed,
           child: Text(
             'Entrar',
             style: TextStyle(fontSize: 18),

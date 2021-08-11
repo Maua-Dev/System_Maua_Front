@@ -6,19 +6,39 @@ part 'login_controller.g.dart';
 class LoginController = _LoginController with _$LoginController;
 
 abstract class _LoginController with Store {
-  final AuthController repository;
+  final AuthController authController;
 
-  _LoginController(this.repository);
+  _LoginController(this.authController);
 
   @observable
   bool isChecked = false;
+
+  @observable
+  String email = '';
+
+  @observable
+  String password = '';
+
+  @observable
+  bool isLogged = false;
 
   @action
   void setIsChecked(bool? value) {
     isChecked = value ?? false;
   }
 
+  @action
+  void setEmail(String value) {
+    email = value;
+  }
+
+  @action
+  void setPassword(String value) {
+    password = value;
+  }
+
   Future<void> login() async {
-    await repository.loginWithEmail('fodac', 'coloca algo aq', isChecked);
+    await authController.loginWithEmail(email, password, isChecked);
+    isLogged = authController.isLogged;
   }
 }
