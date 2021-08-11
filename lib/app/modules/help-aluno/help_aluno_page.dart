@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
+import 'package:system_maua_front/app/modules/help-aluno/enumerates/help_enum.dart';
 import 'package:system_maua_front/app/modules/help-aluno/widgets/help_card.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
@@ -19,29 +20,25 @@ class _HelpAlunoPageState extends State<HelpAlunoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarWidget(
-        title: 'Help',
-        icon: Icons.help_outline_outlined,
-      ),
-      body: ListView(
-        children: [
-          HelpCard(
-              onPressed: () {
-                Modular.to.pushNamed('/avisos');
-              },
-              title: 'Avisos'),
-          HelpCard(onPressed: () {}, title: 'Video tutorial'),
-          HelpCard(onPressed: () {}, title: 'Softwares Disponiveis'),
-          HelpCard(onPressed: () {}, title: 'Bolsas de Estudo'),
-          HelpCard(onPressed: () {}, title: 'Intercambio'),
-          HelpCard(onPressed: () {}, title: 'Estágio'),
-          HelpCard(onPressed: () {}, title: 'Mapa Digital'),
-          HelpCard(onPressed: () {}, title: 'FAQ'),
-          SizedBox(
-            height: 16,
-          ),
-        ],
-      ),
-    );
+        appBar: AppBarWidget(
+          title: 'Help',
+          icon: Icons.help_outline_outlined,
+        ),
+        body: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemBuilder: (context, index) => HelpCard(
+                    title: HelpEnum.values[index].titulo,
+                    onPressed: () =>
+                        Modular.to.pushNamed(HelpEnum.values[index].pushNamed)),
+                itemCount: HelpEnum.values.length,
+              ),
+            ),
+            SizedBox(
+              height: 16,
+            )
+          ],
+        ));
   }
 }

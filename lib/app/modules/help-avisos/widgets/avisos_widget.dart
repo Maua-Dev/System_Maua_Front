@@ -29,7 +29,9 @@ class _AvisosCardState extends State<AvisosCard> {
     return Padding(
         padding: const EdgeInsets.all(10.0),
         child: ExpansionPanelList(
+            animationDuration: Duration(seconds: 1),
             elevation: 4,
+            expandedHeaderPadding: EdgeInsets.all(8),
             children: [
               ExpansionPanel(
                 canTapOnHeader: true,
@@ -53,16 +55,22 @@ class _AvisosCardState extends State<AvisosCard> {
                         ],
                       ),
                     ),
-                    Text(
-                      widget.titulo,
-                      style: TextStyle(color: Colors.black),
+                    SizedBox(
+                      width: 16,
+                    ),
+                    Expanded(
+                      child: Text(
+                        widget.titulo,
+                        style: TextStyle(color: Colors.black),
+                      ),
                     ),
                   ],
                 ),
-                body: Container(
+                body: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 8),
                   child: Text(
                     widget.descricao,
-                    style: AppTextStyles.lightBody,
+                    style: AppTextStyles.lightBody.copyWith(fontSize: 16),
                     textAlign: TextAlign.left,
                   ),
                 ),

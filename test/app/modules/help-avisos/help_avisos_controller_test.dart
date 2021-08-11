@@ -25,8 +25,15 @@ void main() {
     when(repository.getInformacaoAvisos()).thenAnswer((_) async => avisosTeste);
     controller = HelpAvisosController(repository);
   });
+
   test('[TEST] - getInformacoesAvisos', () async {
     await controller.getInformacaoAvisos();
     expect(controller.avisos.isNotEmpty, true);
+  });
+
+  test('[TEST] - trocaOpen', () {
+    controller.setAvisosAction();
+    controller.trocaOpen(0);
+    expect(controller.avisosAction[0].isOpen, true);
   });
 }
