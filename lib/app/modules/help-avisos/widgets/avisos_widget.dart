@@ -40,19 +40,23 @@ class _AvisosCardState extends State<AvisosCard> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.calendar_today,
-                            color: Colors.black,
-                            size: 20,
-                          ),
-                          Text(
-                            widget.data,
-                            style: TextStyle(color: Colors.black, fontSize: 20),
-                          )
-                        ],
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.calendar_today,
+                              color: Colors.black,
+                              size: 20,
+                            ),
+                            Text(
+                              widget.data,
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 20),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
