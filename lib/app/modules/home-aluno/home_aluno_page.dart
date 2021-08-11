@@ -4,6 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/shared/components/app_bar_home/app_bar_home_widget.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
+import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 
 import 'home_aluno_controller.dart';
 
@@ -30,6 +31,45 @@ class _HomeAlunoPageState
             local: controller.aula.local,
           );
         }),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.27,
+        ),
+        Expanded(
+          child: ListView.builder(
+            itemCount: 1,
+            itemBuilder: (BuildContext context, int index) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: Material(
+                    color: AppColors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    child: InkWell(
+                      onTap: () {
+                        Modular.to.navigate('/activities');
+                      },
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.12,
+                        child: Center(
+                            child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.playlist_add_check,
+                              size: 40,
+                              color: AppColors.thinLetter,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text('Entregas da semana'),
+                          ],
+                        )),
+                      ),
+                    )),
+              );
+            },
+          ),
+        )
       ],
     );
   }

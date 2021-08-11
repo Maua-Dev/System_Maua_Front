@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
 import 'package:system_maua_front/app/shared/themes/app_images.dart';
-import '../../shared/themes/app_colors.dart';
 
 class SplashPage extends StatelessWidget {
   SplashPage() {
@@ -16,7 +16,9 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.darkBlue,
+      decoration: BoxDecoration(
+        gradient: AppGradients.blueGradient,
+      ),
       key: ValueKey('Splash'),
       child: Center(
         child: AppImages.logoImage,
