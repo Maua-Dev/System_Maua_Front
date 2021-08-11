@@ -32,8 +32,12 @@ void main() {
   });
 
   test('[TEST] - trocaOpen', () {
-    controller.setAvisosAction();
     controller.trocaOpen(0);
     expect(controller.avisosAction[0].isOpen, true);
+  });
+
+  test('[TEST] - setAvisosAction', () async {
+    controller.setAvisosAction();
+    expect(controller.avisosAction.isNotEmpty, true);
   });
 }
