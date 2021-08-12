@@ -8,7 +8,9 @@ class AuthGuard implements RouteGuard {
   Future<bool> canActivate(String path, ModularRoute router) async {
     await Modular.isModuleReady<AppModule>();
     var authController = Modular.get<AuthController>();
-    await authController.refreshToken();
+    if (!authController.isLogged) {
+      await authController.refreshToken();
+    }
     return authController.isLogged;
   }
 
