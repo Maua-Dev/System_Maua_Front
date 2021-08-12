@@ -9,6 +9,7 @@ class MateriasApresentacaoController = _MateriasApresentacaoControllerBase
 
 abstract class _MateriasApresentacaoControllerBase with Store {
   final IMateriasApresentacaoRepository repository;
-
-  _MateriasApresentacaoControllerBase(this.repository);
+  final String codigoMateria;
+  _MateriasApresentacaoControllerBase(
+      {required this.repository, required this.codigoMateria});
 }

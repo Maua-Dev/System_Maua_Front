@@ -32,11 +32,15 @@ class _MateriasPageState
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: controller.materias.length,
                 itemBuilder: (context, index) {
+                  var item = controller.materias[index];
                   return MateriaCardWidget(
-                    nomeMateria: controller.materias[index].nome.name,
+                    onTap: () {
+                      controller.navigateToApresentacao(item.codigoMateria);
+                    },
+                    nomeMateria: item.nome.name,
                     listaFotosProfessores:
                         controller.getFotosProfessores(index),
-                    fotoMateria: controller.materias[index].foto,
+                    fotoMateria: item.foto,
                   );
                 },
               ),

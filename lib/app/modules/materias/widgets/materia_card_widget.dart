@@ -6,11 +6,13 @@ class MateriaCardWidget extends StatelessWidget {
   final String nomeMateria;
   final List<String>? listaFotosProfessores;
   final String fotoMateria;
+  final void Function()? onTap;
   const MateriaCardWidget(
       {Key? key,
       required this.nomeMateria,
       this.listaFotosProfessores,
-      required this.fotoMateria})
+      required this.fotoMateria,
+      this.onTap})
       : super(key: key);
 
   @override
@@ -18,7 +20,7 @@ class MateriaCardWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       child: GestureDetector(
-        onTap: () {},
+        onTap: onTap,
         child: Container(
           height: MediaQuery.of(context).size.height * 0.16,
           decoration: BoxDecoration(
