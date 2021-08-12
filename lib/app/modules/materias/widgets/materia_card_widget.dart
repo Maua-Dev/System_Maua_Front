@@ -43,9 +43,11 @@ class MateriaCardWidget extends StatelessWidget {
                   child: Padding(
                     padding:
                         const EdgeInsets.only(left: 8, right: 8, bottom: 8),
-                    child: Text(
-                      nomeMateria,
-                      textAlign: TextAlign.center,
+                    child: Center(
+                      child: Text(
+                        nomeMateria,
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
                 ),
