@@ -47,4 +47,9 @@ void main() {
     await materiasController.getMaterias();
     expect(materiasController.materias, materiasTeste);
   });
+
+  test('[TEST] - getFotosProfessores', () {
+    var teste = materiasController.getFotosProfessores(0);
+    expect(teste.length, materiasTeste[0].professores!.length);
+  });
 }
