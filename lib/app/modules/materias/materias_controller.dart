@@ -16,18 +16,16 @@ abstract class MateriasControllerBase with Store {
   @observable
   List<MateriasModel> materias = <MateriasModel>[];
 
-  @observable
-  List<String> fotosProfessores = <String>[];
-
   @action
-  void setFotosProfessores(int index) {
-    var lista = <String>[];
+  List<String> getFotosProfessores(int index) {
+    var fotosProfessores = <String>[];
     if (materias[index].professores != null) {
       for (var i = 0; i < materias[index].professores!.length; i++) {
-        lista.add(materias[index].professores![i].foto);
+        fotosProfessores.add(materias[index].professores![i].foto);
       }
-      fotosProfessores = lista;
+      return fotosProfessores;
     }
+    return [];
   }
 
   @action

@@ -34,7 +34,8 @@ class _MateriasPageState
                 itemBuilder: (context, index) {
                   return MateriaCardWidget(
                     nomeMateria: controller.materias[index].nome.name,
-                    listaFotosProfessores: controller.fotosProfessores,
+                    listaFotosProfessores:
+                        controller.getFotosProfessores(index),
                     fotoMateria: controller.materias[index].foto,
                   );
                 },
