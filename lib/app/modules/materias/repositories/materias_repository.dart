@@ -8,8 +8,7 @@ class MateriasRepository implements IMateriasRepository {
   var listaMaterias = [
     MateriasModel(
         nome: TipoMateriaEnum.ACADEMIATALENTOS,
-        foto:
-            'https://www.contabeis.com.br/assets/img/news/dc7f7a5aa93d4fc89c6edd19df58ea4a.jpg',
+        foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
         professores: [
           ProfessoresModel(
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
@@ -20,8 +19,7 @@ class MateriasRepository implements IMateriasRepository {
         ]),
     MateriasModel(
         nome: TipoMateriaEnum.CALC1,
-        foto:
-            'https://www.contabeis.com.br/assets/img/news/dc7f7a5aa93d4fc89c6edd19df58ea4a.jpg',
+        foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
         professores: [
           ProfessoresModel(
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),

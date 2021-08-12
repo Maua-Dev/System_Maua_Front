@@ -24,6 +24,22 @@ mixin _$MateriasController on MateriasControllerBase, Store {
     });
   }
 
+  final _$fotosProfessoresAtom =
+      Atom(name: 'MateriasControllerBase.fotosProfessores');
+
+  @override
+  List<String> get fotosProfessores {
+    _$fotosProfessoresAtom.reportRead();
+    return super.fotosProfessores;
+  }
+
+  @override
+  set fotosProfessores(List<String> value) {
+    _$fotosProfessoresAtom.reportWrite(value, super.fotosProfessores, () {
+      super.fotosProfessores = value;
+    });
+  }
+
   final _$getMateriasAsyncAction =
       AsyncAction('MateriasControllerBase.getMaterias');
 
@@ -32,10 +48,25 @@ mixin _$MateriasController on MateriasControllerBase, Store {
     return _$getMateriasAsyncAction.run(() => super.getMaterias());
   }
 
+  final _$MateriasControllerBaseActionController =
+      ActionController(name: 'MateriasControllerBase');
+
+  @override
+  void setFotosProfessores(int index) {
+    final _$actionInfo = _$MateriasControllerBaseActionController.startAction(
+        name: 'MateriasControllerBase.setFotosProfessores');
+    try {
+      return super.setFotosProfessores(index);
+    } finally {
+      _$MateriasControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''
-materias: ${materias}
+materias: ${materias},
+fotosProfessores: ${fotosProfessores}
     ''';
   }
 }
