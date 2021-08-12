@@ -1,4 +1,4 @@
-enum TipoMateriaEnum { RESMAT, CALC1, CALC2, FT }
+enum TipoMateriaEnum { RESMAT, CALC1, CALC2, FT, ACADEMIATALENTOS }
 
 extension TipoMateriaEnumExtension on TipoMateriaEnum {
   String get name {
@@ -11,6 +11,8 @@ extension TipoMateriaEnumExtension on TipoMateriaEnum {
         return 'Cálculo Diferencial e Integral II';
       case TipoMateriaEnum.FT:
         return 'Fenômenos de Transporte';
+      case TipoMateriaEnum.ACADEMIATALENTOS:
+        return 'Academia de Talentos';
     }
   }
 }
