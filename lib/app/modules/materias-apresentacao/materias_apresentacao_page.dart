@@ -3,7 +3,9 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/materias-apresentacao/materias_apresentacao_controller.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
-import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
+import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
+
+import 'widgets/contato_docentes_widget.dart';
 
 class MateriasApresentacaoPage extends StatefulWidget {
   final String nomeMateria;
@@ -25,15 +27,58 @@ class _MateriasApresentacaoPageState extends ModularState<
           title: widget.nomeMateria,
           icon: Icons.library_books,
         ),
-        body: Observer(builder: (_) {
-          return Column(
-            children: [
-              Text('Introdução'),
-              Text(controller.materia.introducao),
-              Text('Plano de Ensino')
-            ],
-          );
-        }),
+        body: SingleChildScrollView(
+          child: Observer(builder: (_) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 4),
+                    child: Text(
+                      'Introdução',
+                      style: AppTextStyles.bodyBold.copyWith(fontSize: 24),
+                    ),
+                  ),
+                  Text(
+                    controller.materia.introducao,
+                    textAlign: TextAlign.justify,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    child: Text(
+                      'Plano de Ensino',
+                      style: AppTextStyles.bodyBold.copyWith(fontSize: 24),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    child: Text(
+                      'Docentes da Disciplina',
+                      style: AppTextStyles.bodyBold.copyWith(fontSize: 24),
+                    ),
+                  ),
+                  controller.materia.professores!.isNotEmpty
+                      ? ListView.builder(
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          itemCount: controller.materia.professores!.length,
+                          itemBuilder: (context, index) {
+                            var item = controller.materia.professores![index];
+                            return ContatoDocentesWidget(
+                              nomeDocente: item.nome,
+                              fotoDocente: item.foto,
+                            );
+                          },
+                        )
+                      : SizedBox.shrink()
+                ],
+              ),
+            );
+          }),
+        ),
       ),
     );
   }

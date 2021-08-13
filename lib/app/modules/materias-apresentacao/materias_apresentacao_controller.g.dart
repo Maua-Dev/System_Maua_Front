@@ -14,13 +14,13 @@ mixin _$MateriasApresentacaoController
       Atom(name: '_MateriasApresentacaoControllerBase.materia');
 
   @override
-  MateriasModel get materia {
+  MateriasApresentacaoModel get materia {
     _$materiaAtom.reportRead();
     return super.materia;
   }
 
   @override
-  set materia(MateriasModel value) {
+  set materia(MateriasApresentacaoModel value) {
     _$materiaAtom.reportWrite(value, super.materia, () {
       super.materia = value;
     });

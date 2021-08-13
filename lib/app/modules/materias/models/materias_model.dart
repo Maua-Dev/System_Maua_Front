@@ -6,24 +6,16 @@ class MateriasModel {
   final TipoMateriaEnum? nome;
   final String foto;
   final List<ProfessoresModel>? professores;
-  final String introducao;
-  final String? pdf;
 
-  MateriasModel(
-      {required this.codigoMateria,
-      required this.nome,
-      required this.foto,
-      this.professores,
-      required this.introducao,
-      this.pdf});
+  MateriasModel({
+    required this.codigoMateria,
+    required this.nome,
+    required this.foto,
+    this.professores,
+  });
 
   factory MateriasModel.newInstance() {
     return MateriasModel(
-        codigoMateria: '',
-        foto: '',
-        introducao: '',
-        nome: null,
-        pdf: null,
-        professores: null);
+        codigoMateria: '', foto: '', nome: null, professores: null);
   }
 }

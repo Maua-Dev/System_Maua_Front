@@ -5,8 +5,10 @@
 import 'dart:async' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:system_maua_front/app/modules/materias/models/materias_model.dart'
+import 'package:system_maua_front/app/modules/materias-apresentacao/models/materias_apresentacao_model.dart'
     as _i2;
+import 'package:system_maua_front/app/modules/materias/models/materias_model.dart'
+    as _i5;
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart'
     as _i3;
 
@@ -16,7 +18,8 @@ import 'package:system_maua_front/app/modules/materias/repositories/materias_rep
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: unnecessary_parenthesis
 
-class _FakeMateriasModel extends _i1.Fake implements _i2.MateriasModel {}
+class _FakeMateriasApresentacaoModel extends _i1.Fake
+    implements _i2.MateriasApresentacaoModel {}
 
 /// A class which mocks [IMateriasRepository].
 ///
@@ -28,16 +31,17 @@ class MockIMateriasRepository extends _i1.Mock
   }
 
   @override
-  _i4.Future<List<_i2.MateriasModel>> getMaterias() =>
+  _i4.Future<List<_i5.MateriasModel>> getMaterias() =>
       (super.noSuchMethod(Invocation.method(#getMaterias, []),
               returnValue:
-                  Future<List<_i2.MateriasModel>>.value(<_i2.MateriasModel>[]))
-          as _i4.Future<List<_i2.MateriasModel>>);
+                  Future<List<_i5.MateriasModel>>.value(<_i5.MateriasModel>[]))
+          as _i4.Future<List<_i5.MateriasModel>>);
   @override
-  _i4.Future<_i2.MateriasModel> getMateriaEspecifica(String? codigoMateria) =>
+  _i4.Future<_i2.MateriasApresentacaoModel> getMateriaEspecifica(
+          String? codigoMateria) =>
       (super.noSuchMethod(
               Invocation.method(#getMateriaEspecifica, [codigoMateria]),
-              returnValue:
-                  Future<_i2.MateriasModel>.value(_FakeMateriasModel()))
-          as _i4.Future<_i2.MateriasModel>);
+              returnValue: Future<_i2.MateriasApresentacaoModel>.value(
+                  _FakeMateriasApresentacaoModel()))
+          as _i4.Future<_i2.MateriasApresentacaoModel>);
 }

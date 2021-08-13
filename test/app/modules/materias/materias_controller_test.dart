@@ -18,8 +18,6 @@ void main() {
         codigoMateria: 'EFB101',
         nome: TipoMateriaEnum.ACADEMIATALENTOS,
         foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
-        introducao:
-            'Aqui temos uma introdução sobre essa merda que ninguem usa pra porra nenhuma :)',
         professores: [
           ProfessoresModel(
               nome: 'Everson Denis',
@@ -35,8 +33,6 @@ void main() {
         codigoMateria: 'EFB104',
         nome: TipoMateriaEnum.CALC1,
         foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
-        introducao:
-            'Aqui temos uma introdução sobre essa merda que todo mundo usa pra tudo :)',
         professores: [
           ProfessoresModel(
               nome: 'Furlaneto Cabeça de ',

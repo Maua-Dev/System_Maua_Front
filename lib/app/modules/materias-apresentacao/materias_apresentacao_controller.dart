@@ -1,6 +1,7 @@
 import 'package:mobx/mobx.dart';
-import 'package:system_maua_front/app/modules/materias/models/materias_model.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart';
+
+import 'models/materias_apresentacao_model.dart';
 
 part 'materias_apresentacao_controller.g.dart';
 
@@ -17,7 +18,7 @@ abstract class _MateriasApresentacaoControllerBase with Store {
   }
 
   @observable
-  MateriasModel materia = MateriasModel.newInstance();
+  MateriasApresentacaoModel materia = MateriasApresentacaoModel.newInstance();
 
   @action
   Future<void> getMateria() async {

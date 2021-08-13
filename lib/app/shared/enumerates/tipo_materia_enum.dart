@@ -6,9 +6,9 @@ extension TipoMateriaEnumExtension on TipoMateriaEnum {
       case TipoMateriaEnum.RESMAT:
         return 'Resistência dos Materiais';
       case TipoMateriaEnum.CALC1:
-        return 'Cálculo Diferencial e Integral I';
+        return 'Cálculo Diferencial I';
       case TipoMateriaEnum.CALC2:
-        return 'Cálculo Diferencial e Integral II';
+        return 'Cálculo Diferencial II';
       case TipoMateriaEnum.FT:
         return 'Fenômenos de Transporte';
       case TipoMateriaEnum.ACADEMIATALENTOS:

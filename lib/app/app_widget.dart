@@ -10,7 +10,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     Intl.defaultLocale = 'pt_BR';
     return MaterialApp(
-        initialRoute: '/splash',
+        initialRoute: '/materias',
         localizationsDelegates: [
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
