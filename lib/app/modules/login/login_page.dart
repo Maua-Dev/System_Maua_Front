@@ -86,7 +86,6 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
             EntrarButtonWidget(onPressed: () {
               controller.login();
               if (controller.isLogged) {
-                print('deu bom');
                 Modular.to.navigate('/home');
               }
             }),
