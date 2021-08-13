@@ -83,12 +83,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
             SizedBox(
               height: 72,
             ),
-            EntrarButtonWidget(onPressed: () {
-              controller.login();
-              if (controller.isLogged) {
-                Modular.to.navigate('/home');
-              }
-            }),
+            EntrarButtonWidget(onPressed: controller.login),
             SizedBox(
               height: 4,
             ),

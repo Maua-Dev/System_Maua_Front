@@ -1,3 +1,4 @@
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:system_maua_front/app/modules/auth/auth_controller.dart';
 
@@ -39,6 +40,8 @@ abstract class _LoginController with Store {
 
   Future<void> login() async {
     await authController.loginWithEmail(email, password, isChecked);
-    isLogged = authController.isLogged;
+    if (authController.isLogged) {
+      Modular.to.navigate('/home');
+    }
   }
 }
