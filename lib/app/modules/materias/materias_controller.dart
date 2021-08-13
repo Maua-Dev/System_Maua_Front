@@ -34,7 +34,7 @@ abstract class MateriasControllerBase with Store {
     materias = await repository.getMaterias();
   }
 
-  void navigateToApresentacao(String codigoMateria) {
-    Modular.to.pushNamed('/materias/apresentacao', arguments: codigoMateria);
+  void navigateToApresentacao(MateriasModel materia) async {
+    await Modular.to.pushNamed('/materias/apresentacao', arguments: materia);
   }
 }

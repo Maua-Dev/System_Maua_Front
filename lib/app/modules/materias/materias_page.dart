@@ -35,7 +35,7 @@ class _MateriasPageState
                   var item = controller.materias[index];
                   return MateriaCardWidget(
                     onTap: () {
-                      controller.navigateToApresentacao(item.codigoMateria);
+                      controller.navigateToApresentacao(item);
                     },
                     nomeMateria: item.nome!.name,
                     listaFotosProfessores:

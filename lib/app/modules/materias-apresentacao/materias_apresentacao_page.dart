@@ -6,7 +6,9 @@ import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.d
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 
 class MateriasApresentacaoPage extends StatefulWidget {
-  MateriasApresentacaoPage({Key? key}) : super(key: key);
+  final String nomeMateria;
+  MateriasApresentacaoPage({Key? key, required this.nomeMateria})
+      : super(key: key);
 
   @override
   _MateriasApresentacaoPageState createState() =>
@@ -20,7 +22,7 @@ class _MateriasApresentacaoPageState extends ModularState<
     return SafeArea(
       child: Scaffold(
         appBar: AppBarWidget(
-          title: controller.materia.nome!.name,
+          title: widget.nomeMateria,
           icon: Icons.library_books,
         ),
         body: Observer(builder: (_) {

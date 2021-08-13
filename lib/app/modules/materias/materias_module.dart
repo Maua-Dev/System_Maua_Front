@@ -2,8 +2,10 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/materias-apresentacao/materias_apresentacao_controller.dart';
 import 'package:system_maua_front/app/modules/materias-apresentacao/materias_apresentacao_page.dart';
 import 'package:system_maua_front/app/modules/materias/materias_controller.dart';
+import 'package:system_maua_front/app/modules/materias/models/materias_model.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart';
+import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 
 import 'materias_page.dart';
 
@@ -13,7 +15,8 @@ class MateriasModule extends Module {
     Bind.lazySingleton((i) => MateriasController(i())),
     Bind.lazySingleton<IMateriasRepository>((i) => MateriasRepository()),
     Bind.lazySingleton((i) => MateriasApresentacaoController(
-        repository: i(), codigoMateria: i.args?.data as String)),
+        repository: i(),
+        codigoMateria: (i.args?.data as MateriasModel).codigoMateria)),
   ];
 
   @override
@@ -24,7 +27,9 @@ class MateriasModule extends Module {
     ),
     ChildRoute(
       '/apresentacao',
-      child: (_, args) => MateriasApresentacaoPage(),
+      child: (_, args) => MateriasApresentacaoPage(
+        nomeMateria: (args.data as MateriasModel).nome!.name,
+      ),
     ),
   ];
 }
