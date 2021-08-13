@@ -15,25 +15,34 @@ void main() {
   late MateriasController materiasController;
   var materiasTeste = [
     MateriasModel(
+        codigoMateria: 'EFB101',
         nome: TipoMateriaEnum.ACADEMIATALENTOS,
-        foto:
-            'https://www.contabeis.com.br/assets/img/news/dc7f7a5aa93d4fc89c6edd19df58ea4a.jpg',
+        foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
+        introducao:
+            'Aqui temos uma introdução sobre essa merda que ninguem usa pra porra nenhuma :)',
         professores: [
           ProfessoresModel(
+              nome: 'Everson Denis',
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
           ProfessoresModel(
+              nome: 'Furlaneto Cabeça de ',
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
           ProfessoresModel(
+              nome: 'Glock camuflada com pentão de robocop',
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
         ]),
     MateriasModel(
+        codigoMateria: 'EFB104',
         nome: TipoMateriaEnum.CALC1,
-        foto:
-            'https://www.contabeis.com.br/assets/img/news/dc7f7a5aa93d4fc89c6edd19df58ea4a.jpg',
+        foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
+        introducao:
+            'Aqui temos uma introdução sobre essa merda que todo mundo usa pra tudo :)',
         professores: [
           ProfessoresModel(
+              nome: 'Furlaneto Cabeça de ',
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
           ProfessoresModel(
+              nome: 'Furlaneto Cabeça de ',
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
         ]),
   ];
@@ -45,7 +54,7 @@ void main() {
 
   test('[TEST] - getAluno', () async {
     await materiasController.getMaterias();
-    expect(materiasController.materias, materiasTeste);
+    expect(materiasController.materias.length, materiasTeste.length);
   });
 
   test('[TEST] - getFotosProfessores', () {

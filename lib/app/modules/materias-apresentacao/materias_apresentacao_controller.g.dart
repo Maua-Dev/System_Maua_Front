@@ -10,10 +10,34 @@ part of 'materias_apresentacao_controller.dart';
 
 mixin _$MateriasApresentacaoController
     on _MateriasApresentacaoControllerBase, Store {
+  final _$materiaAtom =
+      Atom(name: '_MateriasApresentacaoControllerBase.materia');
+
+  @override
+  MateriasModel get materia {
+    _$materiaAtom.reportRead();
+    return super.materia;
+  }
+
+  @override
+  set materia(MateriasModel value) {
+    _$materiaAtom.reportWrite(value, super.materia, () {
+      super.materia = value;
+    });
+  }
+
+  final _$getMateriaAsyncAction =
+      AsyncAction('_MateriasApresentacaoControllerBase.getMateria');
+
+  @override
+  Future<void> getMateria() {
+    return _$getMateriaAsyncAction.run(() => super.getMateria());
+  }
+
   @override
   String toString() {
     return '''
-
+materia: ${materia}
     ''';
   }
 }

@@ -10,22 +10,31 @@ class MateriasRepository implements IMateriasRepository {
         codigoMateria: 'EFB101',
         nome: TipoMateriaEnum.ACADEMIATALENTOS,
         foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
+        introducao:
+            'Aqui temos uma introdução sobre essa merda que ninguem usa pra porra nenhuma :)',
         professores: [
           ProfessoresModel(
+              nome: 'Everson Denis',
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
           ProfessoresModel(
+              nome: 'Furlaneto Cabeça de ',
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
           ProfessoresModel(
+              nome: 'Glock camuflada com pentão de robocop',
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
         ]),
     MateriasModel(
         codigoMateria: 'EFB104',
         nome: TipoMateriaEnum.CALC1,
         foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
+        introducao:
+            'Aqui temos uma introdução sobre essa merda que todo mundo usa pra tudo :)',
         professores: [
           ProfessoresModel(
+              nome: 'Furlaneto Cabeça de ',
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
           ProfessoresModel(
+              nome: 'Furlaneto Cabeça de ',
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
         ]),
   ];
@@ -33,5 +42,11 @@ class MateriasRepository implements IMateriasRepository {
   @override
   Future<List<MateriasModel>> getMaterias() {
     return Future.value(listaMaterias);
+  }
+
+  @override
+  Future<MateriasModel> getMateriaEspecifica(String codigoMateria) {
+    return Future.value(listaMaterias
+        .firstWhere((element) => element.codigoMateria == codigoMateria));
   }
 }

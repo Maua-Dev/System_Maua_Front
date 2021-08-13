@@ -2,13 +2,13 @@
 // in system_maua_front/test/app/modules/materias/materias_controller_test.dart.
 // Do not manually edit this file.
 
-import 'dart:async' as _i3;
+import 'dart:async' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:system_maua_front/app/modules/materias/models/materias_model.dart'
-    as _i4;
-import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart'
     as _i2;
+import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart'
+    as _i3;
 
 // ignore_for_file: avoid_redundant_argument_values
 // ignore_for_file: comment_references
@@ -16,19 +16,28 @@ import 'package:system_maua_front/app/modules/materias/repositories/materias_rep
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: unnecessary_parenthesis
 
+class _FakeMateriasModel extends _i1.Fake implements _i2.MateriasModel {}
+
 /// A class which mocks [IMateriasRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockIMateriasRepository extends _i1.Mock
-    implements _i2.IMateriasRepository {
+    implements _i3.IMateriasRepository {
   MockIMateriasRepository() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i3.Future<List<_i4.MateriasModel>> getMaterias() =>
+  _i4.Future<List<_i2.MateriasModel>> getMaterias() =>
       (super.noSuchMethod(Invocation.method(#getMaterias, []),
               returnValue:
-                  Future<List<_i4.MateriasModel>>.value(<_i4.MateriasModel>[]))
-          as _i3.Future<List<_i4.MateriasModel>>);
+                  Future<List<_i2.MateriasModel>>.value(<_i2.MateriasModel>[]))
+          as _i4.Future<List<_i2.MateriasModel>>);
+  @override
+  _i4.Future<_i2.MateriasModel> getMateriaEspecifica(String? codigoMateria) =>
+      (super.noSuchMethod(
+              Invocation.method(#getMateriaEspecifica, [codigoMateria]),
+              returnValue:
+                  Future<_i2.MateriasModel>.value(_FakeMateriasModel()))
+          as _i4.Future<_i2.MateriasModel>);
 }

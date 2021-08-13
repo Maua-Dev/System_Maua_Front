@@ -1,3 +1,0 @@
-import 'materias_apresentacao_repository_interface.dart';
-
-class MateriasApresentacaoRepository extends IMateriasApresentacaoRepository {}
