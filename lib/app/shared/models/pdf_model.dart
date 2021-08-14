@@ -1,8 +1,12 @@
 import 'package:system_maua_front/app/shared/enumerates/pdf_enum.dart';
 
-class PdfModel {
+class ArquivosModel {
   final String url;
-  final PdfEnum pdfEnum;
+  final ArquivosEnum arquivosEnum;
+  final String tituloArquivo;
 
-  PdfModel({required this.url, required this.pdfEnum});
+  ArquivosModel(
+      {required this.tituloArquivo,
+      required this.url,
+      required this.arquivosEnum});
 }

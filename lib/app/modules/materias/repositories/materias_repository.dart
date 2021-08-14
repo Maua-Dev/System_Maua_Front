@@ -1,7 +1,9 @@
 import 'package:system_maua_front/app/modules/materias-apresentacao/models/materias_apresentacao_model.dart';
 import 'package:system_maua_front/app/modules/materias/models/materias_model.dart';
 import 'package:system_maua_front/app/modules/materias/models/professores_model.dart';
+import 'package:system_maua_front/app/shared/enumerates/pdf_enum.dart';
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
+import 'package:system_maua_front/app/shared/models/pdf_model.dart';
 
 import 'materias_repository_interface.dart';
 
@@ -38,7 +40,10 @@ class MateriasRepository implements IMateriasRepository {
 
   var listaApresentacaoMaterias = [
     MateriasApresentacaoModel(
-        pdf: '',
+        pdf: ArquivosModel(
+            arquivosEnum: ArquivosEnum.PDF,
+            url: '',
+            tituloArquivo: 'Plano de Ensino - Cálculo I'),
         introducao:
             'Aqui temos uma introdução sobre essa merda que todo mundo usa pra tudo :)',
         codigoMateria: 'EFB104',
@@ -53,7 +58,10 @@ class MateriasRepository implements IMateriasRepository {
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
         ]),
     MateriasApresentacaoModel(
-        pdf: '',
+        pdf: ArquivosModel(
+            arquivosEnum: ArquivosEnum.PDF,
+            url: '',
+            tituloArquivo: 'Plano de Ensino - Academia de Talentos'),
         introducao:
             'Aqui temos uma introdução sobre essa merda que ninguem usa pra porra nenhuma :)',
         codigoMateria: 'EFB101',
