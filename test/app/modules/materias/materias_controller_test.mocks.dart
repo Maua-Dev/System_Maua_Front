@@ -44,4 +44,8 @@ class MockIMateriasRepository extends _i1.Mock
               returnValue: Future<_i2.MateriasApresentacaoModel>.value(
                   _FakeMateriasApresentacaoModel()))
           as _i4.Future<_i2.MateriasApresentacaoModel>);
+  @override
+  _i4.Future<String> getUrlPdf(String? codigoMateria) =>
+      (super.noSuchMethod(Invocation.method(#getUrlPdf, [codigoMateria]),
+          returnValue: Future<String>.value('')) as _i4.Future<String>);
 }

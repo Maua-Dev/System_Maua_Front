@@ -42,7 +42,7 @@ class MateriasRepository implements IMateriasRepository {
     MateriasApresentacaoModel(
         pdf: ArquivosModel(
             arquivosEnum: ArquivosEnum.PDF,
-            url: '',
+            url: 'http://africau.edu/images/default/sample.pdf',
             tituloArquivo: 'Plano de Ensino - Cálculo I'),
         introducao:
             'Aqui temos uma introdução sobre essa merda que todo mundo usa pra tudo :)',
@@ -60,7 +60,7 @@ class MateriasRepository implements IMateriasRepository {
     MateriasApresentacaoModel(
         pdf: ArquivosModel(
             arquivosEnum: ArquivosEnum.PDF,
-            url: '',
+            url: 'http://africau.edu/images/default/sample.pdf',
             tituloArquivo: 'Plano de Ensino - Academia de Talentos'),
         introducao:
             'Aqui temos uma introdução sobre essa merda que ninguem usa pra porra nenhuma :)',
@@ -89,5 +89,13 @@ class MateriasRepository implements IMateriasRepository {
   Future<MateriasApresentacaoModel> getMateriaEspecifica(String codigoMateria) {
     return Future.value(listaApresentacaoMaterias
         .firstWhere((element) => element.codigoMateria == codigoMateria));
+  }
+
+  @override
+  Future<String> getUrlPdf(String codigoMateria) {
+    return Future.value(listaApresentacaoMaterias
+        .firstWhere((element) => element.codigoMateria == codigoMateria)
+        .pdf!
+        .url);
   }
 }

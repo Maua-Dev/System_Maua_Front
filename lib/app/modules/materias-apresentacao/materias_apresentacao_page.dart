@@ -59,7 +59,10 @@ class _MateriasApresentacaoPageState extends ModularState<
                       ? Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8.0),
                           child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                controller
+                                    .navigateToPlanoEnsino(controller.materia);
+                              },
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [

@@ -1,3 +1,4 @@
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart';
 
@@ -23,5 +24,10 @@ abstract class _MateriasApresentacaoControllerBase with Store {
   @action
   Future<void> getMateria() async {
     materia = await repository.getMateriaEspecifica(codigoMateria);
+  }
+
+  void navigateToPlanoEnsino(MateriasApresentacaoModel codigoMateria) async {
+    await Modular.to
+        .pushNamed('/materias/plano-ensino', arguments: codigoMateria);
   }
 }
