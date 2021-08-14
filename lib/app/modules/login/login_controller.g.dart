@@ -9,6 +9,21 @@ part of 'login_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$LoginController on _LoginController, Store {
+  final _$errosAtom = Atom(name: '_LoginController.erros');
+
+  @override
+  String get erros {
+    _$errosAtom.reportRead();
+    return super.erros;
+  }
+
+  @override
+  set erros(String value) {
+    _$errosAtom.reportWrite(value, super.erros, () {
+      super.erros = value;
+    });
+  }
+
   final _$isCheckedAtom = Atom(name: '_LoginController.isChecked');
 
   @override
@@ -108,6 +123,7 @@ mixin _$LoginController on _LoginController, Store {
   @override
   String toString() {
     return '''
+erros: ${erros},
 isChecked: ${isChecked},
 email: ${email},
 password: ${password},

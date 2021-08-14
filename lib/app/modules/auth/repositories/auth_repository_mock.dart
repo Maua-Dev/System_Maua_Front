@@ -9,9 +9,9 @@ class AuthRepositoryMock implements IAuthRepository {
   @override
   Future<String> loginWithEmail(String email, String password) async {
     if (password != _pw) {
-      throw PasswordInvalid('Senha Inválida');
+      throw PasswordInvalid('Senha inválida');
     } else if (email != _email) {
-      throw EmailInvalid('Email Inválida');
+      throw EmailInvalid('Email inválido');
     } else {
       return 'token12354';
     }

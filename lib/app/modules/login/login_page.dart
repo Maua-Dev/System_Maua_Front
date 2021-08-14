@@ -81,9 +81,23 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
               );
             }),
             SizedBox(
+              height: 16,
+            ),
+            Observer(builder: (_) {
+              return Center(
+                child: Text(
+                  controller.erros,
+                  style: TextStyle(color: AppColors.red),
+                ),
+              );
+            }),
+            //  controller.erros != '' ? Text(controller.erros) : Container(),
+            SizedBox(
               height: 72,
             ),
-            EntrarButtonWidget(onPressed: controller.login),
+            EntrarButtonWidget(onPressed: () {
+              controller.login();
+            }),
             SizedBox(
               height: 4,
             ),

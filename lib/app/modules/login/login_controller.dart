@@ -1,6 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:system_maua_front/app/modules/auth/auth_controller.dart';
+import 'package:system_maua_front/app/modules/auth/errors/errors.dart';
 
 part 'login_controller.g.dart';
 
@@ -10,6 +11,9 @@ abstract class _LoginController with Store {
   final AuthController authController;
 
   _LoginController(this.authController);
+
+  @observable
+  String erros = '';
 
   @observable
   bool isChecked = false;
@@ -39,9 +43,13 @@ abstract class _LoginController with Store {
   }
 
   Future<void> login() async {
-    await authController.loginWithEmail(email, password, isChecked);
-    if (authController.isLogged) {
-      Modular.to.navigate('/home');
+    try {
+      await authController.loginWithEmail(email, password, isChecked);
+      if (authController.isLogged) {
+        Modular.to.navigate('/home');
+      }
+    } on Failure catch (e) {
+      erros = e.message;
     }
   }
 }
