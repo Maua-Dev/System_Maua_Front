@@ -14,6 +14,7 @@ class GridAvaliacao extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
       child: GridView.builder(
         shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 16,

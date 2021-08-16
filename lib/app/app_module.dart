@@ -6,6 +6,8 @@ import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bo
 
 import 'modules/auth/auth_guard.dart';
 import 'modules/auth/auth_module.dart';
+import 'package:system_maua_front/app/shared/components/filter_period/filter_period_controller.dart';
+import 'modules/activities/activities_module.dart';
 import 'modules/landing/landing_module.dart';
 
 class AppModule extends Module {
@@ -14,6 +16,7 @@ class AppModule extends Module {
   @override
   final List<Bind> binds = [
     Bind.lazySingleton((i) => BottomNavigationBarController()),
+    Bind.lazySingleton((i) => FilterPeriodController()),
   ];
 
   @override
@@ -31,6 +34,10 @@ class AppModule extends Module {
     ModuleRoute(
       '/splash',
       module: SplashModule(),
+    ),
+    ModuleRoute(
+      '/activities',
+      module: ActivitiesModule(),
     ),
   ];
 }

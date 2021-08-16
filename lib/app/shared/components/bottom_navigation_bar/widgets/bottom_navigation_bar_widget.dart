@@ -33,9 +33,11 @@ class BottomNavigationBarWidget extends StatelessWidget {
                       Modular.to.navigate('/home');
                     }),
                 IconButtonCustomWidget(
-                    size: MediaQuery.of(context).size.height * 0.044,
-                    icon: Icon(Icons.date_range),
-                    onPressed: () {}),
+                    size: MediaQuery.of(context).size.height * 0.04,
+                    icon: Icon(Icons.calendar_today),
+                    onPressed: () {
+                      Modular.to.pushNamed('/calendario');
+                    }),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: SizedBox(),
@@ -49,7 +51,9 @@ class BottomNavigationBarWidget extends StatelessWidget {
                 IconButtonCustomWidget(
                     size: MediaQuery.of(context).size.height * 0.049,
                     icon: Icon(Icons.help_outline_outlined),
-                    onPressed: () {}),
+                    onPressed: () {
+                      Modular.to.pushNamed('/help');
+                    }),
               ],
             ),
           ),
@@ -82,9 +86,11 @@ class BottomNavigationBarWidget extends StatelessWidget {
                             Modular.to.navigate('/home');
                           }),
                       IconButtonCustomWidget(
-                          size: MediaQuery.of(context).size.height * 0.044,
-                          icon: Icon(Icons.date_range),
-                          onPressed: () {}),
+                          size: MediaQuery.of(context).size.height * 0.04,
+                          icon: Icon(Icons.calendar_today),
+                          onPressed: () {
+                            Modular.to.pushNamed('/calendario');
+                          }),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: SizedBox(),
@@ -98,7 +104,9 @@ class BottomNavigationBarWidget extends StatelessWidget {
                       IconButtonCustomWidget(
                           size: MediaQuery.of(context).size.height * 0.049,
                           icon: Icon(Icons.help_outline_outlined),
-                          onPressed: () {}),
+                          onPressed: () {
+                            Modular.to.pushNamed('/help');
+                          }),
                     ],
                   ),
                 ),
@@ -118,7 +126,9 @@ class BottomNavigationBarWidget extends StatelessWidget {
                                 child: NavigationBarButtonsWidget(
                                   titulo: 'Matérias',
                                   icon: Icons.library_books,
-                                  onTap: () {},
+                                  onTap: () {
+                                    Modular.to.pushNamed('/materias');
+                                  },
                                 ),
                               ),
                             ),
