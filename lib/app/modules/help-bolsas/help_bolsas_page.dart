@@ -10,7 +10,7 @@ class BolsasPage extends StatefulWidget {
 }
 
 class _BolsasPageState extends State<BolsasPage> {
-  late final List<bool> _isOpen = List.filled(10, false);
+  late final List<bool> _isOpen = List.filled(2, false);
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
@@ -27,11 +27,12 @@ class _BolsasPageState extends State<BolsasPage> {
           height: 8,
         ),
         Padding(
-          padding: const EdgeInsets.all(30.0),
+          padding: const EdgeInsets.all(16.0),
           child: ExpansionPanelList(
               animationDuration: Duration(seconds: 1),
-              elevation: 4,
-              expandedHeaderPadding: EdgeInsets.symmetric(horizontal: 20),
+              elevation: 8,
+              dividerColor: Colors.black,
+              expandedHeaderPadding: EdgeInsets.symmetric(vertical: 10),
               children: [
                 ExpansionPanel(
                   canTapOnHeader: true,
@@ -79,12 +80,17 @@ class _BolsasPageState extends State<BolsasPage> {
         Container(
           height: MediaQuery.of(context).size.height * 0.08,
           width: MediaQuery.of(context).size.width * 0.8,
-          decoration: BoxDecoration(boxShadow: <BoxShadow>[
-            BoxShadow(
-                color: Colors.black54,
-                blurRadius: 15.0,
-                offset: Offset(0.0, 0.75))
-          ], color: Colors.white),
+          decoration: BoxDecoration(
+            boxShadow: <BoxShadow>[
+              BoxShadow(
+                  color: Colors.black54,
+                  blurRadius: 15.0,
+                  spreadRadius: 2,
+                  offset: Offset(0.0, 0.75))
+            ],
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8),
+          ),
           child: Text(
             ' 2ª à 6ª feira\n'
             'das 10h30 às 22h30',
