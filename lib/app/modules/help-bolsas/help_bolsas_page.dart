@@ -36,7 +36,7 @@ class _BolsasPageState extends ModularState<BolsasPage, BolsasController> {
               children: [
                 ExpansionPanel(
                   canTapOnHeader: true,
-                  headerBuilder: (context, isOpen) => Text("Documentos"),
+                  headerBuilder: (context, isOpen) => Text('Documentos'),
                   body: Text('Requerimento'
                       'Ficha - Informaçoes de irmaos ou filhos do aluno'
                       'Ficha - aluno'
@@ -49,7 +49,7 @@ class _BolsasPageState extends ModularState<BolsasPage, BolsasController> {
                 ),
                 ExpansionPanel(
                   canTapOnHeader: true,
-                  headerBuilder: (context, isOpen) => Text("Contatos"),
+                  headerBuilder: (context, isOpen) => Text('Contatos'),
                   body: Text('Roberta (11) 4239-3008 \n roberta@maua.br \n'
                       'Cristiane (11) 4239-3010 \n cristiane.datovo@maua.br\n'
                       'Fundo Mauá de Bolsas  \n fmb@maua.br\n'),
@@ -60,8 +60,30 @@ class _BolsasPageState extends ModularState<BolsasPage, BolsasController> {
                     // _isOpen[i] = !isOpen;
                   })),
         ),
-        Text(''),
-        Container()
+        Text(
+          'Horário de atendimento: ',
+          style: AppTextStyles.lightBody.copyWith(fontSize: 24),
+          textAlign: TextAlign.left,
+        ),
+        SizedBox(
+          height: 16,
+        ),
+        Container(
+          height: MediaQuery.of(context).size.height * 0.08,
+          width: MediaQuery.of(context).size.width * 0.8,
+          decoration: BoxDecoration(boxShadow: <BoxShadow>[
+            BoxShadow(
+                color: Colors.black54,
+                blurRadius: 15.0,
+                offset: Offset(0.0, 0.75))
+          ], color: Colors.white),
+          child: Text(
+            ' 2ª à 6ª feira\n'
+            'das 10h30 às 22h30',
+            style: AppTextStyles.lightBody,
+            textAlign: TextAlign.center,
+          ),
+        )
       ]),
     ]);
   }
