@@ -3,6 +3,7 @@ import 'package:system_maua_front/app/modules/help-aluno/help_aluno_module.dart'
 import 'package:system_maua_front/app/modules/help-avisos/help_avisos_module.dart';
 import 'package:system_maua_front/app/modules/activities/activities_module.dart';
 import 'package:system_maua_front/app/modules/calendario/calendario_module.dart';
+import 'package:system_maua_front/app/modules/help-bolsas/help_bolsas_module.dart';
 import 'package:system_maua_front/app/modules/home-aluno/home_aluno_module.dart';
 import 'package:system_maua_front/app/modules/landing/landing_page.dart';
 import 'package:system_maua_front/app/modules/materias/materias_module.dart';
@@ -26,6 +27,7 @@ class LandingModule extends Module {
           ModuleRoute('/mural', module: MuralDivulgacaoModule()),
           ModuleRoute('/calendario', module: CalendarioModule()),
           ModuleRoute('/materias', module: MateriasModule()),
+          ModuleRoute('/bolsas', module: BolsasModule()),
         ]),
   ];
 }
