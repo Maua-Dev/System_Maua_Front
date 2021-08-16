@@ -26,6 +26,6 @@ class AppModule extends Module {
     ModuleRoute(
       '/activities',
       module: ActivitiesModule(),
-    ))
+    )
   ];
 }
