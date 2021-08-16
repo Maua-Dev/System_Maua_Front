@@ -2,15 +2,17 @@
 // in system_maua_front/test/app/modules/materias/materias_controller_test.dart.
 // Do not manually edit this file.
 
-import 'dart:async' as _i4;
+import 'dart:async' as _i5;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:system_maua_front/app/modules/materias-apresentacao/models/materias_apresentacao_model.dart'
     as _i2;
-import 'package:system_maua_front/app/modules/materias/models/materias_model.dart'
-    as _i5;
-import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart'
+import 'package:system_maua_front/app/modules/materias-aulas/models/materias_aulas_model.dart'
     as _i3;
+import 'package:system_maua_front/app/modules/materias/models/materias_model.dart'
+    as _i6;
+import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart'
+    as _i4;
 
 // ignore_for_file: avoid_redundant_argument_values
 // ignore_for_file: comment_references
@@ -21,31 +23,42 @@ import 'package:system_maua_front/app/modules/materias/repositories/materias_rep
 class _FakeMateriasApresentacaoModel extends _i1.Fake
     implements _i2.MateriasApresentacaoModel {}
 
+class _FakeMateriasAulasModel extends _i1.Fake
+    implements _i3.MateriasAulasModel {}
+
 /// A class which mocks [IMateriasRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockIMateriasRepository extends _i1.Mock
-    implements _i3.IMateriasRepository {
+    implements _i4.IMateriasRepository {
   MockIMateriasRepository() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i4.Future<List<_i5.MateriasModel>> getMaterias() =>
+  _i5.Future<List<_i6.MateriasModel>> getMaterias() =>
       (super.noSuchMethod(Invocation.method(#getMaterias, []),
               returnValue:
-                  Future<List<_i5.MateriasModel>>.value(<_i5.MateriasModel>[]))
-          as _i4.Future<List<_i5.MateriasModel>>);
+                  Future<List<_i6.MateriasModel>>.value(<_i6.MateriasModel>[]))
+          as _i5.Future<List<_i6.MateriasModel>>);
   @override
-  _i4.Future<_i2.MateriasApresentacaoModel> getMateriaEspecifica(
+  _i5.Future<_i2.MateriasApresentacaoModel> getMateriaEspecifica(
           String? codigoMateria) =>
       (super.noSuchMethod(
               Invocation.method(#getMateriaEspecifica, [codigoMateria]),
               returnValue: Future<_i2.MateriasApresentacaoModel>.value(
                   _FakeMateriasApresentacaoModel()))
-          as _i4.Future<_i2.MateriasApresentacaoModel>);
+          as _i5.Future<_i2.MateriasApresentacaoModel>);
   @override
-  _i4.Future<String> getUrlPdf(String? codigoMateria) =>
+  _i5.Future<String> getUrlPdf(String? codigoMateria) =>
       (super.noSuchMethod(Invocation.method(#getUrlPdf, [codigoMateria]),
-          returnValue: Future<String>.value('')) as _i4.Future<String>);
+          returnValue: Future<String>.value('')) as _i5.Future<String>);
+  @override
+  _i5.Future<_i3.MateriasAulasModel> getAula(
+          String? codigoMateria, int? idPagina) =>
+      (super.noSuchMethod(
+              Invocation.method(#getAula, [codigoMateria, idPagina]),
+              returnValue: Future<_i3.MateriasAulasModel>.value(
+                  _FakeMateriasAulasModel()))
+          as _i5.Future<_i3.MateriasAulasModel>);
 }

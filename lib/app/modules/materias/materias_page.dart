@@ -37,10 +37,10 @@ class _MateriasPageState
                     onTap: () {
                       controller.navigateToApresentacao(item);
                     },
-                    nomeMateria: item.nome!.name,
+                    nomeMateria: item.nomeMateria!.name,
                     listaFotosProfessores:
                         controller.getFotosProfessores(index),
-                    fotoMateria: item.foto,
+                    fotoMateria: item.foto!,
                   );
                 },
               ),

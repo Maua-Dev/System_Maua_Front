@@ -1,4 +1,5 @@
 import 'package:system_maua_front/app/modules/materias-apresentacao/models/materias_apresentacao_model.dart';
+import 'package:system_maua_front/app/modules/materias-aulas/models/materias_aulas_model.dart';
 import 'package:system_maua_front/app/modules/materias/models/materias_model.dart';
 import 'package:system_maua_front/app/modules/materias/models/professores_model.dart';
 import 'package:system_maua_front/app/shared/enumerates/pdf_enum.dart';
@@ -11,7 +12,7 @@ class MateriasRepository implements IMateriasRepository {
   var listaMaterias = [
     MateriasModel(
         codigoMateria: 'EFB101',
-        nome: TipoMateriaEnum.ACADEMIATALENTOS,
+        nomeMateria: TipoMateriaEnum.ACADEMIATALENTOS,
         foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
         professores: [
           ProfessoresModel(
@@ -26,7 +27,7 @@ class MateriasRepository implements IMateriasRepository {
         ]),
     MateriasModel(
         codigoMateria: 'EFB104',
-        nome: TipoMateriaEnum.CALC1,
+        nomeMateria: TipoMateriaEnum.CALC1,
         foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
         professores: [
           ProfessoresModel(
@@ -47,8 +48,7 @@ class MateriasRepository implements IMateriasRepository {
         introducao:
             'Aqui temos uma introdução sobre essa merda que todo mundo usa pra tudo :)',
         codigoMateria: 'EFB104',
-        nome: TipoMateriaEnum.CALC1,
-        foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
+        nomeMateria: TipoMateriaEnum.CALC1,
         professores: [
           ProfessoresModel(
               nome: 'Furlaneto Cabeça de ',
@@ -65,8 +65,7 @@ class MateriasRepository implements IMateriasRepository {
         introducao:
             'Aqui temos uma introdução sobre essa merda que ninguem usa pra porra nenhuma :)',
         codigoMateria: 'EFB101',
-        nome: TipoMateriaEnum.ACADEMIATALENTOS,
-        foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
+        nomeMateria: TipoMateriaEnum.ACADEMIATALENTOS,
         professores: [
           ProfessoresModel(
               nome: 'Everson Denis',
@@ -77,6 +76,89 @@ class MateriasRepository implements IMateriasRepository {
           ProfessoresModel(
               nome: 'Murilo Nerd Zanini',
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
+        ]),
+  ];
+
+  var listaAulasMaterias = [
+    MateriasAulasModel(
+        idPagina: 1,
+        tituloPagina: 'Aula 1 - 23/02/2021',
+        codigoMateria: 'EFB104',
+        resumoPagina:
+            'Aqui temos uma introdução sobre essa merda que ninguem usa pra porra nenhuma :)',
+        listaArquivos: [
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.XML,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - Excel'),
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.PDF,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - PDF'),
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.URL,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - URL'),
+        ]),
+    MateriasAulasModel(
+        idPagina: 2,
+        tituloPagina: 'Aula 2 - 02/03/2021',
+        codigoMateria: 'EFB101',
+        resumoPagina:
+            'Aqui temos uma introdução sobre essa merda que ninguem usa pra porra nenhuma :)',
+        listaArquivos: [
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.XML,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - Excel'),
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.PDF,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - PDF'),
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.URL,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - URL'),
+        ]),
+    MateriasAulasModel(
+        idPagina: 1,
+        tituloPagina: 'Aula 1 - 23/02/2021',
+        codigoMateria: 'EFB101',
+        resumoPagina:
+            'Aqui temos uma introdução sobre essa merda que ninguem usa pra porra nenhuma :)',
+        listaArquivos: [
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.XML,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - Excel'),
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.PDF,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - PDF'),
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.URL,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - URL'),
+        ]),
+    MateriasAulasModel(
+        idPagina: 2,
+        tituloPagina: 'Aula 2 - 02/03/2021',
+        codigoMateria: 'EFB104',
+        resumoPagina:
+            'Aqui temos uma introdução sobre essa merda que ninguem usa pra porra nenhuma :)',
+        listaArquivos: [
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.XML,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - Excel'),
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.PDF,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - PDF'),
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.URL,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - URL'),
         ]),
   ];
 
@@ -97,5 +179,12 @@ class MateriasRepository implements IMateriasRepository {
         .firstWhere((element) => element.codigoMateria == codigoMateria)
         .pdf!
         .url);
+  }
+
+  @override
+  Future<MateriasAulasModel> getAula(String codigoMateria, int idPagina) {
+    return Future.value(listaAulasMaterias.firstWhere((element) =>
+        element.codigoMateria == codigoMateria &&
+        element.idPagina == idPagina));
   }
 }

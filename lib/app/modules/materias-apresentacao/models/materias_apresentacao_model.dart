@@ -9,13 +9,13 @@ class MateriasApresentacaoModel extends MateriasModel {
 
   MateriasApresentacaoModel(
       {required String codigoMateria,
-      TipoMateriaEnum? nome,
-      required String foto,
+      TipoMateriaEnum? nomeMateria,
+      String? foto,
       List<ProfessoresModel>? professores,
       required this.introducao,
       this.pdf})
       : super(
-            nome: nome,
+            nomeMateria: nomeMateria,
             codigoMateria: codigoMateria,
             foto: foto,
             professores: professores);
@@ -24,7 +24,7 @@ class MateriasApresentacaoModel extends MateriasModel {
     return MateriasApresentacaoModel(
         codigoMateria: '',
         foto: '',
-        nome: null,
+        nomeMateria: null,
         professores: null,
         introducao: '',
         pdf: null);

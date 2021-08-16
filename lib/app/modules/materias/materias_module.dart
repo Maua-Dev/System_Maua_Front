@@ -4,6 +4,9 @@ import 'package:system_maua_front/app/modules/file-view/file_view_page.dart';
 import 'package:system_maua_front/app/modules/materias-apresentacao/materias_apresentacao_controller.dart';
 import 'package:system_maua_front/app/modules/materias-apresentacao/materias_apresentacao_page.dart';
 import 'package:system_maua_front/app/modules/materias-apresentacao/models/materias_apresentacao_model.dart';
+import 'package:system_maua_front/app/modules/materias-aulas/materias_aulas_controller.dart';
+import 'package:system_maua_front/app/modules/materias-aulas/materias_aulas_page.dart';
+import 'package:system_maua_front/app/modules/materias-aulas/models/materias_aulas_model.dart';
 import 'package:system_maua_front/app/modules/materias/materias_controller.dart';
 import 'package:system_maua_front/app/modules/materias/models/materias_model.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository.dart';
@@ -24,6 +27,12 @@ class MateriasModule extends Module {
         repository: i(),
         codigoMateria:
             (i.args?.data as MateriasApresentacaoModel).codigoMateria)),
+    Bind.lazySingleton(
+      (i) => MateriasAulasController(
+          repository: i(),
+          codigoMateria: (i.args?.data as MateriasAulasModel).codigoMateria,
+          idPagina: (i.args?.data as MateriasAulasModel).idPagina),
+    ),
   ];
 
   @override
@@ -35,12 +44,16 @@ class MateriasModule extends Module {
     ChildRoute(
       '/apresentacao',
       child: (_, args) => MateriasApresentacaoPage(
-        nomeMateria: (args.data as MateriasModel).nome!.name,
+        nomeMateria: (args.data as MateriasModel).nomeMateria!.name,
       ),
     ),
     ChildRoute(
       '/plano-ensino',
       child: (_, args) => FileViewPage(),
+    ),
+    ChildRoute(
+      '/aula/:id',
+      child: (_, args) => MateriasAulasPage(),
     ),
   ];
 }
