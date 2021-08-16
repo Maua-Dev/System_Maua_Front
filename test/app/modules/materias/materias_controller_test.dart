@@ -16,7 +16,7 @@ void main() {
   var materiasTeste = [
     MateriasModel(
         codigoMateria: 'EFB101',
-        nome: TipoMateriaEnum.ACADEMIATALENTOS,
+        nomeMateria: TipoMateriaEnum.ACADEMIATALENTOS,
         foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
         professores: [
           ProfessoresModel(
@@ -31,7 +31,7 @@ void main() {
         ]),
     MateriasModel(
         codigoMateria: 'EFB104',
-        nome: TipoMateriaEnum.CALC1,
+        nomeMateria: TipoMateriaEnum.CALC1,
         foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
         professores: [
           ProfessoresModel(
