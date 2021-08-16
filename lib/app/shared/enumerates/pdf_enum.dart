@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 
-enum ArquivosEnum { XML, PDF, DOCS }
+enum ArquivosEnum { XML, PDF, DOCS, URL }
 
 extension ArquivosEnumExtension on ArquivosEnum {
   Color get color {
@@ -13,13 +13,19 @@ extension ArquivosEnumExtension on ArquivosEnum {
         return Colors.red;
       case ArquivosEnum.DOCS:
         return Colors.blue.shade200;
+      case ArquivosEnum.URL:
+        return Colors.grey.shade200;
     }
   }
 
   Icon get imagemString {
     switch (this) {
       case ArquivosEnum.XML:
-        return Icon(FontAwesome5.file_excel, color: Colors.green);
+        return Icon(
+          FontAwesome5.file_excel,
+          color: Colors.green,
+          size: 32,
+        );
       case ArquivosEnum.PDF:
         return Icon(
           FontAwesome5.file_pdf,
@@ -27,7 +33,17 @@ extension ArquivosEnumExtension on ArquivosEnum {
           size: 32,
         );
       case ArquivosEnum.DOCS:
-        return Icon(FontAwesome5.file_word);
+        return Icon(
+          FontAwesome5.file_word,
+          color: Colors.blue.shade200,
+          size: 32,
+        );
+      case ArquivosEnum.URL:
+        return Icon(
+          FontAwesome5.link,
+          color: Colors.grey.shade200,
+          size: 32,
+        );
     }
   }
 }
