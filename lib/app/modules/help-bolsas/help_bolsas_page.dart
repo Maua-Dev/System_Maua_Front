@@ -11,7 +11,8 @@ class BolsasPage extends StatefulWidget {
   _BolsasPageState createState() => _BolsasPageState();
 }
 
-class _BolsasPageState extends ModularState<BolsasPage, BolsasController> {
+class _BolsasPageState extends State<BolsasPage> {
+  late final List<bool> _isOpen = List.filled(10, false);
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
@@ -28,7 +29,7 @@ class _BolsasPageState extends ModularState<BolsasPage, BolsasController> {
           height: 8,
         ),
         Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(30.0),
           child: ExpansionPanelList(
               animationDuration: Duration(seconds: 1),
               elevation: 4,
@@ -38,26 +39,29 @@ class _BolsasPageState extends ModularState<BolsasPage, BolsasController> {
                   canTapOnHeader: true,
                   headerBuilder: (context, isOpen) => Text('Documentos'),
                   body: Text('Requerimento'
-                      'Ficha - Informaçoes de irmaos ou filhos do aluno'
-                      'Ficha - aluno'
-                      'Ficha -Pai do aluno'
-                      'Ficha - Mae do aluno'
-                      'Ficha conjuge do aluno'
-                      'Fichar - fiador(a)'
-                      'Ficha - conjuge do(a) fiador(a)'),
-                  // isExpanded: _isOpen[0],
+                      'Ficha - Informaçoes de irmaos ou filhos do aluno\n'
+                      'Ficha - aluno\n'
+                      'Ficha -Pai do aluno\n'
+                      'Ficha - Mae do aluno\n'
+                      'Ficha conjuge do aluno\n'
+                      'Fichar - fiador(a)\n'
+                      'Ficha - conjuge do(a) fiador(a)\n'),
+                  isExpanded: _isOpen[0],
                 ),
                 ExpansionPanel(
                   canTapOnHeader: true,
                   headerBuilder: (context, isOpen) => Text('Contatos'),
-                  body: Text('Roberta (11) 4239-3008 \n roberta@maua.br \n'
-                      'Cristiane (11) 4239-3010 \n cristiane.datovo@maua.br\n'
-                      'Fundo Mauá de Bolsas  \n fmb@maua.br\n'),
-                  // isExpanded: _isOpen[0],
+                  body: Text(
+                    'Roberta (11) 4239-3008 \n roberta@maua.br \n'
+                    'Cristiane (11) 4239-3010 \n cristiane.datovo@maua.br\n'
+                    'Fundo Mauá de Bolsas  \n fmb@maua.br\n',
+                    textAlign: TextAlign.center,
+                  ),
+                  isExpanded: _isOpen[1],
                 )
               ],
               expansionCallback: (i, isOpen) => setState(() {
-                    // _isOpen[i] = !isOpen;
+                    _isOpen[i] = !isOpen;
                   })),
         ),
         Text(
@@ -83,6 +87,9 @@ class _BolsasPageState extends ModularState<BolsasPage, BolsasController> {
             style: AppTextStyles.lightBody,
             textAlign: TextAlign.center,
           ),
+        ),
+        SizedBox(
+          height: 16,
         )
       ]),
     ]);
