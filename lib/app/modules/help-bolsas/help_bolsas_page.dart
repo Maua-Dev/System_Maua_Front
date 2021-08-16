@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:intl/intl.dart';
 import 'package:system_maua_front/app/modules/help-bolsas/help_bolsas_controller.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
@@ -37,23 +38,29 @@ class _BolsasPageState extends State<BolsasPage> {
               children: [
                 ExpansionPanel(
                   canTapOnHeader: true,
-                  headerBuilder: (context, isOpen) => Text('Documentos'),
-                  body: Text('Requerimento'
-                      'Ficha - Informaçoes de irmaos ou filhos do aluno\n'
-                      'Ficha - aluno\n'
-                      'Ficha -Pai do aluno\n'
-                      'Ficha - Mae do aluno\n'
-                      'Ficha conjuge do aluno\n'
-                      'Fichar - fiador(a)\n'
-                      'Ficha - conjuge do(a) fiador(a)\n'),
+                  headerBuilder: (context, isOpen) => Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Documentos',
+                    ),
+                  ),
+                  body: Text('•Requerimento'
+                      '•Ficha - Informaçoes de irmaos ou filhos do aluno\n'
+                      '•Ficha - aluno\n'
+                      '•Ficha -Pai do aluno\n'
+                      '•Ficha - Mae do aluno\n'
+                      '•Ficha conjuge do aluno\n'
+                      '•Fichar - fiador(a)\n'
+                      '•Ficha - conjuge do(a) fiador(a)\n'),
                   isExpanded: _isOpen[0],
                 ),
                 ExpansionPanel(
                   canTapOnHeader: true,
-                  headerBuilder: (context, isOpen) => Text('Contatos'),
+                  headerBuilder: (context, isOpen) => Align(
+                      alignment: Alignment.centerLeft, child: Text('Contatos')),
                   body: Text(
-                    'Roberta (11) 4239-3008 \n roberta@maua.br \n'
-                    'Cristiane (11) 4239-3010 \n cristiane.datovo@maua.br\n'
+                    'Roberta (11) 4239-3008 \n roberta@maua.br \n\n'
+                    'Cristiane (11) 4239-3010 \n cristiane.datovo@maua.br\n\n'
                     'Fundo Mauá de Bolsas  \n fmb@maua.br\n',
                     textAlign: TextAlign.center,
                   ),
