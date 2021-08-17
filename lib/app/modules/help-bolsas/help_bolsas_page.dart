@@ -29,12 +29,14 @@ class _HelpBolsasPageState
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: RichText(
+                      overflow: TextOverflow.clip,
+                      softWrap: true,
                       textAlign: TextAlign.justify,
                       text: TextSpan(style: AppTextStyles.lightBody, children: [
                         TextSpan(
                             text:
                                 'OS FORMULÁRIOS DEVERÃO SER PREENCHIDOS ELETRONICAMENTE, ASSINADOS E JUNTAMENTE COM TODA A DOCUMENTAÇÃO DEVERÃO SER DIGITALIZADOS E ENCAMINHADOS PARA O'),
-                        TextSpan(text: 'E-MAIL: fmb@maua.br'),
+                        TextSpan(text: '''E-MAIL: fmb@maua.br'''),
                         TextSpan(
                             text:
                                 'NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS.')
