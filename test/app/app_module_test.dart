@@ -6,7 +6,4 @@ import 'package:system_maua_front/app/modules/auth/auth_controller.dart';
 
 void main() {
   initModule(AppModule());
-  test('[TEST] - modular get auth', () {
-    Modular.get<AuthController>();
-  });
 }
