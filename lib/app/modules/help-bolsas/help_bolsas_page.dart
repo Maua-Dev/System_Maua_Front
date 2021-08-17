@@ -132,17 +132,12 @@ class _HelpBolsasPageState
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Center(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
-                      child: Column(
-                        children: [
-                          Text('2ª à 6ª feira', textAlign: TextAlign.center),
-                          Text('das 10h30 às 22h30',
-                              textAlign: TextAlign.center),
-                        ],
-                      ),
-                    ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('2ª à 6ª feira', textAlign: TextAlign.center),
+                      Text('das 10h30 às 22h30', textAlign: TextAlign.center),
+                    ],
                   ),
                 ),
               ]),
