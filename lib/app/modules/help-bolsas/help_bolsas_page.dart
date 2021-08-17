@@ -28,15 +28,15 @@ class _HelpBolsasPageState
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text(
-                    ''' 
-OS FORMULÁRIOS DEVERÃO SER PREENCHIDOS ELETRONICAMENTE, 
-ASSINADOS E JUNTAMENTE COM TODA A DOCUMENTAÇÃO DEVERÃO SER DIGITALIZADOS E 
-ENCAMINHADOS 
-PARA O E-MAIL: fmb@maua.br
-
-NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS''',
-                    textAlign: TextAlign.center,
+                  child: Column(
+                    children: [
+                      Text(
+                        ' OS FORMULÁRIOS DEVERÃO SER PREENCHIDOS ELETRONICAMENTE, ASSINADOS E JUNTAMENTE COM TODA A DOCUMENTAÇÃO DEVERÃO SER DIGITALIZADOS EENCAMINHADOSPARA O E-MAIL: fmb@maua.br',
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                          'NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS')
+                    ],
                   ),
                 ),
                 SizedBox(
@@ -63,15 +63,30 @@ NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS''',
                                 style: AppTextStyles.bodyBold,
                               ),
                             ),
-                            body: Text(
-                              ''' • Requerimento
- • Ficha - Informaçoes de irmaos ou filhos do aluno
- • Ficha - aluno
- • Ficha -Pai do aluno
- • Ficha - Mae do aluno
- • Ficha conjuge do aluno
- • Fichar - fiador(a)
- • Ficha - conjuge do(a) fiador(a)''',
+                            body: Column(
+                              children: [
+                                Text(
+                                  ' • Requerimento',
+                                ),
+                                Text(
+                                  ' • Ficha - Informaçoes de irmaos ou filhos do aluno',
+                                ),
+                                Text(
+                                  ' • Ficha - Pai do aluno ',
+                                ),
+                                Text(
+                                  ' • Ficha - Mae do aluno',
+                                ),
+                                Text(
+                                  ' • Ficha conjuge do aluno',
+                                ),
+                                Text(
+                                  ' • Fichar - fiador(a)',
+                                ),
+                                Text(
+                                  ' • Ficha - conjuge do(a) fiador(a)',
+                                ),
+                              ],
                             ),
                             isExpanded: controller.isOpen[0],
                           ),
@@ -86,17 +101,20 @@ NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS''',
                                 style: AppTextStyles.bodyBold,
                               ),
                             ),
-                            body: Text(
-                              '''Roberta (11) 4239-3008  
-roberta@maua.br
-
-Cristiane (11) 4239-3010 
-cristiane.datovo@maua.br
-
-Fundo Mauá de Bolsas 
-fmb@maua.br''',
-                              style: AppTextStyles.body.copyWith(fontSize: 16),
-                              textAlign: TextAlign.center,
+                            body: Column(
+                              children: [
+                                Text('Roberta (11) 4239-3008',
+                                    textAlign: TextAlign.center),
+                                Text('roberta@maua.br',
+                                    textAlign: TextAlign.center),
+                                Text('Cristiane (11) 4239-3010 ',
+                                    textAlign: TextAlign.center),
+                                Text('cristiane.datovo@maua.br',
+                                    textAlign: TextAlign.center),
+                                Text('Fundo Mauá de Bolsas ',
+                                    textAlign: TextAlign.center),
+                                Text('fmb@maua.br', textAlign: TextAlign.center)
+                              ],
                             ),
                             isExpanded: controller.isOpen[1],
                           )
@@ -123,10 +141,11 @@ fmb@maua.br''',
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Center(
-                    child: Text(
-                      '''2ª à 6ª feira 
-das 10h30 às 22h30''',
-                      textAlign: TextAlign.center,
+                    child: Column(
+                      children: [
+                        Text('2ª à 6ª feira', textAlign: TextAlign.center),
+                        Text('das 10h30 às 22h30', textAlign: TextAlign.center)
+                      ],
                     ),
                   ),
                 ),
