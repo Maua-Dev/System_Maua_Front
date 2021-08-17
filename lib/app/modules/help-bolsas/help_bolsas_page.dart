@@ -28,19 +28,16 @@ class _HelpBolsasPageState
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: RichText(
-                      overflow: TextOverflow.clip,
-                      softWrap: true,
-                      textAlign: TextAlign.justify,
-                      text: TextSpan(style: AppTextStyles.lightBody, children: [
-                        TextSpan(
-                            text:
-                                'OS FORMULÁRIOS DEVERÃO SER PREENCHIDOS ELETRONICAMENTE, ASSINADOS E JUNTAMENTE COM TODA A DOCUMENTAÇÃO DEVERÃO SER DIGITALIZADOS E ENCAMINHADOS PARA O'),
-                        TextSpan(text: '''E-MAIL: fmb@maua.br'''),
-                        TextSpan(
-                            text:
-                                'NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS.')
-                      ])),
+                  child: Text(
+                    ''' 
+OS FORMULÁRIOS DEVERÃO SER PREENCHIDOS ELETRONICAMENTE, 
+ASSINADOS E JUNTAMENTE COM TODA A DOCUMENTAÇÃO DEVERÃO SER DIGITALIZADOS E 
+ENCAMINHADOS 
+PARA O E-MAIL: fmb@maua.br
+
+NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS''',
+                    textAlign: TextAlign.center,
+                  ),
                 ),
                 SizedBox(
                   height: 8,
@@ -66,26 +63,16 @@ class _HelpBolsasPageState
                                 style: AppTextStyles.bodyBold,
                               ),
                             ),
-                            body: RichText(
-                                text: TextSpan(
-                                    style: AppTextStyles.body
-                                        .copyWith(fontSize: 16),
-                                    children: [
-                                      TextSpan(text: ' • Requerimento'),
-                                      TextSpan(
-                                          text:
-                                              ' • Ficha - Informaçoes de irmaos ou filhos do aluno'),
-                                      TextSpan(text: ' • Ficha - aluno'),
-                                      TextSpan(text: ' • Ficha - Pai do aluno'),
-                                      TextSpan(text: ' • Ficha - Mae do aluno'),
-                                      TextSpan(
-                                          text: ' • Ficha conjuge do aluno'),
-                                      TextSpan(text: ' • Fichar - fiador(a)'),
-                                      TextSpan(
-                                          text:
-                                              ' • Ficha - conjuge do(a) fiador(a)'),
-                                    ]),
-                                textAlign: TextAlign.center),
+                            body: Text(
+                              ''' • Requerimento
+ • Ficha - Informaçoes de irmaos ou filhos do aluno
+ • Ficha - aluno
+ • Ficha -Pai do aluno
+ • Ficha - Mae do aluno
+ • Ficha conjuge do aluno
+ • Fichar - fiador(a)
+ • Ficha - conjuge do(a) fiador(a)''',
+                            ),
                             isExpanded: controller.isOpen[0],
                           ),
                           ExpansionPanel(
@@ -100,9 +87,14 @@ class _HelpBolsasPageState
                               ),
                             ),
                             body: Text(
-                              'Roberta (11) 4239-3008 \n roberta@maua.br \n\n'
-                              'Cristiane (11) 4239-3010 \n cristiane.datovo@maua.br\n\n'
-                              'Fundo Mauá de Bolsas  \n fmb@maua.br\n',
+                              '''Roberta (11) 4239-3008  
+roberta@maua.br
+
+Cristiane (11) 4239-3010 
+cristiane.datovo@maua.br
+
+Fundo Mauá de Bolsas 
+fmb@maua.br''',
                               style: AppTextStyles.body.copyWith(fontSize: 16),
                               textAlign: TextAlign.center,
                             ),
@@ -131,14 +123,10 @@ class _HelpBolsasPageState
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Center(
-                    child: RichText(
-                      text: TextSpan(
-                          style: AppTextStyles.body.copyWith(fontSize: 16),
-                          children: [
-                            TextSpan(text: '2ª à 6ª feira '),
-                            TextSpan(text: 'das 10h30 às 22h30')
-                          ]),
-                      textAlign: TextAlign.left,
+                    child: Text(
+                      '''2ª à 6ª feira 
+das 10h30 às 22h30''',
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
