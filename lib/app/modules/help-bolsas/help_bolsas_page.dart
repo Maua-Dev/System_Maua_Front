@@ -28,12 +28,17 @@ class _HelpBolsasPageState
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text(
-                    'OS FORMULÁRIOS DEVERÃO SER PREENCHIDOS ELETRONICAMENTE, ASSINADOS E JUNTAMENTE COM TODA A DOCUMENTAÇÃO DEVERÃO SER DIGITALIZADOS E ENCAMINHADOS PARA O E-MAIL: fmb@maua.br'
-                    'NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS,',
-                    style: AppTextStyles.lightBody,
-                    textAlign: TextAlign.justify,
-                  ),
+                  child: RichText(
+                      textAlign: TextAlign.justify,
+                      text: TextSpan(style: AppTextStyles.lightBody, children: [
+                        TextSpan(
+                            text:
+                                'OS FORMULÁRIOS DEVERÃO SER PREENCHIDOS ELETRONICAMENTE, ASSINADOS E JUNTAMENTE COM TODA A DOCUMENTAÇÃO DEVERÃO SER DIGITALIZADOS E ENCAMINHADOS PARA O'),
+                        TextSpan(text: 'E-MAIL: fmb@maua.br'),
+                        TextSpan(
+                            text:
+                                'NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS.')
+                      ])),
                 ),
                 SizedBox(
                   height: 8,
@@ -59,18 +64,26 @@ class _HelpBolsasPageState
                                 style: AppTextStyles.bodyBold,
                               ),
                             ),
-                            body: Text(
-                              '• Requerimento'
-                              '• Ficha - Informaçoes de irmaos ou filhos do aluno\n'
-                              '• Ficha - aluno\n'
-                              '• Ficha -Pai do aluno\n'
-                              '• Ficha - Mae do aluno\n'
-                              '• Ficha conjuge do aluno\n'
-                              '• Fichar - fiador(a)\n'
-                              '• Ficha - conjuge do(a) fiador(a)\n',
-                              style: AppTextStyles.body.copyWith(fontSize: 16),
-                              textAlign: TextAlign.justify,
-                            ),
+                            body: RichText(
+                                text: TextSpan(
+                                    style: AppTextStyles.body
+                                        .copyWith(fontSize: 16),
+                                    children: [
+                                      TextSpan(text: ' • Requerimento'),
+                                      TextSpan(
+                                          text:
+                                              ' • Ficha - Informaçoes de irmaos ou filhos do aluno'),
+                                      TextSpan(text: ' • Ficha - aluno'),
+                                      TextSpan(text: ' • Ficha - Pai do aluno'),
+                                      TextSpan(text: ' • Ficha - Mae do aluno'),
+                                      TextSpan(
+                                          text: ' • Ficha conjuge do aluno'),
+                                      TextSpan(text: ' • Fichar - fiador(a)'),
+                                      TextSpan(
+                                          text:
+                                              ' • Ficha - conjuge do(a) fiador(a)'),
+                                    ]),
+                                textAlign: TextAlign.center),
                             isExpanded: controller.isOpen[0],
                           ),
                           ExpansionPanel(
@@ -116,11 +129,14 @@ class _HelpBolsasPageState
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Center(
-                    child: Text(
-                      ' 2ª à 6ª feira\n'
-                      'das 10h30 às 22h30',
-                      style: AppTextStyles.lightBody,
-                      textAlign: TextAlign.center,
+                    child: RichText(
+                      text: TextSpan(
+                          style: AppTextStyles.body.copyWith(fontSize: 16),
+                          children: [
+                            TextSpan(text: '2ª à 6ª feira '),
+                            TextSpan(text: 'das 10h30 às 22h30')
+                          ]),
+                      textAlign: TextAlign.left,
                     ),
                   ),
                 ),
