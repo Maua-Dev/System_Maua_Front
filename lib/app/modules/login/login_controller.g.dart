@@ -69,21 +69,6 @@ mixin _$LoginController on _LoginController, Store {
     });
   }
 
-  final _$isLoggedAtom = Atom(name: '_LoginController.isLogged');
-
-  @override
-  bool get isLogged {
-    _$isLoggedAtom.reportRead();
-    return super.isLogged;
-  }
-
-  @override
-  set isLogged(bool value) {
-    _$isLoggedAtom.reportWrite(value, super.isLogged, () {
-      super.isLogged = value;
-    });
-  }
-
   final _$_LoginControllerActionController =
       ActionController(name: '_LoginController');
 
@@ -126,8 +111,7 @@ mixin _$LoginController on _LoginController, Store {
 erros: ${erros},
 isChecked: ${isChecked},
 email: ${email},
-password: ${password},
-isLogged: ${isLogged}
+password: ${password}
     ''';
   }
 }

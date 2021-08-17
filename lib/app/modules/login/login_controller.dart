@@ -24,9 +24,6 @@ abstract class _LoginController with Store {
   @observable
   String password = '';
 
-  @observable
-  bool isLogged = false;
-
   @action
   void setIsChecked(bool? value) {
     isChecked = value ?? false;

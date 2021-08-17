@@ -8,7 +8,7 @@ import 'repositories/secure_storage.dart';
 class AuthModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.lazySingleton(
+    Bind.lazySingleton<AuthController>(
         (i) => AuthController(
             repository: i<IAuthRepository>(), storage: i<ISecureStorage>()),
         export: true),
