@@ -27,7 +27,7 @@ class LandingModule extends Module {
           ModuleRoute('/mural', module: MuralDivulgacaoModule()),
           ModuleRoute('/calendario', module: CalendarioModule()),
           ModuleRoute('/materias', module: MateriasModule()),
-          ModuleRoute('/bolsas', module: BolsasModule()),
+          ModuleRoute('/bolsas', module: HelpBolsasModule()),
         ]),
   ];
 }
