@@ -34,45 +34,51 @@ class _MateriasApresentacaoPageState extends ModularState<
             var itemPdf = controller.materia.pdf!;
             return Padding(
               padding: const EdgeInsets.only(left: 16, right: 16, bottom: 32),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  TituloApresentacaoWidget(titulo: 'Introdução'),
-                  Text(
-                    controller.materia.introducao,
-                    textAlign: TextAlign.justify,
-                  ),
-                  TituloApresentacaoWidget(titulo: 'Plano de Ensino'),
-                  controller.materia.pdf != null
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8.0),
-                          child: PlanoEnsinoPdfButtonWidget(
-                            titulo: itemPdf.tituloArquivo,
-                            onPressed: () {
-                              controller
-                                  .navigateToPlanoEnsino(controller.materia);
+              child: Stack(children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    TituloApresentacaoWidget(titulo: 'Introdução'),
+                    Text(
+                      controller.materia.introducao,
+                      textAlign: TextAlign.justify,
+                    ),
+                    TituloApresentacaoWidget(titulo: 'Plano de Ensino'),
+                    controller.materia.pdf != null
+                        ? Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                            child: PlanoEnsinoPdfButtonWidget(
+                              titulo: itemPdf.tituloArquivo,
+                              onPressed: () {
+                                controller
+                                    .navigateToPlanoEnsino(controller.materia);
+                              },
+                              imagem: itemPdf.arquivosEnum.imagemString,
+                            ))
+                        : SizedBox.shrink(),
+                    TituloApresentacaoWidget(titulo: 'Docentes da Disciplina'),
+                    controller.materia.professores!.isNotEmpty
+                        ? ListView.builder(
+                            shrinkWrap: true,
+                            physics: NeverScrollableScrollPhysics(),
+                            itemCount: controller.materia.professores!.length,
+                            itemBuilder: (context, index) {
+                              var item = controller.materia.professores![index];
+                              return ContatoDocentesWidget(
+                                nomeDocente: item.nome,
+                                fotoDocente: item.foto,
+                              );
                             },
-                            imagem: itemPdf.arquivosEnum.imagemString,
-                          ))
-                      : SizedBox.shrink(),
-                  TituloApresentacaoWidget(titulo: 'Docentes da Disciplina'),
-                  controller.materia.professores!.isNotEmpty
-                      ? ListView.builder(
-                          shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
-                          itemCount: controller.materia.professores!.length,
-                          itemBuilder: (context, index) {
-                            var item = controller.materia.professores![index];
-                            return ContatoDocentesWidget(
-                              nomeDocente: item.nome,
-                              fotoDocente: item.foto,
-                            );
-                          },
-                        )
-                      : SizedBox.shrink()
-                ],
-              ),
+                          )
+                        : SizedBox.shrink()
+                  ],
+                ),
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: FloatingActionButton(onPressed: () {}),
+                ),
+              ]),
             );
           }),
         ),

@@ -51,9 +51,6 @@ class MateriasModule extends Module {
       '/plano-ensino',
       child: (_, args) => FileViewPage(),
     ),
-    ChildRoute(
-      '/aula/:id',
-      child: (_, args) => MateriasAulasPage(),
-    ),
+    ChildRoute('/aula/:id', child: (_, args) => MateriasAulasPage()),
   ];
 }
