@@ -21,22 +21,22 @@ void main() {
     controller = LoginController(mockAuth);
   });
 
-  test('[TEST] setIsChecked', () async {
+  test('[TEST] - setIsChecked', () async {
     controller.setIsChecked(true);
     expect(controller.isChecked, true);
   });
 
-  test('[TESTE] setEmail', () async {
+  test('[TEST] - setEmail', () async {
     controller.setEmail(emailTeste);
     expect(controller.email, 'email');
   });
 
-  test('[TESTE] setPassword', () async {
+  test('[TEST] - setPassword', () async {
     controller.setPassword(senhaTeste);
     expect(controller.password, 'senha');
   });
 
-  test('[TESTE] login', () async {
+  test('[TEST] - login', () async {
     when(mockAuth.loginWithEmail(any, any, any)).thenAnswer((_) async {});
     when(mockAuth.isLogged).thenReturn(true);
     when(navegador.navigate('/home')).thenAnswer((_) async => {});
