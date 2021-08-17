@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:system_maua_front/app/modules/help-bolsas/enumerate/requerimento_enum.dart';
 import 'package:system_maua_front/app/modules/help-bolsas/help_bolsas_controller.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
@@ -31,11 +32,13 @@ class _HelpBolsasPageState
                   child: Column(
                     children: [
                       Text(
-                        ' OS FORMULÁRIOS DEVERÃO SER PREENCHIDOS ELETRONICAMENTE, ASSINADOS E JUNTAMENTE COM TODA A DOCUMENTAÇÃO DEVERÃO SER DIGITALIZADOS EENCAMINHADOSPARA O E-MAIL: fmb@maua.br',
+                        ' OS FORMULÁRIOS DEVERÃO SER PREENCHIDOS ELETRONICAMENTE, ASSINADOS E JUNTAMENTE COM TODA A DOCUMENTAÇÃO DEVERÃO SER DIGITALIZADOS E ENCAMINHADOS PARA O E-MAIL: fmb@maua.br',
                         textAlign: TextAlign.center,
                       ),
                       Text(
-                          'NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS')
+                        'NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS',
+                        textAlign: TextAlign.center,
+                      )
                     ],
                   ),
                 ),
@@ -63,30 +66,15 @@ class _HelpBolsasPageState
                                 style: AppTextStyles.bodyBold,
                               ),
                             ),
-                            body: Column(
-                              children: [
-                                Text(
-                                  ' • Requerimento',
+                            body: Container(
+                              height: 210,
+                              child: ListView.builder(
+                                itemBuilder: (context, index) => Text(
+                                  RequerimentoEnum.values[index].descricao,
+                                  textAlign: TextAlign.center,
                                 ),
-                                Text(
-                                  ' • Ficha - Informaçoes de irmaos ou filhos do aluno',
-                                ),
-                                Text(
-                                  ' • Ficha - Pai do aluno ',
-                                ),
-                                Text(
-                                  ' • Ficha - Mae do aluno',
-                                ),
-                                Text(
-                                  ' • Ficha conjuge do aluno',
-                                ),
-                                Text(
-                                  ' • Fichar - fiador(a)',
-                                ),
-                                Text(
-                                  ' • Ficha - conjuge do(a) fiador(a)',
-                                ),
-                              ],
+                                itemCount: RequerimentoEnum.values.length,
+                              ),
                             ),
                             isExpanded: controller.isOpen[0],
                           ),
@@ -113,7 +101,11 @@ class _HelpBolsasPageState
                                     textAlign: TextAlign.center),
                                 Text('Fundo Mauá de Bolsas ',
                                     textAlign: TextAlign.center),
-                                Text('fmb@maua.br', textAlign: TextAlign.center)
+                                Text('fmb@maua.br',
+                                    textAlign: TextAlign.center),
+                                SizedBox(
+                                  height: 8,
+                                ),
                               ],
                             ),
                             isExpanded: controller.isOpen[1],
@@ -133,19 +125,23 @@ class _HelpBolsasPageState
                   height: 16,
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.08,
+                  height: MediaQuery.of(context).size.height * 0.095,
                   width: MediaQuery.of(context).size.width * 0.8,
                   decoration: BoxDecoration(
                     boxShadow: [AppColors.shadow],
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
-                    child: Column(
-                      children: [
-                        Text('2ª à 6ª feira', textAlign: TextAlign.center),
-                        Text('das 10h30 às 22h30', textAlign: TextAlign.center)
-                      ],
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      child: Column(
+                        children: [
+                          Text('2ª à 6ª feira', textAlign: TextAlign.center),
+                          Text('das 10h30 às 22h30',
+                              textAlign: TextAlign.center),
+                        ],
+                      ),
                     ),
                   ),
                 ),
