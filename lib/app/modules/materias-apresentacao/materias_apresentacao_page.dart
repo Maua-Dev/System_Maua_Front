@@ -4,6 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/materias-apresentacao/materias_apresentacao_controller.dart';
 import 'package:system_maua_front/app/modules/materias-apresentacao/widgets/plano_ensino_pdf_button_widget.dart';
 import 'package:system_maua_front/app/modules/materias-apresentacao/widgets/titulo_apresentacao_widget.dart';
+import 'package:system_maua_front/app/modules/modal-buttom-sheet/modal_buttom_sheet_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/enumerates/pdf_enum.dart';
 
@@ -28,6 +29,12 @@ class _MateriasApresentacaoPageState extends ModularState<
         appBar: AppBarWidget(
           title: widget.nomeMateria,
           icon: Icons.library_books,
+          actionWidget: IconButton(
+            icon: Icon(Icons.ac_unit_outlined),
+            onPressed: () {
+              buildShowModalBottomSheet(context);
+            },
+          ),
         ),
         body: SingleChildScrollView(
           child: Observer(builder: (_) {
@@ -73,10 +80,6 @@ class _MateriasApresentacaoPageState extends ModularState<
                           )
                         : SizedBox.shrink()
                   ],
-                ),
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: FloatingActionButton(onPressed: () {}),
                 ),
               ]),
             );

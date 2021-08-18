@@ -187,4 +187,16 @@ class MateriasRepository implements IMateriasRepository {
         element.codigoMateria == codigoMateria &&
         element.idPagina == idPagina));
   }
+
+  @override
+  Future<List<MateriasAulasModel>> getListaAulas(String codigoMateria) {
+    var lista = <MateriasAulasModel>[];
+
+    for (var i = 0; i < listaAulasMaterias.length; i++) {
+      if (listaAulasMaterias[i].codigoMateria == codigoMateria) {
+        lista.add(listaAulasMaterias[i]);
+      }
+    }
+    return Future.value(lista);
+  }
 }
