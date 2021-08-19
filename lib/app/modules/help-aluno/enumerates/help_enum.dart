@@ -40,7 +40,7 @@ extension HelpEnumExtension on HelpEnum {
       case HelpEnum.SOFTWARES:
         return '';
       case HelpEnum.BOLSAS:
-        return '';
+        return '/bolsas';
       case HelpEnum.INTERCAMBIO:
         return '';
       case HelpEnum.ESTAGIO:
