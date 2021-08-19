@@ -6,6 +6,7 @@ import 'package:system_maua_front/app/modules/calendario/calendario_module.dart'
 import 'package:system_maua_front/app/modules/home-aluno/home_aluno_module.dart';
 import 'package:system_maua_front/app/modules/landing/landing_page.dart';
 import 'package:system_maua_front/app/modules/materias/materias_module.dart';
+import 'package:system_maua_front/app/modules/medias/medias_module.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/mural_divulgacao_module.dart';
 import 'package:system_maua_front/app/modules/notas-aluno/notas_aluno_module.dart';
 
@@ -22,6 +23,7 @@ class LandingModule extends Module {
           ModuleRoute('/home', module: HomeAlunoModule()),
           ModuleRoute('/help', module: HelpAlunoModule()),
           ModuleRoute('/avisos', module: HelpAvisosModule()),
+          ModuleRoute('/medias', module: MediasModule()),
           ModuleRoute('/activities', module: ActivitiesModule()),
           ModuleRoute('/mural', module: MuralDivulgacaoModule()),
           ModuleRoute('/calendario', module: CalendarioModule()),
