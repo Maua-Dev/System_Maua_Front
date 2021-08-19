@@ -42,7 +42,7 @@ extension HelpEnumExtension on HelpEnum {
       case HelpEnum.BOLSAS:
         return '/bolsas';
       case HelpEnum.INTERCAMBIO:
-        return '';
+        return '/intercambio';
       case HelpEnum.ESTAGIO:
         return '';
       case HelpEnum.MAPA:
