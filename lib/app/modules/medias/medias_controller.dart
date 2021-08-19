@@ -19,6 +19,9 @@ abstract class MediasControllerBase with Store {
     getMedias();
   }
 
+  @computed
+  int get mediaMaua => 6;
+
   @observable
   // List<MediasModel> todasMedias = [];
   List<MediasModel> todasMedias = [

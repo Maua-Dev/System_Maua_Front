@@ -9,6 +9,14 @@ part of 'medias_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$MediasController on MediasControllerBase, Store {
+  Computed<int>? _$mediaMauaComputed;
+
+  @override
+  int get mediaMaua =>
+      (_$mediaMauaComputed ??= Computed<int>(() => super.mediaMaua,
+              name: 'MediasControllerBase.mediaMaua'))
+          .value;
+
   final _$todasMediasAtom = Atom(name: 'MediasControllerBase.todasMedias');
 
   @override
@@ -34,7 +42,8 @@ mixin _$MediasController on MediasControllerBase, Store {
   @override
   String toString() {
     return '''
-todasMedias: ${todasMedias}
+todasMedias: ${todasMedias},
+mediaMaua: ${mediaMaua}
     ''';
   }
 }
