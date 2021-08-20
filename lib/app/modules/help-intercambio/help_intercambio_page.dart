@@ -31,7 +31,7 @@ class _HelpIntercambioPageState extends State<HelpIntercambioPage> {
             ),
           ),
           SizedBox(
-            height: 8,
+            height: 9,
           )
         ],
       ),
