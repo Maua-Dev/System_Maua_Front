@@ -28,12 +28,11 @@ class MateriasModule extends Module {
         repository: i(),
         codigoMateria:
             (i.args?.data as MateriasApresentacaoModel).codigoMateria)),
-    Bind.lazySingleton(
-      (i) => MateriasAulasController(
+    Bind.lazySingleton((i) => MateriasAulasController(
           repository: i(),
           codigoMateria: (i.args?.data as MateriasAulasModel).codigoMateria,
-          idPagina: (i.args?.data as MateriasAulasModel).idPagina),
-    ),
+          idPagina: (i.args?.params['id'] as int),
+        )),
     Bind.lazySingleton((i) => ModalButtomController(
         repository: i(),
         codigoMateria: (i.args?.data as MateriasModel).codigoMateria)),
@@ -55,6 +54,9 @@ class MateriasModule extends Module {
       '/plano-ensino',
       child: (_, args) => FileViewPage(),
     ),
-    ChildRoute('/aula/:id', child: (_, args) => MateriasAulasPage()),
+    ChildRoute('/aula/:id',
+        child: (_, args) => MateriasAulasPage(
+              nomeMateria: (args.data as MateriasAulasModel).nomeMateria!.name,
+            )),
   ];
 }

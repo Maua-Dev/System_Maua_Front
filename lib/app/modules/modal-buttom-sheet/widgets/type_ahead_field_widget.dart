@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
-import 'package:system_maua_front/app/shared/models/generic_fields_model.dart';
+import 'package:system_maua_front/app/modules/modal-buttom-sheet/models/generic_fields_model.dart';
 
 class TypeAheadFieldWidget extends StatelessWidget {
   final String? titulo;
@@ -34,7 +34,7 @@ class TypeAheadFieldWidget extends StatelessWidget {
           decoration: InputDecoration(
             labelText: titulo,
             labelStyle: TextStyle(
-              fontSize: 24,
+              fontSize: 18,
             ),
             suffixIcon: IconButton(
                 onPressed: textController.clear, icon: Icon(Icons.close)),

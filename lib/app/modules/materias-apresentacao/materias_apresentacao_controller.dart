@@ -26,8 +26,7 @@ abstract class _MateriasApresentacaoControllerBase with Store {
     materia = await repository.getMateriaEspecifica(codigoMateria);
   }
 
-  void navigateToPlanoEnsino(MateriasApresentacaoModel codigoMateria) async {
-    await Modular.to
-        .pushNamed('/materias/plano-ensino', arguments: codigoMateria);
+  void navigateToPlanoEnsino() async {
+    await Modular.to.pushNamed('/materias/plano-ensino', arguments: materia);
   }
 }

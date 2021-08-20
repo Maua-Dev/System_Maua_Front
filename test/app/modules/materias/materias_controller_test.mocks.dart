@@ -61,4 +61,11 @@ class MockIMateriasRepository extends _i1.Mock
               returnValue: Future<_i3.MateriasAulasModel>.value(
                   _FakeMateriasAulasModel()))
           as _i5.Future<_i3.MateriasAulasModel>);
+  @override
+  _i5.Future<List<_i3.MateriasAulasModel>> getListaAulas(
+          String? codigoMateria) =>
+      (super.noSuchMethod(Invocation.method(#getListaAulas, [codigoMateria]),
+              returnValue: Future<List<_i3.MateriasAulasModel>>.value(
+                  <_i3.MateriasAulasModel>[]))
+          as _i5.Future<List<_i3.MateriasAulasModel>>);
 }

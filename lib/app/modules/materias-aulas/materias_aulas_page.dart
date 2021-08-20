@@ -4,7 +4,8 @@ import 'package:system_maua_front/app/modules/materias-aulas/materias_aulas_cont
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 
 class MateriasAulasPage extends StatefulWidget {
-  MateriasAulasPage({Key? key}) : super(key: key);
+  final String nomeMateria;
+  MateriasAulasPage({Key? key, required this.nomeMateria}) : super(key: key);
 
   @override
   _MateriasAulasPageState createState() => _MateriasAulasPageState();
@@ -16,7 +17,7 @@ class _MateriasAulasPageState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
-        title: controller.aula.tituloPagina,
+        title: widget.nomeMateria,
       ),
       body: Container(
         color: Colors.red,

@@ -81,29 +81,10 @@ class MateriasRepository implements IMateriasRepository {
 
   var listaAulasMaterias = [
     MateriasAulasModel(
-        idPagina: 1,
+        idPagina: 0,
         tituloPagina: 'Aula 1 - 23/02/2021',
         codigoMateria: 'EFB104',
-        resumoPagina:
-            'Aqui temos uma introdução sobre essa merda que ninguem usa pra porra nenhuma :)',
-        listaArquivos: [
-          ArquivosModel(
-              arquivosEnum: ArquivosEnum.XML,
-              url: 'http://africau.edu/images/default/sample.pdf',
-              tituloArquivo: 'Aula 1 - Excel'),
-          ArquivosModel(
-              arquivosEnum: ArquivosEnum.PDF,
-              url: 'http://africau.edu/images/default/sample.pdf',
-              tituloArquivo: 'Aula 1 - PDF'),
-          ArquivosModel(
-              arquivosEnum: ArquivosEnum.URL,
-              url: 'http://africau.edu/images/default/sample.pdf',
-              tituloArquivo: 'Aula 1 - URL'),
-        ]),
-    MateriasAulasModel(
-        idPagina: 2,
-        tituloPagina: 'Aula 2 - 02/03/2021',
-        codigoMateria: 'EFB101',
+        nomeMateria: TipoMateriaEnum.CALC1,
         resumoPagina:
             'Aqui temos uma introdução sobre essa merda que ninguem usa pra porra nenhuma :)',
         listaArquivos: [
@@ -122,6 +103,28 @@ class MateriasRepository implements IMateriasRepository {
         ]),
     MateriasAulasModel(
         idPagina: 1,
+        tituloPagina: 'Aula 2 - 02/03/2021',
+        codigoMateria: 'EFB101',
+        nomeMateria: TipoMateriaEnum.ACADEMIATALENTOS,
+        resumoPagina:
+            'Aqui temos uma introdução sobre essa merda que ninguem usa pra porra nenhuma :)',
+        listaArquivos: [
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.XML,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - Excel'),
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.PDF,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - PDF'),
+          ArquivosModel(
+              arquivosEnum: ArquivosEnum.URL,
+              url: 'http://africau.edu/images/default/sample.pdf',
+              tituloArquivo: 'Aula 1 - URL'),
+        ]),
+    MateriasAulasModel(
+        idPagina: 0,
+        nomeMateria: TipoMateriaEnum.ACADEMIATALENTOS,
         tituloPagina: 'Aula 1 - 23/02/2021',
         codigoMateria: 'EFB101',
         resumoPagina:
@@ -141,7 +144,8 @@ class MateriasRepository implements IMateriasRepository {
               tituloArquivo: 'Aula 1 - URL'),
         ]),
     MateriasAulasModel(
-        idPagina: 2,
+        idPagina: 1,
+        nomeMateria: TipoMateriaEnum.CALC1,
         tituloPagina: 'Aula 2 - 02/03/2021',
         codigoMateria: 'EFB104',
         resumoPagina:
