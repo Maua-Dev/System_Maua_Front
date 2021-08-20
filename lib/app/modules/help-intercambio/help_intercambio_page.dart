@@ -20,13 +20,15 @@ class _HelpIntercambioPageState extends State<HelpIntercambioPage> {
       ),
       body: Column(
         children: [
-          ListView.builder(
-            itemBuilder: (context, index) => IntercambioCard(
-              title: IntercambioEnum.values[index].titulo,
-              onPressed: () =>
-                  Modular.to.pushNamed(IntercambioEnum.values[index].pushNamed),
+          Expanded(
+            child: ListView.builder(
+              itemBuilder: (context, index) => IntercambioCard(
+                title: IntercambioEnum.values[index].titulo,
+                onPressed: () => Modular.to
+                    .pushNamed(IntercambioEnum.values[index].pushNamed),
+              ),
+              itemCount: IntercambioEnum.values.length,
             ),
-            itemCount: IntercambioEnum.values.length,
           ),
         ],
       ),
