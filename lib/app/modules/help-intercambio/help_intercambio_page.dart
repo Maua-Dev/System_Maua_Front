@@ -30,6 +30,9 @@ class _HelpIntercambioPageState extends State<HelpIntercambioPage> {
               itemCount: IntercambioEnum.values.length,
             ),
           ),
+          SizedBox(
+            height: 8,
+          )
         ],
       ),
     );
