@@ -24,18 +24,18 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          children: <Widget>[
+          children: [
             Container(
-              height: 292,
+              height: MediaQuery.of(context).size.height * 0.35,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(gradient: AppGradients.blueGradient),
               child: Image.asset('assets/images/logoMaua.png'),
             ),
             SizedBox(
-              height: 72,
+              height: MediaQuery.of(context).size.height * 0.12,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
               child: Observer(builder: (_) {
                 return TextField(
                   onChanged: controller.setEmail,
@@ -55,7 +55,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
               }),
             ),
             Padding(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.all(8),
               child: Observer(builder: (_) {
                 return TextField(
                   onChanged: controller.setPassword,
@@ -81,7 +81,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
               );
             }),
             SizedBox(
-              height: 16,
+              height: 8,
             ),
             Observer(builder: (_) {
               return Center(
@@ -93,7 +93,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
             }),
             //  controller.erros != '' ? Text(controller.erros) : Container(),
             SizedBox(
-              height: 72,
+              height: MediaQuery.of(context).size.height * 0.05,
             ),
             EntrarButtonWidget(onPressed: () {
               controller.login();

@@ -39,6 +39,7 @@ abstract class _LoginController with Store {
     password = value;
   }
 
+  @action
   Future<void> login() async {
     try {
       await authController.loginWithEmail(email, password, isChecked);
