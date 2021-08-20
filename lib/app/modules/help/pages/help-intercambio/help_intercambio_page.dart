@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:system_maua_front/app/modules/help-intercambio/enumarates/intercambio_enum.dart';
-import 'package:system_maua_front/app/modules/help-intercambio/widgets/intercambio_card.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-intercambio/widgets/intercambio_card.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
+
+import 'enumarates/intercambio_enum.dart';
 
 class HelpIntercambioPage extends StatefulWidget {
   @override
@@ -31,7 +32,7 @@ class _HelpIntercambioPageState extends State<HelpIntercambioPage> {
             ),
           ),
           SizedBox(
-            height: 8,
+            height: 9,
           )
         ],
       ),

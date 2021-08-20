@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/app/modules/help-aluno/enumerates/help_enum.dart';
-import 'package:system_maua_front/app/modules/help-aluno/widgets/help_card.dart';
+import 'package:system_maua_front/app/modules/help/widgets/help_card.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 
-class HelpAlunoPage extends StatefulWidget {
-  const HelpAlunoPage({
+import 'enumerates/help_enum.dart';
+
+class HelpPage extends StatefulWidget {
+  const HelpPage({
     Key? key,
   }) : super(key: key);
   @override
@@ -16,7 +17,7 @@ class HelpAlunoPage extends StatefulWidget {
 
 var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
 
-class _HelpAlunoPageState extends State<HelpAlunoPage> {
+class _HelpAlunoPageState extends State<HelpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

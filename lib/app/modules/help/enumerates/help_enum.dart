@@ -34,15 +34,15 @@ extension HelpEnumExtension on HelpEnum {
   String get pushNamed {
     switch (this) {
       case HelpEnum.AVISOS:
-        return '/avisos';
+        return '/help/avisos';
       case HelpEnum.VIDEO:
         return '';
       case HelpEnum.SOFTWARES:
         return '';
       case HelpEnum.BOLSAS:
-        return '/bolsas';
+        return '/help/bolsas';
       case HelpEnum.INTERCAMBIO:
-        return '/intercambio';
+        return '/help/intercambio';
       case HelpEnum.ESTAGIO:
         return '';
       case HelpEnum.MAPA:
