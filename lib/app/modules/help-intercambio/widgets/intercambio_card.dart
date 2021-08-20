@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
-class HelpCard extends StatelessWidget {
+class IntercambioCard extends StatelessWidget {
   final void Function()? onPressed;
   final String title;
 
-  const HelpCard({Key? key, this.onPressed, required this.title})
+  const IntercambioCard({Key? key, this.onPressed, required this.title})
       : super(key: key);
 
   @override
