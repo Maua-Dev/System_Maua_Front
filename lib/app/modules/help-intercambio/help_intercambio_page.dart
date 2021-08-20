@@ -15,6 +15,9 @@ class _HelpIntercambioPageState extends State<HelpIntercambioPage> {
         title: "Intercambio",
         icon: Icons.airplanemode_active,
       ),
+      body: Column(
+        children: [],
+      ),
     );
   }
 }
