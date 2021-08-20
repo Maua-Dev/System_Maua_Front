@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:system_maua_front/app/modules/modal-buttom-sheet/modal_buttom_sheet_controller.dart';
-import 'package:system_maua_front/app/modules/modal-buttom-sheet/widgets/type_ahead_field_widget.dart';
+import 'package:system_maua_front/app/modules/materias/pages/modal-buttom-sheet/widgets/type_ahead_field_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
+
+import 'modal_buttom_sheet_controller.dart';
 
 Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
   var controller = Modular.get<ModalButtomController>();

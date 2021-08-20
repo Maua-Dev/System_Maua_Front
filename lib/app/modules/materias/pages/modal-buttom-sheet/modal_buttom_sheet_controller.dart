@@ -1,8 +1,9 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
-import 'package:system_maua_front/app/modules/materias-aulas/models/materias_aulas_model.dart';
+import 'package:system_maua_front/app/modules/materias/pages/materias-aulas/models/materias_aulas_model.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart';
-import 'package:system_maua_front/app/modules/modal-buttom-sheet/models/generic_fields_model.dart';
+
+import 'models/generic_fields_model.dart';
 
 part 'modal_buttom_sheet_controller.g.dart';
 
@@ -40,7 +41,7 @@ abstract class ModalButtomControllerBase with Store {
 
   @action
   Future<void> onSuggestionSelected(int value) async {
-    await Modular.to.pushNamed('/materias/aula/' + value.toString(),
-        arguments: listaAulasNome[value]);
+    await Modular.to
+        .pushNamed('/materias/aula/$value', arguments: listaAulasNome[value]);
   }
 }

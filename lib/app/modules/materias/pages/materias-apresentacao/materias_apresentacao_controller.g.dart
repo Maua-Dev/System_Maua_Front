@@ -26,6 +26,22 @@ mixin _$MateriasApresentacaoController
     });
   }
 
+  final _$professoresAtom =
+      Atom(name: '_MateriasApresentacaoControllerBase.professores');
+
+  @override
+  List<ProfessoresModel> get professores {
+    _$professoresAtom.reportRead();
+    return super.professores;
+  }
+
+  @override
+  set professores(List<ProfessoresModel> value) {
+    _$professoresAtom.reportWrite(value, super.professores, () {
+      super.professores = value;
+    });
+  }
+
   final _$getMateriaAsyncAction =
       AsyncAction('_MateriasApresentacaoControllerBase.getMateria');
 
@@ -37,7 +53,8 @@ mixin _$MateriasApresentacaoController
   @override
   String toString() {
     return '''
-materia: ${materia}
+materia: ${materia},
+professores: ${professores}
     ''';
   }
 }

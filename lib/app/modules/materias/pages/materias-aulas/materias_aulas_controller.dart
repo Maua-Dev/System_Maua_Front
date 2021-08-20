@@ -1,6 +1,7 @@
 import 'package:mobx/mobx.dart';
-import 'package:system_maua_front/app/modules/materias-aulas/models/materias_aulas_model.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart';
+
+import 'models/materias_aulas_model.dart';
 
 part 'materias_aulas_controller.g.dart';
 

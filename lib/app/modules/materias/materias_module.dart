@@ -1,17 +1,15 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:system_maua_front/app/modules/file-view/file_view_controller.dart';
-import 'package:system_maua_front/app/modules/file-view/file_view_page.dart';
-import 'package:system_maua_front/app/modules/materias-apresentacao/materias_apresentacao_controller.dart';
-import 'package:system_maua_front/app/modules/materias-apresentacao/materias_apresentacao_page.dart';
-import 'package:system_maua_front/app/modules/materias-apresentacao/models/materias_apresentacao_model.dart';
-import 'package:system_maua_front/app/modules/materias-aulas/materias_aulas_controller.dart';
-import 'package:system_maua_front/app/modules/materias-aulas/materias_aulas_page.dart';
-import 'package:system_maua_front/app/modules/materias-aulas/models/materias_aulas_model.dart';
 import 'package:system_maua_front/app/modules/materias/materias_controller.dart';
 import 'package:system_maua_front/app/modules/materias/models/materias_model.dart';
+import 'package:system_maua_front/app/modules/materias/pages/file-view/file_view_controller.dart';
+import 'package:system_maua_front/app/modules/materias/pages/file-view/file_view_page.dart';
+import 'package:system_maua_front/app/modules/materias/pages/materias-apresentacao/materias_apresentacao_controller.dart';
+import 'package:system_maua_front/app/modules/materias/pages/materias-apresentacao/materias_apresentacao_page.dart';
+import 'package:system_maua_front/app/modules/materias/pages/materias-aulas/materias_aulas_controller.dart';
+import 'package:system_maua_front/app/modules/materias/pages/materias-aulas/materias_aulas_page.dart';
+import 'package:system_maua_front/app/modules/materias/pages/modal-buttom-sheet/modal_buttom_sheet_controller.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart';
-import 'package:system_maua_front/app/modules/modal-buttom-sheet/modal_buttom_sheet_controller.dart';
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 
 import 'materias_page.dart';
@@ -26,11 +24,10 @@ class MateriasModule extends Module {
         codigoMateria: (i.args?.data as MateriasModel).codigoMateria)),
     Bind.lazySingleton((i) => FileViewController(
         repository: i(),
-        codigoMateria:
-            (i.args?.data as MateriasApresentacaoModel).codigoMateria)),
+        codigoMateria: (i.args?.data as MateriasModel).codigoMateria)),
     Bind.lazySingleton((i) => MateriasAulasController(
           repository: i(),
-          codigoMateria: (i.args?.data as MateriasAulasModel).codigoMateria,
+          codigoMateria: (i.args?.data as MateriasModel).codigoMateria,
           idPagina: (i.args?.params['id'] as int),
         )),
     Bind.lazySingleton((i) => ModalButtomController(
@@ -56,7 +53,7 @@ class MateriasModule extends Module {
     ),
     ChildRoute('/aula/:id',
         child: (_, args) => MateriasAulasPage(
-              nomeMateria: (args.data as MateriasAulasModel).nomeMateria!.name,
+              nomeMateria: (args.data as MateriasModel).nomeMateria!.name,
             )),
   ];
 }
