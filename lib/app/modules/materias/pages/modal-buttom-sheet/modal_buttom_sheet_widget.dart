@@ -30,8 +30,9 @@ Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
                           titulo: 'Pesquisar conteúdo',
                           list: controller.getListaAulasNomes,
                           flex: 2,
-                          onSuggestionSelected: controller.onSuggestionSelected,
+                          onSuggestionSelected: controller.onAulaSelecionada,
                           value: controller.valorDigitado,
+                          onChanged: controller.onChangedValorDigitado,
                         );
                       }),
                       IconButton(
@@ -49,22 +50,22 @@ Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
                       child: Padding(
                     padding: const EdgeInsets.only(top: 8),
                     child: ListView.builder(
-                      itemCount: controller.listaAulasNome.length,
+                      itemCount: controller.materia.listaAulas!.length,
                       itemBuilder: (context, index) {
                         return Observer(builder: (_) {
                           return Align(
                             alignment: Alignment.topLeft,
                             child: TextButton(
                                 onPressed: () {
-                                  controller.onSuggestionSelected(controller
-                                      .listaAulasNome[index].idPagina);
+                                  controller.onAulaSelecionada(controller
+                                      .materia.listaAulas![index].idPagina);
                                 },
                                 child: Padding(
                                   padding:
                                       const EdgeInsets.symmetric(vertical: 8),
                                   child: Text(
-                                    controller
-                                        .listaAulasNome[index].tituloPagina,
+                                    controller.materia.listaAulas![index]
+                                        .tituloPagina,
                                     style: AppTextStyles.body.copyWith(
                                         fontSize: 22, color: Color(0xff00518C)),
                                     textAlign: TextAlign.start,

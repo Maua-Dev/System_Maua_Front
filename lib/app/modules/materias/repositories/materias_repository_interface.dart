@@ -9,5 +9,5 @@ abstract class IMateriasRepository {
   Future<List<ProfessoresModel>> getProfessores(String codigoMateria);
   Future<String> getUrlPdf(String codigoMateria);
   Future<MateriasAulasModel> getAula(String codigoMateria, int idPagina);
-  Future<List<MateriasAulasModel>> getListaAulas(String codigoMateria);
+  Future<MateriasModel> getMateriaEspecifica(String codigoMateria);
 }

@@ -9,19 +9,18 @@ part of 'modal_buttom_sheet_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$ModalButtomController on ModalButtomControllerBase, Store {
-  final _$listaAulasNomeAtom =
-      Atom(name: 'ModalButtomControllerBase.listaAulasNome');
+  final _$materiaAtom = Atom(name: 'ModalButtomControllerBase.materia');
 
   @override
-  List<MateriasAulasModel> get listaAulasNome {
-    _$listaAulasNomeAtom.reportRead();
-    return super.listaAulasNome;
+  MateriasModel get materia {
+    _$materiaAtom.reportRead();
+    return super.materia;
   }
 
   @override
-  set listaAulasNome(List<MateriasAulasModel> value) {
-    _$listaAulasNomeAtom.reportWrite(value, super.listaAulasNome, () {
-      super.listaAulasNome = value;
+  set materia(MateriasModel value) {
+    _$materiaAtom.reportWrite(value, super.materia, () {
+      super.materia = value;
     });
   }
 
@@ -49,13 +48,13 @@ mixin _$ModalButtomController on ModalButtomControllerBase, Store {
     return _$getListaAulasAsyncAction.run(() => super.getListaAulas());
   }
 
-  final _$onSuggestionSelectedAsyncAction =
-      AsyncAction('ModalButtomControllerBase.onSuggestionSelected');
+  final _$onAulaSelecionadaAsyncAction =
+      AsyncAction('ModalButtomControllerBase.onAulaSelecionada');
 
   @override
-  Future<void> onSuggestionSelected(int value) {
-    return _$onSuggestionSelectedAsyncAction
-        .run(() => super.onSuggestionSelected(value));
+  Future<void> onAulaSelecionada(int value) {
+    return _$onAulaSelecionadaAsyncAction
+        .run(() => super.onAulaSelecionada(value));
   }
 
   final _$ModalButtomControllerBaseActionController =
@@ -75,7 +74,7 @@ mixin _$ModalButtomController on ModalButtomControllerBase, Store {
   @override
   String toString() {
     return '''
-listaAulasNome: ${listaAulasNome},
+materia: ${materia},
 valorDigitado: ${valorDigitado}
     ''';
   }

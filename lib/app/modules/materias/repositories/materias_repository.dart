@@ -179,10 +179,9 @@ class MateriasRepository implements IMateriasRepository {
   }
 
   @override
-  Future<List<MateriasAulasModel>> getListaAulas(String codigoMateria) {
+  Future<MateriasModel> getMateriaEspecifica(String codigoMateria) {
     return Future.value(listaMaterias
         .where((element) => element.codigoMateria == codigoMateria)
-        .first
-        .listaAulas);
+        .first);
   }
 }
