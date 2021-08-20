@@ -15,7 +15,7 @@ class _HelpIntercambioPageState extends State<HelpIntercambioPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
-        title: "Intercambio",
+        title: 'Intercambio',
         icon: Icons.airplanemode_active,
       ),
       body: Column(
