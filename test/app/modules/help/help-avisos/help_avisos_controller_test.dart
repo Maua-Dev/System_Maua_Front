@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:system_maua_front/app/modules/help-avisos/help_avisos_controller.dart';
-import 'package:system_maua_front/app/modules/help-avisos/models/avisos_model.dart';
-import 'package:system_maua_front/app/modules/help-avisos/repositories/help_avisos_repository_interface.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-avisos/help_avisos_controller.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-avisos/models/avisos_model.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-avisos/repositories/help_avisos_repository_interface.dart';
 
 import 'help_avisos_controller_test.mocks.dart';
 

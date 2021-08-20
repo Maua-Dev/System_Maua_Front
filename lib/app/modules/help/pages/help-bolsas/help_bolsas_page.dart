@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:system_maua_front/app/modules/help-bolsas/enumerate/requerimento_enum.dart';
-import 'package:system_maua_front/app/modules/help-bolsas/help_bolsas_controller.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
+
+import 'enumerate/requerimento_enum.dart';
+import 'help_bolsas_controller.dart';
 
 class HelpBolsasPage extends StatefulWidget {
   @override

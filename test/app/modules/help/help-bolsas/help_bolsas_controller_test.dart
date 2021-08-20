@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:system_maua_front/app/modules/help-bolsas/help_bolsas_controller.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-bolsas/help_bolsas_controller.dart';
 
 void main() {
   var controller = HelpBolsasController();
