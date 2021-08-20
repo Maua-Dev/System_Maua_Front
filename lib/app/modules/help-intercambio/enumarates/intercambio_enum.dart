@@ -24,7 +24,7 @@ extension IntercambioEnumExtension on IntercambioEnum {
       case IntercambioEnum.CONTATO:
         return 'Contato';
       case IntercambioEnum.FAQ:
-        return 'Perguntas frequentes';
+        return 'FAQ';
     }
   }
 
