@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:system_maua_front/app/modules/help-intercambio/enumarates/intercambio_enum.dart';
+import 'package:system_maua_front/app/modules/help-intercambio/widgets/intercambio_card.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 
 class HelpIntercambioPage extends StatefulWidget {
@@ -16,7 +19,16 @@ class _HelpIntercambioPageState extends State<HelpIntercambioPage> {
         icon: Icons.airplanemode_active,
       ),
       body: Column(
-        children: [],
+        children: [
+          ListView.builder(
+            itemBuilder: (context, index) => IntercambioCard(
+              title: IntercambioEnum.values[index].titulo,
+              onPressed: () =>
+                  Modular.to.pushNamed(IntercambioEnum.values[index].pushNamed),
+            ),
+            itemCount: IntercambioEnum.values.length,
+          ),
+        ],
       ),
     );
   }
