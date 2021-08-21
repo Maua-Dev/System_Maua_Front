@@ -5,6 +5,7 @@ import 'package:system_maua_front/app/modules/help/pages/help-avisos/repositorie
 import 'package:system_maua_front/app/modules/help/pages/help-bolsas/help_bolsas_controller.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-bolsas/help_bolsas_page.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-intercambio/help_intercambio_page.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-softwares/help_softwares_page.dart';
 
 import 'help_page.dart';
 
@@ -22,5 +23,6 @@ class HelpModule extends Module {
     ChildRoute('/avisos', child: (_, args) => HelpAvisosPage()),
     ChildRoute('/bolsas', child: (_, args) => HelpBolsasPage()),
     ChildRoute('/intercambio', child: (_, args) => HelpIntercambioPage()),
+    ChildRoute('/softwares', child: (_, args) => HelpSoftwaresPage())
   ];
 }
