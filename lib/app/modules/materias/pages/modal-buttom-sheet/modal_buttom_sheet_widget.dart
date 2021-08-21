@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:system_maua_front/app/modules/materias/pages/modal-buttom-sheet/widgets/text_button_custom_widget.dart';
 import 'package:system_maua_front/app/modules/materias/pages/modal-buttom-sheet/widgets/type_ahead_field_widget.dart';
-import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 import 'modal_buttom_sheet_controller.dart';
 
@@ -21,60 +21,62 @@ Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
               height: MediaQuery.of(context).size.height * 0.73,
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                 child: Column(children: [
-                  Row(
-                    children: [
-                      Observer(builder: (_) {
-                        return TypeAheadFieldWidget(
-                          titulo: 'Pesquisar conteúdo',
-                          list: controller.getListaAulasNomes,
-                          flex: 2,
-                          onSuggestionSelected: controller.onAulaSelecionada,
-                          value: controller.valorDigitado,
-                          onChanged: controller.onChangedValorDigitado,
-                        );
-                      }),
-                      IconButton(
-                        icon: Icon(
-                          Icons.close,
-                          size: 25,
-                        ),
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                      ),
-                    ],
-                  ),
-                  Expanded(
-                      child: Padding(
-                    padding: const EdgeInsets.only(top: 8),
-                    child: ListView.builder(
-                      itemCount: controller.materia.listaAulas!.length,
-                      itemBuilder: (context, index) {
-                        return Observer(builder: (_) {
-                          return Align(
-                            alignment: Alignment.topLeft,
-                            child: TextButton(
-                                onPressed: () {
-                                  controller.onAulaSelecionada(controller
-                                      .materia.listaAulas![index].idPagina);
-                                },
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.symmetric(vertical: 8),
-                                  child: Text(
-                                    controller.materia.listaAulas![index]
-                                        .tituloPagina,
-                                    style: AppTextStyles.body.copyWith(
-                                        fontSize: 22, color: Color(0xff00518C)),
-                                    textAlign: TextAlign.start,
-                                  ),
-                                )),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 32.0),
+                    child: Row(
+                      children: [
+                        Observer(builder: (_) {
+                          return Expanded(
+                            child: TypeAheadFieldWidget(
+                              titulo: 'Pesquisar conteúdo',
+                              list: controller.getListaAulasNomes,
+                              onSuggestionSelected: (value) {
+                                controller.onAulaSelecionada(value);
+                              },
+                              value: controller.valorDigitado,
+                              onChanged: controller.onChangedValorDigitado,
+                            ),
                           );
-                        });
+                        }),
+                        IconButton(
+                          icon: Icon(
+                            Icons.close,
+                            size: 25,
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8),
+                    child: TextButtonCustomWidget(
+                      titulo: 'Introdução',
+                      onPressed: () {
+                        Modular.to.pushNamed('apresentacao',
+                            arguments: controller.materia);
                       },
                     ),
+                  ),
+                  Expanded(
+                      child: ListView.builder(
+                    itemCount: controller.materia.listaAulas!.length,
+                    itemBuilder: (context, index) {
+                      return Observer(builder: (_) {
+                        return TextButtonCustomWidget(
+                          titulo: controller
+                              .materia.listaAulas![index].tituloPagina,
+                          onPressed: () {
+                            controller.onAulaSelecionada(
+                                controller.materia.listaAulas![index].idPagina);
+                          },
+                        );
+                      });
+                    },
                   ))
                 ]),
               ));

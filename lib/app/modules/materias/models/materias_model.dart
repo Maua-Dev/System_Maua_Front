@@ -1,6 +1,6 @@
 import 'package:system_maua_front/app/modules/materias/models/professores_model.dart';
-import 'package:system_maua_front/app/modules/materias/pages/materias-apresentacao/models/materias_apresentacao_model.dart';
 import 'package:system_maua_front/app/modules/materias/pages/materias-aulas/models/materias_aulas_model.dart';
+import 'package:system_maua_front/app/modules/materias/pages/materias-introducao/models/materias_introducao_model.dart';
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 
 class MateriasModel {
@@ -9,10 +9,10 @@ class MateriasModel {
   final String? foto;
   final List<ProfessoresModel>? professores;
   final List<MateriasAulasModel>? listaAulas;
-  final MateriasApresentacaoModel? apresentacaoModel;
+  final MateriasIntroducaoModel? introducaoModel;
 
   MateriasModel({
-    this.apresentacaoModel,
+    this.introducaoModel,
     this.listaAulas,
     required this.codigoMateria,
     required this.nomeMateria,
@@ -22,7 +22,7 @@ class MateriasModel {
 
   factory MateriasModel.newInstance() {
     return MateriasModel(
-      apresentacaoModel: null,
+      introducaoModel: null,
       codigoMateria: '',
       foto: '',
       nomeMateria: null,

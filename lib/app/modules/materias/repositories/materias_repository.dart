@@ -1,7 +1,7 @@
 import 'package:system_maua_front/app/modules/materias/models/materias_model.dart';
 import 'package:system_maua_front/app/modules/materias/models/professores_model.dart';
-import 'package:system_maua_front/app/modules/materias/pages/materias-apresentacao/models/materias_apresentacao_model.dart';
 import 'package:system_maua_front/app/modules/materias/pages/materias-aulas/models/materias_aulas_model.dart';
+import 'package:system_maua_front/app/modules/materias/pages/materias-introducao/models/materias_introducao_model.dart';
 import 'package:system_maua_front/app/shared/enumerates/pdf_enum.dart';
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 import 'package:system_maua_front/app/shared/models/arquivos_model.dart';
@@ -25,7 +25,7 @@ class MateriasRepository implements IMateriasRepository {
             nome: 'Murilo Nerd Zanini',
             foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
       ],
-      apresentacaoModel: MateriasApresentacaoModel(
+      introducaoModel: MateriasIntroducaoModel(
         pdf: ArquivosModel(
             arquivosEnum: ArquivosEnum.PDF,
             url: 'http://africau.edu/images/default/sample.pdf',
@@ -86,7 +86,7 @@ class MateriasRepository implements IMateriasRepository {
             nome: 'Furlaneto Cabeça de ',
             foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
       ],
-      apresentacaoModel: MateriasApresentacaoModel(
+      introducaoModel: MateriasIntroducaoModel(
         pdf: ArquivosModel(
             arquivosEnum: ArquivosEnum.PDF,
             url: 'http://africau.edu/images/default/sample.pdf',
@@ -143,11 +143,11 @@ class MateriasRepository implements IMateriasRepository {
   }
 
   @override
-  Future<MateriasApresentacaoModel> getApresentacao(String codigoMateria) {
+  Future<MateriasIntroducaoModel> getApresentacao(String codigoMateria) {
     return Future.value(listaMaterias
         .where((element) => element.codigoMateria == codigoMateria)
         .first
-        .apresentacaoModel);
+        .introducaoModel);
   }
 
   @override
@@ -155,7 +155,7 @@ class MateriasRepository implements IMateriasRepository {
     return Future.value(listaMaterias
         .where((element) => element.codigoMateria == codigoMateria)
         .first
-        .apresentacaoModel!
+        .introducaoModel!
         .pdf!
         .url);
   }

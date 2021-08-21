@@ -3,10 +3,10 @@ import 'package:system_maua_front/app/modules/materias/materias_controller.dart'
 import 'package:system_maua_front/app/modules/materias/models/materias_model.dart';
 import 'package:system_maua_front/app/modules/materias/pages/file-view/file_view_controller.dart';
 import 'package:system_maua_front/app/modules/materias/pages/file-view/file_view_page.dart';
-import 'package:system_maua_front/app/modules/materias/pages/materias-apresentacao/materias_apresentacao_controller.dart';
-import 'package:system_maua_front/app/modules/materias/pages/materias-apresentacao/materias_apresentacao_page.dart';
 import 'package:system_maua_front/app/modules/materias/pages/materias-aulas/materias_aulas_controller.dart';
 import 'package:system_maua_front/app/modules/materias/pages/materias-aulas/materias_aulas_page.dart';
+import 'package:system_maua_front/app/modules/materias/pages/materias-introducao/materias_introducao_controller.dart';
+import 'package:system_maua_front/app/modules/materias/pages/materias-introducao/materias_introducao_page.dart';
 import 'package:system_maua_front/app/modules/materias/pages/modal-buttom-sheet/modal_buttom_sheet_controller.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart';
@@ -19,7 +19,7 @@ class MateriasModule extends Module {
   final List<Bind> binds = [
     Bind.lazySingleton((i) => MateriasController(i())),
     Bind.lazySingleton<IMateriasRepository>((i) => MateriasRepository()),
-    Bind.lazySingleton((i) => MateriasApresentacaoController(
+    Bind.lazySingleton((i) => MateriasIntroducaoController(
         repository: i(),
         codigoMateria: (i.args?.data as MateriasModel).codigoMateria)),
     Bind.lazySingleton((i) => FileViewController(
@@ -43,7 +43,7 @@ class MateriasModule extends Module {
     ),
     ChildRoute(
       '/apresentacao',
-      child: (_, args) => MateriasApresentacaoPage(
+      child: (_, args) => MateriasIntroducaoPage(
         nomeMateria: (args.data as MateriasModel).nomeMateria!.name,
       ),
     ),

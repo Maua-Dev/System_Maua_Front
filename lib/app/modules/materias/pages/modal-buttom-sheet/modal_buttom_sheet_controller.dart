@@ -41,6 +41,9 @@ abstract class ModalButtomControllerBase with Store {
 
   @action
   Future<void> onAulaSelecionada(int value) async {
-    await Modular.to.pushNamed('/materias/aula/$value', arguments: materia);
+    await Modular.to.pushNamed(
+      'aula/$value',
+      arguments: materia,
+    );
   }
 }

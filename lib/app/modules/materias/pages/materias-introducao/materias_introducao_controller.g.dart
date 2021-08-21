@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'materias_apresentacao_controller.dart';
+part of 'materias_introducao_controller.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -8,26 +8,41 @@ part of 'materias_apresentacao_controller.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
-mixin _$MateriasApresentacaoController
-    on _MateriasApresentacaoControllerBase, Store {
-  final _$materiaAtom =
-      Atom(name: '_MateriasApresentacaoControllerBase.materia');
+mixin _$MateriasIntroducaoController
+    on _MateriasIntroducaoControllerBase, Store {
+  final _$materiaAtom = Atom(name: '_MateriasIntroducaoControllerBase.materia');
 
   @override
-  MateriasApresentacaoModel get materia {
+  MateriasIntroducaoModel get materia {
     _$materiaAtom.reportRead();
     return super.materia;
   }
 
   @override
-  set materia(MateriasApresentacaoModel value) {
+  set materia(MateriasIntroducaoModel value) {
     _$materiaAtom.reportWrite(value, super.materia, () {
       super.materia = value;
     });
   }
 
+  final _$materiaGeralAtom =
+      Atom(name: '_MateriasIntroducaoControllerBase.materiaGeral');
+
+  @override
+  MateriasModel get materiaGeral {
+    _$materiaGeralAtom.reportRead();
+    return super.materiaGeral;
+  }
+
+  @override
+  set materiaGeral(MateriasModel value) {
+    _$materiaGeralAtom.reportWrite(value, super.materiaGeral, () {
+      super.materiaGeral = value;
+    });
+  }
+
   final _$professoresAtom =
-      Atom(name: '_MateriasApresentacaoControllerBase.professores');
+      Atom(name: '_MateriasIntroducaoControllerBase.professores');
 
   @override
   List<ProfessoresModel> get professores {
@@ -43,7 +58,7 @@ mixin _$MateriasApresentacaoController
   }
 
   final _$getMateriaAsyncAction =
-      AsyncAction('_MateriasApresentacaoControllerBase.getMateria');
+      AsyncAction('_MateriasIntroducaoControllerBase.getMateria');
 
   @override
   Future<void> getMateria() {
@@ -54,6 +69,7 @@ mixin _$MateriasApresentacaoController
   String toString() {
     return '''
 materia: ${materia},
+materiaGeral: ${materiaGeral},
 professores: ${professores}
     ''';
   }

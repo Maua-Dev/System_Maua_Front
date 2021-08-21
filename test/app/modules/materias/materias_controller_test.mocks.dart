@@ -9,10 +9,10 @@ import 'package:system_maua_front/app/modules/materias/models/materias_model.dar
     as _i4;
 import 'package:system_maua_front/app/modules/materias/models/professores_model.dart'
     as _i7;
-import 'package:system_maua_front/app/modules/materias/pages/materias-apresentacao/models/materias_apresentacao_model.dart'
-    as _i2;
 import 'package:system_maua_front/app/modules/materias/pages/materias-aulas/models/materias_aulas_model.dart'
     as _i3;
+import 'package:system_maua_front/app/modules/materias/pages/materias-introducao/models/materias_introducao_model.dart'
+    as _i2;
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart'
     as _i5;
 
@@ -22,8 +22,8 @@ import 'package:system_maua_front/app/modules/materias/repositories/materias_rep
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: unnecessary_parenthesis
 
-class _FakeMateriasApresentacaoModel extends _i1.Fake
-    implements _i2.MateriasApresentacaoModel {}
+class _FakeMateriasIntroducaoModel extends _i1.Fake
+    implements _i2.MateriasIntroducaoModel {}
 
 class _FakeMateriasAulasModel extends _i1.Fake
     implements _i3.MateriasAulasModel {}
@@ -46,12 +46,12 @@ class MockIMateriasRepository extends _i1.Mock
                   Future<List<_i4.MateriasModel>>.value(<_i4.MateriasModel>[]))
           as _i6.Future<List<_i4.MateriasModel>>);
   @override
-  _i6.Future<_i2.MateriasApresentacaoModel> getApresentacao(
+  _i6.Future<_i2.MateriasIntroducaoModel> getApresentacao(
           String? codigoMateria) =>
       (super.noSuchMethod(Invocation.method(#getApresentacao, [codigoMateria]),
-              returnValue: Future<_i2.MateriasApresentacaoModel>.value(
-                  _FakeMateriasApresentacaoModel()))
-          as _i6.Future<_i2.MateriasApresentacaoModel>);
+              returnValue: Future<_i2.MateriasIntroducaoModel>.value(
+                  _FakeMateriasIntroducaoModel()))
+          as _i6.Future<_i2.MateriasIntroducaoModel>);
   @override
   _i6.Future<List<_i7.ProfessoresModel>> getProfessores(
           String? codigoMateria) =>

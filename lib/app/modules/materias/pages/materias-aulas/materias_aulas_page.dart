@@ -6,6 +6,7 @@ import 'materias_aulas_controller.dart';
 
 class MateriasAulasPage extends StatefulWidget {
   final String nomeMateria;
+
   MateriasAulasPage({Key? key, required this.nomeMateria}) : super(key: key);
 
   @override

@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:system_maua_front/app/modules/materias/pages/materias-apresentacao/widgets/plano_ensino_pdf_button_widget.dart';
-import 'package:system_maua_front/app/modules/materias/pages/materias-apresentacao/widgets/titulo_apresentacao_widget.dart';
+import 'package:system_maua_front/app/modules/materias/pages/materias-introducao/widgets/plano_ensino_pdf_button_widget.dart';
+import 'package:system_maua_front/app/modules/materias/pages/materias-introducao/widgets/titulo_apresentacao_widget.dart';
 import 'package:system_maua_front/app/modules/materias/pages/modal-buttom-sheet/modal_buttom_sheet_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/enumerates/pdf_enum.dart';
 
-import 'materias_apresentacao_controller.dart';
+import 'materias_introducao_controller.dart';
 import 'widgets/contato_docentes_widget.dart';
 
-class MateriasApresentacaoPage extends StatefulWidget {
+class MateriasIntroducaoPage extends StatefulWidget {
   final String nomeMateria;
-  MateriasApresentacaoPage({Key? key, required this.nomeMateria})
+  MateriasIntroducaoPage({Key? key, required this.nomeMateria})
       : super(key: key);
 
   @override
-  _MateriasApresentacaoPageState createState() =>
-      _MateriasApresentacaoPageState();
+  _MateriasIntroducaoPageState createState() => _MateriasIntroducaoPageState();
 }
 
-class _MateriasApresentacaoPageState extends ModularState<
-    MateriasApresentacaoPage, MateriasApresentacaoController> {
+class _MateriasIntroducaoPageState
+    extends ModularState<MateriasIntroducaoPage, MateriasIntroducaoController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -51,20 +50,22 @@ class _MateriasApresentacaoPageState extends ModularState<
                   );
                 }),
                 TituloApresentacaoWidget(titulo: 'Plano de Ensino'),
-                controller.materia.pdf != null
-                    ? Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8.0),
-                        child: Observer(builder: (_) {
-                          return PlanoEnsinoPdfButtonWidget(
-                            titulo: controller.materia.pdf!.tituloArquivo,
-                            onPressed: () {
-                              controller.navigateToPlanoEnsino();
-                            },
-                            imagem: controller
-                                .materia.pdf!.arquivosEnum.imagemString,
-                          );
-                        }))
-                    : SizedBox.shrink(),
+                Observer(
+                  builder: (context) {
+                    return controller.materia.pdf != null
+                        ? Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                            child: PlanoEnsinoPdfButtonWidget(
+                              titulo: controller.materia.pdf!.tituloArquivo,
+                              onPressed: () {
+                                controller.navigateToPlanoEnsino();
+                              },
+                              imagem: controller
+                                  .materia.pdf!.arquivosEnum.imagemString,
+                            ))
+                        : SizedBox.shrink();
+                  },
+                ),
                 TituloApresentacaoWidget(titulo: 'Docentes da Disciplina'),
                 Observer(builder: (_) {
                   return ListView.builder(
