@@ -45,23 +45,24 @@ class _MateriasIntroducaoPageState
                 TituloApresentacaoWidget(titulo: 'Introdução'),
                 Observer(builder: (_) {
                   return Text(
-                    controller.materia.introducao,
+                    controller.introducao.tituloPagina,
                     textAlign: TextAlign.justify,
                   );
                 }),
                 TituloApresentacaoWidget(titulo: 'Plano de Ensino'),
                 Observer(
                   builder: (context) {
-                    return controller.materia.pdf != null
+                    return controller.introducao.listaArquivos != null
                         ? Padding(
                             padding: const EdgeInsets.symmetric(vertical: 8.0),
                             child: PlanoEnsinoPdfButtonWidget(
-                              titulo: controller.materia.pdf!.tituloArquivo,
+                              titulo: controller
+                                  .introducao.listaArquivos![0].tituloArquivo,
                               onPressed: () {
                                 controller.navigateToPlanoEnsino();
                               },
-                              imagem: controller
-                                  .materia.pdf!.arquivosEnum.imagemString,
+                              imagem: controller.introducao.listaArquivos![0]
+                                  .arquivosEnum.imagemString,
                             ))
                         : SizedBox.shrink();
                   },

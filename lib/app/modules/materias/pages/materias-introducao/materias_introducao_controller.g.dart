@@ -10,34 +10,19 @@ part of 'materias_introducao_controller.dart';
 
 mixin _$MateriasIntroducaoController
     on _MateriasIntroducaoControllerBase, Store {
-  final _$materiaAtom = Atom(name: '_MateriasIntroducaoControllerBase.materia');
+  final _$introducaoAtom =
+      Atom(name: '_MateriasIntroducaoControllerBase.introducao');
 
   @override
-  MateriasIntroducaoModel get materia {
-    _$materiaAtom.reportRead();
-    return super.materia;
+  MateriasAulasModel get introducao {
+    _$introducaoAtom.reportRead();
+    return super.introducao;
   }
 
   @override
-  set materia(MateriasIntroducaoModel value) {
-    _$materiaAtom.reportWrite(value, super.materia, () {
-      super.materia = value;
-    });
-  }
-
-  final _$materiaGeralAtom =
-      Atom(name: '_MateriasIntroducaoControllerBase.materiaGeral');
-
-  @override
-  MateriasModel get materiaGeral {
-    _$materiaGeralAtom.reportRead();
-    return super.materiaGeral;
-  }
-
-  @override
-  set materiaGeral(MateriasModel value) {
-    _$materiaGeralAtom.reportWrite(value, super.materiaGeral, () {
-      super.materiaGeral = value;
+  set introducao(MateriasAulasModel value) {
+    _$introducaoAtom.reportWrite(value, super.introducao, () {
+      super.introducao = value;
     });
   }
 
@@ -68,8 +53,7 @@ mixin _$MateriasIntroducaoController
   @override
   String toString() {
     return '''
-materia: ${materia},
-materiaGeral: ${materiaGeral},
+introducao: ${introducao},
 professores: ${professores}
     ''';
   }
