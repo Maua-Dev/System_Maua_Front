@@ -18,49 +18,52 @@ Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
         return StatefulBuilder(
             builder: (BuildContext context, StateSetter setState) {
           return Container(
-            height: MediaQuery.of(context).size.height * 0.73,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-              child: Column(children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 32.0, top: 24),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: TypeAheadFieldWidget(
-                          titulo: 'Pesquisar conteúdo',
-                          list: controller.getListaAulasNomes,
-                          onSuggestionSelected: (value) {
-                            controller.onAulaSelecionada(value);
+              height: MediaQuery.of(context).size.height * 0.73,
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                child: Column(children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 32.0),
+                    child: Row(
+                      children: [
+                        Observer(builder: (_) {
+                          return Expanded(
+                            child: TypeAheadFieldWidget(
+                              titulo: 'Pesquisar conteúdo',
+                              list: controller.getListaAulasNomes,
+                              onSuggestionSelected: (value) {
+                                controller.onAulaSelecionada(value);
+                              },
+                              value: controller.valorDigitado,
+                              onChanged: controller.onChangedValorDigitado,
+                            ),
+                          );
+                        }),
+                        IconButton(
+                          icon: Icon(
+                            Icons.close,
+                            size: 25,
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).pop();
                           },
-                          value: controller.valorDigitado,
-                          onChanged: controller.onChangedValorDigitado,
                         ),
-                      ),
-                      IconButton(
-                        icon: Icon(
-                          Icons.close,
-                          size: 25,
-                        ),
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8),
-                  child: TextButtonCustomWidget(
-                    titulo: 'Introdução',
-                    onPressed: () {
-                      Modular.to.pushNamed('apresentacao',
-                          arguments: controller.materia);
-                    },
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8),
+                    child: TextButtonCustomWidget(
+                      titulo: 'Introdução',
+                      onPressed: () {
+                        Modular.to.pushNamed('apresentacao',
+                            arguments: controller.materia);
+                      },
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: ListView.builder(
+                  Expanded(
+                      child: ListView.builder(
                     itemCount: controller.materia.listaAulas!.length,
                     itemBuilder: (context, index) {
                       return Observer(builder: (_) {
@@ -74,11 +77,9 @@ Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
                         );
                       });
                     },
-                  ),
-                ),
-              ]),
-            ),
-          );
+                  ))
+                ]),
+              ));
         });
       });
 }
