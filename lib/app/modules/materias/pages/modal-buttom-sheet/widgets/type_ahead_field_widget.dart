@@ -19,10 +19,10 @@ class TypeAheadFieldWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var textController = TextEditingController(text: value);
+    var controller = TextEditingController(text: value);
     return TypeAheadField<GenericFieldsModel>(
       textFieldConfiguration: TextFieldConfiguration(
-        controller: textController,
+        controller: controller,
         onChanged: onChanged,
         style: TextStyle(
           fontSize: 24,
@@ -33,8 +33,7 @@ class TypeAheadFieldWidget extends StatelessWidget {
             fontSize: 18,
           ),
           suffixIcon: (value != '' || value == null)
-              ? IconButton(
-                  onPressed: textController.clear, icon: Icon(Icons.close))
+              ? IconButton(onPressed: controller.clear, icon: Icon(Icons.close))
               : null,
           contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
           border: OutlineInputBorder(),
