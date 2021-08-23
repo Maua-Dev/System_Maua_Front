@@ -1,5 +1,5 @@
 import 'package:hive/hive.dart';
-
+import 'package:hive_flutter/hive_flutter.dart';
 import 'secure_storage_interface.dart';
 
 class SecureStorage implements ISecureStorage {
@@ -8,6 +8,7 @@ class SecureStorage implements ISecureStorage {
   SecureStorage._(this.storage);
 
   static Future<SecureStorage> instance() async {
+    await Hive.initFlutter();
     return SecureStorage._(await Hive.openBox('box'));
   }
 

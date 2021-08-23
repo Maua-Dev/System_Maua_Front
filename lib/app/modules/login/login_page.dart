@@ -36,43 +36,39 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Observer(builder: (_) {
-                return TextField(
-                  onChanged: controller.setEmail,
-                  controller: emailController,
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    labelStyle: TextStyle(color: AppColors.strongLetter),
-                    labelText: 'Email',
-                    prefixIcon: Icon(
-                      Icons.mail,
-                      color: AppColors.darkBlue,
-                    ),
+              child: TextField(
+                onChanged: controller.setEmail,
+                controller: emailController,
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  labelStyle: TextStyle(color: AppColors.strongLetter),
+                  labelText: 'Email',
+                  prefixIcon: Icon(
+                    Icons.mail,
+                    color: AppColors.darkBlue,
                   ),
-                );
-              }),
+                ),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(8),
-              child: Observer(builder: (_) {
-                return TextField(
-                  onChanged: controller.setPassword,
-                  controller: passwordController,
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    labelStyle: TextStyle(color: AppColors.strongLetter),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
-                    labelText: 'Senha',
-                    prefixIcon: Icon(
-                      Icons.vpn_key,
-                      color: AppColors.darkBlue,
-                    ),
+              child: TextField(
+                onChanged: controller.setPassword,
+                controller: passwordController,
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelStyle: TextStyle(color: AppColors.strongLetter),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  labelText: 'Senha',
+                  prefixIcon: Icon(
+                    Icons.vpn_key,
+                    color: AppColors.darkBlue,
                   ),
-                );
-              }),
+                ),
+              ),
             ),
             Observer(builder: (_) {
               return CheckBoxWidget(
