@@ -27,19 +27,17 @@ Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
                     padding: const EdgeInsets.only(bottom: 32.0),
                     child: Row(
                       children: [
-                        Observer(builder: (_) {
-                          return Expanded(
-                            child: TypeAheadFieldWidget(
-                              titulo: 'Pesquisar conteúdo',
-                              list: controller.getListaAulasNomes,
-                              onSuggestionSelected: (value) {
-                                controller.onAulaSelecionada(value);
-                              },
-                              value: controller.valorDigitado,
-                              onChanged: controller.onChangedValorDigitado,
-                            ),
-                          );
-                        }),
+                        Expanded(
+                          child: TypeAheadFieldWidget(
+                            titulo: 'Pesquisar conteúdo',
+                            list: controller.getListaAulasNomes,
+                            onSuggestionSelected: (value) {
+                              controller.onAulaSelecionada(value);
+                            },
+                            value: controller.valorDigitado,
+                            onChanged: controller.onChangedValorDigitado,
+                          ),
+                        ),
                         IconButton(
                           icon: Icon(
                             Icons.close,
