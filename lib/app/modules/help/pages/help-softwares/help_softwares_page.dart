@@ -48,6 +48,9 @@ class _HelpSoftwaresPageState
               ),
             );
           })),
+          SizedBox(
+            height: 8,
+          )
         ],
       ),
     );
