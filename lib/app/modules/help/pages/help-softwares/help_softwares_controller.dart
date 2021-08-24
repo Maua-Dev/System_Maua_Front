@@ -22,7 +22,7 @@ abstract class _HelpSoftwaresControllerBase with Store {
   List<SoftwaresPanelModel> softwaresAction = [];
 
   @action
-  void setAvisosAction() {
+  void setSoftwaresAction() {
     var list = <SoftwaresPanelModel>[];
     for (var i = 0; i < softwares.length; i++) {
       list.add(SoftwaresPanelModel(softwares: softwares[i]));
@@ -40,6 +40,6 @@ abstract class _HelpSoftwaresControllerBase with Store {
   @action
   Future<void> getInformacaoSoftwares() async {
     softwares = await repository.getInformacaoSoftwares();
-    setAvisosAction();
+    setSoftwaresAction();
   }
 }
