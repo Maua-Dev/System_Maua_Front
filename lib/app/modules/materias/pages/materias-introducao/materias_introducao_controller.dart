@@ -1,6 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
-import 'package:system_maua_front/app/modules/materias/models/materias_model.dart';
 import 'package:system_maua_front/app/modules/materias/models/professores_model.dart';
 import 'package:system_maua_front/app/modules/materias/pages/materias-aulas/models/materias_aulas_model.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart';
@@ -32,6 +31,7 @@ abstract class _MateriasIntroducaoControllerBase with Store {
   }
 
   void navigateToPlanoEnsino() async {
-    await Modular.to.pushNamed('/materias/plano-ensino', arguments: introducao);
+    await Modular.to.pushNamed('/materias/plano-ensino',
+        arguments: introducao.listaArquivos!.first);
   }
 }

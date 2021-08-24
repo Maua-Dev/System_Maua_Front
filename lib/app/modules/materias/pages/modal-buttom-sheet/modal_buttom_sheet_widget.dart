@@ -50,16 +50,6 @@ Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8),
-                    child: TextButtonCustomWidget(
-                      titulo: 'Introdução',
-                      onPressed: () {
-                        Modular.to.pushNamed('apresentacao',
-                            arguments: controller.materia);
-                      },
-                    ),
-                  ),
                   Expanded(
                       child: ListView.builder(
                     itemCount: controller.materia.listaAulas!.length,

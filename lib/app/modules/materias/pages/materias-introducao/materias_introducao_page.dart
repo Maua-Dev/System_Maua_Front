@@ -26,7 +26,7 @@ class _MateriasIntroducaoPageState
     return SafeArea(
         child: Scaffold(
       appBar: AppBarWidget(
-        title: widget.nomeMateria,
+        title: 'Matérias',
         icon: Icons.library_books,
         actionWidget: IconButton(
           icon: Icon(Icons.menu),
@@ -42,10 +42,11 @@ class _MateriasIntroducaoPageState
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                TituloApresentacaoWidget(titulo: widget.nomeMateria),
                 TituloApresentacaoWidget(titulo: 'Introdução'),
                 Observer(builder: (_) {
                   return Text(
-                    controller.introducao.tituloPagina,
+                    controller.introducao.resumoPagina!,
                     textAlign: TextAlign.justify,
                   );
                 }),
@@ -56,12 +57,12 @@ class _MateriasIntroducaoPageState
                         ? Padding(
                             padding: const EdgeInsets.symmetric(vertical: 8.0),
                             child: PlanoEnsinoPdfButtonWidget(
-                              titulo: controller
-                                  .introducao.listaArquivos![0].tituloArquivo,
+                              titulo: controller.introducao.listaArquivos!.first
+                                  .tituloArquivo,
                               onPressed: () {
                                 controller.navigateToPlanoEnsino();
                               },
-                              imagem: controller.introducao.listaArquivos![0]
+                              imagem: controller.introducao.listaArquivos!.first
                                   .arquivosEnum.imagemString,
                             ))
                         : SizedBox.shrink();
