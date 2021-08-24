@@ -22,4 +22,8 @@ void main() {
   test('[TEST] - Injeção do HelpBolsasController', () {
     Modular.get<HelpBolsasController>();
   });
+
+  test('[TEST] - Injeção do HelpSoftwaresController', () {
+    Modular.get();
+  });
 }
