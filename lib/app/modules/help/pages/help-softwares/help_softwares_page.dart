@@ -49,7 +49,7 @@ class _HelpSoftwaresPageState
             );
           })),
           SizedBox(
-            height: 8,
+            height: 16,
           )
         ],
       ),
