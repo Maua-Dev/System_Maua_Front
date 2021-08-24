@@ -1,6 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/repositories/help_softwares_repository.dart';
-import 'package:system_maua_front/app/modules/help/pages/help-softwares/repositories/help_softwares_repository_interface.dart';
 
 void main() {
   late HelpSoftwaresRepository helpSoftwaresRepository;
