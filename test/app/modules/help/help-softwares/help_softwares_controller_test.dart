@@ -40,7 +40,7 @@ void main() {
     expect(controller.softwaresAction[0].isOpen, true);
   });
 
-  test('[TEST] - setAvisosAction', () async {
+  test('[TEST] - setSoftwaresAction', () async {
     controller.setSoftwaresAction();
     expect(controller.softwaresAction.isNotEmpty, true);
   });
