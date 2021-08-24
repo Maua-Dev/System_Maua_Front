@@ -37,14 +37,6 @@ class _SoftwaresCardState extends State<SofwaresCard> {
                 headerBuilder: (context, isExpanded) => Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Center(
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 16),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                        ),
-                      ),
-                    ),
                     SizedBox(
                       width: 16,
                     ),

@@ -69,6 +69,13 @@ mixin _$LoginController on _LoginController, Store {
     });
   }
 
+  final _$loginAsyncAction = AsyncAction('_LoginController.login');
+
+  @override
+  Future<void> login() {
+    return _$loginAsyncAction.run(() => super.login());
+  }
+
   final _$_LoginControllerActionController =
       ActionController(name: '_LoginController');
 
