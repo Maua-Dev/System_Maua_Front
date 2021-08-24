@@ -24,7 +24,7 @@ Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                 child: Column(children: [
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 32.0),
+                    padding: const EdgeInsets.only(bottom: 32.0, top: 16),
                     child: Row(
                       children: [
                         Expanded(

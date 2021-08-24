@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:system_maua_front/app/modules/materias/models/professores_model.dart';
@@ -23,6 +24,11 @@ abstract class _MateriasIntroducaoControllerBase with Store {
 
   @observable
   List<ProfessoresModel> professores = [];
+
+  @action
+  void horizontalDrag(DragStartDetails details) async {
+    await Modular.to.pushNamed('/materias/aula/${introducao.idPagina + 1}');
+  }
 
   @action
   Future<void> getMateria() async {
