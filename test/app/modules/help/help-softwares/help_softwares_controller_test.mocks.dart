@@ -7,7 +7,6 @@ import 'dart:async' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/models/softwares_model.dart'
     as _i4;
-import 'package:system_maua_front/app/modules/help/pages/help-avisos/repositories/help_avisos_repository_interface.dart';
 
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/repositories/help_softwares_repository_interface.dart'
     as _i2;
