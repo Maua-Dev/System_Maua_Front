@@ -53,11 +53,11 @@ mixin _$HelpSoftwaresController on _HelpSoftwaresControllerBase, Store {
       ActionController(name: '_HelpSoftwaresControllerBase');
 
   @override
-  void setAvisosAction() {
+  void setSoftwaresAction() {
     final _$actionInfo = _$_HelpSoftwaresControllerBaseActionController
-        .startAction(name: '_HelpSoftwaresControllerBase.setAvisosAction');
+        .startAction(name: '_HelpSoftwaresControllerBase.setSoftwaresAction');
     try {
-      return super.setAvisosAction();
+      return super.setSoftwaresAction();
     } finally {
       _$_HelpSoftwaresControllerBaseActionController.endAction(_$actionInfo);
     }
