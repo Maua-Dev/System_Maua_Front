@@ -11,6 +11,7 @@ import 'package:system_maua_front/app/modules/materias/pages/modal-buttom-sheet/
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart';
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
+import 'package:system_maua_front/app/shared/models/arquivos_model.dart';
 
 import 'materias_page.dart';
 
@@ -23,8 +24,7 @@ class MateriasModule extends Module {
         repository: i(),
         codigoMateria: (i.args?.data as MateriasModel).codigoMateria)),
     Bind.lazySingleton((i) => FileViewController(
-        repository: i(),
-        codigoMateria: (i.args?.data as MateriasModel).codigoMateria)),
+        repository: i(), url: (i.args?.data as ArquivosModel).url)),
     Bind.lazySingleton((i) => MateriasAulasController(
           repository: i(),
           codigoMateria: (i.args?.data as MateriasModel).codigoMateria,

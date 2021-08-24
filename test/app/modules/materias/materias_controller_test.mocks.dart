@@ -2,19 +2,17 @@
 // in system_maua_front/test/app/modules/materias/materias_controller_test.dart.
 // Do not manually edit this file.
 
-import 'dart:async' as _i6;
+import 'dart:async' as _i5;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:system_maua_front/app/modules/materias/models/materias_model.dart'
-    as _i4;
-import 'package:system_maua_front/app/modules/materias/models/professores_model.dart'
-    as _i7;
-import 'package:system_maua_front/app/modules/materias/pages/materias-aulas/models/materias_aulas_model.dart'
     as _i3;
-import 'package:system_maua_front/app/modules/materias/pages/materias-introducao/models/materias_introducao_model.dart'
+import 'package:system_maua_front/app/modules/materias/models/professores_model.dart'
+    as _i6;
+import 'package:system_maua_front/app/modules/materias/pages/materias-aulas/models/materias_aulas_model.dart'
     as _i2;
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart'
-    as _i5;
+    as _i4;
 
 // ignore_for_file: avoid_redundant_argument_values
 // ignore_for_file: comment_references
@@ -22,60 +20,46 @@ import 'package:system_maua_front/app/modules/materias/repositories/materias_rep
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: unnecessary_parenthesis
 
-class _FakeMateriasIntroducaoModel extends _i1.Fake
-    implements _i2.MateriasIntroducaoModel {}
-
 class _FakeMateriasAulasModel extends _i1.Fake
-    implements _i3.MateriasAulasModel {}
+    implements _i2.MateriasAulasModel {}
 
-class _FakeMateriasModel extends _i1.Fake implements _i4.MateriasModel {}
+class _FakeMateriasModel extends _i1.Fake implements _i3.MateriasModel {}
 
 /// A class which mocks [IMateriasRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockIMateriasRepository extends _i1.Mock
-    implements _i5.IMateriasRepository {
+    implements _i4.IMateriasRepository {
   MockIMateriasRepository() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i6.Future<List<_i4.MateriasModel>> getMaterias() =>
+  _i5.Future<List<_i3.MateriasModel>> getMaterias() =>
       (super.noSuchMethod(Invocation.method(#getMaterias, []),
               returnValue:
-                  Future<List<_i4.MateriasModel>>.value(<_i4.MateriasModel>[]))
-          as _i6.Future<List<_i4.MateriasModel>>);
+                  Future<List<_i3.MateriasModel>>.value(<_i3.MateriasModel>[]))
+          as _i5.Future<List<_i3.MateriasModel>>);
   @override
-  _i6.Future<_i2.MateriasIntroducaoModel> getApresentacao(
-          String? codigoMateria) =>
-      (super.noSuchMethod(Invocation.method(#getApresentacao, [codigoMateria]),
-              returnValue: Future<_i2.MateriasIntroducaoModel>.value(
-                  _FakeMateriasIntroducaoModel()))
-          as _i6.Future<_i2.MateriasIntroducaoModel>);
-  @override
-  _i6.Future<List<_i7.ProfessoresModel>> getProfessores(
+  _i5.Future<List<_i6.ProfessoresModel>> getProfessores(
           String? codigoMateria) =>
       (super.noSuchMethod(Invocation.method(#getProfessores, [codigoMateria]),
-              returnValue: Future<List<_i7.ProfessoresModel>>.value(
-                  <_i7.ProfessoresModel>[]))
-          as _i6.Future<List<_i7.ProfessoresModel>>);
+              returnValue: Future<List<_i6.ProfessoresModel>>.value(
+                  <_i6.ProfessoresModel>[]))
+          as _i5.Future<List<_i6.ProfessoresModel>>);
   @override
-  _i6.Future<String> getUrlPdf(String? codigoMateria) =>
-      (super.noSuchMethod(Invocation.method(#getUrlPdf, [codigoMateria]),
-          returnValue: Future<String>.value('')) as _i6.Future<String>);
-  @override
-  _i6.Future<_i3.MateriasAulasModel> getAula(
+  _i5.Future<_i2.MateriasAulasModel> getAula(
           String? codigoMateria, int? idPagina) =>
       (super.noSuchMethod(
               Invocation.method(#getAula, [codigoMateria, idPagina]),
-              returnValue: Future<_i3.MateriasAulasModel>.value(
+              returnValue: Future<_i2.MateriasAulasModel>.value(
                   _FakeMateriasAulasModel()))
-          as _i6.Future<_i3.MateriasAulasModel>);
+          as _i5.Future<_i2.MateriasAulasModel>);
   @override
-  _i6.Future<_i4.MateriasModel> getMateriaEspecifica(String? codigoMateria) =>
+  _i5.Future<_i3.MateriasModel> getMateriaEspecifica(String? codigoMateria) =>
       (super.noSuchMethod(
               Invocation.method(#getMateriaEspecifica, [codigoMateria]),
               returnValue:
-                  Future<_i4.MateriasModel>.value(_FakeMateriasModel()))
-          as _i6.Future<_i4.MateriasModel>);
+                  Future<_i3.MateriasModel>.value(_FakeMateriasModel()))
+          as _i5.Future<_i3.MateriasModel>);
 }

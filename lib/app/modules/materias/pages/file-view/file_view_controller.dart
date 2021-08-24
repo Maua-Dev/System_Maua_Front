@@ -8,10 +8,9 @@ class FileViewController = _FileViewControllerBase with _$FileViewController;
 
 abstract class _FileViewControllerBase with Store {
   final IMateriasRepository repository;
-  final String codigoMateria;
+  final String url;
 
-  _FileViewControllerBase(
-      {required this.repository, required this.codigoMateria}) {
+  _FileViewControllerBase({required this.repository, required this.url}) {
     setDocument();
   }
 
@@ -28,7 +27,6 @@ abstract class _FileViewControllerBase with Store {
 
   @action
   Future<void> setDocument() async {
-    var url = await repository.getUrlPdf(codigoMateria);
     try {
       document = await PDFDocument.fromURL(url, headers: {
         'Access-Control-Allow-Origin': '*',

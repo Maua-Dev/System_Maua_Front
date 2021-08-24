@@ -26,7 +26,7 @@ class _MateriasIntroducaoPageState
     return SafeArea(
         child: Scaffold(
       appBar: AppBarWidget(
-        title: widget.nomeMateria,
+        title: 'Matérias',
         icon: Icons.library_books,
         actionWidget: IconButton(
           icon: Icon(Icons.menu),
@@ -42,26 +42,28 @@ class _MateriasIntroducaoPageState
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                TituloApresentacaoWidget(titulo: widget.nomeMateria),
                 TituloApresentacaoWidget(titulo: 'Introdução'),
                 Observer(builder: (_) {
                   return Text(
-                    controller.materia.introducao,
+                    controller.introducao.resumoPagina!,
                     textAlign: TextAlign.justify,
                   );
                 }),
                 TituloApresentacaoWidget(titulo: 'Plano de Ensino'),
                 Observer(
                   builder: (context) {
-                    return controller.materia.pdf != null
+                    return controller.introducao.listaArquivos != null
                         ? Padding(
                             padding: const EdgeInsets.symmetric(vertical: 8.0),
                             child: PlanoEnsinoPdfButtonWidget(
-                              titulo: controller.materia.pdf!.tituloArquivo,
+                              titulo: controller.introducao.listaArquivos!.first
+                                  .tituloArquivo,
                               onPressed: () {
                                 controller.navigateToPlanoEnsino();
                               },
-                              imagem: controller
-                                  .materia.pdf!.arquivosEnum.imagemString,
+                              imagem: controller.introducao.listaArquivos!.first
+                                  .arquivosEnum.imagemString,
                             ))
                         : SizedBox.shrink();
                   },
