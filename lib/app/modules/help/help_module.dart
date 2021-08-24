@@ -6,7 +6,8 @@ import 'package:system_maua_front/app/modules/help/pages/help-bolsas/help_bolsas
 import 'package:system_maua_front/app/modules/help/pages/help-bolsas/help_bolsas_page.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-intercambio/help_intercambio_page.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/help_softwares_page.dart';
-
+import 'package:system_maua_front/app/modules/help/pages/help-softwares/repositories/help_softwares_repository.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-softwares/help_softwares_controller.dart';
 import 'help_page.dart';
 
 class HelpModule extends Module {
@@ -15,6 +16,9 @@ class HelpModule extends Module {
     Bind.lazySingleton((i) => HelpAvisosController(i())),
     Bind.lazySingleton<HelpAvisosRepository>((i) => HelpAvisosRepository()),
     Bind.lazySingleton((i) => HelpBolsasController()),
+    Bind.lazySingleton((i) => HelpSoftwaresController(i())),
+    Bind.lazySingleton<HelpSoftwaresRepository>(
+        (i) => HelpSoftwaresRepository()),
   ];
 
   @override
