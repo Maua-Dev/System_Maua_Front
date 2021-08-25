@@ -54,20 +54,33 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
             ),
             Padding(
               padding: const EdgeInsets.all(8),
-              child: TextField(
-                onChanged: controller.setPassword,
-                controller: passwordController,
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelStyle: TextStyle(color: AppColors.strongLetter),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10))),
-                  labelText: 'Senha',
-                  prefixIcon: Icon(
-                    Icons.vpn_key,
-                    color: AppColors.darkBlue,
-                  ),
-                ),
+              child: Observer(
+                builder: (_) {
+                  return TextField(
+                    onChanged: controller.setPassword,
+                    controller: passwordController,
+                    obscureText: controller.passwordVisibility,
+                    decoration: InputDecoration(
+                        labelStyle: TextStyle(color: AppColors.strongLetter),
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10))),
+                        labelText: 'Senha',
+                        suffixIcon: InkWell(
+                          onTap: controller.changePasswordVisibility,
+                          child: Icon(
+                            controller.passwordVisibility
+                                ? Icons.visibility_off
+                                : Icons.visibility,
+                            color: AppColors.darkBlue,
+                          ),
+                        ),
+                        prefixIcon: Icon(
+                          Icons.vpn_key,
+                          color: AppColors.darkBlue,
+                        )),
+                  );
+                },
               ),
             ),
             Observer(builder: (_) {
