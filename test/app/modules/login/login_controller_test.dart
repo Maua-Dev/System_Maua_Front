@@ -44,4 +44,9 @@ void main() {
     verify(navegador.navigate('/home')).called(1);
     expect(mockAuth.isLogged, true);
   });
+
+  test('[TEST] - PasswordVisibility', () async {
+    controller.changePasswordVisibility();
+    expect(controller.passwordVisibility, false);
+  });
 }

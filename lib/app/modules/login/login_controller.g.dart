@@ -9,6 +9,22 @@ part of 'login_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$LoginController on _LoginController, Store {
+  final _$passwordVisibilityAtom =
+      Atom(name: '_LoginController.passwordVisibility');
+
+  @override
+  bool get passwordVisibility {
+    _$passwordVisibilityAtom.reportRead();
+    return super.passwordVisibility;
+  }
+
+  @override
+  set passwordVisibility(bool value) {
+    _$passwordVisibilityAtom.reportWrite(value, super.passwordVisibility, () {
+      super.passwordVisibility = value;
+    });
+  }
+
   final _$errosAtom = Atom(name: '_LoginController.erros');
 
   @override
@@ -69,6 +85,13 @@ mixin _$LoginController on _LoginController, Store {
     });
   }
 
+  final _$loginAsyncAction = AsyncAction('_LoginController.login');
+
+  @override
+  Future<void> login() {
+    return _$loginAsyncAction.run(() => super.login());
+  }
+
   final _$_LoginControllerActionController =
       ActionController(name: '_LoginController');
 
@@ -106,8 +129,20 @@ mixin _$LoginController on _LoginController, Store {
   }
 
   @override
+  void changePasswordVisibility() {
+    final _$actionInfo = _$_LoginControllerActionController.startAction(
+        name: '_LoginController.changePasswordVisibility');
+    try {
+      return super.changePasswordVisibility();
+    } finally {
+      _$_LoginControllerActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
+passwordVisibility: ${passwordVisibility},
 erros: ${erros},
 isChecked: ${isChecked},
 email: ${email},

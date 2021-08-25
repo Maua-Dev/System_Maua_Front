@@ -13,6 +13,9 @@ abstract class _LoginController with Store {
   _LoginController(this.authController);
 
   @observable
+  bool passwordVisibility = true;
+
+  @observable
   String erros = '';
 
   @observable
@@ -49,5 +52,10 @@ abstract class _LoginController with Store {
     } on Failure catch (e) {
       erros = e.message;
     }
+  }
+
+  @action
+  void changePasswordVisibility() {
+    passwordVisibility = !passwordVisibility;
   }
 }
