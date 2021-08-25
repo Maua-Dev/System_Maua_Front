@@ -38,7 +38,7 @@ extension HelpEnumExtension on HelpEnum {
       case HelpEnum.VIDEO:
         return '';
       case HelpEnum.SOFTWARES:
-        return '';
+        return '/help/softwares';
       case HelpEnum.BOLSAS:
         return '/help/bolsas';
       case HelpEnum.INTERCAMBIO:

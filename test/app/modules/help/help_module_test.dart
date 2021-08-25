@@ -5,6 +5,7 @@ import 'package:system_maua_front/app/modules/help/help_module.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-avisos/help_avisos_controller.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-avisos/repositories/help_avisos_repository.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-bolsas/help_bolsas_controller.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-softwares/help_softwares_controller.dart';
 
 void main() {
   initModule(HelpModule());
@@ -21,5 +22,9 @@ void main() {
 
   test('[TEST] - Injeção do HelpBolsasController', () {
     Modular.get<HelpBolsasController>();
+  });
+
+  test('[TEST] - Injeção do HelpSoftwaresController', () {
+    Modular.get<HelpSoftwaresController>();
   });
 }
