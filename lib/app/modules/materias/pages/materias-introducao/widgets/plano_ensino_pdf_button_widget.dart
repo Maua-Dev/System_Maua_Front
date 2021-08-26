@@ -20,7 +20,10 @@ class PlanoEnsinoPdfButtonWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 4),
               child: Text(
-                titulo,
+                (MediaQuery.of(context).size.width < 360 ||
+                        titulo.characters.length > 38)
+                    ? 'Plano de Ensino'
+                    : titulo,
                 style: TextStyle(fontSize: 16),
               ),
             ),
