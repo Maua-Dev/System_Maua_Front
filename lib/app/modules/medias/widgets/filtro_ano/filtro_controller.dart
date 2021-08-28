@@ -2,9 +2,9 @@ import 'package:mobx/mobx.dart';
 
 part 'filtro_controller.g.dart';
 
-class FiltroAnoController = FiltroAnoControllerBase with _$FiltroAnoController;
+class FiltroController = FiltroControllerBase with _$FiltroController;
 
-abstract class FiltroAnoControllerBase with Store {
+abstract class FiltroControllerBase with Store {
   @observable
   //alterar para buscar o ano mais atual que o usuário possui
   String ano = '2021';

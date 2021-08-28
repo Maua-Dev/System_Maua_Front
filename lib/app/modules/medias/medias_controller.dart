@@ -11,7 +11,7 @@ part 'medias_controller.g.dart';
 class MediasController = MediasControllerBase with _$MediasController;
 
 abstract class MediasControllerBase with Store {
-  var controllerFiltroAno = Modular.get<FiltroAnoController>();
+  var controllerFiltroAno = Modular.get<FiltroController>();
 
   final IFiltroMediasRepository filtrosRepository;
   final IMediasRepository mediasRepository;

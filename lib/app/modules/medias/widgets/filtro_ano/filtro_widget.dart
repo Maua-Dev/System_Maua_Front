@@ -9,7 +9,7 @@ import 'filtro_controller.dart';
 class FiltroWidget extends StatelessWidget {
   late final List<String> listOptions;
 
-  var controller = FiltroAnoController();
+  var controller = FiltroController();
 
   FiltroWidget({
     Key? key,

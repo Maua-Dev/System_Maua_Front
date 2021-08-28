@@ -1,6 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/medias/repositories/medias/medias_repository.dart';
 import 'package:system_maua_front/app/modules/medias/repositories/medias/medias_repository_interface.dart';
+import 'package:system_maua_front/app/modules/medias/widgets/filtro_ano/filtro_controller.dart';
 import 'package:system_maua_front/app/modules/notas-aluno/notas_aluno_page.dart';
 import 'medias_controller.dart';
 import 'medias_page.dart';
@@ -14,6 +15,7 @@ class MediasModule extends Module {
     Bind.lazySingleton<IMediasRepository>((i) => MediasRepository()),
     Bind.lazySingleton<IFiltroMediasRepository>(
         (i) => FiltroMediasRepository()),
+    Bind.lazySingleton((i) => FiltroController()),
   ];
 
   @override
