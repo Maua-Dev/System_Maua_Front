@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'filtro_ano_controller.dart';
+part of 'filtro_controller.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -9,18 +9,18 @@ part of 'filtro_ano_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$FiltroAnoController on FiltroAnoControllerBase, Store {
-  final _$filterValueAtom = Atom(name: 'FiltroAnoControllerBase.filterValue');
+  final _$anoAtom = Atom(name: 'FiltroAnoControllerBase.ano');
 
   @override
-  String get filterValue {
-    _$filterValueAtom.reportRead();
-    return super.filterValue;
+  String get ano {
+    _$anoAtom.reportRead();
+    return super.ano;
   }
 
   @override
-  set filterValue(String value) {
-    _$filterValueAtom.reportWrite(value, super.filterValue, () {
-      super.filterValue = value;
+  set ano(String value) {
+    _$anoAtom.reportWrite(value, super.ano, () {
+      super.ano = value;
     });
   }
 
@@ -35,7 +35,7 @@ mixin _$FiltroAnoController on FiltroAnoControllerBase, Store {
   @override
   String toString() {
     return '''
-filterValue: ${filterValue}
+ano: ${ano}
     ''';
   }
 }

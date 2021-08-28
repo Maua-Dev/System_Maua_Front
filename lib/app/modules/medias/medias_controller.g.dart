@@ -17,19 +17,42 @@ mixin _$MediasController on MediasControllerBase, Store {
               name: 'MediasControllerBase.mediaMaua'))
           .value;
 
-  final _$todasMediasAtom = Atom(name: 'MediasControllerBase.todasMedias');
+  final _$mediasAtom = Atom(name: 'MediasControllerBase.medias');
 
   @override
-  List<MediasModel> get todasMedias {
-    _$todasMediasAtom.reportRead();
-    return super.todasMedias;
+  MediasModel get medias {
+    _$mediasAtom.reportRead();
+    return super.medias;
   }
 
   @override
-  set todasMedias(List<MediasModel> value) {
-    _$todasMediasAtom.reportWrite(value, super.todasMedias, () {
-      super.todasMedias = value;
+  set medias(MediasModel value) {
+    _$mediasAtom.reportWrite(value, super.medias, () {
+      super.medias = value;
     });
+  }
+
+  final _$filtrosAtom = Atom(name: 'MediasControllerBase.filtros');
+
+  @override
+  FiltroMediasModel get filtros {
+    _$filtrosAtom.reportRead();
+    return super.filtros;
+  }
+
+  @override
+  set filtros(FiltroMediasModel value) {
+    _$filtrosAtom.reportWrite(value, super.filtros, () {
+      super.filtros = value;
+    });
+  }
+
+  final _$getFiltrosAsyncAction =
+      AsyncAction('MediasControllerBase.getFiltros');
+
+  @override
+  Future<void> getFiltros() {
+    return _$getFiltrosAsyncAction.run(() => super.getFiltros());
   }
 
   final _$getMediasAsyncAction = AsyncAction('MediasControllerBase.getMedias');
@@ -39,10 +62,27 @@ mixin _$MediasController on MediasControllerBase, Store {
     return _$getMediasAsyncAction.run(() => super.getMedias());
   }
 
+  final _$toggleOpcaoAsyncAction =
+      AsyncAction('MediasControllerBase.toggleOpcao');
+
+  @override
+  Future<void> toggleOpcao(String label) {
+    return _$toggleOpcaoAsyncAction.run(() => super.toggleOpcao(label));
+  }
+
+  final _$escolheAnoAsyncAction =
+      AsyncAction('MediasControllerBase.escolheAno');
+
+  @override
+  Future<void> escolheAno() {
+    return _$escolheAnoAsyncAction.run(() => super.escolheAno());
+  }
+
   @override
   String toString() {
     return '''
-todasMedias: ${todasMedias},
+medias: ${medias},
+filtros: ${filtros},
 mediaMaua: ${mediaMaua}
     ''';
   }

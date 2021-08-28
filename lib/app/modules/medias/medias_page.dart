@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:system_maua_front/app/modules/medias/widgets/filtro_ano/filtro_ano_widget.dart';
+import 'package:system_maua_front/app/modules/medias/widgets/filtro_ano/filtro_widget.dart';
+import 'package:system_maua_front/app/modules/medias/widgets/opcao_chip/opcao_chip.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
@@ -20,7 +21,7 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBarWidget(
-            title: 'Notas',
+            title: 'Médias',
             leadingWidget: BackButton(
               onPressed: () {
                 Modular.to.navigate('/home');
@@ -30,75 +31,132 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
         body: Container(
             child: Column(
           children: [
-            FiltroAnoWidget(),
-            Text(
-              'Engenharia de Computação',
-              style: AppTextStyles.bodyBold.copyWith(fontSize: 22),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 4.0),
-              child: Text.rich(TextSpan(
-                  text: 'Coeficiente de Rendimento',
-                  style: AppTextStyles.lightBody,
+            // FiltroAnoWidget(),
+            Container(
+              child: Observer(builder: (_) {
+                return Column(
                   children: [
-                    TextSpan(
-                      text: ' 8.7',
-                      style: AppTextStyles.body,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'Engenharia de Computação',
+                              style:
+                                  AppTextStyles.bodyBold.copyWith(fontSize: 25),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10.0, vertical: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(
+                            'Coeficiente de Rendimento',
+                            style: AppTextStyles.lightBody.copyWith(
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          Text(
+                            '8.7',
+                            style: AppTextStyles.body.copyWith(
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Observer(builder: (_) {
+                      return FiltroWidget(
+                        listOptions: controller.filtros.anos,
+                      );
+                    }),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(children: [
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 15.0),
+                            child: ChipWidget(
+                              label: '1º Semestre',
+                              selected: controller.filtros.primeiroSem,
+                            ),
+                          ),
+                          ChipWidget(
+                            label: '2º Semestre',
+                            selected: controller.filtros.segundoSem,
+                          )
+                        ]),
+                        Column(children: [
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 15.0),
+                            child: ChipWidget(
+                              label: 'Provas',
+                              selected: controller.filtros.provas,
+                            ),
+                          ),
+                          ChipWidget(
+                            label: 'Trabalhos',
+                            selected: controller.filtros.trabalhos,
+                          )
+                        ]),
+                      ],
                     )
-                  ])),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 8,
-                right: 8,
-                top: 12,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Matérias'),
-                  Text('Médias'),
-                ],
-              ),
+                  ],
+                );
+              }),
             ),
             Expanded(
               child: Observer(
                 builder: (_) {
                   return ListView.separated(
-                    itemCount: controller.todasMedias[0].medias.length,
+                    itemCount: controller.medias.medias.length,
                     itemBuilder: (_, index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              controller.todasMedias[0].medias[index].materia,
-                              style: AppTextStyles.lightBody
-                                  .copyWith(fontSize: 15),
-                            ),
-                            Text(
-                              '${controller.todasMedias[0].medias[index].media ?? '-'}',
-                              style: AppTextStyles.lightBody.copyWith(
-                                  color: controller.todasMedias[0].medias[index]
-                                              .media !=
-                                          null
-                                      ? controller.todasMedias[0].medias[index]
-                                                  .media! >=
-                                              controller.mediaMaua
-                                          ? AppColors.thinLetter
-                                          : AppColors.red
-                                      : AppColors.thinLetter),
-                            )
-                          ],
+                      return InkWell(
+                        onTap: () => {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                controller.medias.medias[index].materia,
+                                style: AppTextStyles.lightBody.copyWith(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              Text(
+                                '${controller.medias.medias[index].media ?? '-'}',
+                                style: AppTextStyles.lightBody.copyWith(
+                                  color:
+                                      controller.medias.medias[index].media !=
+                                              null
+                                          ? controller.medias.medias[index]
+                                                      .media! >=
+                                                  controller.mediaMaua
+                                              ? AppColors.thinLetter
+                                              : AppColors.red
+                                          : AppColors.thinLetter,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       );
                     },
                     separatorBuilder: (BuildContext context, int index) {
                       return Container(
-                        child: Divider(
-                          color: AppColors.stroke,
-                        ),
+                        height: 1.5,
+                        color: AppColors.stroke,
                       );
                     },
                   );
