@@ -18,13 +18,15 @@ class LandingModule extends Module {
     ChildRoute(Modular.initialRoute,
         child: (_, args) => LandingPage(),
         children: [
-          ModuleRoute('/notas', module: NotasAlunoModule()),
           ModuleRoute('/home', module: HomeAlunoModule()),
-          ModuleRoute('/help', module: HelpModule()),
+          ModuleRoute('/help', module: HelpAlunoModule()),
+          ModuleRoute('/avisos', module: HelpAvisosModule()),
+          ModuleRoute('/medias', module: MediasModule()),
           ModuleRoute('/activities', module: ActivitiesModule()),
           ModuleRoute('/mural', module: MuralDivulgacaoModule()),
           ModuleRoute('/calendario', module: CalendarioModule()),
           ModuleRoute('/materias', module: MateriasModule()),
+          ModuleRoute('/bolsas', module: HelpBolsasModule()),
         ]),
   ];
 }
