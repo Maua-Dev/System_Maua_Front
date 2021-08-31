@@ -25,20 +25,10 @@ abstract class MediasControllerBase with Store {
   int get mediaMaua => 6;
 
   @observable
-  MediasModel medias = MediasModel(
-    nomeGraduacao: '',
-    ano: 2021,
-    medias: [],
-  );
+  MediasModel medias = MediasModel.newInstance();
 
   @observable
-  FiltroMediasModel filtros = FiltroMediasModel(
-    anos: [],
-    primeiroSem: true,
-    segundoSem: true,
-    provas: true,
-    trabalhos: true,
-  );
+  FiltroMediasModel filtros = FiltroMediasModel.newInstance();
 
   @action
   Future<void> getFiltros() async {
@@ -61,7 +51,6 @@ abstract class MediasControllerBase with Store {
     switch (label) {
       case '1º Semestre':
         if (filtros.segundoSem) {
-          print(segundoSem);
           primeiroSem = !filtros.primeiroSem;
         }
         break;
@@ -90,12 +79,5 @@ abstract class MediasControllerBase with Store {
       provas: provas,
       trabalhos: trabalhos,
     );
-    print(label);
-  }
-
-  @action
-  Future<void> escolheAno() async {
-    // todasMedias = await mediasRepository.getMedias();
-    print(controllerFiltroAno.ano);
   }
 }

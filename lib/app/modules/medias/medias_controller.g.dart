@@ -70,14 +70,6 @@ mixin _$MediasController on MediasControllerBase, Store {
     return _$toggleOpcaoAsyncAction.run(() => super.toggleOpcao(label));
   }
 
-  final _$escolheAnoAsyncAction =
-      AsyncAction('MediasControllerBase.escolheAno');
-
-  @override
-  Future<void> escolheAno() {
-    return _$escolheAnoAsyncAction.run(() => super.escolheAno());
-  }
-
   @override
   String toString() {
     return '''

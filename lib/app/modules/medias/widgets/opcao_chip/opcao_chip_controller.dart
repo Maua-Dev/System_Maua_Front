@@ -11,6 +11,5 @@ abstract class OpcaoChipControllerBase with Store {
   @action
   Future<void> toggleOpcao(String label) async {
     selected = !selected;
-    print(label);
   }
 }

@@ -55,7 +55,6 @@ class MediasRepository implements IMediasRepository {
 
   @override
   Future<MediasModel> getMedias() {
-    print(todasMedias);
     return Future.value(todasMedias);
   }
 }

@@ -20,18 +20,10 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBarWidget(
-            title: 'Médias',
-            leadingWidget: BackButton(
-              onPressed: () {
-                Modular.to.navigate('/home');
-              },
-            ),
-            icon: Icons.fact_check),
+        appBar: AppBarWidget(title: 'Médias', icon: Icons.fact_check),
         body: Container(
             child: Column(
           children: [
-            // FiltroAnoWidget(),
             Container(
               child: Observer(builder: (_) {
                 return Column(
