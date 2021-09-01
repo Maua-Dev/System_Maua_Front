@@ -5,23 +5,23 @@ class HelpFaqRepository extends IHelpFaqRepository {
   List<FaqModel> listFaq = [
     FaqModel(
         titulo: 'Perguntas frequentes',
-        descricao: 'Temos como trocar de grupo?'
-            'Uma resposta aqui'
-            'Quando começam as PAEs?'
-            'Uma resposta aqui'
-            'Como reservar a quadra?'
+        descricao: 'Temos como trocar de grupo?\n'
+            'Uma resposta aqui\n\n'
+            'Quando começam as PAEs?\n'
+            'Uma resposta aqui\n\n'
+            'Como reservar a quadra?\n'
             'Uma resposta aqui e uma ligação para mandar para a parte de reserva.'),
     FaqModel(
         titulo: 'Perguntas sobre eventos',
-        descricao: 'Quando é o proximo grande evento?'
+        descricao: 'Quando é o proximo grande evento?\n'
             'Sei la'),
     FaqModel(
         titulo: 'Perguntas sobre horários',
-        descricao: 'Quando posso matar aula?'
+        descricao: 'Quando posso matar aula?\n'
             'Sempre'),
     FaqModel(
         titulo: 'Perguntas sobre locais',
-        descricao: 'Onde fica o bloco y?'
+        descricao: 'Onde fica o bloco y?\n'
             'Sim'),
   ];
 
