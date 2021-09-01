@@ -10,7 +10,7 @@ class HelpFaqRepository extends IHelpFaqRepository {
             'Quando começam as PAEs?\n'
             'Uma resposta aqui\n\n'
             'Como reservar a quadra?\n'
-            'Uma resposta aqui e uma ligação para mandar para a parte de reserva.'),
+            'Uma resposta aqui'),
     FaqModel(
         titulo: 'Perguntas sobre eventos',
         descricao: 'Quando é o proximo grande evento?\n'
