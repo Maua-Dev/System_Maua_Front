@@ -2,9 +2,9 @@ import 'faq_model.dart';
 
 class FaqPanelModel {
   bool _isOpen = false;
-  final FaqModel softwares;
+  final FaqModel faq;
 
-  FaqPanelModel({required this.softwares});
+  FaqPanelModel({required this.faq});
 
   void changeStateIsOpen() {
     _isOpen = !_isOpen;
