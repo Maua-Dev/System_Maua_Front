@@ -5,8 +5,8 @@ import 'package:system_maua_front/app/modules/help/help_module.dart';
 import 'package:system_maua_front/app/modules/home-aluno/home_aluno_module.dart';
 import 'package:system_maua_front/app/modules/landing/landing_page.dart';
 import 'package:system_maua_front/app/modules/materias/materias_module.dart';
-import 'package:system_maua_front/app/modules/medias/medias_module.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/mural_divulgacao_module.dart';
+import 'package:system_maua_front/app/modules/notas/notas_module.dart';
 
 class LandingModule extends Module {
   @override
@@ -18,7 +18,7 @@ class LandingModule extends Module {
         child: (_, args) => LandingPage(),
         children: [
           ModuleRoute('/home', module: HomeAlunoModule()),
-          ModuleRoute('/medias', module: MediasModule()),
+          ModuleRoute('/medias', module: NotasModule()),
           ModuleRoute('/help', module: HelpModule()),
           ModuleRoute('/activities', module: ActivitiesModule()),
           ModuleRoute('/mural', module: MuralDivulgacaoModule()),
