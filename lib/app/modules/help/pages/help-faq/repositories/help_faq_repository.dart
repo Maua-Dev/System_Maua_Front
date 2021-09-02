@@ -5,7 +5,7 @@ class HelpFaqRepository extends IHelpFaqRepository {
   List<FaqModel> listFaq = [
     FaqModel(
         titulo: 'Perguntas frequentes',
-        descricao: 'Temos como trocar de grupo?\n'
+        descricao: 'Temos como trocar de grupo apoós começar?\n'
             'Uma resposta aqui\n\n'
             'Quando começam as PAEs?\n'
             'Uma resposta aqui\n\n'
@@ -14,15 +14,27 @@ class HelpFaqRepository extends IHelpFaqRepository {
     FaqModel(
         titulo: 'Perguntas sobre eventos',
         descricao: 'Quando é o proximo grande evento?\n'
-            'Sei la'),
+            'Uma resposta aqui\n\n'
+            'Quando começam eles?\n'
+            'Uma resposta aqui\n\n'
+            'Como reservar um evento?\n'
+            'Uma resposta aqui'),
     FaqModel(
         titulo: 'Perguntas sobre horários',
         descricao: 'Quando posso matar aula?\n'
-            'Sempre'),
+            'Uma resposta aqui\n\n'
+            'Quando começam as PAEs de horario?\n'
+            'Uma resposta aqui\n\n'
+            'Como reservar um horario na sala?\n'
+            'Uma resposta aqui'),
     FaqModel(
         titulo: 'Perguntas sobre locais',
         descricao: 'Onde fica o bloco y?\n'
-            'Sim'),
+            'Uma resposta aqui\n\n'
+            'Onde alugar quadra pela mauá?\n'
+            'Uma resposta aqui\n\n'
+            'Onde fica o melhor lugar pra comer?\n'
+            'Uma resposta aqui'),
   ];
 
   @override
