@@ -53,7 +53,8 @@ class _FaqCardState extends State<FaqCard> {
                   child: Text(
                     widget.descricao,
                     style: AppTextStyles.lightBody.copyWith(fontSize: 16),
-                    textAlign: TextAlign.left,
+                    textAlign: TextAlign.center,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ),
