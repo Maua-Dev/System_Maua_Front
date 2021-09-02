@@ -24,7 +24,6 @@ class NotasModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    // ChildRoute(Modular.initialRoute, child: (_, args) => NotasAlunoPage()),
     ChildRoute(Modular.initialRoute, child: (_, args) => MediasPage()),
     ChildRoute('/notas', child: (_, args) => NotasAlunoPage()),
   ];
