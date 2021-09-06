@@ -3,6 +3,7 @@ import 'package:system_maua_front/app/modules/mural-divulgacao/repositories/mura
 
 import 'mural_divulgacao_controller.dart';
 import 'mural_divulgacao_page.dart';
+import 'pages/mural_equipes/mural_equipes_page.dart';
 
 class MuralDivulgacaoModule extends Module {
   @override
@@ -15,5 +16,6 @@ class MuralDivulgacaoModule extends Module {
   @override
   final List<ModularRoute> routes = [
     ChildRoute(Modular.initialRoute, child: (_, args) => MuralDivulgacaoPage()),
+    ChildRoute('/equipes', child: (_, args) => MuralEquipesPage()),
   ];
 }

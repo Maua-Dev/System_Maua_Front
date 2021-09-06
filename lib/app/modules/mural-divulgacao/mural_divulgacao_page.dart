@@ -54,7 +54,9 @@ class _MuralDivulgacaoPageState
                     titulo: 'Equipes Mauá',
                     iconSize: 40,
                     textController: controller.informacaoEquipesNaoLido,
-                    onTap: () {},
+                    onTap: () {
+                      Modular.to.pushNamed('/equipes');
+                    },
                   );
                 }),
                 Observer(builder: (_) {
