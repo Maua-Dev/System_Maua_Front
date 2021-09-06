@@ -22,28 +22,30 @@ class _MuralEquipesPageState
           title: 'Equipes Mauá',
           icon: Icons.ac_unit,
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Observer(builder: (_) {
-                return Expanded(
-                  child: ListView.builder(
-                    itemCount: controller.listaEquipes.length,
-                    itemBuilder: (context, index) => EquipesCardWidget(
-                      titulo: controller.listaEquipes[index].nomeEquipe,
-                      descricao: controller.listaEquipes[index].descricaoEquipe,
-                      onPressed: () {
-                        controller.trocaOpen(index);
-                      },
-                    ),
+        body: Column(
+          children: [
+            Expanded(
+              child: Observer(builder: (_) {
+                return ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: controller.listaPanelEquipes.length,
+                  itemBuilder: (context, index) => EquipesCardWidget(
+                    titulo:
+                        controller.listaPanelEquipes[index].equipes.nomeEquipe,
+                    descricao: controller
+                        .listaPanelEquipes[index].equipes.descricaoEquipe,
+                    isOpen: controller.listaPanelEquipes[index].isOpen,
+                    onPressed: () {
+                      controller.trocaOpen(index);
+                    },
                   ),
                 );
               }),
-              SizedBox(
-                height: 32,
-              )
-            ],
-          ),
+            ),
+            SizedBox(
+              height: 32,
+            )
+          ],
         ));
   }
 }

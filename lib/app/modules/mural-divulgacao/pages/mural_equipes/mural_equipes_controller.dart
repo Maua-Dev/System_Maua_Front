@@ -27,6 +27,7 @@ abstract class _MuralEquipesControllerBase with Store {
   @action
   Future<void> getEquipes() async {
     listaEquipes = await repository.getEquipes();
+    getListaPanelEquipes();
   }
 
   @action
