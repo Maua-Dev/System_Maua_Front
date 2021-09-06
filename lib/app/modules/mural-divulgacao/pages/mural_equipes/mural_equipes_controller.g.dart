@@ -25,18 +25,60 @@ mixin _$MuralEquipesController on _MuralEquipesControllerBase, Store {
     });
   }
 
+  final _$listaPanelEquipesAtom =
+      Atom(name: '_MuralEquipesControllerBase.listaPanelEquipes');
+
+  @override
+  List<EquipesPanelModel> get listaPanelEquipes {
+    _$listaPanelEquipesAtom.reportRead();
+    return super.listaPanelEquipes;
+  }
+
+  @override
+  set listaPanelEquipes(List<EquipesPanelModel> value) {
+    _$listaPanelEquipesAtom.reportWrite(value, super.listaPanelEquipes, () {
+      super.listaPanelEquipes = value;
+    });
+  }
+
   final _$getEquipesAsyncAction =
       AsyncAction('_MuralEquipesControllerBase.getEquipes');
 
   @override
-  Future getEquipes() {
+  Future<void> getEquipes() {
     return _$getEquipesAsyncAction.run(() => super.getEquipes());
+  }
+
+  final _$_MuralEquipesControllerBaseActionController =
+      ActionController(name: '_MuralEquipesControllerBase');
+
+  @override
+  void getListaPanelEquipes() {
+    final _$actionInfo = _$_MuralEquipesControllerBaseActionController
+        .startAction(name: '_MuralEquipesControllerBase.getListaPanelEquipes');
+    try {
+      return super.getListaPanelEquipes();
+    } finally {
+      _$_MuralEquipesControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void trocaOpen(int index) {
+    final _$actionInfo = _$_MuralEquipesControllerBaseActionController
+        .startAction(name: '_MuralEquipesControllerBase.trocaOpen');
+    try {
+      return super.trocaOpen(index);
+    } finally {
+      _$_MuralEquipesControllerBaseActionController.endAction(_$actionInfo);
+    }
   }
 
   @override
   String toString() {
     return '''
-listaEquipes: ${listaEquipes}
+listaEquipes: ${listaEquipes},
+listaPanelEquipes: ${listaPanelEquipes}
     ''';
   }
 }

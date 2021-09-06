@@ -55,7 +55,7 @@ class _MuralDivulgacaoPageState
                     iconSize: 40,
                     textController: controller.informacaoEquipesNaoLido,
                     onTap: () {
-                      Modular.to.pushNamed('/equipes');
+                      Modular.to.pushNamed('/mural/equipes');
                     },
                   );
                 }),
