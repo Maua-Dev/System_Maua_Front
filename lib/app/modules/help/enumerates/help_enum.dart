@@ -48,7 +48,7 @@ extension HelpEnumExtension on HelpEnum {
       case HelpEnum.MAPA:
         return '';
       case HelpEnum.FAQ:
-        return '';
+        return '/help/faq';
     }
   }
 }
