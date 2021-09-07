@@ -1,4 +1,4 @@
-import 'package:system_maua_front/app/modules/notas-aluno/enumerates/avaliacao_enum.dart';
+import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/enumerates/avaliacao_enum.dart';
 
 class NotasModel {
   final AvaliacaoEnum avaliacao; //p1, p2, p3, p4, t1 t2 t3

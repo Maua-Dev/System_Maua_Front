@@ -1,7 +1,8 @@
-import 'package:system_maua_front/app/modules/notas-aluno/enumerates/avaliacao_enum.dart';
-import 'package:system_maua_front/app/modules/notas-aluno/models/materia_model.dart';
-import 'package:system_maua_front/app/modules/notas-aluno/models/notas_model.dart';
-import 'package:system_maua_front/app/modules/notas-aluno/repositories/notas_aluno_repository_interface.dart';
+import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/enumerates/avaliacao_enum.dart';
+import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/models/materia_model.dart';
+import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/models/notas_model.dart';
+
+import 'notas_aluno_repository_interface.dart';
 
 class NotasAlunoRepository implements INotasAlunoRepository {
   var materia = MateriaModel(

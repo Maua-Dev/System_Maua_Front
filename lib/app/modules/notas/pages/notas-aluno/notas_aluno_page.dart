@@ -1,11 +1,12 @@
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:system_maua_front/app/modules/notas-aluno/notas_aluno_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/app/modules/notas-aluno/widgets/grid_avaliacao_widget.dart';
+import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/widgets/grid_avaliacao_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
+
+import 'notas_aluno_controller.dart';
 
 class NotasAlunoPage extends StatefulWidget {
   const NotasAlunoPage({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/app/modules/notas-aluno/models/notas_model.dart';
+import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/models/notas_model.dart';
 import 'package:system_maua_front/app/shared/components/notas_card/notas_card_widget.dart';
 
 class GridAvaliacao extends StatelessWidget {

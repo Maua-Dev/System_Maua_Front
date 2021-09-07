@@ -1,5 +1,5 @@
 import 'package:mobx/mobx.dart';
-import 'package:system_maua_front/app/modules/notas-aluno/repositories/notas_aluno_repository_interface.dart';
+import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/repositories/notas_aluno_repository_interface.dart';
 
 import 'models/materia_model.dart';
 

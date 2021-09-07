@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:system_maua_front/app/modules/notas-aluno/repositories/notas_aluno_repository.dart';
+import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/repositories/notas_aluno_repository.dart';
 
 void main() {
   late NotasAlunoRepository notasAlunoRepository;
