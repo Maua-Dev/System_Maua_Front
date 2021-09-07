@@ -4,11 +4,13 @@ import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 class EquipesCardWidget extends StatelessWidget {
   final String titulo;
   final String? descricao;
+  final String? contato;
   final void Function()? onPressed;
   final bool isOpen;
   const EquipesCardWidget(
       {Key? key,
       required this.titulo,
+      this.contato,
       this.descricao,
       this.onPressed,
       required this.isOpen})
@@ -40,14 +42,27 @@ class EquipesCardWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              body: descricao == null
+              body: (descricao == null || contato == null)
                   ? SizedBox.shrink()
                   : Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8),
-                      child: Text(
-                        descricao!,
-                        style: AppTextStyles.lightBody.copyWith(fontSize: 16),
-                        textAlign: TextAlign.left,
+                      padding: EdgeInsets.symmetric(horizontal: 12),
+                      child: Column(
+                        children: [
+                          Text(
+                            descricao!,
+                            style:
+                                AppTextStyles.lightBody.copyWith(fontSize: 16),
+                            textAlign: TextAlign.left,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 12),
+                            child: RichText(
+                                text: TextSpan(children: [
+                              TextSpan(text: 'Contato: '),
+                              TextSpan(text: contato)
+                            ])),
+                          )
+                        ],
                       ),
                     ),
             )

@@ -20,7 +20,7 @@ class _MuralEquipesPageState
     return Scaffold(
         appBar: AppBarWidget(
           title: 'Equipes Mauá',
-          icon: Icons.ac_unit,
+          icon: Icons.group,
         ),
         body: Column(
           children: [
@@ -34,6 +34,7 @@ class _MuralEquipesPageState
                         controller.listaPanelEquipes[index].equipes.nomeEquipe,
                     descricao: controller
                         .listaPanelEquipes[index].equipes.descricaoEquipe,
+                    contato: controller.listaEquipes[index].contatoResponsavel,
                     isOpen: controller.listaPanelEquipes[index].isOpen,
                     onPressed: () {
                       controller.trocaOpen(index);

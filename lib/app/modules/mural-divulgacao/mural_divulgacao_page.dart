@@ -48,7 +48,7 @@ class _MuralDivulgacaoPageState
                 }),
                 Observer(builder: (_) {
                   return MuralDivulgacaoCardWidget(
-                    icon: Icons.group, //mudar pra group
+                    icon: Icons.group,
                     corContainer: Color(0xFFC1FF43).withOpacity(0.2),
                     corContainerIcone: Color(0xFFC1FF43),
                     titulo: 'Equipes Mauá',
