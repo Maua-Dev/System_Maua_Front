@@ -43,13 +43,9 @@ class _MuralDivulgacaoPageState
                     titulo: 'Vendas de Materiais',
                     iconSize: 40,
                     textController: controller.informacaoVendasNaoLido,
-<<<<<<< HEAD
                     onTap: () {
                       Modular.to.pushNamed('/vendas');
                     },
-=======
-                    onTap: () {},
->>>>>>> parent of d634f50... FM-20 Estruturação do MVC
                   );
                 }),
                 Observer(builder: (_) {

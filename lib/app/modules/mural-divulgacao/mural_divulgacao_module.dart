@@ -1,8 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-<<<<<<< HEAD
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/mural_vendas_materiais_page.dart';
-=======
->>>>>>> parent of d634f50... FM-20 Estruturação do MVC
 import 'package:system_maua_front/app/modules/mural-divulgacao/repositories/mural_divulgacao_repository.dart';
 
 import 'mural_divulgacao_controller.dart';
@@ -25,9 +22,6 @@ class MuralDivulgacaoModule extends Module {
   final List<ModularRoute> routes = [
     ChildRoute(Modular.initialRoute, child: (_, args) => MuralDivulgacaoPage()),
     ChildRoute('/equipes', child: (_, args) => MuralEquipesPage()),
-<<<<<<< HEAD
     ChildRoute('vendas', child: (_, args)=> MuralVendasMateriaisPage()),
-=======
->>>>>>> parent of d634f50... FM-20 Estruturação do MVC
   ];
 }
