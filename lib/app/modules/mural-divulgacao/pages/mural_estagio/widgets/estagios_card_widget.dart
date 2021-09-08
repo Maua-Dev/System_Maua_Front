@@ -28,7 +28,7 @@ class EstagiosCardWidget extends StatelessWidget {
         body: (descricao == null)
             ? SizedBox.shrink()
             : Padding(
-                padding: EdgeInsets.symmetric(horizontal: 12),
+                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 child: Text(
                   descricao!,
                   style: AppTextStyles.lightBody.copyWith(fontSize: 16),
