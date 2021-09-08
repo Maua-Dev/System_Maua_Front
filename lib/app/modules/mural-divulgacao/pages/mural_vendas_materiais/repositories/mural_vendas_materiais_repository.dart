@@ -1,9 +1,7 @@
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/models/vendas_materiais_model.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/repositories/mural_vendas_materiais_repository_interface.dart';
 
-
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas/models/vendas_model.dart';
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas/repositories/mural_vendas_repository_interface.dart';
-
-class MuralVendasMateriaisRepository implements IMuralVendasMateriaisRepository {
+class MuralVendasMateriaisRepository implements ImuralVendasMateriaisRepository{
   var listaVendas = [
     VendasMateriaisModel(
       nomeProduto: 'Livro de Cálculo',
