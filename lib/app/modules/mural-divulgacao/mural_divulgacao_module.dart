@@ -19,7 +19,8 @@ class MuralDivulgacaoModule extends Module {
     Bind.lazySingleton((i) => MuralEquipesController(i())),
     Bind.lazySingleton<MuralEquipesRepository>((i) => MuralEquipesRepository()),
     Bind.lazySingleton((i) => MuralEstagiosController(i())),
-    Bind.lazySingleton<MuralEstagiosRepository>((i) => MuralEstagiosRepository()),
+    Bind.lazySingleton<MuralEstagiosRepository>(
+        (i) => MuralEstagiosRepository()),
   ];
 
   @override
