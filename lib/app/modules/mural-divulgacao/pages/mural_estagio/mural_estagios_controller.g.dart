@@ -41,23 +41,24 @@ mixin _$MuralEstagiosController on _MuralEstagiosControllerBase, Store {
     });
   }
 
-  final _$getEquipesAsyncAction =
-      AsyncAction('_MuralEstagiosControllerBase.getEquipes');
+  final _$getEstagiosAsyncAction =
+      AsyncAction('_MuralEstagiosControllerBase.getEstagios');
 
   @override
-  Future<void> getEquipes() {
-    return _$getEquipesAsyncAction.run(() => super.getEquipes());
+  Future<void> getEstagios() {
+    return _$getEstagiosAsyncAction.run(() => super.getEstagios());
   }
 
   final _$_MuralEstagiosControllerBaseActionController =
       ActionController(name: '_MuralEstagiosControllerBase');
 
   @override
-  void getListaPanelEquipes() {
-    final _$actionInfo = _$_MuralEstagiosControllerBaseActionController
-        .startAction(name: '_MuralEstagiosControllerBase.getListaPanelEquipes');
+  void setListaPanelEstagios() {
+    final _$actionInfo =
+        _$_MuralEstagiosControllerBaseActionController.startAction(
+            name: '_MuralEstagiosControllerBase.setListaPanelEstagios');
     try {
-      return super.getListaPanelEquipes();
+      return super.setListaPanelEstagios();
     } finally {
       _$_MuralEstagiosControllerBaseActionController.endAction(_$actionInfo);
     }

@@ -23,12 +23,12 @@ abstract class _MuralEstagiosControllerBase with Store {
   List<ListPanelModel> listaPanelEstagios = [];
 
   @action
-  Future<void> getEquipes() async {
+  Future<void> getEstagios() async {
     listaEstagios = await repository.getEstagios();
   }
 
   @action
-  void getListaPanelEquipes() {
+  void setListaPanelEstagios() {
     var list = <ListPanelModel>[];
     for (var i = 0; i < listaEstagios.length; i++) {
       list.add(ListPanelModel(model: listaEstagios[i]));

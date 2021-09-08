@@ -78,7 +78,9 @@ class _MuralDivulgacaoPageState
                     titulo: 'Estágio',
                     iconSize: 34,
                     textController: controller.informacaoEstagioNaoLido,
-                    onTap: () {},
+                    onTap: () {
+                      Modular.to.pushNamed('/mural/estagios');
+                    },
                   );
                 }),
               ],
