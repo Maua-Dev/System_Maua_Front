@@ -9,10 +9,76 @@ part of 'mural_estagios_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$MuralEstagiosController on _MuralEstagiosControllerBase, Store {
+  final _$listaEstagiosAtom =
+      Atom(name: '_MuralEstagiosControllerBase.listaEstagios');
+
+  @override
+  List<EstagiosModel> get listaEstagios {
+    _$listaEstagiosAtom.reportRead();
+    return super.listaEstagios;
+  }
+
+  @override
+  set listaEstagios(List<EstagiosModel> value) {
+    _$listaEstagiosAtom.reportWrite(value, super.listaEstagios, () {
+      super.listaEstagios = value;
+    });
+  }
+
+  final _$listaPanelEstagiosAtom =
+      Atom(name: '_MuralEstagiosControllerBase.listaPanelEstagios');
+
+  @override
+  List<ListPanelModel> get listaPanelEstagios {
+    _$listaPanelEstagiosAtom.reportRead();
+    return super.listaPanelEstagios;
+  }
+
+  @override
+  set listaPanelEstagios(List<ListPanelModel> value) {
+    _$listaPanelEstagiosAtom.reportWrite(value, super.listaPanelEstagios, () {
+      super.listaPanelEstagios = value;
+    });
+  }
+
+  final _$getEquipesAsyncAction =
+      AsyncAction('_MuralEstagiosControllerBase.getEquipes');
+
+  @override
+  Future<void> getEquipes() {
+    return _$getEquipesAsyncAction.run(() => super.getEquipes());
+  }
+
+  final _$_MuralEstagiosControllerBaseActionController =
+      ActionController(name: '_MuralEstagiosControllerBase');
+
+  @override
+  void getListaPanelEquipes() {
+    final _$actionInfo = _$_MuralEstagiosControllerBaseActionController
+        .startAction(name: '_MuralEstagiosControllerBase.getListaPanelEquipes');
+    try {
+      return super.getListaPanelEquipes();
+    } finally {
+      _$_MuralEstagiosControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void trocaOpen(int index) {
+    final _$actionInfo = _$_MuralEstagiosControllerBaseActionController
+        .startAction(name: '_MuralEstagiosControllerBase.trocaOpen');
+    try {
+      return super.trocaOpen(index);
+    } finally {
+      _$_MuralEstagiosControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''
-
+listaEstagios: ${listaEstagios},
+listaPanelEstagios: ${listaPanelEstagios}
     ''';
   }
 }
