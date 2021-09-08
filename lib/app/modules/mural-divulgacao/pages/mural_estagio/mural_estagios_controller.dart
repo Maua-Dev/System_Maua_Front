@@ -12,9 +12,9 @@ class MuralEstagiosController = _MuralEstagiosControllerBase
 abstract class _MuralEstagiosControllerBase with Store {
   IMuralEstagiosRepository repository;
 
-  _MuralEstagiosControllerBase({
-    required this.repository,
-  });
+  _MuralEstagiosControllerBase(
+    this.repository,
+  );
 
   @observable
   List<EstagiosModel> listaEstagios = List.empty();
