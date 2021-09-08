@@ -31,9 +31,9 @@ class _MuralEquipesPageState
                   itemCount: controller.listaPanelEquipes.length,
                   itemBuilder: (context, index) => EquipesCardWidget(
                     titulo:
-                        controller.listaPanelEquipes[index].equipes.nomeEquipe,
+                        controller.listaPanelEquipes[index].model.nomeEquipe,
                     descricao: controller
-                        .listaPanelEquipes[index].equipes.descricaoEquipe,
+                        .listaPanelEquipes[index].model.descricaoEquipe,
                     contato: controller.listaEquipes[index].contatoResponsavel,
                     isOpen: controller.listaPanelEquipes[index].isOpen,
                     onPressed: () {

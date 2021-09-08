@@ -29,13 +29,13 @@ mixin _$MuralEstagiosController on _MuralEstagiosControllerBase, Store {
       Atom(name: '_MuralEstagiosControllerBase.listaPanelEstagios');
 
   @override
-  List<ListPanelModel> get listaPanelEstagios {
+  List<ListPanelModel<EstagiosModel>> get listaPanelEstagios {
     _$listaPanelEstagiosAtom.reportRead();
     return super.listaPanelEstagios;
   }
 
   @override
-  set listaPanelEstagios(List<ListPanelModel> value) {
+  set listaPanelEstagios(List<ListPanelModel<EstagiosModel>> value) {
     _$listaPanelEstagiosAtom.reportWrite(value, super.listaPanelEstagios, () {
       super.listaPanelEstagios = value;
     });

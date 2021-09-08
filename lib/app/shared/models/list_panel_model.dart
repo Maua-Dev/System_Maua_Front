@@ -1,5 +1,5 @@
-class ListPanelModel {
-  final dynamic model;
+class ListPanelModel<T> {
+  final T model;
   bool _isOpen = false;
 
   ListPanelModel({required this.model});

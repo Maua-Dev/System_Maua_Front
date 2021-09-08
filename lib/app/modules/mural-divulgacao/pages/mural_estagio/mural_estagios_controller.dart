@@ -14,22 +14,25 @@ abstract class _MuralEstagiosControllerBase with Store {
 
   _MuralEstagiosControllerBase(
     this.repository,
-  );
+  ) {
+    getEstagios();
+  }
 
   @observable
   List<EstagiosModel> listaEstagios = List.empty();
 
   @observable
-  List<ListPanelModel> listaPanelEstagios = [];
+  List<ListPanelModel<EstagiosModel>> listaPanelEstagios = [];
 
   @action
   Future<void> getEstagios() async {
     listaEstagios = await repository.getEstagios();
+    setListaPanelEstagios();
   }
 
   @action
   void setListaPanelEstagios() {
-    var list = <ListPanelModel>[];
+    var list = <ListPanelModel<EstagiosModel>>[];
     for (var i = 0; i < listaEstagios.length; i++) {
       list.add(ListPanelModel(model: listaEstagios[i]));
     }
@@ -38,7 +41,7 @@ abstract class _MuralEstagiosControllerBase with Store {
 
   @action
   void trocaOpen(int index) {
-    var lista = List<ListPanelModel>.from(listaPanelEstagios);
+    var lista = List<ListPanelModel<EstagiosModel>>.from(listaPanelEstagios);
     lista[index].changeStateIsOpen();
     listaPanelEstagios = lista;
   }
