@@ -8,7 +8,7 @@ class VendasMateriaisModel {
   );
 
   factory VendasMateriaisModel.newInstance(){
-    return VendasMateriaisModel(nomeProduto: '', precoProduto: null);
+    return VendasMateriaisModel(
+      nomeProduto: '', precoProduto: null);
   }
-
-}
+} 

@@ -26,20 +26,19 @@ mixin _$MuralVendasMateriaisController
     });
   }
 
-  final _$listaPanelVendasMateriaisAtom = Atom(
-      name: '_MuralVendasMateriaisControllerBase.listaPanelVendasMateriais');
+  final _$listaPanelVendasAtom =
+      Atom(name: '_MuralVendasMateriaisControllerBase.listaPanelVendas');
 
   @override
-  List<dynamic> get listaPanelVendasMateriais {
-    _$listaPanelVendasMateriaisAtom.reportRead();
-    return super.listaPanelVendasMateriais;
+  List<ListPanelModel<VendasMateriaisModel>> get listaPanelVendas {
+    _$listaPanelVendasAtom.reportRead();
+    return super.listaPanelVendas;
   }
 
   @override
-  set listaPanelVendasMateriais(List<dynamic> value) {
-    _$listaPanelVendasMateriaisAtom
-        .reportWrite(value, super.listaPanelVendasMateriais, () {
-      super.listaPanelVendasMateriais = value;
+  set listaPanelVendas(List<ListPanelModel<VendasMateriaisModel>> value) {
+    _$listaPanelVendasAtom.reportWrite(value, super.listaPanelVendas, () {
+      super.listaPanelVendas = value;
     });
   }
 
@@ -84,7 +83,7 @@ mixin _$MuralVendasMateriaisController
   String toString() {
     return '''
 listaVendas: ${listaVendas},
-listaPanelVendasMateriais: ${listaPanelVendasMateriais}
+listaPanelVendas: ${listaPanelVendas}
     ''';
   }
 }

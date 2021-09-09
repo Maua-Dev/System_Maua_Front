@@ -28,7 +28,7 @@ class MuralDivulgacaoModule extends Module {
   final List<ModularRoute> routes = [
     ChildRoute(Modular.initialRoute, child: (_, args) => MuralDivulgacaoPage()),
     ChildRoute('/equipes', child: (_, args) => MuralEquipesPage()),
-    ChildRoute('vendas', child: (_, args)=> MuralVendasMateriaisPage()),
+    ChildRoute('/vendas', child: (_, args)=> MuralVendasMateriaisPage()),
     ChildRoute('/estagios', child: (_, args) => MuralEstagiosPage()),
   ];
 }

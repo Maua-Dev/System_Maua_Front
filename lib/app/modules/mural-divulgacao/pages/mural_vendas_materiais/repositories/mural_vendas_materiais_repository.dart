@@ -6,13 +6,13 @@ class MuralVendasMateriaisRepository implements ImuralVendasMateriaisRepository{
     VendasMateriaisModel(
       nomeProduto: 'Livro de Cálculo',
       precoProduto: 50.00 ,),
-      VendasMateriaisModel(
+    VendasMateriaisModel(
       nomeProduto: 'Livro de Termodinâmica',
       precoProduto: 50.00 ,),
-      VendasMateriaisModel(
+    VendasMateriaisModel(
       nomeProduto: 'Livro de Cálculo',
       precoProduto: 50.00 ,),
-      VendasMateriaisModel(
+    VendasMateriaisModel(
       nomeProduto: 'Livro de Cálculo',
       precoProduto: 50.00 ,),
   ];

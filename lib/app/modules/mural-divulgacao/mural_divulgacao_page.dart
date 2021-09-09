@@ -44,7 +44,7 @@ class _MuralDivulgacaoPageState
                     iconSize: 40,
                     textController: controller.informacaoVendasNaoLido,
                     onTap: () {
-                      Modular.to.pushNamed('/vendas');
+                      Modular.to.pushNamed('/mural/vendas');
                     },
                   );
                 }),
