@@ -10,14 +10,14 @@ class MuralVendasMateriaisRepository implements ImuralVendasMateriaisRepository{
       nomeProduto: 'Livro de Termodinâmica',
       precoProduto: 'RS 50,00'),
     VendasMateriaisModel(
-      nomeProduto: 'Livro de Cálculo',
-      precoProduto: 'RS 50,00'),
+      nomeProduto: 'Apostila Fisica I',
+      precoProduto: 'RS 30,00'),
     VendasMateriaisModel(
-      nomeProduto: 'Livro de Cálculo',
-      precoProduto: 'RS 50,00'),
+      nomeProduto: 'Calculadora CASIO',
+      precoProduto: 'RS 25,50'),
     VendasMateriaisModel(
-      nomeProduto: 'Livro de Cálculo',
-      precoProduto: 'RS 50,00'),
+      nomeProduto: 'Caderno de plástico',
+      precoProduto: 'RS 7,20'),
     VendasMateriaisModel(
       nomeProduto: 'Livro de Cálculo',
       precoProduto: 'RS 50,00'),

@@ -19,10 +19,19 @@ class _MuralVendasMateriaisPageState extends ModularState<
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
-        title: 'Venda de materiais', 
+        title: 'Venda de materiais',
         icon: Icons.card_travel,
-        actionWidget: Icon(Icons.add,),
-        ),
+        // ignore: unnecessary_new
+        actionWidget: new Observer(builder: (_) {
+          return InkWell(
+              onTap: () {
+                null;
+              },
+              child: Icon(
+                Icons.add,
+              ));
+        }),
+      ),
       body: Column(
         children: [
           Expanded(
@@ -35,7 +44,7 @@ class _MuralVendasMateriaisPageState extends ModularState<
                   onTap: () {
                     null;
                   },
-                ), 
+                ),
               );
             }),
           ),
