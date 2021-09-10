@@ -1,14 +1,14 @@
 class VendasMateriaisModel {
-  final String nomeProduto;
-  final double? precoProduto;
+  final String? nomeProduto;
+  final String? precoProduto;
 
   VendasMateriaisModel(
     {required this.nomeProduto,
-    this.precoProduto}
-  );
+    required this.precoProduto,
+    });
 
   factory VendasMateriaisModel.newInstance(){
     return VendasMateriaisModel(
-      nomeProduto: '', precoProduto: null);
+      nomeProduto: '', precoProduto: '');
   }
 } 

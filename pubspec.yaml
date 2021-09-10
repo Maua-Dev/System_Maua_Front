@@ -41,6 +41,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/logoMaua.png
+    - assets/images/calculo.jpg
 
 scripts:
   mobx_build: flutter pub run build_runner build

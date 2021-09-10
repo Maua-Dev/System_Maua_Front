@@ -5,16 +5,25 @@ class MuralVendasMateriaisRepository implements ImuralVendasMateriaisRepository{
   var listaVendas = [
     VendasMateriaisModel(
       nomeProduto: 'Livro de Cálculo',
-      precoProduto: 50.00 ,),
+      precoProduto: 'RS 50,00'),
     VendasMateriaisModel(
       nomeProduto: 'Livro de Termodinâmica',
-      precoProduto: 50.00 ,),
+      precoProduto: 'RS 50,00'),
     VendasMateriaisModel(
       nomeProduto: 'Livro de Cálculo',
-      precoProduto: 50.00 ,),
+      precoProduto: 'RS 50,00'),
     VendasMateriaisModel(
       nomeProduto: 'Livro de Cálculo',
-      precoProduto: 50.00 ,),
+      precoProduto: 'RS 50,00'),
+    VendasMateriaisModel(
+      nomeProduto: 'Livro de Cálculo',
+      precoProduto: 'RS 50,00'),
+    VendasMateriaisModel(
+      nomeProduto: 'Livro de Cálculo',
+      precoProduto: 'RS 50,00'),
+    VendasMateriaisModel(
+      nomeProduto: 'Livro de Cálculo',
+      precoProduto: 'RS 50,00'),
   ];
 
   @override
