@@ -27,9 +27,6 @@ abstract class _AtingirMetasControllerBase with Store {
   @observable
   Map metasParaCalculo = {};
 
-  // @observable
-  // MateriaModel metasPosCalculo = MateriaModel.newInstance();
-
   @action
   Future<void> setNota(String value, AvaliacaoEnum tituloAvaliacao) async {
     metasParaCalculo[tituloAvaliacao.name] = value;
