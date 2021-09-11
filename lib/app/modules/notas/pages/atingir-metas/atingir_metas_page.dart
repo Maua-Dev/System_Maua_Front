@@ -47,7 +47,11 @@ class AtingirMetasPageState
                               ),
                               IconButton(
                                 onPressed: controller.getNotasCalculadas,
-                                icon: Icon(Icons.my_location_outlined),
+                                icon: Icon(
+                                  Icons.my_location_outlined,
+                                  color: AppColors.darkBlue,
+                                ),
+                                tooltip: 'Calcular',
                               ),
                             ],
                           ),
@@ -63,8 +67,11 @@ class AtingirMetasPageState
                               ),
                               IconButton(
                                 onPressed: controller.getMateria,
-                                icon: Icon(Icons.delete),
-                                tooltip: 'aaaa',
+                                icon: Icon(
+                                  Icons.delete,
+                                  color: AppColors.darkBlue,
+                                ),
+                                tooltip: 'Limpar',
                               ),
                             ],
                           ),
