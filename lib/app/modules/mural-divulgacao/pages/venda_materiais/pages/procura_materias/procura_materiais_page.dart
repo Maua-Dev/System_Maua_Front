@@ -5,6 +5,7 @@ import 'package:system_maua_front/app/modules/mural-divulgacao/pages/venda_mater
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/venda_materiais/pages/procura_materias/procura_materiais_controller.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/components/type_ahead_field/type_ahead_field_widget.dart';
+import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class ProcuraMateriaisPage extends StatefulWidget {
   ProcuraMateriaisPage({Key? key}) : super(key: key);
@@ -22,29 +23,35 @@ class _ProcuraMateriaisPageState
         title: 'Venda Materiais',
         icon: FontAwesome5.shopping_bag,
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            TypeAheadFieldWidget(
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+            child: TypeAheadFieldWidget(
               list: controller.listaMateriais,
               titulo: 'Procurar material',
               onChanged: controller.setMaterial,
               value: controller.material,
               onSuggestionSelected: () {},
             ),
-            SizedBox(
-              height: 16,
-            ),
-            Expanded(
-              child: ListView.builder(
-                itemCount: MateriaisEnum.values.length,
-                itemBuilder: (context, index) => TextButton(
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: MateriaisEnum.values.length,
+              itemBuilder: (context, index) => Padding(
+                padding: const EdgeInsets.only(bottom: 6),
+                child: TextButton(
                     onPressed: () {},
-                    child: Text(MateriaisEnum.values[index].nome)),
+                    child: Text(
+                      MateriaisEnum.values[index].nome,
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    )),
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }
