@@ -5,7 +5,6 @@ import 'package:system_maua_front/app/modules/mural-divulgacao/pages/venda_mater
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/venda_materiais/pages/procura_materias/procura_materiais_controller.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/components/type_ahead_field/type_ahead_field_widget.dart';
-import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class ProcuraMateriaisPage extends StatefulWidget {
   ProcuraMateriaisPage({Key? key}) : super(key: key);
