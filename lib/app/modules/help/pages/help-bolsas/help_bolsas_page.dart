@@ -51,14 +51,8 @@ class _HelpBolsasPageState
                   child: Column(
                       children: [
                         Text(
-                          ' OS FORMULÁRIOS DEVERÃO SER PREENCHIDOS ELETRONICAMENTE, ASSINADOS E JUNTAMENTE COM TODA A DOCUMENTAÇÃO DEVERÃO SER DIGITALIZADOS E ENCAMINHADOS PARA O E-MAIL: fmb@maua.br',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 16
-                          ),
-                        ),
-                        Text(
-                          'NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS',
+                          ''' OS FORMULÁRIOS DEVERÃO SER PREENCHIDOS ELETRONICAMENTE, ASSINADOS E JUNTAMENTE COM TODA A DOCUMENTAÇÃO DEVERÃO SER DIGITALIZADOS E ENCAMINHADOS PARA O E-MAIL: fmb@maua.br
+NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS''',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 16
