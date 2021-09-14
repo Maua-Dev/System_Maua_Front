@@ -21,4 +21,19 @@ extension MateriaisEnumExtension on MateriaisEnum {
         return 'Livro Resistêcia dos Materiais';
     }
   }
+
+  String get rota {
+    switch (this) {
+      case MateriaisEnum.LIVROCALCULOI:
+        return '/';
+      case MateriaisEnum.DOACOES:
+        return '/';
+      case MateriaisEnum.LIVROFISICAI:
+        return '/';
+      case MateriaisEnum.CADERNORESMAT:
+        return '/';
+      case MateriaisEnum.LIVRORESMAT:
+        return '/';
+    }
+  }
 }
