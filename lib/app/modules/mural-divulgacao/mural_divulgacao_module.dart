@@ -1,12 +1,9 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/pages/lista_vendas/lista_vendas_materiais_controller.dart';
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/pages/lista_vendas/lista_vendas_materiais_page.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/modules/venda_materiais_module.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_estagio/mural_estagios_controller.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_estagio/mural_estagios_page.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_estagio/repositories/mural_estagios_repository.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/pages/procura_materias/procura_materiais_controller.dart';
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/pages/procura_materias/procura_materiais_page.dart';
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/repositories/mural_vendas_materiais_repository.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/repositories/mural_divulgacao_repository.dart';
 
 import 'mural_divulgacao_controller.dart';
@@ -33,8 +30,7 @@ class MuralDivulgacaoModule extends Module {
   final List<ModularRoute> routes = [
     ChildRoute(Modular.initialRoute, child: (_, args) => MuralDivulgacaoPage()),
     ChildRoute('/equipes', child: (_, args) => MuralEquipesPage()),
-    ChildRoute('/vendas', child: (_, args) => ListaVendasMateriaisPage()),
     ChildRoute('/estagios', child: (_, args) => MuralEstagiosPage()),
-    ChildRoute('/venda-materiais', child: (_, args) => ProcuraMateriaisPage()),
+    ModuleRoute('/vendas', module: VendaMateriaisModule()),
   ];
 }
