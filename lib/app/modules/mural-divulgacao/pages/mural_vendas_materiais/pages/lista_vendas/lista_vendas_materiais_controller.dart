@@ -10,7 +10,7 @@ class ListaVendasMateriaisController = _ListaVendasMateriaisControllerBase
     with _$ListaVendasMateriaisController;
 
 abstract class _ListaVendasMateriaisControllerBase with Store {
-  ImuralVendasMateriaisRepository? repository;
+  IMuralVendasMateriaisRepository? repository;
 
   _ListaVendasMateriaisControllerBase(
     this.repository,
