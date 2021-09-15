@@ -4,15 +4,15 @@ import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_venda
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/repositories/mural_vendas_materiais_repository_interface.dart';
 import 'package:system_maua_front/app/shared/models/list_panel_model.dart';
 
-part 'mural_vendas_materiais_controller.g.dart';
+part 'lista_vendas_materiais_controller.g.dart';
 
-class MuralVendasMateriaisController = _MuralVendasMateriaisControllerBase
-    with _$MuralVendasMateriaisController;
+class ListaVendasMateriaisController = _ListaVendasMateriaisControllerBase
+    with _$ListaVendasMateriaisController;
 
-abstract class _MuralVendasMateriaisControllerBase with Store {
+abstract class _ListaVendasMateriaisControllerBase with Store {
   ImuralVendasMateriaisRepository? repository;
 
-  _MuralVendasMateriaisControllerBase(
+  _ListaVendasMateriaisControllerBase(
     this.repository,
   ) {
     getVendas();
@@ -41,9 +41,9 @@ abstract class _MuralVendasMateriaisControllerBase with Store {
 
   @action
   void trocaOpen(int index) {
-    var lista = List<ListPanelModel<VendasMateriaisModel>>.from(listaPanelVendas);
+    var lista =
+        List<ListPanelModel<VendasMateriaisModel>>.from(listaPanelVendas);
     lista[index].changeStateIsOpen();
     listaPanelVendas = lista;
-  }  
-
+  }
 }

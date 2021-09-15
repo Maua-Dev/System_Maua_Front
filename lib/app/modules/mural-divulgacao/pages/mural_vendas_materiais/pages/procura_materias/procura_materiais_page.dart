@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/venda_materiais/enumerates/materiais_enum.dart';
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/venda_materiais/pages/procura_materias/procura_materiais_controller.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/enumerates/materiais_enum.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/pages/procura_materias/procura_materiais_controller.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/components/type_ahead_field/type_ahead_field_widget.dart';
 

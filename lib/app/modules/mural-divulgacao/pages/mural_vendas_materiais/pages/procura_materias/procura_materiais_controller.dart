@@ -1,6 +1,5 @@
 import 'package:mobx/mobx.dart';
-
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/venda_materiais/enumerates/materiais_enum.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/enumerates/materiais_enum.dart';
 
 part 'procura_materiais_controller.g.dart';
 

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/mural_vendas_materiais_controller.dart';
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/widgets/vendas_materiais_card_widget.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/pages/lista_vendas/lista_vendas_materiais_controller.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/pages/lista_vendas/widgets/vendas_materiais_card_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 
-class MuralVendasMateriaisPage extends StatefulWidget {
-  MuralVendasMateriaisPage({Key? key}) : super(key: key);
+class ListaVendasMateriaisPage extends StatefulWidget {
+  ListaVendasMateriaisPage({Key? key}) : super(key: key);
 
   @override
-  _MuralVendasMateriaisPageState createState() =>
-      _MuralVendasMateriaisPageState();
+  _ListaVendasMateriaisPageState createState() =>
+      _ListaVendasMateriaisPageState();
 }
 
-class _MuralVendasMateriaisPageState extends ModularState<
-    MuralVendasMateriaisPage, MuralVendasMateriaisController> {
+class _ListaVendasMateriaisPageState extends ModularState<
+    ListaVendasMateriaisPage, ListaVendasMateriaisController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

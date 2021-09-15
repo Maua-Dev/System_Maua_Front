@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/venda_materiais/pages/procura_materias/procura_materiais_controller.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/pages/procura_materias/procura_materiais_controller.dart';
 
 void main() {
   late ProcuraMateriaisController procuraMateriaisController;

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'mural_vendas_materiais_controller.dart';
+part of 'lista_vendas_materiais_controller.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -8,10 +8,10 @@ part of 'mural_vendas_materiais_controller.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
-mixin _$MuralVendasMateriaisController
-    on _MuralVendasMateriaisControllerBase, Store {
+mixin _$ListaVendasMateriaisController
+    on _ListaVendasMateriaisControllerBase, Store {
   final _$listaVendasAtom =
-      Atom(name: '_MuralVendasMateriaisControllerBase.listaVendas');
+      Atom(name: '_ListaVendasMateriaisControllerBase.listaVendas');
 
   @override
   List<VendasMateriaisModel> get listaVendas {
@@ -27,7 +27,7 @@ mixin _$MuralVendasMateriaisController
   }
 
   final _$listaPanelVendasAtom =
-      Atom(name: '_MuralVendasMateriaisControllerBase.listaPanelVendas');
+      Atom(name: '_ListaVendasMateriaisControllerBase.listaPanelVendas');
 
   @override
   List<ListPanelModel<VendasMateriaisModel>> get listaPanelVendas {
@@ -43,38 +43,38 @@ mixin _$MuralVendasMateriaisController
   }
 
   final _$getVendasAsyncAction =
-      AsyncAction('_MuralVendasMateriaisControllerBase.getVendas');
+      AsyncAction('_ListaVendasMateriaisControllerBase.getVendas');
 
   @override
   Future<void> getVendas() {
     return _$getVendasAsyncAction.run(() => super.getVendas());
   }
 
-  final _$_MuralVendasMateriaisControllerBaseActionController =
-      ActionController(name: '_MuralVendasMateriaisControllerBase');
+  final _$_ListaVendasMateriaisControllerBaseActionController =
+      ActionController(name: '_ListaVendasMateriaisControllerBase');
 
   @override
   void getListaPanelVendasMateriais() {
     final _$actionInfo =
-        _$_MuralVendasMateriaisControllerBaseActionController.startAction(
+        _$_ListaVendasMateriaisControllerBaseActionController.startAction(
             name:
-                '_MuralVendasMateriaisControllerBase.getListaPanelVendasMateriais');
+                '_ListaVendasMateriaisControllerBase.getListaPanelVendasMateriais');
     try {
       return super.getListaPanelVendasMateriais();
     } finally {
-      _$_MuralVendasMateriaisControllerBaseActionController
+      _$_ListaVendasMateriaisControllerBaseActionController
           .endAction(_$actionInfo);
     }
   }
 
   @override
   void trocaOpen(int index) {
-    final _$actionInfo = _$_MuralVendasMateriaisControllerBaseActionController
-        .startAction(name: '_MuralVendasMateriaisControllerBase.trocaOpen');
+    final _$actionInfo = _$_ListaVendasMateriaisControllerBaseActionController
+        .startAction(name: '_ListaVendasMateriaisControllerBase.trocaOpen');
     try {
       return super.trocaOpen(index);
     } finally {
-      _$_MuralVendasMateriaisControllerBaseActionController
+      _$_ListaVendasMateriaisControllerBaseActionController
           .endAction(_$actionInfo);
     }
   }
