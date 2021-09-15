@@ -12,6 +12,5 @@ abstract class FiltroControllerBase with Store {
   @action
   Future<void> changeFilter(String? newValue) async {
     ano = newValue!;
-    print(ano);
   }
 }

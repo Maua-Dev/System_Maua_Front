@@ -1,32 +1,28 @@
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/widgets/grid_avaliacao_widget.dart';
+import 'package:system_maua_front/app/modules/notas/pages/atingir-metas/widgets/grid_avaliacao_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
-import 'notas_aluno_controller.dart';
+import 'atingir_metas_controller.dart';
 
-class NotasAlunoPage extends StatefulWidget {
-  const NotasAlunoPage({Key? key}) : super(key: key);
+class AtingirMetasPage extends StatefulWidget {
+  const AtingirMetasPage({Key? key}) : super(key: key);
   @override
-  NotasAlunoPageState createState() => NotasAlunoPageState();
+  AtingirMetasPageState createState() => AtingirMetasPageState();
 }
 
-class NotasAlunoPageState
-    extends ModularState<NotasAlunoPage, NotasAlunoController> {
+class AtingirMetasPageState
+    extends ModularState<AtingirMetasPage, AtingirMetasController> {
+  // var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBarWidget(
-          title: 'Notas',
-          icon: Icons.playlist_add_check_outlined,
-          actionWidget: IconButton(
-              onPressed: () => {Modular.to.pushNamed('/medias/atingir-metas')},
-              icon: Icon(Icons.my_location_outlined)),
-        ),
+            title: 'Atingir Metas', icon: Icons.my_location_outlined),
         body: SingleChildScrollView(
           child: Container(
             child: Center(
@@ -34,6 +30,54 @@ class NotasAlunoPageState
                 padding: const EdgeInsets.only(top: 16, bottom: 32),
                 child: Column(
                   children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Row(
+                            children: [
+                              TextButton(
+                                onPressed: controller.getNotasCalculadas,
+                                child: Text(
+                                  'Calcular',
+                                  style: AppTextStyles.appBarTitle
+                                      .copyWith(color: AppColors.darkBlue),
+                                ),
+                              ),
+                              IconButton(
+                                onPressed: controller.getNotasCalculadas,
+                                icon: Icon(
+                                  Icons.my_location_outlined,
+                                  color: AppColors.darkBlue,
+                                ),
+                                tooltip: 'Calcular',
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              TextButton(
+                                onPressed: controller.getMateria,
+                                child: Text(
+                                  'Limpar',
+                                  style: AppTextStyles.appBarTitle
+                                      .copyWith(color: AppColors.darkBlue),
+                                ),
+                              ),
+                              IconButton(
+                                onPressed: controller.getMateria,
+                                icon: Icon(
+                                  Icons.delete,
+                                  color: AppColors.darkBlue,
+                                ),
+                                tooltip: 'Limpar',
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.8,
                       decoration: BoxDecoration(
@@ -98,6 +142,7 @@ class NotasAlunoPageState
                             ),
                             Observer(builder: (_) {
                               return GridAvaliacao(
+                                  setNota: controller.setNota,
                                   listaNotas: controller.materia.provas);
                             })
                           ],
@@ -124,6 +169,7 @@ class NotasAlunoPageState
                             ),
                             Observer(builder: (_) {
                               return GridAvaliacao(
+                                  setNota: controller.setNota,
                                   listaNotas: controller.materia.trabalhos);
                             })
                           ],

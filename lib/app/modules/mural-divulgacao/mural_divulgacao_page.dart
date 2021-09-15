@@ -43,7 +43,9 @@ class _MuralDivulgacaoPageState
                     titulo: 'Vendas de Materiais',
                     iconSize: 40,
                     textController: controller.informacaoVendasNaoLido,
-                    onTap: () {},
+                    onTap: () {
+                      Modular.to.pushNamed('/mural/venda-materiais');
+                    },
                   );
                 }),
                 Observer(builder: (_) {
