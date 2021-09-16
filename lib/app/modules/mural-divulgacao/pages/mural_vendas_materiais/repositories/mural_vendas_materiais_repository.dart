@@ -7,12 +7,13 @@ class MuralVendasMateriaisRepository
   var listaVendas = [
     InformacaoMaterialModel(
         nomeMaterial: 'Livro Calculo I',
-        idMaterial: MateriaisEnum.LIVROCALCULOI,
+        materialEnum: MateriaisEnum.LIVROCALCULOI,
         contatoVendedorMaterial: '(11) 12345-1234',
         custoMaterial: 'R\$ 12,20',
         descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
         imagemMaterial: '',
-        nomeVendedorMaterial: 'Ana Clara'),
+        nomeVendedorMaterial: 'Ana Clara',
+        idMaterial: 1),
     InformacaoMaterialModel(
         nomeMaterial: 'Caderno Física',
         contatoVendedorMaterial: '(11) 12345-1234',
@@ -20,7 +21,8 @@ class MuralVendasMateriaisRepository
         descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
         imagemMaterial: '',
         nomeVendedorMaterial: 'Ana Clara',
-        idMaterial: MateriaisEnum.LIVROFISICAI),
+        materialEnum: MateriaisEnum.LIVROFISICAI,
+        idMaterial: 2),
     InformacaoMaterialModel(
         nomeMaterial: 'Caderno Resistencia dos Materiais',
         contatoVendedorMaterial: '(11) 12345-1234',
@@ -28,7 +30,8 @@ class MuralVendasMateriaisRepository
         descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
         imagemMaterial: 'https://avatars.githubusercontent.com/u/24724451?v=4',
         nomeVendedorMaterial: 'Ana Clara',
-        idMaterial: MateriaisEnum.CADERNORESMAT),
+        materialEnum: MateriaisEnum.CADERNORESMAT,
+        idMaterial: 3),
     InformacaoMaterialModel(
         nomeMaterial: 'Caderno Resistencia dos Materiais',
         contatoVendedorMaterial: '(11) 12345-1234',
@@ -36,21 +39,23 @@ class MuralVendasMateriaisRepository
         descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
         imagemMaterial: 'https://avatars.githubusercontent.com/u/24724451?v=4',
         nomeVendedorMaterial: 'Ana Clara',
-        idMaterial: MateriaisEnum.CADERNORESMAT),
+        materialEnum: MateriaisEnum.CADERNORESMAT,
+        idMaterial: 4),
     InformacaoMaterialModel(
         nomeMaterial: 'Caderno Física',
         contatoVendedorMaterial: '(11) 12345-1234',
         descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
         imagemMaterial: 'https://avatars.githubusercontent.com/u/24724451?v=4',
         nomeVendedorMaterial: 'Ana Clara',
-        idMaterial: MateriaisEnum.DOACOES),
+        materialEnum: MateriaisEnum.DOACOES,
+        idMaterial: 5),
   ];
 
   @override
   Future<List<InformacaoMaterialModel>> getVendas(MateriaisEnum idMaterial) {
     var list = <InformacaoMaterialModel>[];
     for (var i = 0; i < listaVendas.length; i++) {
-      if (listaVendas[i].idMaterial == idMaterial) {
+      if (listaVendas[i].materialEnum == idMaterial) {
         list.add(listaVendas[i]);
       }
     }

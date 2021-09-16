@@ -22,7 +22,8 @@ void main() {
         descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
         imagemMaterial: 'https://avatars.githubusercontent.com/u/24724451?v=4',
         nomeVendedorMaterial: 'Ana Clara',
-        idMaterial: MateriaisEnum.CADERNORESMAT),
+        materialEnum: MateriaisEnum.CADERNORESMAT,
+        idMaterial: 1),
     InformacaoMaterialModel(
         nomeMaterial: 'Caderno Resistencia dos Materiais',
         contatoVendedorMaterial: '(11) 12345-1234',
@@ -30,7 +31,8 @@ void main() {
         descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
         imagemMaterial: 'https://avatars.githubusercontent.com/u/24724451?v=4',
         nomeVendedorMaterial: 'Ana Clara',
-        idMaterial: MateriaisEnum.CADERNORESMAT),
+        materialEnum: MateriaisEnum.CADERNORESMAT,
+        idMaterial: 2),
   ];
 
   setUpAll(() {
