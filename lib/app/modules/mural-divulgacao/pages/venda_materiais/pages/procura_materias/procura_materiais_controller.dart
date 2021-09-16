@@ -24,6 +24,7 @@ abstract class ProcuraMateriaisControllerBase with Store {
     for (var i = 0; i < MateriaisEnum.values.length; i++) {
       lista.add(MateriaisEnum.values[i].nome);
     }
+    listaMateriais = lista;
   }
 
   @action
