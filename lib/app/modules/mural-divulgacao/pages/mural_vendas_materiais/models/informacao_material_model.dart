@@ -2,8 +2,7 @@ import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_venda
 
 class InformacaoMaterialModel {
   final String? imagemMaterial;
-  final MateriaisEnum? materialEnum;
-  final int idMaterial;
+  final MateriaisEnum? idMaterial;
   final String nomeMaterial;
   final String? custoMaterial;
   final String? descricaoMaterial;
@@ -13,7 +12,6 @@ class InformacaoMaterialModel {
   InformacaoMaterialModel(
       {this.imagemMaterial,
       required this.idMaterial,
-      this.materialEnum,
       required this.nomeMaterial,
       this.custoMaterial,
       this.descricaoMaterial,
@@ -22,9 +20,8 @@ class InformacaoMaterialModel {
 
   factory InformacaoMaterialModel.newInstance() {
     return InformacaoMaterialModel(
-        idMaterial: 0,
         contatoVendedorMaterial: '',
-        materialEnum: null,
+        idMaterial: null,
         nomeMaterial: '',
         custoMaterial: null,
         descricaoMaterial: null,

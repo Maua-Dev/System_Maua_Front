@@ -3,5 +3,4 @@ import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_venda
 
 abstract class IMuralVendasMateriaisRepository {
   Future<List<InformacaoMaterialModel>> getVendas(MateriaisEnum idMaterial);
-  Future<InformacaoMaterialModel> getMaterialEspecifico(int idMaterial);
 }
