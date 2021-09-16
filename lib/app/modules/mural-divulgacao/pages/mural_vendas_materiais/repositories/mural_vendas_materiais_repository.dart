@@ -61,4 +61,10 @@ class MuralVendasMateriaisRepository
     }
     return Future.value(list);
   }
+
+  @override
+  Future<InformacaoMaterialModel> getMaterialEspecifico(int idMaterial) {
+    return Future.value(
+        listaVendas.where((element) => element.idMaterial == idMaterial).first);
+  }
 }
