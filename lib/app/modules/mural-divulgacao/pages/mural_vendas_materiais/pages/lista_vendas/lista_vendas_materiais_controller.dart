@@ -29,7 +29,7 @@ abstract class _ListaVendasMateriaisControllerBase with Store {
 
   @action
   void navigateTo(InformacaoMaterialModel informacaoMaterialModel) {
-    Modular.to
-        .pushNamed('/informacao-material', arguments: informacaoMaterialModel);
+    Modular.to.pushNamed('/mural/venda-materiais/informacao-material',
+        arguments: informacaoMaterialModel);
   }
 }
