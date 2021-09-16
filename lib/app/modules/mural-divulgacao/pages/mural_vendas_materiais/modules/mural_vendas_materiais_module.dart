@@ -18,7 +18,6 @@ class MuralVendasMateriaisModule extends Module {
           idMaterial: (i.args?.data as MateriaisEnum),
         )),
     Bind.lazySingleton((i) => InformacaoMaterialController(
-          repository: i(),
           informacaoMaterialModel: (i.args?.data as InformacaoMaterialModel),
         )),
     Bind.lazySingleton<MuralVendasMateriaisRepository>(

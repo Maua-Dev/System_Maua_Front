@@ -16,23 +16,23 @@ void main() {
 
   var listaVendas = [
     InformacaoMaterialModel(
-        nomeMaterial: 'Caderno Resistencia dos Materiais',
-        contatoVendedorMaterial: '(11) 12345-1234',
-        custoMaterial: 'R\$ 12,20',
-        descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
-        imagemMaterial: 'https://avatars.githubusercontent.com/u/24724451?v=4',
-        nomeVendedorMaterial: 'Ana Clara',
-        materialEnum: MateriaisEnum.CADERNORESMAT,
-        idMaterial: 1),
+      nomeMaterial: 'Caderno Resistencia dos Materiais',
+      contatoVendedorMaterial: '(11) 12345-1234',
+      custoMaterial: 'R\$ 12,20',
+      descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
+      imagemMaterial: 'https://avatars.githubusercontent.com/u/24724451?v=4',
+      nomeVendedorMaterial: 'Ana Clara',
+      idMaterial: MateriaisEnum.CADERNORESMAT,
+    ),
     InformacaoMaterialModel(
-        nomeMaterial: 'Caderno Resistencia dos Materiais',
-        contatoVendedorMaterial: '(11) 12345-1234',
-        custoMaterial: 'R\$ 12,20',
-        descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
-        imagemMaterial: 'https://avatars.githubusercontent.com/u/24724451?v=4',
-        nomeVendedorMaterial: 'Ana Clara',
-        materialEnum: MateriaisEnum.CADERNORESMAT,
-        idMaterial: 2),
+      nomeMaterial: 'Caderno Resistencia dos Materiais',
+      contatoVendedorMaterial: '(11) 12345-1234',
+      custoMaterial: 'R\$ 12,20',
+      descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
+      imagemMaterial: 'https://avatars.githubusercontent.com/u/24724451?v=4',
+      nomeVendedorMaterial: 'Ana Clara',
+      idMaterial: MateriaisEnum.CADERNORESMAT,
+    ),
   ];
 
   setUpAll(() {

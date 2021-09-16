@@ -10,10 +10,35 @@ part of 'informacao_material_controller.dart';
 
 mixin _$InformacaoMaterialController
     on InformacaoMaterialControllerBase, Store {
+  final _$materialAtom =
+      Atom(name: 'InformacaoMaterialControllerBase.material');
+
+  @override
+  InformacaoMaterialModel get material {
+    _$materialAtom.reportRead();
+    return super.material;
+  }
+
+  @override
+  set material(InformacaoMaterialModel value) {
+    _$materialAtom.reportWrite(value, super.material, () {
+      super.material = value;
+    });
+  }
+
+  final _$getMaterialEspecificoAsyncAction =
+      AsyncAction('InformacaoMaterialControllerBase.getMaterialEspecifico');
+
+  @override
+  Future<void> getMaterialEspecifico() {
+    return _$getMaterialEspecificoAsyncAction
+        .run(() => super.getMaterialEspecifico());
+  }
+
   @override
   String toString() {
     return '''
-
+material: ${material}
     ''';
   }
 }
