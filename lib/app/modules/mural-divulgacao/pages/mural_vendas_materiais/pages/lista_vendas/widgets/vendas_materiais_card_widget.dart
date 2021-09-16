@@ -3,64 +3,82 @@ import 'package:flutter/material.dart';
 class VendasCardWidget extends StatelessWidget {
   final String? produto;
   final String? preco;
+  final String? imagemMaterial;
   final void Function()? onTap;
 
-  const VendasCardWidget (
-    {Key? key,
-    required this.produto,
-    this.onTap,
-    required this.preco});
-
+  const VendasCardWidget(
+      {Key? key,
+      required this.produto,
+      this.onTap,
+      required this.preco,
+      this.imagemMaterial});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: onTap,
-        child: Container(
-          height: 120,
-          padding: const EdgeInsets.all(0),
-          child: Row(children: [
-            Expanded(
-              flex: 4,
-              child: Padding(
-                padding: const EdgeInsets.all(2.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        'assets/images/calculo.jpg'),
-                        ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        child: InkWell(
+          onTap: onTap,
+          child: Container(
+            height: 120,
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 4,
+                  child: Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: imagemMaterial == null
+                        ? SizedBox.shrink()
+                        : Padding(
+                            padding: const EdgeInsets.only(left: 8),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: NetworkImage(imagemMaterial!),
+                                ),
+                              ),
+                            ),
+                          ),
                   ),
                 ),
-              ),
-             ),
-             Spacer(
-               flex: 1,
-             ),
-             Expanded(
-               flex: 14,
-               child: Container(
-                 child: Padding(
-                   padding: const EdgeInsets.only(top: 20, bottom: 10),
-                   child: Column(
-                     children: [
-                       Text('$produto',
-                       style: TextStyle(
-                         fontSize: 22,
-                         color: Colors.black),
-                       ),
-                       Text('$preco',
-                       style: TextStyle(
-                         fontSize: 20,
-                         fontWeight: FontWeight.bold,
-                         color: Colors.black),
-                         ),
-                     ],
-                   ),
-                 ),),)
-          ],),),
+                Spacer(
+                  flex: 1,
+                ),
+                Expanded(
+                  flex: 14,
+                  child: Container(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 16, bottom: 8),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8),
+                            child: Text(
+                              '$produto',
+                              style:
+                                  TextStyle(fontSize: 18, color: Colors.black),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          Text(
+                            '$preco',
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

@@ -21,31 +21,23 @@ class _ListaVendasMateriaisPageState extends ModularState<
       appBar: AppBarWidget(
         title: 'Venda de materiais',
         icon: Icons.card_travel,
-        // ignore: unnecessary_new
-        actionWidget: new Observer(builder: (_) {
-          return InkWell(
-              onTap: () {
-                null;
-              },
-              child: Icon(
-                Icons.add,
-              ));
-        }),
       ),
       body: Column(
         children: [
           Expanded(
             child: Observer(builder: (_) {
               return ListView.builder(
-                itemCount: controller.listaVendas.length,
-                itemBuilder: (context, index) => VendasCardWidget(
-                  produto: controller.listaVendas[index].nomeMaterial,
-                  preco: controller.listaVendas[index].custoMaterial as String,
-                  onTap: () {
-                    null;
-                  },
-                ),
-              );
+                  itemCount: controller.listaVendas.length,
+                  itemBuilder: (context, index) {
+                    var abreviacao = controller.listaVendas[index];
+                    return VendasCardWidget(
+                        produto: abreviacao.nomeMaterial,
+                        preco: abreviacao.custoMaterial,
+                        imagemMaterial: abreviacao.imagemMaterial,
+                        onTap: () {
+                          controller.navigateTo(controller.listaVendas[index]);
+                        });
+                  });
             }),
           ),
         ],
