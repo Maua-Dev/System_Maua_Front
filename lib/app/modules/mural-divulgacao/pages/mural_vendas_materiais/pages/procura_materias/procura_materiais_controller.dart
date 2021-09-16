@@ -15,15 +15,21 @@ abstract class ProcuraMateriaisControllerBase with Store {
   String material = '';
 
   @observable
-  List<String> listaMateriais = [];
+  List<MateriaisEnum> listaMateriais = [];
+
+  @observable
+  List<String> nomesMateriais = [];
 
   @action
   void getListaMateriais() {
-    var lista = <String>[];
+    var lista = <MateriaisEnum>[];
+    var listaString = <String>[];
     for (var i = 0; i < MateriaisEnum.values.length; i++) {
-      lista.add(MateriaisEnum.values[i].nome);
+      lista.add(MateriaisEnum.values[i]);
+      listaString.add(MateriaisEnum.values[i].nome);
     }
     listaMateriais = lista;
+    nomesMateriais = listaString;
   }
 
   @action

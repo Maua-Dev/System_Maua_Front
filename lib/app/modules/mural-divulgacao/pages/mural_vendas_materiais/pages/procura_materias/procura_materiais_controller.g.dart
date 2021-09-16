@@ -28,15 +28,31 @@ mixin _$ProcuraMateriaisController on ProcuraMateriaisControllerBase, Store {
       Atom(name: 'ProcuraMateriaisControllerBase.listaMateriais');
 
   @override
-  List<String> get listaMateriais {
+  List<MateriaisEnum> get listaMateriais {
     _$listaMateriaisAtom.reportRead();
     return super.listaMateriais;
   }
 
   @override
-  set listaMateriais(List<String> value) {
+  set listaMateriais(List<MateriaisEnum> value) {
     _$listaMateriaisAtom.reportWrite(value, super.listaMateriais, () {
       super.listaMateriais = value;
+    });
+  }
+
+  final _$nomesMateriaisAtom =
+      Atom(name: 'ProcuraMateriaisControllerBase.nomesMateriais');
+
+  @override
+  List<String> get nomesMateriais {
+    _$nomesMateriaisAtom.reportRead();
+    return super.nomesMateriais;
+  }
+
+  @override
+  set nomesMateriais(List<String> value) {
+    _$nomesMateriaisAtom.reportWrite(value, super.nomesMateriais, () {
+      super.nomesMateriais = value;
     });
   }
 
@@ -69,7 +85,8 @@ mixin _$ProcuraMateriaisController on ProcuraMateriaisControllerBase, Store {
   String toString() {
     return '''
 material: ${material},
-listaMateriais: ${listaMateriais}
+listaMateriais: ${listaMateriais},
+nomesMateriais: ${nomesMateriais}
     ''';
   }
 }

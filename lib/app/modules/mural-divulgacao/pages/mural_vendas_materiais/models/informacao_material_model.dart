@@ -4,7 +4,7 @@ class InformacaoMaterialModel {
   final String? imagemMaterial;
   final MateriaisEnum? idMaterial;
   final String nomeMaterial;
-  final double? custoMaterial;
+  final String? custoMaterial;
   final String? descricaoMaterial;
   final String contatoVendedorMaterial;
   final String? nomeVendedorMaterial;

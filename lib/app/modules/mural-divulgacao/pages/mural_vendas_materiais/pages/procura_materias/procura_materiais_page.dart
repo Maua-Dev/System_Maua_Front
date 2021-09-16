@@ -27,7 +27,7 @@ class _ProcuraMateriaisPageState
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
             child: TypeAheadFieldWidget(
-              list: controller.listaMateriais,
+              list: controller.nomesMateriais,
               titulo: 'Procurar material',
               onChanged: controller.setMaterial,
               value: controller.material,
@@ -40,7 +40,11 @@ class _ProcuraMateriaisPageState
               itemBuilder: (context, index) => Padding(
                 padding: const EdgeInsets.only(bottom: 6),
                 child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Modular.to.pushNamed(
+                          '/mural/venda-materiais/lista-vendas',
+                          arguments: controller.listaMateriais[index]);
+                    },
                     child: Text(
                       MateriaisEnum.values[index].nome,
                       style: TextStyle(
