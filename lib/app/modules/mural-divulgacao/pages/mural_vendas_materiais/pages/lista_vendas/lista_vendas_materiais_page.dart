@@ -37,10 +37,10 @@ class _ListaVendasMateriaisPageState extends ModularState<
           Expanded(
             child: Observer(builder: (_) {
               return ListView.builder(
-                itemCount: controller.listaPanelVendas.length,
+                itemCount: controller.listaVendas.length,
                 itemBuilder: (context, index) => VendasCardWidget(
-                  produto: controller.listaPanelVendas[index].model.nomeProduto,
-                  preco: controller.listaPanelVendas[index].model.precoProduto,
+                  produto: controller.listaVendas[index].nomeMaterial,
+                  preco: controller.listaVendas[index].custoMaterial as String,
                   onTap: () {
                     null;
                   },

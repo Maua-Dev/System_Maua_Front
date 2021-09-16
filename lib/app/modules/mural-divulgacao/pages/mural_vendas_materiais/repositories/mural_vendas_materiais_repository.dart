@@ -1,27 +1,51 @@
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/models/vendas_materiais_model.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/enumerates/materiais_enum.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/models/informacao_material_model.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/repositories/mural_vendas_materiais_repository_interface.dart';
 
 class MuralVendasMateriaisRepository
     implements IMuralVendasMateriaisRepository {
   var listaVendas = [
-    VendasMateriaisModel(
-        nomeProduto: 'Livro de Cálculo', precoProduto: 'RS 50,00'),
-    VendasMateriaisModel(
-        nomeProduto: 'Livro de Termodinâmica', precoProduto: 'RS 50,00'),
-    VendasMateriaisModel(
-        nomeProduto: 'Apostila Fisica I', precoProduto: 'RS 30,00'),
-    VendasMateriaisModel(
-        nomeProduto: 'Calculadora CASIO', precoProduto: 'RS 25,50'),
-    VendasMateriaisModel(
-        nomeProduto: 'Caderno de plástico', precoProduto: 'RS 7,20'),
-    VendasMateriaisModel(
-        nomeProduto: 'Livro de Cálculo', precoProduto: 'RS 50,00'),
-    VendasMateriaisModel(
-        nomeProduto: 'Livro de Cálculo', precoProduto: 'RS 50,00'),
+    InformacaoMaterialModel(
+        nomeMaterial: 'Livro Calculo I',
+        idMaterial: MateriaisEnum.LIVROCALCULOI,
+        contatoVendedorMaterial: '(11) 12345-1234',
+        custoMaterial: 12.2,
+        descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
+        imagemMaterial: '',
+        nomeVendedorMaterial: 'Ana Clara'),
+    InformacaoMaterialModel(
+        nomeMaterial: 'Caderno Física',
+        contatoVendedorMaterial: '(11) 12345-1234',
+        custoMaterial: 12.2,
+        descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
+        imagemMaterial: '',
+        nomeVendedorMaterial: 'Ana Clara',
+        idMaterial: MateriaisEnum.LIVROFISICAI),
+    InformacaoMaterialModel(
+        nomeMaterial: 'Caderno Resistencia dos Materiais',
+        contatoVendedorMaterial: '(11) 12345-1234',
+        custoMaterial: 12.2,
+        descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
+        imagemMaterial: '',
+        nomeVendedorMaterial: 'Ana Clara',
+        idMaterial: MateriaisEnum.CADERNORESMAT),
+    InformacaoMaterialModel(
+        nomeMaterial: 'Caderno Física',
+        contatoVendedorMaterial: '(11) 12345-1234',
+        descricaoMaterial: 'Livro em bom estado com 2 anos de uso',
+        imagemMaterial: '',
+        nomeVendedorMaterial: 'Ana Clara',
+        idMaterial: MateriaisEnum.DOACOES),
   ];
 
   @override
-  Future<List<VendasMateriaisModel>> getVendas() {
-    return Future.value(listaVendas);
+  Future<List<InformacaoMaterialModel>> getVendas(MateriaisEnum idMaterial) {
+    var list = <InformacaoMaterialModel>[];
+    for (var i = 0; i < listaVendas.length; i++) {
+      if (listaVendas[i].idMaterial == idMaterial) {
+        list.add(listaVendas[i]);
+      }
+    }
+    return Future.value(list);
   }
 }

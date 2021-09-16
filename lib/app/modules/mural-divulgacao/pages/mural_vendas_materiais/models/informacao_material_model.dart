@@ -1,5 +1,8 @@
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/enumerates/materiais_enum.dart';
+
 class InformacaoMaterialModel {
   final String? imagemMaterial;
+  final MateriaisEnum? idMaterial;
   final String nomeMaterial;
   final double? custoMaterial;
   final String? descricaoMaterial;
@@ -8,6 +11,7 @@ class InformacaoMaterialModel {
 
   InformacaoMaterialModel(
       {this.imagemMaterial,
+      this.idMaterial,
       required this.nomeMaterial,
       this.custoMaterial,
       this.descricaoMaterial,
@@ -17,6 +21,7 @@ class InformacaoMaterialModel {
   factory InformacaoMaterialModel.newInstance() {
     return InformacaoMaterialModel(
         contatoVendedorMaterial: '',
+        idMaterial: null,
         nomeMaterial: '',
         custoMaterial: null,
         descricaoMaterial: null,

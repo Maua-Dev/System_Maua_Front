@@ -14,31 +14,15 @@ mixin _$ListaVendasMateriaisController
       Atom(name: '_ListaVendasMateriaisControllerBase.listaVendas');
 
   @override
-  List<VendasMateriaisModel> get listaVendas {
+  List<InformacaoMaterialModel> get listaVendas {
     _$listaVendasAtom.reportRead();
     return super.listaVendas;
   }
 
   @override
-  set listaVendas(List<VendasMateriaisModel> value) {
+  set listaVendas(List<InformacaoMaterialModel> value) {
     _$listaVendasAtom.reportWrite(value, super.listaVendas, () {
       super.listaVendas = value;
-    });
-  }
-
-  final _$listaPanelVendasAtom =
-      Atom(name: '_ListaVendasMateriaisControllerBase.listaPanelVendas');
-
-  @override
-  List<ListPanelModel<VendasMateriaisModel>> get listaPanelVendas {
-    _$listaPanelVendasAtom.reportRead();
-    return super.listaPanelVendas;
-  }
-
-  @override
-  set listaPanelVendas(List<ListPanelModel<VendasMateriaisModel>> value) {
-    _$listaPanelVendasAtom.reportWrite(value, super.listaPanelVendas, () {
-      super.listaPanelVendas = value;
     });
   }
 
@@ -54,25 +38,11 @@ mixin _$ListaVendasMateriaisController
       ActionController(name: '_ListaVendasMateriaisControllerBase');
 
   @override
-  void getListaPanelVendasMateriais() {
-    final _$actionInfo =
-        _$_ListaVendasMateriaisControllerBaseActionController.startAction(
-            name:
-                '_ListaVendasMateriaisControllerBase.getListaPanelVendasMateriais');
-    try {
-      return super.getListaPanelVendasMateriais();
-    } finally {
-      _$_ListaVendasMateriaisControllerBaseActionController
-          .endAction(_$actionInfo);
-    }
-  }
-
-  @override
-  void trocaOpen(int index) {
+  void navigateTo(InformacaoMaterialModel informacaoMaterialModel) {
     final _$actionInfo = _$_ListaVendasMateriaisControllerBaseActionController
-        .startAction(name: '_ListaVendasMateriaisControllerBase.trocaOpen');
+        .startAction(name: '_ListaVendasMateriaisControllerBase.navigateTo');
     try {
-      return super.trocaOpen(index);
+      return super.navigateTo(informacaoMaterialModel);
     } finally {
       _$_ListaVendasMateriaisControllerBaseActionController
           .endAction(_$actionInfo);
@@ -82,8 +52,7 @@ mixin _$ListaVendasMateriaisController
   @override
   String toString() {
     return '''
-listaVendas: ${listaVendas},
-listaPanelVendas: ${listaPanelVendas}
+listaVendas: ${listaVendas}
     ''';
   }
 }

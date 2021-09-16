@@ -1,8 +1,9 @@
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/enumerates/materiais_enum.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/models/informacao_material_model.dart';
 
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/models/vendas_materiais_model.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/repositories/mural_vendas_materiais_repository_interface.dart';
-import 'package:system_maua_front/app/shared/models/list_panel_model.dart';
 
 part 'lista_vendas_materiais_controller.g.dart';
 
@@ -10,40 +11,25 @@ class ListaVendasMateriaisController = _ListaVendasMateriaisControllerBase
     with _$ListaVendasMateriaisController;
 
 abstract class _ListaVendasMateriaisControllerBase with Store {
-  IMuralVendasMateriaisRepository? repository;
+  final IMuralVendasMateriaisRepository? repository;
+  final MateriaisEnum idMaterial;
 
   _ListaVendasMateriaisControllerBase(
-    this.repository,
-  ) {
+      {this.repository, required this.idMaterial}) {
     getVendas();
   }
 
   @observable
-  List<VendasMateriaisModel> listaVendas = List.empty();
-
-  @observable
-  List<ListPanelModel<VendasMateriaisModel>> listaPanelVendas = [];
+  List<InformacaoMaterialModel> listaVendas = List.empty();
 
   @action
   Future<void> getVendas() async {
-    listaVendas = await repository!.getVendas();
-    getListaPanelVendasMateriais();
+    listaVendas = await repository!.getVendas(idMaterial);
   }
 
   @action
-  void getListaPanelVendasMateriais() {
-    var list = <ListPanelModel<VendasMateriaisModel>>[];
-    for (var i = 0; i < listaVendas.length; i++) {
-      list.add(ListPanelModel(model: listaVendas[i]));
-    }
-    listaPanelVendas = list;
-  }
-
-  @action
-  void trocaOpen(int index) {
-    var lista =
-        List<ListPanelModel<VendasMateriaisModel>>.from(listaPanelVendas);
-    lista[index].changeStateIsOpen();
-    listaPanelVendas = lista;
+  void navigateTo(InformacaoMaterialModel informacaoMaterialModel) {
+    Modular.to
+        .pushNamed('/informacao-material', arguments: informacaoMaterialModel);
   }
 }
