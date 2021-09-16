@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-bolsas/widgets/help_bolsas_card_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
-import 'help_bolsas_controller.dart';
 
 class HelpBolsasPage extends StatefulWidget {
   @override
@@ -13,7 +11,7 @@ class HelpBolsasPage extends StatefulWidget {
 }
 
 class _HelpBolsasPageState
-    extends ModularState<HelpBolsasPage, HelpBolsasController> {
+    extends State<HelpBolsasPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
