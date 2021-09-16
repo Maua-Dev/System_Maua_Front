@@ -4,14 +4,12 @@ import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.d
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
-
 class HelpBolsasPage extends StatefulWidget {
   @override
   _HelpBolsasPageState createState() => _HelpBolsasPageState();
 }
 
-class _HelpBolsasPageState
-    extends State<HelpBolsasPage> {
+class _HelpBolsasPageState extends State<HelpBolsasPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,43 +27,41 @@ class _HelpBolsasPageState
                   textAlign: TextAlign.left,
                 ),
                 Container(
-                height: MediaQuery.of(context).size.height * 0.095,
-                width: MediaQuery.of(context).size.width * 0.8,
-                decoration: BoxDecoration(
-                  boxShadow: [AppColors.shadow],
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('2ª à 6ª feira', textAlign: TextAlign.center),
-                    Text('das 10h30 às 22h30', textAlign: TextAlign.center),
-                  ],
-                ),
+                  height: MediaQuery.of(context).size.height * 0.095,
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  decoration: BoxDecoration(
+                    boxShadow: [AppColors.shadow],
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('2ª à 6ª feira', textAlign: TextAlign.center),
+                      Text('das 10h30 às 22h30', textAlign: TextAlign.center),
+                    ],
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
-                      children: [
-                        Text(
-                          ''' OS FORMULÁRIOS DEVERÃO SER PREENCHIDOS ELETRONICAMENTE, ASSINADOS E JUNTAMENTE COM TODA A DOCUMENTAÇÃO DEVERÃO SER DIGITALIZADOS E ENCAMINHADOS PARA O E-MAIL: fmb@maua.br
+                    children: [
+                      Text(
+                        ''' OS FORMULÁRIOS DEVERÃO SER PREENCHIDOS ELETRONICAMENTE, ASSINADOS E JUNTAMENTE COM TODA A DOCUMENTAÇÃO DEVERÃO SER DIGITALIZADOS E ENCAMINHADOS PARA O E-MAIL: fmb@maua.br
 NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS''',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 16
-                          ),
-                        ),
-                      ],
-                    ),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 16),
+                      ),
+                    ],
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     children: [
                       BolsasWidget(
-                          titulo: 'Documentos',
-                          info: '''
+                        titulo: 'Documentos',
+                        info: '''
       • Requerimento
       • Ficha - Informaçoes de irmãos 
         ou filhos do aluno
@@ -77,7 +73,7 @@ NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS''',
       ''',
                       ),
                       BolsasWidget(
-                        titulo: 'Contatos', 
+                        titulo: 'Contatos',
                         info: '''
 • Roberta (11) 4239-3008
 • roberta@maua.br
