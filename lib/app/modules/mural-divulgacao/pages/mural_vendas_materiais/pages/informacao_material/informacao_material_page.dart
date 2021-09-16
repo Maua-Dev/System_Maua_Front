@@ -24,23 +24,19 @@ class _InformacaoMaterialPageState
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
           child: Column(
             children: [
               rotaController.imagemMaterial == null
                   ? SizedBox.shrink()
-                  : Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      child: Container(
-                          height: MediaQuery.of(context).size.height * 0.37,
-                          width: MediaQuery.of(context).size.height * 0.37,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                    rotaController.imagemMaterial!),
-                              ))),
-                    ),
+                  : Container(
+                      height: MediaQuery.of(context).size.height * 0.37,
+                      width: MediaQuery.of(context).size.height * 0.37,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                            image: NetworkImage(rotaController.imagemMaterial!),
+                          ))),
               TextoCustomWidget(texto: rotaController.nomeMaterial),
               TextoCustomWidget(texto: rotaController.custoMaterial),
               TextoCustomWidget(
