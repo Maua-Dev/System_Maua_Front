@@ -44,9 +44,9 @@ class BottomNavigationBarWidget extends StatelessWidget {
                 ),
                 IconButtonCustomWidget(
                     size: MediaQuery.of(context).size.height * 0.049,
-                    icon: Icon(Icons.playlist_add_check),
+                    icon: Icon(Icons.fact_check),
                     onPressed: () {
-                      Modular.to.pushNamed('/notas');
+                      Modular.to.pushNamed('/medias');
                     }),
                 IconButtonCustomWidget(
                     size: MediaQuery.of(context).size.height * 0.049,
