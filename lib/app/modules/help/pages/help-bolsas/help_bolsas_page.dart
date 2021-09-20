@@ -21,10 +21,13 @@ class _HelpBolsasPageState extends State<HelpBolsasPage> {
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  'Horário de atendimento: ',
-                  style: AppTextStyles.bodyBold.copyWith(fontSize: 24),
-                  textAlign: TextAlign.left,
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 4),
+                  child: Text(
+                    'Horário de atendimento: ',
+                    style: AppTextStyles.bodyBold.copyWith(fontSize: 24),
+                    textAlign: TextAlign.left,
+                  ),
                 ),
                 Container(
                   height: MediaQuery.of(context).size.height * 0.095,
@@ -59,7 +62,7 @@ NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS''',
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     children: [
-                      BolsasWidget(
+                      HelpBolsasCardWidget(
                         titulo: 'Documentos',
                         info: '''
       • Requerimento
@@ -72,7 +75,7 @@ NÃO É NECESSÁRIO RECONHECER FIRMA DAS ASSINATURAS NAS FICHAS''',
       • Ficha - conjuge do(a) fiador(a)
       ''',
                       ),
-                      BolsasWidget(
+                      HelpBolsasCardWidget(
                         titulo: 'Contatos',
                         info: '''
 • Roberta (11) 4239-3008
