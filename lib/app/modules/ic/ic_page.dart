@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:system_maua_front/app/modules/ic/ic_controller.dart';
 import 'package:system_maua_front/app/modules/ic/widgets/ic_card_custom_widget.dart';
+import 'package:system_maua_front/app/modules/ic/widgets/ic_card_dropdown_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
+import 'package:system_maua_front/app/shared/enumerates/tronco_enum.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
@@ -11,7 +15,7 @@ class IcPage extends StatefulWidget {
   _IcPageState createState() => _IcPageState();
 }
 
-class _IcPageState extends State<IcPage> {
+class _IcPageState extends ModularState<IcPage, IcController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,6 +60,18 @@ class _IcPageState extends State<IcPage> {
               ),
               IcCardCustomWidget(titulo: 'Informações gerais'),
               IcCardCustomWidget(titulo: 'Normas para participar'),
+              IcCardDrpDownWidget(
+                items: TroncoEnum.values.map((TroncoEnum value) {
+                  return DropdownMenuItem<TroncoEnum>(
+                    value: value,
+                    child: Text(value.nomeTronco),
+                  );
+                }).toList(),
+                value: controller.tronco,
+                onChanged: (value) {
+                  controller.setTronco(value as TroncoEnum);
+                },
+              ),
               IcCardCustomWidget(titulo: 'Resultados anteriores'),
             ],
           ),
