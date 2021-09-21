@@ -8,7 +8,7 @@ import 'ic_page.dart';
 class IcModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.lazySingleton((i) => IcController()),
+    Bind.lazySingleton((i) => IcController(repository: i())),
     Bind.lazySingleton<IIcRepository>((i) => IcRepository()),
   ];
 

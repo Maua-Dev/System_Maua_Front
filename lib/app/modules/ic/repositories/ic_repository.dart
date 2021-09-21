@@ -6,7 +6,7 @@ import 'package:system_maua_front/app/shared/models/arquivos_model.dart';
 import 'package:system_maua_front/app/shared/models/professores_model.dart';
 
 class IcRepository implements IIcRepository {
-  var listaIC = [
+  var listaIc = [
     IcModel(
         tituloIc: 'Sistemas mecatrônicos inteligentes e robótica',
         professoresIc: [
@@ -67,4 +67,15 @@ class IcRepository implements IIcRepository {
             'A atuação do grupo está voltada ao estudo e desenvolvimento de sistemas...',
         tronco: [TroncoEnum.CA]),
   ];
+
+  @override
+  Future<List<IcModel>> getDadosTronco(TroncoEnum tronco) {
+    var lista = <IcModel>[];
+    for (var i = 0; i < listaIc.length; i++) {
+      if (listaIc[i].tronco.contains(tronco)) {
+        lista.add(listaIc[i]);
+      }
+    }
+    return Future.value(lista);
+  }
 }
