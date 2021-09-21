@@ -55,6 +55,8 @@ class _IcPageState extends State<IcPage> {
                 ),
               ),
               IcCardCustomWidget(titulo: 'Informações gerais'),
+              IcCardCustomWidget(titulo: 'Normas para participar'),
+              IcCardCustomWidget(titulo: 'Resultados anteriores'),
             ],
           ),
         ),
