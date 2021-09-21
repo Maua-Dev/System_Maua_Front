@@ -1,10 +1,16 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:system_maua_front/app/modules/ic/ic_controller.dart';
+import 'package:system_maua_front/app/modules/ic/repositories/ic_repository.dart';
+import 'package:system_maua_front/app/modules/ic/repositories/ic_repository_interface.dart';
 
 import 'ic_page.dart';
 
 class IcModule extends Module {
   @override
-  final List<Bind> binds = [];
+  final List<Bind> binds = [
+    Bind.lazySingleton((i) => IcController()),
+    Bind.lazySingleton<IIcRepository>((i) => IcRepository()),
+  ];
 
   @override
   final List<ModularRoute> routes = [
