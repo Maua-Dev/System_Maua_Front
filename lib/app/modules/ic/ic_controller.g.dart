@@ -47,18 +47,11 @@ mixin _$IcController on IcControllerBase, Store {
     return _$getDadosTroncoAsyncAction.run(() => super.getDadosTronco());
   }
 
-  final _$IcControllerBaseActionController =
-      ActionController(name: 'IcControllerBase');
+  final _$setTroncoAsyncAction = AsyncAction('IcControllerBase.setTronco');
 
   @override
-  void setTronco(TroncoEnum value) {
-    final _$actionInfo = _$IcControllerBaseActionController.startAction(
-        name: 'IcControllerBase.setTronco');
-    try {
-      return super.setTronco(value);
-    } finally {
-      _$IcControllerBaseActionController.endAction(_$actionInfo);
-    }
+  Future<void> setTronco(TroncoEnum value) {
+    return _$setTroncoAsyncAction.run(() => super.setTronco(value));
   }
 
   @override

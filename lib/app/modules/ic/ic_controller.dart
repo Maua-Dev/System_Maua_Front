@@ -27,8 +27,8 @@ abstract class IcControllerBase with Store {
   }
 
   @action
-  void setTronco(TroncoEnum value) {
+  Future<void> setTronco(TroncoEnum value) async {
     tronco = value;
-    getDadosTronco();
+    await getDadosTronco();
   }
 }
