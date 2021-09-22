@@ -25,11 +25,15 @@ abstract class _AtingirMetasControllerBase with Store {
   MateriaModel materia = MateriaModel.newInstance();
 
   @observable
-  Map metasParaCalculo = {};
+  Map<String, String> metasParaCalculo = {};
 
   @action
   Future<void> setNota(String value, AvaliacaoEnum tituloAvaliacao) async {
-    metasParaCalculo[tituloAvaliacao.name] = value;
+    if (value == '') {
+      metasParaCalculo.remove(tituloAvaliacao.name);
+    } else {
+      metasParaCalculo[tituloAvaliacao.name] = value;
+    }
   }
 
   @action
