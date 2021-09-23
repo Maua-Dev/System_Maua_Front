@@ -5,7 +5,7 @@ class HelpFaqRepository extends IHelpFaqRepository {
   List<FaqModel> listFaq = [
     FaqModel(
         titulo: 'Perguntas frequentes',
-        descricao: 'Temos como trocar de grupo apoós começar?\n'
+        descricao: 'Temos como trocar de grupo após começar?\n'
             'Uma resposta aqui\n\n'
             'Quando começam as PAEs?\n'
             'Uma resposta aqui\n\n'
