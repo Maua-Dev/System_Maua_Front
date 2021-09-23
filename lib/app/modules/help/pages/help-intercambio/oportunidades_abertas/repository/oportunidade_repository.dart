@@ -6,7 +6,7 @@ class OportunidadeRepository implements IOportunidadeRepository {
     UniversidadeModel(
         nome: 'TU Braunshweig - Alemanha',
         descricao:
-            'A universidade parceira na Alemanha, oferece isenção de taxas para alunos da Mauá mediante disponibilidade de vagas. A análise das candidaturas e aprovação é feita pelo departamento de Relações Internacionais. Número de bolsas: 3'),
+            'A universidade parceira na Alemanha,\n oferece isenção de taxas para alunos da\n Mauá mediante disponibilidade de vagas.\n A análise das candidaturas e aprovação\n é feita pelo departamento\n de Relações Internacionais.\n Número de bolsas: 3'),
   ];
 
   @override
