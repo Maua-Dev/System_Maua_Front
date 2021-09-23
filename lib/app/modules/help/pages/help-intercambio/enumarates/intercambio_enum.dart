@@ -31,7 +31,7 @@ extension IntercambioEnumExtension on IntercambioEnum {
   String get pushNamed {
     switch (this) {
       case IntercambioEnum.OPORTUNIDADES:
-        return '';
+        return '/help/intercambio/oportunidades';
       case IntercambioEnum.UNIVERSIDADES:
         return '';
       case IntercambioEnum.BOLSAS:
