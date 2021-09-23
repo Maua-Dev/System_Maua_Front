@@ -7,7 +7,7 @@ import 'package:system_maua_front/app/modules/help/pages/help-bolsas/help_bolsas
 import 'package:system_maua_front/app/modules/help/pages/help-faq/help_faq_controller.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/help_faq_page.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/repositories/help_faq_repository.dart';
-import 'package:system_maua_front/app/modules/help/pages/help-intercambio/help_intercambio_page.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-intercambio/help_intercambio_module.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/help_softwares_page.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/repositories/help_softwares_repository.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/help_softwares_controller.dart';
@@ -24,6 +24,7 @@ class HelpModule extends Module {
         (i) => HelpSoftwaresRepository()),
     Bind.lazySingleton((i) => HelpFaqController(i())),
     Bind.lazySingleton<HelpFaqRepository>((i) => HelpFaqRepository()),
+    Bind.lazySingleton((i) => HelpIntercambioModule()),
   ];
 
   @override
@@ -31,8 +32,8 @@ class HelpModule extends Module {
     ChildRoute(Modular.initialRoute, child: (_, args) => HelpPage()),
     ChildRoute('/avisos', child: (_, args) => HelpAvisosPage()),
     ChildRoute('/bolsas', child: (_, args) => HelpBolsasPage()),
-    ChildRoute('/intercambio', child: (_, args) => HelpIntercambioPage()),
+    ModuleRoute('intercambio', module: HelpIntercambioModule()),
     ChildRoute('/softwares', child: (_, args) => HelpSoftwaresPage()),
-    ChildRoute('/faq', child: (_, args) => HelpFaqPage())
+    ChildRoute('/faq', child: (_, args) => HelpFaqPage()),
   ];
 }
