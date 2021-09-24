@@ -28,7 +28,7 @@ class _HelpEstagioPageState
             padding: const EdgeInsets.only(top: 8.0),
             child: HelpEstagioCard(
               onTap: () {
-                Modular.to.pushNamed('/estagio/guia-estagio');
+                Modular.to.pushNamed('/help/estagio/guiaestagio');
               },
             )
           ),

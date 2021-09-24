@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 
 class HelpEstagioCard extends StatelessWidget {
@@ -34,18 +33,15 @@ class HelpEstagioCard extends StatelessWidget {
                     ),
                     ),
                     ),
-                    Observer(builder: (_) {
-                      return GestureDetector(
+                    GestureDetector(
                         onTap: onTap,
                         child: Icon(
                           Icons.arrow_forward,
                           color: Colors.black,
                         ),
-                      );
-                    },),
-            ],
+                      ),
+            ],),
           ),
-      ),
-    );
+      );
     }
 }
