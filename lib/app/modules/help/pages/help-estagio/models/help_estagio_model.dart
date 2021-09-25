@@ -2,11 +2,11 @@ import 'package:system_maua_front/app/shared/models/arquivos_model.dart';
 
 class HelpEstagioModel {
   final String tituloPanel;
-  final ArquivoModel? arquivo;
+  final ArquivoModel? nomearquivo;
 
-  HelpEstagioModel({required this.tituloPanel, this.arquivo});
+  HelpEstagioModel({required this.tituloPanel, this.nomearquivo});
 
   factory HelpEstagioModel.newInstance() {
-    return HelpEstagioModel(tituloPanel: '', arquivo: null);
+    return HelpEstagioModel(tituloPanel: '', nomearquivo: null);
   }
 }

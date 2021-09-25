@@ -1,11 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttericon/font_awesome5_icons.dart';
-import 'package:system_maua_front/app/shared/models/arquivos_model.dart';
-
 class HelpPanelCard extends StatelessWidget {
   final String titulo;
-  final IconData? descricao;
+  final Icon? descricao;
   final String? descrica;
   final bool isOpen;
   final Function()? onPressed;
@@ -54,7 +51,7 @@ class HelpPanelCard extends StatelessWidget {
                           Expanded(
                             child: TextField(
                               decoration: InputDecoration(
-                                icon: Icon(descricao),
+                                icon: descricao,
                               ),),
                           ),
                           Spacer(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-estagio/help_estagio_controller.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-estagio/widgets/help_estagio_card.dart';
 import 'package:system_maua_front/app/modules/help/widgets/help_panel_card_widget.dart';
@@ -45,9 +46,9 @@ class _HelpEstagioPageState
                 itemBuilder: (context, index) => HelpPanelCard(
                   titulo:
                       controller.listaPanelEstagio[index].estagio.tituloPanel,
-                  //descricao: controller.listaPanelEstagio[index].estagio.arquivo!.arquivo,
+                  descricao: Icon(FontAwesome5.file_pdf, color: Colors.red,),
                   descrica:
-                      controller.listaPanelEstagio[index].estagio.arquivo!.nome,
+                      controller.listaPanelEstagio[index].estagio.nomearquivo!.nome,
                   isOpen: controller.listaPanelEstagio[index].isOpen,
                   onPressed: () {
                     controller.trocaOpen(index);
