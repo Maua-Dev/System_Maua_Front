@@ -18,8 +18,8 @@ class HelpEstagioCard extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
           ),
-          width: 355,
-          height: 50,
+          width: MediaQuery.of(context).size.width * 0.95,
+          height: MediaQuery.of(context).size.height * 0.065,
           child: Row(
             children: [
               Padding(

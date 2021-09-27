@@ -38,27 +38,25 @@ class _HelpEstagioPageState
                 'Arquivos',
               ),
             ),
-            Expanded(
-              child: Observer(builder: (_) {
-                return ListView.builder(
-                  physics: NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: controller.listaPanelEstagio.length,
-                  itemBuilder: (context, index) => HelpPanelCard(
-                    titulo:
-                        controller.listaPanelEstagio[index].estagio.tituloPanel,
-                    descricao: controller.listaPanelEstagio[index].estagio
-                        .nomearquivo!.arquivo!.iconeArquivo,
-                    descrica: controller
-                        .listaPanelEstagio[index].estagio.nomearquivo!.nome,
-                    isOpen: controller.listaPanelEstagio[index].isOpen,
-                    onPressed: () {
-                      controller.trocaOpen(index);
-                    },
-                  ),
-                );
-              }),
-            ),
+            Observer(builder: (_) {
+              return ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: controller.listaPanelEstagio.length,
+                itemBuilder: (context, index) => HelpPanelCard(
+                  titulo:
+                      controller.listaPanelEstagio[index].estagio.tituloPanel,
+                  descricao: controller.listaPanelEstagio[index].estagio
+                      .nomearquivo!.arquivo!.iconeArquivo,
+                  descrica: controller
+                      .listaPanelEstagio[index].estagio.nomearquivo!.nome,
+                  isOpen: controller.listaPanelEstagio[index].isOpen,
+                  onPressed: () {
+                    controller.trocaOpen(index);
+                  },
+                ),
+              );
+            }),
             SizedBox(
               height: 32,
             )
