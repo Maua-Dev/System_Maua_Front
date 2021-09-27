@@ -27,6 +27,8 @@ void main() {
     NotasModel(avaliacao: AvaliacaoEnum.T4, value: 9.0),
   ]);
 
+  var metasParaCalculoTeste = <String, String>{'P1': '8'};
+
   var notasCalculadas = MateriaModel(
       nome: 'Resistência dos Materiais',
       notaParcial: 9.0,
@@ -63,6 +65,11 @@ void main() {
   test('[TEST] - getMateria', () async {
     await atingirMetasController.getMateria();
     expect(atingirMetasController.materia, materiaTeste);
+  });
+
+  test('[TEST] - seNotas', () async {
+    await atingirMetasController.setNota('8', AvaliacaoEnum.P1);
+    expect(atingirMetasController.metasParaCalculo, metasParaCalculoTeste);
   });
 
   test('[TEST] - getNotasCalculadas', () async {

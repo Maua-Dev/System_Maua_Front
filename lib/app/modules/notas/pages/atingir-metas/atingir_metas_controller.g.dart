@@ -36,13 +36,13 @@ mixin _$AtingirMetasController on _AtingirMetasControllerBase, Store {
       Atom(name: '_AtingirMetasControllerBase.metasParaCalculo');
 
   @override
-  Map<dynamic, dynamic> get metasParaCalculo {
+  Map<String, String> get metasParaCalculo {
     _$metasParaCalculoAtom.reportRead();
     return super.metasParaCalculo;
   }
 
   @override
-  set metasParaCalculo(Map<dynamic, dynamic> value) {
+  set metasParaCalculo(Map<String, String> value) {
     _$metasParaCalculoAtom.reportWrite(value, super.metasParaCalculo, () {
       super.metasParaCalculo = value;
     });
