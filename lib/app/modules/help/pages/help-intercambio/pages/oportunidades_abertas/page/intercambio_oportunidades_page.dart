@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:system_maua_front/app/modules/help/pages/help-intercambio/oportunidades_abertas/controller/oportunidade_controller.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/oportunidades_abertas/controller/oportunidade_controller.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
-import 'package:system_maua_front/app/shared/components/faq_card/faqcard_widget.dart';
+import 'package:system_maua_front/app/shared/components/faq_card/faq_card_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class OportunidadePage extends StatefulWidget {
@@ -37,6 +37,7 @@ class _OportunidadePageState
           Expanded(
             child: Observer(builder: (_) {
               return ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: controller.universidadeAction.length,
                 itemBuilder: (context, index) => FaqCard(

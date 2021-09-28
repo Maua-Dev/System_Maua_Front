@@ -1,9 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:system_maua_front/app/modules/help/pages/help-intercambio/oportunidades_abertas/controller/oportunidade_controller.dart';
-import 'package:system_maua_front/app/modules/help/pages/help-intercambio/oportunidades_abertas/models/universidade_model.dart';
-import 'package:system_maua_front/app/modules/help/pages/help-intercambio/oportunidades_abertas/repository/i_oportunidade_repository.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/oportunidades_abertas/controller/oportunidade_controller.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/oportunidades_abertas/models/universidade_model.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/oportunidades_abertas/repository/i_oportunidade_repository.dart';
+
 import 'oportunidades_abertas_controller_test.mocks.dart';
 
 @GenerateMocks([IOportunidadeRepository])

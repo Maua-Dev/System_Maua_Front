@@ -1,7 +1,7 @@
 import 'package:mobx/mobx.dart';
-import 'package:system_maua_front/app/modules/help/pages/help-intercambio/oportunidades_abertas/models/universidade_model.dart';
-import 'package:system_maua_front/app/modules/help/pages/help-intercambio/oportunidades_abertas/models/universidade_panel_model.dart';
-import 'package:system_maua_front/app/modules/help/pages/help-intercambio/oportunidades_abertas/repository/i_oportunidade_repository.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/oportunidades_abertas/models/universidade_model.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/oportunidades_abertas/models/universidade_panel_model.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/oportunidades_abertas/repository/i_oportunidade_repository.dart';
 part 'oportunidade_controller.g.dart';
 
 class OportunidadeController = _OportunidadeControllerBase

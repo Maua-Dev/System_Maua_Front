@@ -1,4 +1,4 @@
-import 'package:system_maua_front/app/modules/help/pages/help-intercambio/oportunidades_abertas/models/universidade_model.dart';
+import 'universidade_model.dart';
 
 class UniversidadePanelModel {
   bool _isOpen = false;

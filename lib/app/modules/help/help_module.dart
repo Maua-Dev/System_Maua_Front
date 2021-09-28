@@ -24,7 +24,6 @@ class HelpModule extends Module {
         (i) => HelpSoftwaresRepository()),
     Bind.lazySingleton((i) => HelpFaqController(i())),
     Bind.lazySingleton<HelpFaqRepository>((i) => HelpFaqRepository()),
-    Bind.lazySingleton((i) => HelpIntercambioModule()),
   ];
 
   @override
