@@ -4,11 +4,11 @@ import 'package:system_maua_front/app/modules/help/pages/help-estagio/repositori
 void main() {
   late HelpEstagioRepository helpEstagioRepository;
 
-  setUpAll((){
+  setUpAll(() {
     helpEstagioRepository = HelpEstagioRepository();
   });
 
   test('[TEST] - getEstagio', () {
     expect(helpEstagioRepository.listaEstagio.isNotEmpty, true);
-  });   
+  });
 }
