@@ -23,17 +23,66 @@ class NotasAlunoPageState
         appBar: AppBarWidget(
           title: 'Notas',
           icon: Icons.playlist_add_check_outlined,
-          actionWidget: IconButton(
-              onPressed: () => {Modular.to.pushNamed('/medias/atingir-metas')},
-              icon: Icon(Icons.my_location_outlined)),
         ),
         body: SingleChildScrollView(
           child: Container(
             child: Center(
               child: Padding(
-                padding: const EdgeInsets.only(top: 16, bottom: 32),
+                padding: const EdgeInsets.only(top: 8, bottom: 32),
                 child: Column(
                   children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          children: [
+                            IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  Icons.book,
+                                  color: AppColors.darkBlue,
+                                )),
+                            Text(
+                              'Atividades',
+                              style: AppTextStyles.body.copyWith(fontSize: 15),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            IconButton(
+                                onPressed: () {
+                                  Modular.to.pushNamed('/medias/atingir-metas');
+                                },
+                                icon: Icon(
+                                  Icons.my_location_outlined,
+                                  color: AppColors.darkBlue,
+                                )),
+                            Text(
+                              'Atingir metas',
+                              style: AppTextStyles.body.copyWith(fontSize: 15),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  Icons.insert_chart,
+                                  color: AppColors.darkBlue,
+                                )),
+                            Text(
+                              'Estatísticas',
+                              style: AppTextStyles.body.copyWith(fontSize: 15),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.8,
                       decoration: BoxDecoration(
