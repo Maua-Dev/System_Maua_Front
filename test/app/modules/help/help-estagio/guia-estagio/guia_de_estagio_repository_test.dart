@@ -4,11 +4,11 @@ import 'package:system_maua_front/app/modules/help/pages/help-estagio/page/guia-
 void main() {
   late GuiaEstagioRepository guiaEstagioRepository;
 
-  setUpAll((){
+  setUpAll(() {
     guiaEstagioRepository = GuiaEstagioRepository();
   });
 
   test('[TEST] - getGuiaEstagio', () {
     expect(guiaEstagioRepository.listaGuiaEstagio.isNotEmpty, true);
-  });   
+  });
 }

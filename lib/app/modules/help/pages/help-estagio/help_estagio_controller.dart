@@ -29,7 +29,7 @@ abstract class _HelpEstagioControllerBase with Store {
     getListaPanelEstagio();
   }
 
-  @action 
+  @action
   void getListaPanelEstagio() {
     var list = <HelpEstagioPanelModel>[];
     for (var i = 0; i < listaEstagio.length; i++) {

@@ -17,8 +17,7 @@ class HelpEstagioModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute(Modular.initialRoute, child: (_,args) => HelpEstagioPage()),
+    ChildRoute(Modular.initialRoute, child: (_, args) => HelpEstagioPage()),
     ChildRoute('/guiaestagio', child: (_, args) => GuiaEstagioPage())
-    
   ];
 }

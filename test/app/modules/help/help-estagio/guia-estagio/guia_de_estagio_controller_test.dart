@@ -13,17 +13,20 @@ void main() {
   late GuiaEstagioController controller;
   var guiaEstagioTeste = [
     GuiaEstagioModel(
-      nomePasso: '1° Passo: Curriculo', 
-      descricaoPasso: 'Crie um curriculo em um word e crie um perfil no linkedin colocando suas informações academicas.'),
+        nomePasso: '1° Passo: Curriculo',
+        descricaoPasso:
+            'Crie um curriculo em um word e crie um perfil no linkedin colocando suas informações academicas.'),
     GuiaEstagioModel(
-      nomePasso: '2° Passo: Inscrição', 
-      descricaoPasso: 'Mande seu curriculo para empresas e espere o retorno.'),
+        nomePasso: '2° Passo: Inscrição',
+        descricaoPasso:
+            'Mande seu curriculo para empresas e espere o retorno.'),
     GuiaEstagioModel(
-      nomePasso: '3° Passo: Preparação', 
-      descricaoPasso: 'Enquanto espera o retorno das empresas, estude os assuntos que a empresa acha desejáveis e diferenciávieis para ter resultados melhores.  '),
+        nomePasso: '3° Passo: Preparação',
+        descricaoPasso:
+            'Enquanto espera o retorno das empresas, estude os assuntos que a empresa acha desejáveis e diferenciávieis para ter resultados melhores.  '),
     GuiaEstagioModel(
-      nomePasso: '4° Passo: Testes', 
-      descricaoPasso: 'Faça os Teste das empresas que retornaram.'),
+        nomePasso: '4° Passo: Testes',
+        descricaoPasso: 'Faça os Teste das empresas que retornaram.'),
   ];
   setUpAll(() {
     when(repository.getGuiaEstagio()).thenAnswer((_) async => guiaEstagioTeste);
