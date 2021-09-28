@@ -29,7 +29,8 @@ class _GuiaEstagioPageState
                 shrinkWrap: true,
                 itemCount: controller.listaPanelGuiaEstagio.length,
                 itemBuilder: (context, index) => SofwaresCard(
-                  titulo: controller.listaPanelGuiaEstagio[index].guiaEstagio.nomePasso,
+                  titulo: controller
+                      .listaPanelGuiaEstagio[index].guiaEstagio.nomePasso,
                   descricao: controller
                       .listaPanelGuiaEstagio[index].guiaEstagio.descricaoPasso,
                   isOpen: controller.listaPanelGuiaEstagio[index].isOpen,

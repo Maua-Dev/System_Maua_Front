@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 class HelpPanelCard extends StatelessWidget {
   final String titulo;
   final Icon? descricao;
@@ -52,7 +53,8 @@ class HelpPanelCard extends StatelessWidget {
                             child: TextField(
                               decoration: InputDecoration(
                                 icon: descricao,
-                              ),),
+                              ),
+                            ),
                           ),
                           Spacer(
                             flex: 1,

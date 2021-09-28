@@ -43,5 +43,5 @@ abstract class _GuiaEstagioControllerBase with Store {
     var lista = List<GuiaEstagioPanelModel>.from(listaPanelGuiaEstagio);
     lista[index].changeStateIsOpen();
     listaPanelGuiaEstagio = lista;
-  } 
+  }
 }
