@@ -1,5 +1,5 @@
 import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/oportunidades_abertas/models/universidade_model.dart';
-import 'i_oportunidade_repository.dart';
+import 'oportunidade_repository_interface.dart';
 
 class OportunidadeRepository implements IOportunidadeRepository {
   List<UniversidadeModel> listaDeUniversidade = [
