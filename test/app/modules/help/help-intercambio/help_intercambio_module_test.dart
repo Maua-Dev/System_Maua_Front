@@ -8,7 +8,7 @@ import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/
 void main() {
   initModule(HelpIntercambioModule());
 
-  test('[TEST] - Injeção do OportunidadeRespotiory ', () {
+  test('[TEST] - Injeção do OportunidadeRepository ', () {
     Modular.get<OportunidadeRepository>();
   });
 
