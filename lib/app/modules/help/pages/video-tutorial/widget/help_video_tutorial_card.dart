@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
+import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class VideoTutorialCard extends StatelessWidget {
   final String titulo;
@@ -15,23 +16,30 @@ class VideoTutorialCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return GestureDetector(
+      onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
           boxShadow: [AppColors.shadow],
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
         ),
-        width: MediaQuery.of(context).size.width * 0.95,
-        height: MediaQuery.of(context).size.height * 0.065,
+        width: MediaQuery.of(context).size.width,
+        height:  100,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            GestureDetector(
-              onTap: onTap,
+            Text(
+              '$titulo',
+              style: AppTextStyles.bodyBold.copyWith(
+                  fontSize: 22,
+              ),
             ),
-            Text(titulo),
-            Text(descricao!),
+            Text('$descricao!',
+            style: TextStyle(
+                fontSize: 16,
+            ),
+           ),
           ],
         ),
       ),

@@ -25,8 +25,6 @@ class HelpModule extends Module {
         (i) => HelpSoftwaresRepository()),
     Bind.lazySingleton((i) => HelpFaqController(i())),
     Bind.lazySingleton<HelpFaqRepository>((i) => HelpFaqRepository()),
-    Bind.lazySingleton((i) => HelpVideoTutorialController()),
-    Bind.lazySingleton<HelpVideoTutorialRepository>((i) => HelpVideoTutorialRepository())
   ];
 
   @override

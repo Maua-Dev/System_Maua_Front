@@ -6,7 +6,7 @@ import 'package:system_maua_front/app/modules/help/pages/video-tutorial/reposito
 class HelpVideoTutorialModule extends Module{
   @override
   final List<Bind> binds = [
-    Bind.lazySingleton((i) => HelpVideoTutorialController()),
+    Bind.lazySingleton((i) => HelpVideoTutorialController(repository: i())),
     Bind.lazySingleton<HelpVideoTutorialRepository>((i) => HelpVideoTutorialRepository()),
   ];
 

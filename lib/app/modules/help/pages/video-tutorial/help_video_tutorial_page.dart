@@ -22,25 +22,27 @@ class _HelpVideoTutorialPageState
         icon: Icons.play_circle_fill_rounded,
       ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Observer(builder: (_) {
-                return ListView.builder(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    itemCount: controller.listaVideos.length,
-                    itemBuilder: (context, index) {
-                      var abreviacao = controller.listaVideos[index];
-                      return VideoTutorialCard(
-                        titulo: abreviacao.titulo,
-                        descricao: abreviacao.descricao,
-                      );
-                    });
-              })
-            ],
-          ),
+        child: Column(
+          children: [
+            Text(
+              'Abaixo está uma lista de videos'
+            ),
+            Observer(builder: (_) {
+              return ListView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: controller.listaVideos.length,
+                  itemBuilder: (context, index) {
+                    return VideoTutorialCard(
+                      titulo: controller.listaVideos[index].titulo,
+                      descricao: controller.listaVideos[index].descricao,
+                    );
+                  });
+            }),
+            SizedBox(
+              height: 32,
+            ),
+          ],
         ),
       ),
     );

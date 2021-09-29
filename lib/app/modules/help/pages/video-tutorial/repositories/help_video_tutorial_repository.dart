@@ -13,7 +13,7 @@ class HelpVideoTutorialRepository implements IHelpVideoTutorialRepository {
     ),
   ];
   @override
-  Future<List<VideoTutorialModel>> getVideos() {
+  Future<List<VideoTutorialModel>> getVideos() async {
     return Future.value(listaVideos);
   }
 }

@@ -8,18 +8,18 @@ class HelpVideoTutorialController = _HelpVideoTutorialControllerBase
     with _$HelpVideoTutorialController;
 
 abstract class _HelpVideoTutorialControllerBase with Store {
-  IHelpVideoTutorialRepository? repository;
+  final IHelpVideoTutorialRepository repository;
 
   _HelpVideoTutorialControllerBase(
-      {this.repository}) {
+      {required this.repository}) {
     getVideos();
   }
 
   @observable
   List<VideoTutorialModel> listaVideos = List.empty();
 
-  @action
+    @action
   Future<void> getVideos() async {
-    listaVideos = await repository!.getVideos();
+    listaVideos = await repository.getVideos();
   }
 }
