@@ -37,7 +37,6 @@ class _OportunidadePageState
           Expanded(
             child: Observer(builder: (_) {
               return ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: controller.universidadeAction.length,
                 itemBuilder: (context, index) => FaqCard(
