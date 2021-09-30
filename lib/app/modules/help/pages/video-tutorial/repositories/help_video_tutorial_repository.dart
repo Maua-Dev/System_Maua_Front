@@ -6,10 +6,12 @@ class HelpVideoTutorialRepository implements IHelpVideoTutorialRepository {
     VideoTutorialModel(
       titulo: 'Vídeo introdutório',
       descricao: 'Este vídeo contará um pouco sobre nossa nova plataforma',
+      url: '',
     ),
     VideoTutorialModel(
       titulo: 'Sistemas de nota',
       descricao: 'Este vídeo sobre como utilizar funções do sistema de notas',
+      url: '',
     ),
   ];
   @override

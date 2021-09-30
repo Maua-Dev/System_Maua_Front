@@ -10,9 +10,7 @@ import 'package:system_maua_front/app/modules/help/pages/help-intercambio/help_i
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/help_softwares_page.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/repositories/help_softwares_repository.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/help_softwares_controller.dart';
-import 'package:system_maua_front/app/modules/help/pages/video-tutorial/help_video_tutorial_controller.dart';
 import 'package:system_maua_front/app/modules/help/pages/video-tutorial/help_video_tutorial_module.dart';
-import 'package:system_maua_front/app/modules/help/pages/video-tutorial/repositories/help_video_tutorial_repository.dart';
 import 'help_page.dart';
 
 class HelpModule extends Module {

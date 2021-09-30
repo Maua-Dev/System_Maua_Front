@@ -24,8 +24,16 @@ class _HelpVideoTutorialPageState
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Text(
-              'Abaixo está uma lista de videos'
+            Padding(
+              padding: const EdgeInsets.only(top: 8),
+              child: Text(
+                '''Abaixo está uma lista de 
+videos para se assistirem em 
+relação ao melhor
+aproveitamento da nossa 
+plataforma''',
+                style: TextStyle(fontSize: 24),
+              ),
             ),
             Observer(builder: (_) {
               return ListView.builder(
@@ -34,6 +42,9 @@ class _HelpVideoTutorialPageState
                   itemCount: controller.listaVideos.length,
                   itemBuilder: (context, index) {
                     return VideoTutorialCard(
+                      onTap: (){
+                        null;
+                      },
                       titulo: controller.listaVideos[index].titulo,
                       descricao: controller.listaVideos[index].descricao,
                     );
