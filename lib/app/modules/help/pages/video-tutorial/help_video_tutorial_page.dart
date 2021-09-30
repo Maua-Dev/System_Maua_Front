@@ -42,7 +42,7 @@ plataforma''',
                   itemCount: controller.listaVideos.length,
                   itemBuilder: (context, index) {
                     return VideoTutorialCard(
-                      onTap: (){
+                      onTap: () {
                         null;
                       },
                       titulo: controller.listaVideos[index].titulo,
