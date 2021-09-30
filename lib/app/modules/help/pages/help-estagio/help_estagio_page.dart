@@ -46,9 +46,9 @@ class _HelpEstagioPageState
                 itemBuilder: (context, index) => HelpPanelCard(
                   titulo:
                       controller.listaPanelEstagio[index].estagio.tituloPanel,
-                  descricao: controller.listaPanelEstagio[index].estagio
+                  descricaoIcon: controller.listaPanelEstagio[index].estagio
                       .nomearquivo!.arquivo!.iconeArquivo,
-                  descrica: controller
+                  descricaoNome: controller
                       .listaPanelEstagio[index].estagio.nomearquivo!.nome,
                   isOpen: controller.listaPanelEstagio[index].isOpen,
                   onPressed: () {

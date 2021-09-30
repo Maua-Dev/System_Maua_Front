@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 
 class HelpPanelCard extends StatelessWidget {
   final String titulo;
-  final Icon? descricao;
-  final String? descrica;
+  final Icon? descricaoIcon;
+  final String? descricaoNome;
   final bool isOpen;
   final Function()? onPressed;
 
   const HelpPanelCard({
     Key? key,
     required this.titulo,
-    this.descricao,
+    this.descricaoIcon,
     required this.isOpen,
     this.onPressed,
-    this.descrica,
+    this.descricaoNome,
   }) : super(key: key);
 
   @override
@@ -43,7 +43,7 @@ class HelpPanelCard extends StatelessWidget {
                       ),
                     ],
                   ),
-              body: descrica == null
+              body: descricaoNome == null
                   ? SizedBox.shrink()
                   : Padding(
                       padding: EdgeInsets.fromLTRB(12, 4, 12, 8),
@@ -52,7 +52,7 @@ class HelpPanelCard extends StatelessWidget {
                           Expanded(
                             child: TextField(
                               decoration: InputDecoration(
-                                icon: descricao,
+                                icon: descricaoIcon,
                               ),
                             ),
                           ),
@@ -62,7 +62,7 @@ class HelpPanelCard extends StatelessWidget {
                           Expanded(
                             flex: 14,
                             child: Text(
-                              descrica!,
+                              descricaoNome!,
                               style: TextStyle(
                                 fontSize: 16,
                               ),
