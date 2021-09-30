@@ -27,11 +27,7 @@ class _HelpVideoTutorialPageState
             Padding(
               padding: const EdgeInsets.only(top: 8),
               child: Text(
-                '''Abaixo está uma lista de 
-videos para se assistirem em 
-relação ao melhor
-aproveitamento da nossa 
-plataforma''',
+                'Abaixo está uma lista de \nvideos para se assistirem em \nrelação ao melhor \naproveitamento da nossa \nplataforma',
                 style: TextStyle(fontSize: 24),
               ),
             ),
