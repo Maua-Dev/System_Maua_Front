@@ -2,6 +2,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/widgets/grid_avaliacao_widget.dart';
+import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/widgets/icones_navegacao.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
@@ -31,55 +32,7 @@ class NotasAlunoPageState
                 padding: const EdgeInsets.only(top: 8, bottom: 32),
                 child: Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Column(
-                          children: [
-                            IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.book,
-                                  color: AppColors.darkBlue,
-                                )),
-                            Text(
-                              'Atividades',
-                              style: AppTextStyles.body.copyWith(fontSize: 15),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            IconButton(
-                                onPressed: () {
-                                  Modular.to.pushNamed('/medias/atingir-metas');
-                                },
-                                icon: Icon(
-                                  Icons.my_location_outlined,
-                                  color: AppColors.darkBlue,
-                                )),
-                            Text(
-                              'Atingir metas',
-                              style: AppTextStyles.body.copyWith(fontSize: 15),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.insert_chart,
-                                  color: AppColors.darkBlue,
-                                )),
-                            Text(
-                              'Estatísticas',
-                              style: AppTextStyles.body.copyWith(fontSize: 15),
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
+                    IconesNavegacao(),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.02,
                     ),
