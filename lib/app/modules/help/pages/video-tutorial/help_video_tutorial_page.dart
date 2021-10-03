@@ -39,7 +39,9 @@ class _HelpVideoTutorialPageState
                   itemBuilder: (context, index) {
                     return VideoTutorialCard(
                       onTap: () {
-                        null;
+                        Modular.to.pushNamed(
+                          '/help/video-tutorial/video-especifico',
+                        );
                       },
                       titulo: controller.listaVideos[index].titulo,
                       descricao: controller.listaVideos[index].descricao,
