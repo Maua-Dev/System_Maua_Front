@@ -33,47 +33,70 @@ class AtingirMetasPageState
                     Padding(
                       padding: const EdgeInsets.only(bottom: 8.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Row(
-                            children: [
-                              TextButton(
-                                onPressed: controller.getNotasCalculadas,
-                                child: Text(
-                                  'Calcular',
-                                  style: AppTextStyles.appBarTitle
-                                      .copyWith(color: AppColors.darkBlue),
+                          Material(
+                            color: AppColors.white,
+                            borderRadius: BorderRadius.circular(10),
+                            child: InkWell(
+                              onTap: controller.getNotasCalculadas,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Container(
+                                  width:
+                                      MediaQuery.of(context).size.height * 0.16,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Calcular',
+                                        style: AppTextStyles.appBarTitle
+                                            .copyWith(
+                                                color: AppColors.darkBlue),
+                                      ),
+                                      SizedBox(width: 5),
+                                      Icon(
+                                        Icons.my_location_outlined,
+                                        color: AppColors.darkBlue,
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
-                              IconButton(
-                                onPressed: controller.getNotasCalculadas,
-                                icon: Icon(
-                                  Icons.my_location_outlined,
-                                  color: AppColors.darkBlue,
-                                ),
-                                tooltip: 'Calcular',
-                              ),
-                            ],
+                            ),
                           ),
-                          Row(
-                            children: [
-                              TextButton(
-                                onPressed: controller.getMateria,
-                                child: Text(
-                                  'Limpar',
-                                  style: AppTextStyles.appBarTitle
-                                      .copyWith(color: AppColors.darkBlue),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Material(
+                            color: AppColors.white,
+                            borderRadius: BorderRadius.circular(10),
+                            child: InkWell(
+                              onTap: controller.getMateria,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Container(
+                                  width:
+                                      MediaQuery.of(context).size.height * 0.16,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Editar',
+                                        style: AppTextStyles.appBarTitle
+                                            .copyWith(
+                                                color: AppColors.darkBlue),
+                                      ),
+                                      SizedBox(width: 5),
+                                      Icon(
+                                        Icons.edit,
+                                        color: AppColors.darkBlue,
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
-                              IconButton(
-                                onPressed: controller.getMateria,
-                                icon: Icon(
-                                  Icons.delete,
-                                  color: AppColors.darkBlue,
-                                ),
-                                tooltip: 'Limpar',
-                              ),
-                            ],
+                            ),
                           ),
                         ],
                       ),
@@ -142,8 +165,9 @@ class AtingirMetasPageState
                             ),
                             Observer(builder: (_) {
                               return GridAvaliacao(
-                                  setNota: controller.setNota,
-                                  listaNotas: controller.materia.provas);
+                                setNota: controller.setNota,
+                                listaNotas: controller.materia.provas,
+                              );
                             })
                           ],
                         )),
@@ -169,8 +193,9 @@ class AtingirMetasPageState
                             ),
                             Observer(builder: (_) {
                               return GridAvaliacao(
-                                  setNota: controller.setNota,
-                                  listaNotas: controller.materia.trabalhos);
+                                setNota: controller.setNota,
+                                listaNotas: controller.materia.trabalhos,
+                              );
                             })
                           ],
                         )),

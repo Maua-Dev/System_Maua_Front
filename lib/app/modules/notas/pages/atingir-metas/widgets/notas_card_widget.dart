@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'package:system_maua_front/app/modules/notas/pages/atingir-metas/enumerates/avaliacao_a_enum.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
-class NotasCardWidget extends StatelessWidget {
+class NotasCardWidget extends StatefulWidget {
   final Function(String, AvaliacaoEnum)? setNota;
   final AvaliacaoEnum tituloAvaliacao;
   final double? notaAvaliacao;
@@ -13,6 +14,14 @@ class NotasCardWidget extends StatelessWidget {
     required this.tituloAvaliacao,
     this.notaAvaliacao,
   }) : super(key: key);
+
+  @override
+  _NotasCardWidgetState createState() => _NotasCardWidgetState();
+}
+
+class _NotasCardWidgetState extends State<NotasCardWidget> {
+  final TextEditingController _controller = TextEditingController();
+  String oldText = '';
 
   @override
   Widget build(BuildContext context) {
@@ -31,18 +40,29 @@ class NotasCardWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                tituloAvaliacao.name + ': ',
+                widget.tituloAvaliacao.name + ': ',
                 style:
                     AppTextStyles.body.copyWith(color: AppColors.strongLetter),
               ),
               Container(
-                child: notaAvaliacao == null
+                child: widget.notaAvaliacao == null
                     ? SizedBox(
                         width: MediaQuery.of(context).size.width * 0.1,
                         child: TextField(
+                          controller: _controller,
                           keyboardType: TextInputType.number,
+                          // onChanged: (value) {
+                          //   widget.setNota!(value, widget.tituloAvaliacao);
+                          // },
                           onChanged: (value) {
-                            setNota!(value, tituloAvaliacao);
+                            if (value == '') {
+                              widget.setNota!(value, widget.tituloAvaliacao);
+                            } else if (int.parse(value) <= 10) {
+                              oldText = value;
+                              widget.setNota!(value, widget.tituloAvaliacao);
+                            } else {
+                              _controller.text = oldText;
+                            }
                           },
                           decoration: InputDecoration(
                             hintText: 'Meta',
@@ -50,15 +70,15 @@ class NotasCardWidget extends StatelessWidget {
                         ),
                       )
                     : Text(
-                        notaAvaliacao == null
+                        widget.notaAvaliacao == null
                             ? ''
-                            : notaAvaliacao!
+                            : widget.notaAvaliacao!
                                 .toStringAsFixed(1)
                                 .replaceAll('.', ','),
                         style: AppTextStyles.body.copyWith(
-                            color: notaAvaliacao == null
+                            color: widget.notaAvaliacao == null
                                 ? null
-                                : notaAvaliacao! < 6.0
+                                : widget.notaAvaliacao! < 6.0
                                     ? Colors.red
                                     : AppColors.strongLetter),
                       ),

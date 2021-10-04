@@ -1,8 +1,8 @@
 import 'package:mobx/mobx.dart';
 
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_equipes/models/equipes_model.dart';
-import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_equipes/models/equipes_panel_model.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_equipes/repositories/mural_equipes_repository_interface.dart';
+import 'package:system_maua_front/app/shared/models/list_panel_model.dart';
 
 part 'mural_equipes_controller.g.dart';
 
@@ -22,7 +22,7 @@ abstract class _MuralEquipesControllerBase with Store {
   List<EquipesModel> listaEquipes = List.empty();
 
   @observable
-  List<EquipesPanelModel> listaPanelEquipes = [];
+  List<ListPanelModel<EquipesModel>> listaPanelEquipes = [];
 
   @action
   Future<void> getEquipes() async {
@@ -32,16 +32,16 @@ abstract class _MuralEquipesControllerBase with Store {
 
   @action
   void getListaPanelEquipes() {
-    var list = <EquipesPanelModel>[];
+    var list = <ListPanelModel<EquipesModel>>[];
     for (var i = 0; i < listaEquipes.length; i++) {
-      list.add(EquipesPanelModel(equipes: listaEquipes[i]));
+      list.add(ListPanelModel(model: listaEquipes[i]));
     }
     listaPanelEquipes = list;
   }
 
   @action
   void trocaOpen(int index) {
-    var lista = List<EquipesPanelModel>.from(listaPanelEquipes);
+    var lista = List<ListPanelModel<EquipesModel>>.from(listaPanelEquipes);
     lista[index].changeStateIsOpen();
     listaPanelEquipes = lista;
   }

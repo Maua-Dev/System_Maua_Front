@@ -9,4 +9,5 @@ class ArquivosModel {
       {required this.urlArquivo,
       required this.arquivosEnum,
       required this.tituloArquivo});
+
 }
