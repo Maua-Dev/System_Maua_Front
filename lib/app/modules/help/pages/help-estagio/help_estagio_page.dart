@@ -6,7 +6,6 @@ import 'package:system_maua_front/app/modules/help/pages/help-estagio/widgets/he
 import 'package:system_maua_front/app/modules/help/widgets/help_panel_card_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/enumerates/arquivos_enum.dart';
-import 'package:system_maua_front/app/shared/models/arquivos_model.dart';
 
 class HelpEstagioPage extends StatefulWidget {
   HelpEstagioPage({Key? key}) : super(key: key);
