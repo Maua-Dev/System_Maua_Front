@@ -3,6 +3,7 @@ import 'package:system_maua_front/app/modules/help/pages/help-avisos/help_avisos
 import 'package:system_maua_front/app/modules/help/pages/help-avisos/help_avisos_page.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-avisos/repositories/help_avisos_repository.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-bolsas/help_bolsas_page.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-estagio/help_estagio_module.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/help_faq_controller.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/help_faq_page.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/repositories/help_faq_repository.dart';
@@ -33,6 +34,7 @@ class HelpModule extends Module {
     ChildRoute('/intercambio', child: (_, args) => HelpIntercambioPage()),
     ChildRoute('/softwares', child: (_, args) => HelpSoftwaresPage()),
     ChildRoute('/faq', child: (_, args) => HelpFaqPage()),
-    ModuleRoute('/video-tutorial', module: HelpVideoTutorialModule())
+    ModuleRoute('/video-tutorial', module: HelpVideoTutorialModule()),
+    ModuleRoute('/estagio', module: HelpEstagioModule()),
   ];
 }
