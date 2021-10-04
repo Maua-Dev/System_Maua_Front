@@ -42,4 +42,33 @@ extension TroncoEnumExtension on TroncoEnum {
         return 'Engenharia Química';
     }
   }
+
+  String get nomeTroncoAbreviacao {
+    switch (this) {
+      case TroncoEnum.ADM:
+        return 'Administração';
+      case TroncoEnum.DESIGN:
+        return 'Design';
+      case TroncoEnum.CB:
+        return 'Ciclo Básico';
+      case TroncoEnum.ALIMENTOS:
+        return 'Alimentos';
+      case TroncoEnum.CIVIL:
+        return 'Civil';
+      case TroncoEnum.COMPUTACAO:
+        return 'Computação';
+      case TroncoEnum.CA:
+        return 'CA';
+      case TroncoEnum.ELETRONICA:
+        return 'Eletrônica';
+      case TroncoEnum.ELETRICA:
+        return 'Elétrica';
+      case TroncoEnum.MECANICA:
+        return 'Mecânica';
+      case TroncoEnum.PRODUCAO:
+        return 'Produção';
+      case TroncoEnum.QUIMICA:
+        return 'Química';
+    }
+  }
 }

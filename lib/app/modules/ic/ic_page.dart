@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/ic/ic_controller.dart';
 import 'package:system_maua_front/app/modules/ic/widgets/ic_card_custom_widget.dart';
@@ -60,17 +61,50 @@ class _IcPageState extends ModularState<IcPage, IcController> {
               ),
               IcCardCustomWidget(titulo: 'Informações gerais'),
               IcCardCustomWidget(titulo: 'Normas para participar'),
-              IcCardDrpDownWidget(
-                items: TroncoEnum.values.map((TroncoEnum value) {
-                  return DropdownMenuItem<TroncoEnum>(
-                    value: value,
-                    child: Text(value.nomeTronco),
-                  );
-                }).toList(),
-                value: controller.tronco,
-                onChanged: (value) {
-                  controller.setTronco(value as TroncoEnum);
-                },
+              Padding(
+                padding: const EdgeInsets.only(right: 16, left: 16, top: 8),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                      boxShadow: [AppColors.shadow],
+                      border: Border.all(color: AppColors.stroke)),
+                  child: Column(
+                    children: [
+                      IcCardDropDownWidget(
+                        items: TroncoEnum.values.map((TroncoEnum value) {
+                          return DropdownMenuItem<TroncoEnum>(
+                            value: value,
+                            child: Text(value.nomeTroncoAbreviacao),
+                          );
+                        }).toList(),
+                        value: controller.tronco,
+                        onChanged: (value) {
+                          controller.setTronco(value as TroncoEnum);
+                        },
+                      ),
+                      Observer(builder: (_) {
+                        return ListView.builder(
+                          itemCount: controller.dadosTronco.length,
+                          shrinkWrap: true,
+                          itemBuilder: (context, index) {
+                            return Padding(
+                              padding: const EdgeInsets.only(bottom: 12),
+                              child: TextButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    controller.listaTitulosIc[index],
+                                    textAlign: TextAlign.center,
+                                    style: AppTextStyles.textButton,
+                                  )),
+                            );
+                          },
+                        );
+                      })
+                    ],
+                  ),
+                ),
               ),
               IcCardCustomWidget(titulo: 'Resultados anteriores'),
             ],

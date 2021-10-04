@@ -21,6 +21,15 @@ abstract class IcControllerBase with Store {
   @observable
   List<IcModel> dadosTronco = [];
 
+  @computed
+  List<String> get listaTitulosIc {
+    var listaTitulos = <String>[];
+    dadosTronco.forEach((element) {
+      listaTitulos.add(element.tituloIc);
+    });
+    return listaTitulos;
+  }
+
   @action
   Future<void> getDadosTronco() async {
     dadosTronco = await repository.getDadosTronco(tronco);
