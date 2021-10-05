@@ -41,6 +41,7 @@ class _HelpVideoTutorialPageState
                       onTap: () {
                         Modular.to.pushNamed(
                           '/help/video-tutorial/video-especifico',
+                          arguments: controller.listaVideos[index],
                         );
                       },
                       titulo: controller.listaVideos[index].titulo,
