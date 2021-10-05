@@ -15,12 +15,12 @@ void main() {
     VideoTutorialModel(
       titulo: 'Vídeo introdutório',
       descricao: 'Este vídeo contará um pouco sobre nossa nova plataforma',
-      url: '',
+      url: '_tw_Wb7ufEg',
     ),
     VideoTutorialModel(
       titulo: 'Sistemas de nota',
       descricao: 'Este vídeo sobre como utilizar funções do sistema de notas',
-      url: '',
+      url: 'tLECP-nJ2CQ',
     ),
   ];
   setUpAll(() {
