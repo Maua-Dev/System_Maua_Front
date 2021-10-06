@@ -1,14 +1,14 @@
 import 'package:mobx/mobx.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/models/faq_model.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/models/faq_panel_model.dart';
-import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/faq/repository/faq_repository.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/faq/repository/faq_repository_interface.dart';
 part 'faq_intercambio_controller.g.dart';
 
 class FaqIntercambioController = _FaqIntercambioControllerBase
     with _$FaqIntercambioController;
 
 abstract class _FaqIntercambioControllerBase with Store {
-  final FaqIntercambioRepository repository;
+  final IFaqIntercambioRepository repository;
 
   _FaqIntercambioControllerBase(this.repository) {
     getListRepository();
