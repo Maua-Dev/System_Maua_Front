@@ -41,7 +41,7 @@ extension ArquivosEnumExtension on ArquivosEnum {
       case ArquivosEnum.URL:
         return Icon(
           FontAwesome5.link,
-          color: Colors.grey.shade200,
+          color: Colors.grey.shade700,
           size: 32,
         );
     }

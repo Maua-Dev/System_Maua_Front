@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/ic/ic_controller.dart';
-import 'package:system_maua_front/app/modules/ic/pages/descricao_ic/ic_descricao_controller.dart';
+import 'package:system_maua_front/app/modules/ic/models/ic_model.dart';
 import 'package:system_maua_front/app/modules/ic/pages/descricao_ic/ic_descricao_page.dart';
 import 'package:system_maua_front/app/modules/ic/repositories/ic_repository.dart';
 import 'package:system_maua_front/app/modules/ic/repositories/ic_repository_interface.dart';
@@ -11,7 +11,6 @@ class IcModule extends Module {
   @override
   final List<Bind> binds = [
     Bind.lazySingleton((i) => IcController(repository: i())),
-    Bind.lazySingleton((i) => IcDescricaoController(repository: i())),
     Bind.lazySingleton<IIcRepository>((i) => IcRepository()),
   ];
 
@@ -22,8 +21,10 @@ class IcModule extends Module {
       child: (_, args) => IcPage(),
     ),
     ChildRoute(
-      '/icDescricao',
-      child: (_, args) => IcDescricaoPage(),
+      '/descricao',
+      child: (_, args) => IcDescricaoPage(
+        icModel: args.data as IcModel,
+      ),
     ),
   ];
 }

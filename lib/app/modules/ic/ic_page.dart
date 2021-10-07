@@ -92,7 +92,11 @@ class _IcPageState extends ModularState<IcPage, IcController> {
                             return Padding(
                               padding: const EdgeInsets.only(bottom: 12),
                               child: TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Modular.to.pushNamed('/ic/descricao',
+                                        arguments:
+                                            controller.dadosTronco[index]);
+                                  },
                                   child: Text(
                                     controller.listaTitulosIc[index],
                                     textAlign: TextAlign.center,
