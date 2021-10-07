@@ -38,7 +38,7 @@ class _MateriasPageState
               return Padding(
                 padding: const EdgeInsets.only(top: 12, bottom: 16),
                 child: Container(
-                  width: MediaQuery.of(context).size.width * 0.9,
+                  width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height * 0.3,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
