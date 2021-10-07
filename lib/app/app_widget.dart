@@ -34,9 +34,7 @@ class AppWidget extends StatelessWidget {
           appBarTheme: AppBarTheme(
             color: AppColors.darkBlue,
             centerTitle: true,
-            textTheme: TextTheme(
-              headline6: AppTextStyles.appBarTitle,
-            ),
+            toolbarTextStyle: AppTextStyles.appBarTitle,
           ),
           scaffoldBackgroundColor: AppColors.background,
         )).modular();
