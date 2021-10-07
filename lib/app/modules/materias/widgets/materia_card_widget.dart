@@ -16,11 +16,12 @@ class MateriaCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
       child: GestureDetector(
         onTap: () {},
         child: Container(
           height: MediaQuery.of(context).size.height * 0.16,
+          width: MediaQuery.of(context).size.width * 0.45,
           decoration: BoxDecoration(
               boxShadow: [AppColors.shadow],
               borderRadius: BorderRadius.circular(10),
@@ -31,14 +32,16 @@ class MateriaCardWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                    height: MediaQuery.of(context).size.height * 0.095,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(10),
-                            topLeft: Radius.circular(10)),
-                        image: DecorationImage(
-                            image: NetworkImage(fotoMateria),
-                            fit: BoxFit.cover))),
+                  height: MediaQuery.of(context).size.height * 0.095,
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(10),
+                        topLeft: Radius.circular(10)),
+                    image: DecorationImage(
+                        image: NetworkImage(fotoMateria), fit: BoxFit.cover),
+                  ),
+                ),
                 Container(
                   child: Padding(
                     padding:
