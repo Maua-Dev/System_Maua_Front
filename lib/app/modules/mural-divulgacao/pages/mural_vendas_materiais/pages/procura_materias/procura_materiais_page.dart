@@ -31,7 +31,7 @@ class _ProcuraMateriaisPageState
               titulo: 'Procurar material',
               onChanged: controller.setMaterial,
               value: controller.material,
-              onSuggestionSelected: () {},
+              listaMateriais: controller.listaMateriais,
             ),
           ),
           Expanded(
