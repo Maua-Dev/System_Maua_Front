@@ -29,13 +29,13 @@ mixin _$MuralEquipesController on _MuralEquipesControllerBase, Store {
       Atom(name: '_MuralEquipesControllerBase.listaPanelEquipes');
 
   @override
-  List<EquipesPanelModel> get listaPanelEquipes {
+  List<ListPanelModel<EquipesModel>> get listaPanelEquipes {
     _$listaPanelEquipesAtom.reportRead();
     return super.listaPanelEquipes;
   }
 
   @override
-  set listaPanelEquipes(List<EquipesPanelModel> value) {
+  set listaPanelEquipes(List<ListPanelModel<EquipesModel>> value) {
     _$listaPanelEquipesAtom.reportWrite(value, super.listaPanelEquipes, () {
       super.listaPanelEquipes = value;
     });

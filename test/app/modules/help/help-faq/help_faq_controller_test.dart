@@ -1,10 +1,13 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/help_faq_controller.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/models/faq_model.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/repositories/help_faq_repository_interface.dart';
+
 import 'help_faq_controller_test.mocks.dart';
 
+@GenerateMocks([IHelpFaqRepository])
 void main() {
   IHelpFaqRepository repository = MockIHelpFaqRepository();
   late HelpFaqController controller;

@@ -16,7 +16,6 @@ class NotasAlunoPage extends StatefulWidget {
 
 class NotasAlunoPageState
     extends ModularState<NotasAlunoPage, NotasAlunoController> {
-  // var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -24,7 +23,9 @@ class NotasAlunoPageState
         appBar: AppBarWidget(
           title: 'Notas',
           icon: Icons.playlist_add_check_outlined,
-          actionWidget: Icon(Icons.menu_book),
+          actionWidget: IconButton(
+              onPressed: () => {Modular.to.pushNamed('/medias/atingir-metas')},
+              icon: Icon(Icons.my_location_outlined)),
         ),
         body: SingleChildScrollView(
           child: Container(
