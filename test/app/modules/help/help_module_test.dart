@@ -5,7 +5,9 @@ import 'package:system_maua_front/app/modules/help/help_module.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-avisos/help_avisos_controller.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-avisos/repositories/help_avisos_repository.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/help_faq_controller.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-faq/repositories/help_faq_repository.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/help_softwares_controller.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-softwares/repositories/help_softwares_repository.dart';
 
 void main() {
   initModule(HelpModule());
@@ -24,7 +26,15 @@ void main() {
     Modular.get<HelpSoftwaresController>();
   });
 
+  test('[TEST] - Injeção do HelpSoftwaresRepository', () {
+    Modular.get<HelpSoftwaresRepository>();
+  });
+
   test('[TEST] - Injeção do HelpFaqController', () {
     Modular.get<HelpFaqController>();
+  });
+
+  test('[TEST] - Injeção do HelpFaqRepository', () {
+    Modular.get<HelpFaqRepository>();
   });
 }
