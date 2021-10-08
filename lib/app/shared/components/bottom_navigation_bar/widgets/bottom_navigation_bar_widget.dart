@@ -163,7 +163,9 @@ class BottomNavigationBarWidget extends StatelessWidget {
                                 child: NavigationBarButtonsWidget(
                                   titulo: 'ICs',
                                   icon: Icons.biotech_rounded,
-                                  onTap: () {},
+                                  onTap: () {
+                                    Modular.to.pushNamed('/ic');
+                                  },
                                 ),
                               ),
                             ),
