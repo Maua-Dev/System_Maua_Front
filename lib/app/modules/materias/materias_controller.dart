@@ -21,7 +21,7 @@ abstract class MateriasControllerBase with Store {
     var fotosProfessores = <String>[];
     if (materias[index].professores != null) {
       for (var i = 0; i < materias[index].professores!.length; i++) {
-        fotosProfessores.add(materias[index].professores![i].foto);
+        fotosProfessores.add(materias[index].professores![i].foto!);
       }
       return fotosProfessores;
     }
