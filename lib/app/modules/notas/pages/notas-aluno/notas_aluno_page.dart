@@ -2,6 +2,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/widgets/grid_avaliacao_widget.dart';
+import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/widgets/icones_navegacao.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
@@ -23,17 +24,18 @@ class NotasAlunoPageState
         appBar: AppBarWidget(
           title: 'Notas',
           icon: Icons.playlist_add_check_outlined,
-          actionWidget: IconButton(
-              onPressed: () => {Modular.to.pushNamed('/medias/atingir-metas')},
-              icon: Icon(Icons.my_location_outlined)),
         ),
         body: SingleChildScrollView(
           child: Container(
             child: Center(
               child: Padding(
-                padding: const EdgeInsets.only(top: 16, bottom: 32),
+                padding: const EdgeInsets.only(top: 8, bottom: 32),
                 child: Column(
                   children: [
+                    IconesNavegacao(),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.8,
                       decoration: BoxDecoration(

@@ -16,46 +16,54 @@ void main() {
   var estagioTeste = [
     HelpEstagioModel(
       tituloPanel: 'Resultado do relátorio de estágio',
-      nomearquivo: ArquivoModel(
-          nome: 'resultado-relatorio-de-estagio.xlsx',
-          arquivo: ArquivosEnum.XML,
-          url: ''),
+      nomearquivo: ArquivosModel(
+          tituloArquivo: 'resultado-relatorio-de-estagio.xlsx',
+          arquivosEnum: ArquivosEnum.XML,
+          urlArquivo: ''),
     ),
     HelpEstagioModel(
       tituloPanel: 'Plano de estágio',
-      nomearquivo: ArquivoModel(
-          nome: 'plano-de-estagio.doc', arquivo: ArquivosEnum.DOCS, url: ''),
+      nomearquivo: ArquivosModel(
+          tituloArquivo: 'plano-de-estagio.doc',
+          arquivosEnum: ArquivosEnum.DOCS,
+          urlArquivo: ''),
     ),
     HelpEstagioModel(
       tituloPanel: 'Capa para entrega do relátorio final',
-      nomearquivo: ArquivoModel(
-          nome: 'capa-para-entrega-do-relatorio-final.docx',
-          arquivo: ArquivosEnum.DOCS,
-          url: ''),
+      nomearquivo: ArquivosModel(
+          tituloArquivo: 'capa-para-entrega-do-relatorio-final.docx',
+          arquivosEnum: ArquivosEnum.DOCS,
+          urlArquivo: ''),
     ),
     HelpEstagioModel(
       tituloPanel: 'Resolução normativa',
-      nomearquivo: ArquivoModel(
-          nome: 'resolucao-normativa.pdf', arquivo: ArquivosEnum.PDF, url: ''),
+      nomearquivo: ArquivosModel(
+          tituloArquivo: 'resolucao-normativa.pdf',
+          arquivosEnum: ArquivosEnum.PDF,
+          urlArquivo: ''),
     ),
     HelpEstagioModel(
       tituloPanel:
           'Instruções para entrega do processo de estágio supervisionado obrigatório',
-      nomearquivo: ArquivoModel(
-          nome:
+      nomearquivo: ArquivosModel(
+          tituloArquivo:
               'instrucoes-para-entrega-do-processo-de-estagio-supervisionado-obrigatorio.pdf',
-          arquivo: ArquivosEnum.PDF,
-          url: ''),
+          arquivosEnum: ArquivosEnum.PDF,
+          urlArquivo: ''),
     ),
     HelpEstagioModel(
       tituloPanel: 'Modelo de convênio',
-      nomearquivo: ArquivoModel(
-          nome: 'termo-de-convenio.doc', arquivo: ArquivosEnum.DOCS, url: ''),
+      nomearquivo: ArquivosModel(
+          tituloArquivo: 'termo-de-convenio.doc',
+          arquivosEnum: ArquivosEnum.DOCS,
+          urlArquivo: ''),
     ),
     HelpEstagioModel(
       tituloPanel: 'Modelo de contrato',
-      nomearquivo: ArquivoModel(
-          nome: 'modelo-de-contrato.doc', arquivo: ArquivosEnum.DOCS, url: ''),
+      nomearquivo: ArquivosModel(
+          tituloArquivo: 'modelo-de-contrato.doc',
+          arquivosEnum: ArquivosEnum.DOCS,
+          urlArquivo: ''),
     ),
   ];
   setUpAll(() {
