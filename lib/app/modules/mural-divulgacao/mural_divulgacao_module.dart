@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/modules/mural_vendas_materiais_module.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_estagio/mural_estagios_controller.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_estagio/mural_estagios_page.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_estagio/repositories/mural_estagios_repository.dart';
@@ -28,5 +29,6 @@ class MuralDivulgacaoModule extends Module {
     ChildRoute(Modular.initialRoute, child: (_, args) => MuralDivulgacaoPage()),
     ChildRoute('/equipes', child: (_, args) => MuralEquipesPage()),
     ChildRoute('/estagios', child: (_, args) => MuralEstagiosPage()),
+    ModuleRoute('/venda-materiais', module: MuralVendasMateriaisModule()),
   ];
 }
