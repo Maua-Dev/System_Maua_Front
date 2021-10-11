@@ -10,8 +10,9 @@ class IcRepository implements IIcRepository {
     IcModel(
         tituloIc: 'Sistemas mecatrônicos inteligentes e robótica',
         professoresIc: [
-          ProfessoresModel(nome: 'Murilo Zanini'),
-          ProfessoresModel(nome: 'Pedrão')
+          ProfessoresModel(
+              nome: 'Murilo Zanini', email: 'murilo.zanini@maua.br'),
+          ProfessoresModel(nome: 'Pedrão', email: 'murilo.zanini@maua.br')
         ],
         descricao:
             'A atuação do grupo está voltada ao estudo e desenvolvimento de sistemas...',
@@ -21,7 +22,8 @@ class IcRepository implements IIcRepository {
     IcModel(
         tituloIc: 'Sistemas mecatrônicos inteligentes e robótica',
         professoresIc: [
-          ProfessoresModel(nome: 'Murilo Zanini'),
+          ProfessoresModel(
+              nome: 'Murilo Zanini', email: 'murilo.zanini@maua.br'),
         ],
         descricao:
             'A atuação do grupo está voltada ao estudo e desenvolvimento de sistemas...',
@@ -47,8 +49,9 @@ class IcRepository implements IIcRepository {
     IcModel(
         tituloIc: 'Sistemas mecatrônicos inteligentes e robótica',
         professoresIc: [
-          ProfessoresModel(nome: 'Murilo Zanini'),
-          ProfessoresModel(nome: 'Pedrão')
+          ProfessoresModel(
+              nome: 'Murilo Zanini', email: 'murilo.zanini@maua.br'),
+          ProfessoresModel(nome: 'Pedrão', email: 'murilo.zanini@maua.br')
         ],
         descricao:
             'A atuação do grupo está voltada ao estudo e desenvolvimento de sistemas...',
@@ -58,8 +61,9 @@ class IcRepository implements IIcRepository {
     IcModel(
         tituloIc: 'Sistemas mecatrônicos inteligentes e robótica',
         professoresIc: [
-          ProfessoresModel(nome: 'Murilo Zanini'),
-          ProfessoresModel(nome: 'Pedrão')
+          ProfessoresModel(
+              nome: 'Murilo Zanini', email: 'murilo.zanini@maua.br'),
+          ProfessoresModel(nome: 'Pedrão', email: 'murilo.zanini@maua.br')
         ],
         descricao:
             'A atuação do grupo está voltada ao estudo e desenvolvimento de sistemas...',
