@@ -31,7 +31,7 @@ class HelpModule extends Module {
     ChildRoute(Modular.initialRoute, child: (_, args) => HelpPage()),
     ChildRoute('/avisos', child: (_, args) => HelpAvisosPage()),
     ChildRoute('/bolsas', child: (_, args) => HelpBolsasPage()),
-    ModuleRoute('intercambio', module: HelpIntercambioModule()),
+    ModuleRoute('/intercambio', module: HelpIntercambioModule()),
     ChildRoute('/softwares', child: (_, args) => HelpSoftwaresPage()),
     ChildRoute('/faq', child: (_, args) => HelpFaqPage()),
     ModuleRoute('/video-tutorial', module: HelpVideoTutorialModule()),
