@@ -47,9 +47,9 @@ class _HelpEstagioPageState
                   titulo:
                       controller.listaPanelEstagio[index].estagio.tituloPanel,
                   descricaoIcon: controller.listaPanelEstagio[index].estagio
-                      .nomearquivo!.arquivo!.iconeArquivo,
-                  descricaoNome: controller
-                      .listaPanelEstagio[index].estagio.nomearquivo!.nome,
+                      .nomearquivo!.arquivosEnum.iconeArquivo,
+                  descricaoNome: controller.listaPanelEstagio[index].estagio
+                      .nomearquivo!.tituloArquivo,
                   isOpen: controller.listaPanelEstagio[index].isOpen,
                   onPressed: () {
                     controller.trocaOpen(index);

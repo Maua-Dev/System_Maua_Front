@@ -43,7 +43,7 @@ extension IntercambioEnumExtension on IntercambioEnum {
       case IntercambioEnum.CONTATO:
         return '';
       case IntercambioEnum.FAQ:
-        return '';
+        return '/help/intercambio/faq';
     }
   }
 }

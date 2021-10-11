@@ -1,13 +1,12 @@
 import 'package:system_maua_front/app/shared/enumerates/arquivos_enum.dart';
 
-class ArquivoModel {
-  final String nome;
-  final ArquivosEnum? arquivo;
-  final String? url;
+class ArquivosModel {
+  final ArquivosEnum arquivosEnum;
+  final String tituloArquivo;
+  final String urlArquivo;
 
-  ArquivoModel({
-    required this.nome,
-    this.arquivo,
-    this.url,
-  });
+  ArquivosModel(
+      {required this.urlArquivo,
+      required this.arquivosEnum,
+      required this.tituloArquivo});
 }
