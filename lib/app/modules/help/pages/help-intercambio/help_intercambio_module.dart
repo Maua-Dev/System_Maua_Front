@@ -10,7 +10,6 @@ import 'pages/oportunidades_abertas/controller/oportunidade_controller.dart';
 import 'pages/oportunidades_abertas/page/intercambio_oportunidades_page.dart';
 import 'pages/oportunidades_abertas/repository/oportunidade_repository.dart';
 
-
 class HelpIntercambioModule extends Module {
   @override
   final List<Bind> binds = [
@@ -29,6 +28,5 @@ class HelpIntercambioModule extends Module {
     ChildRoute(Modular.initialRoute, child: (_, args) => HelpIntercambioPage()),
     ChildRoute('/oportunidades', child: (_, args) => OportunidadePage()),
     ChildRoute('/faq', child: (_, args) => FaqIntercambioPage()),
-
   ];
 }
