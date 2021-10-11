@@ -6,6 +6,10 @@ import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/
 import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/faq/repository/faq_repository_interface.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-intercambio/pages/oportunidades_abertas/repository/oportunidade_repository_interface.dart';
 
+import 'pages/oportunidades_abertas/controller/oportunidade_controller.dart';
+import 'pages/oportunidades_abertas/page/intercambio_oportunidades_page.dart';
+import 'pages/oportunidades_abertas/repository/oportunidade_repository.dart';
+
 
 class HelpIntercambioModule extends Module {
   @override

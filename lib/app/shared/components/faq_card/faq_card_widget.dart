@@ -63,42 +63,5 @@ class _FaqCardState extends State<FaqCard> {
             widget.onPressed!();
           }),
     );
-        padding: const EdgeInsets.all(10.0),
-        child: ExpansionPanelList(
-            animationDuration: Duration(seconds: 1),
-            elevation: 4,
-            expandedHeaderPadding: EdgeInsets.all(8),
-            children: [
-              ExpansionPanel(
-                canTapOnHeader: true,
-                isExpanded: widget.isOpen,
-                headerBuilder: (context, isExpanded) => Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      width: 16,
-                    ),
-                    Expanded(
-                      child: Text(
-                        widget.titulo,
-                        style: TextStyle(color: Colors.black),
-                      ),
-                    ),
-                  ],
-                ),
-                body: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8),
-                  child: Text(
-                    widget.descricao,
-                    style: AppTextStyles.lightBody.copyWith(fontSize: 16),
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ),
-            ],
-            expansionCallback: (i, isExpanded) {
-              widget.onPressed!();
-            }));
   }
 }
