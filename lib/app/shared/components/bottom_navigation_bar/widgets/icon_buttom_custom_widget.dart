@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 
 class IconButtonCustomWidget extends StatelessWidget {
-  final Icon icon;
+  final IconData icon;
   final Function()? onPressed;
   final double size;
   const IconButtonCustomWidget(
@@ -15,7 +15,7 @@ class IconButtonCustomWidget extends StatelessWidget {
       alignment: Alignment.center,
       padding: const EdgeInsets.only(top: 16),
       iconSize: size,
-      icon: icon,
+      icon: Icon(icon),
       color: AppColors.white,
       onPressed: onPressed,
     );
