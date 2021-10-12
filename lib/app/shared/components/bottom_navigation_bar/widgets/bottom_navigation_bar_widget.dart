@@ -120,7 +120,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
                       shrinkWrap: true,
                       physics: NeverScrollableScrollPhysics(),
                       crossAxisCount: 2,
-                      crossAxisSpacing: 24,
+                      crossAxisSpacing: 48,
                       mainAxisSpacing: 24,
                       children: [
                         NavigationBarButtonsWidget(
