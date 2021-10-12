@@ -116,7 +116,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.31,
                     padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: GridView.count(
-                      childAspectRatio: 2,
+                      childAspectRatio: 1.8,
                       shrinkWrap: true,
                       physics: NeverScrollableScrollPhysics(),
                       crossAxisCount: 2,
