@@ -17,15 +17,21 @@ class LandingPage extends StatelessWidget {
         bottomNavigationBar: Observer(builder: (_) {
           return BottomNavigationBarWidget(
             isOpen: controllerNavigationBar.isOpen,
+            onPressed: () {
+              controllerNavigationBar.trocaOpen();
+            },
           );
         }),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButtonCustomWidget(
-          key: ValueKey('actionButton'),
-          onPressed: () {
-            controllerNavigationBar.trocaOpen();
-          },
-        ),
+        floatingActionButton: Observer(builder: (_) {
+          return FloatingActionButtonCustomWidget(
+            key: ValueKey('actionButton'),
+            isOpen: controllerNavigationBar.isOpen,
+            onPressed: () {
+              controllerNavigationBar.trocaOpen();
+            },
+          );
+        }),
       ),
     );
   }
