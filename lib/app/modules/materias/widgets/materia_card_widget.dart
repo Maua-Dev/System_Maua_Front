@@ -4,12 +4,12 @@ import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 
 class MateriaCardWidget extends StatelessWidget {
   final String nomeMateria;
-  final List<String>? listaFotosProfessores;
+  // final List<String>? listaFotosProfessores;
   final String fotoMateria;
   const MateriaCardWidget(
       {Key? key,
       required this.nomeMateria,
-      this.listaFotosProfessores,
+      // this.listaFotosProfessores,
       required this.fotoMateria})
       : super(key: key);
 
@@ -56,11 +56,11 @@ class MateriaCardWidget extends StatelessWidget {
                 ),
               ],
             ),
-            Center(
-              child: GridFotosProfessores(
-                listaFotos: listaFotosProfessores,
-              ),
-            )
+            // Center(
+            //   child: GridFotosProfessores(
+            //     listaFotos: listaFotosProfessores,
+            //   ),
+            // )
           ]),
         ),
       ),
