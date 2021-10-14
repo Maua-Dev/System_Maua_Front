@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class FaqCard extends StatefulWidget {
   final String titulo;
@@ -27,41 +26,51 @@ class _FaqCardState extends State<FaqCard> {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: ExpansionPanelList(
-          animationDuration: Duration(seconds: 1),
-          elevation: 4,
-          expandedHeaderPadding: EdgeInsets.all(8),
-          children: [
-            ExpansionPanel(
+        animationDuration: Duration(seconds: 1),
+        elevation: 4,
+        expandedHeaderPadding: EdgeInsets.all(8),
+        children: [
+          ExpansionPanel(
               canTapOnHeader: true,
               isExpanded: widget.isOpen,
               headerBuilder: (context, isExpanded) => Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    width: 16,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 16,
+                      ),
+                      Expanded(
+                        child: Text(
+                          widget.titulo,
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ),
+                    ],
                   ),
-                  Expanded(
-                    child: Text(
-                      widget.titulo,
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ),
-                ],
-              ),
               body: Padding(
-                padding: EdgeInsets.all(8),
-                child: Text(
-                  widget.descricao,
-                  style: AppTextStyles.lightBody.copyWith(fontSize: 16),
-                  textAlign: TextAlign.center,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-          ],
-          expansionCallback: (i, isExpanded) {
-            widget.onPressed!();
-          }),
+                      padding: EdgeInsets.fromLTRB(12, 4, 12, 8),
+                      child: Row(
+                        children: [
+                          Spacer(
+                            flex: 1,
+                          ),
+                          Expanded(
+                            flex: 14,
+                            child: Text(
+                              widget.descricao,
+                              style: TextStyle(
+                                fontSize: 16,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )),
+        ],
+        expansionCallback: (i, isExpanded) {
+          widget.onPressed!();
+        },
+      ),
     );
   }
 }
