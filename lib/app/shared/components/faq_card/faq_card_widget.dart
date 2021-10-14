@@ -48,24 +48,24 @@ class _FaqCardState extends State<FaqCard> {
                     ],
                   ),
               body: Padding(
-                      padding: EdgeInsets.fromLTRB(12, 4, 12, 8),
-                      child: Row(
-                        children: [
-                          Spacer(
-                            flex: 1,
-                          ),
-                          Expanded(
-                            flex: 14,
-                            child: Text(
-                              widget.descricao,
-                              style: TextStyle(
-                                fontSize: 16,
-                              ),
-                            ),
-                          ),
-                        ],
+                padding: EdgeInsets.fromLTRB(12, 4, 12, 8),
+                child: Row(
+                  children: [
+                    Spacer(
+                      flex: 1,
+                    ),
+                    Expanded(
+                      flex: 14,
+                      child: Text(
+                        widget.descricao,
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
                       ),
-                    )),
+                    ),
+                  ],
+                ),
+              )),
         ],
         expansionCallback: (i, isExpanded) {
           widget.onPressed!();
