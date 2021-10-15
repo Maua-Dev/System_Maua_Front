@@ -12,8 +12,6 @@ class ReservasPage extends StatefulWidget {
   _ReservasPageState createState() => _ReservasPageState();
 }
 
-var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
-
 class _ReservasPageState extends State<ReservasPage> {
   @override
   Widget build(BuildContext context) {
@@ -29,7 +27,7 @@ class _ReservasPageState extends State<ReservasPage> {
               padding: const EdgeInsets.only(top: 8),
               child: Text(
                 'Espaço destinado a reserva \nde espaços dentro da mauá, \nescolha o que deseja:',
-                style: TextStyle(fontSize: 24),
+                style: TextStyle(fontSize: 20),
               ),
             ),
             Column(
@@ -55,7 +53,7 @@ class _ReservasPageState extends State<ReservasPage> {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 'Todos os horários serão com \npadrão de 1 hora sendo \nnecessário alugar com 2 \nhorários caso seja preciso mais, \ncada aluno tem direito a no \nmáximo 2 horas.',
-                style: TextStyle(fontSize: 24),
+                style: TextStyle(fontSize: 20),
               ),
             ),
           ],
