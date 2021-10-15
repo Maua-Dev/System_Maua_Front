@@ -3,7 +3,6 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/reservas/enumerates/reservas_enum.dart';
 import 'package:system_maua_front/app/modules/reservas/widgets/reservas_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
-import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 
 class ReservasPage extends StatefulWidget {
   ReservasPage({Key? key}) : super(key: key);
