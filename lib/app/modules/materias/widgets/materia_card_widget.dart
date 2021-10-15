@@ -5,9 +5,7 @@ class MateriaCardWidget extends StatelessWidget {
   final String nomeMateria;
   final String fotoMateria;
   const MateriaCardWidget(
-      {Key? key,
-      required this.nomeMateria,
-      required this.fotoMateria})
+      {Key? key, required this.nomeMateria, required this.fotoMateria})
       : super(key: key);
 
   @override
