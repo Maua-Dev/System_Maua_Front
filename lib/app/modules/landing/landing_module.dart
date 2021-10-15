@@ -8,6 +8,7 @@ import 'package:system_maua_front/app/modules/landing/landing_page.dart';
 import 'package:system_maua_front/app/modules/materias/materias_module.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/mural_divulgacao_module.dart';
 import 'package:system_maua_front/app/modules/notas/notas_module.dart';
+import 'package:system_maua_front/app/modules/reservas/reservas_module.dart';
 
 class LandingModule extends Module {
   @override
@@ -25,7 +26,8 @@ class LandingModule extends Module {
           ModuleRoute('/mural', module: MuralDivulgacaoModule()),
           ModuleRoute('/calendario', module: CalendarioModule()),
           ModuleRoute('/materias', module: MateriasModule()),
-          ModuleRoute('/ic', module: IcModule())
+          ModuleRoute('/ic', module: IcModule()),
+          ModuleRoute('/reservas', module: ReservasModule()),
         ]),
   ];
 }
