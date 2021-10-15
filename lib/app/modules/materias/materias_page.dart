@@ -47,8 +47,6 @@ class _MateriasPageState
                     itemBuilder: (context, index) {
                       return MateriaCardWidget(
                         nomeMateria: controller.materias[index].nome.name,
-                        // listaFotosProfessores:
-                        //     controller.getFotosProfessores(index),
                         fotoMateria: controller.materias[index].foto,
                       );
                     },
@@ -78,8 +76,6 @@ class _MateriasPageState
                     itemBuilder: (context, index) {
                       return MateriaCardWidget(
                         nomeMateria: controller.materias[index].nome.name,
-                        // listaFotosProfessores:
-                        //     controller.getFotosProfessores(index),
                         fotoMateria: controller.materias[index].foto,
                       );
                     },
