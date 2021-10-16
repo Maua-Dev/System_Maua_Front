@@ -13,7 +13,6 @@ class ReservasQuadrasModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute(Modular.initialRoute,
-        child: (_, args) => ReservasQuadrasPage()),
+    ChildRoute(Modular.initialRoute, child: (_, args) => ReservasQuadrasPage()),
   ];
 }

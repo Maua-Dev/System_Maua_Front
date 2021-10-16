@@ -18,7 +18,6 @@ class ReservasQuadrasRepository implements IReservasQuadrasRepository {
     ReservasQuadrasModel(
       titulo: 'Tenis de mesa',
     ),
-    
   ];
   @override
   Future<List<ReservasQuadrasModel>> getQuadras() async {
