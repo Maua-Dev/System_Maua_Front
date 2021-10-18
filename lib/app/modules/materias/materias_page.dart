@@ -35,23 +35,23 @@ class _MateriasPageState
                   style: TextStyle(color: AppColors.strongLetter, fontSize: 24),
                 ),
               ),
-            ),
-            Observer(builder: (_) {
-              return Padding(
-                padding: const EdgeInsets.only(top: 12, bottom: 16),
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.3,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    shrinkWrap: true,
-                    itemCount: controller.materias.length,
-                    itemBuilder: (context, index) {
-                      return MateriaCardWidget(
-                        nomeMateria: controller.materias[index].nome.name,
-                        fotoMateria: controller.materias[index].foto,
-                      );
-                    },
+              Observer(builder: (_) {
+                return Padding(
+                  padding: const EdgeInsets.only(top: 12, bottom: 16),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      itemCount: controller.materias.length,
+                      itemBuilder: (context, index) {
+                        return MateriaCardWidget(
+                          nomeMateria: controller.materias[index].nome.name,
+                          fotoMateria: controller.materias[index].foto,
+                        );
+                      },
+                    ),
                   ),
                 );
               }),
@@ -62,25 +62,24 @@ class _MateriasPageState
                   style: TextStyle(color: AppColors.strongLetter, fontSize: 24),
                 ),
               ),
-            ),
-            Observer(builder: (_) {
-              return Padding(
-                padding: const EdgeInsets.only(
-                  top: 12,
-                ),
-                child: Container(
-                  width: MediaQuery.of(context).size.width * 0.9,
-                  height: MediaQuery.of(context).size.height * 0.3,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    shrinkWrap: true,
-                    itemCount: controller.materias.length,
-                    itemBuilder: (context, index) {
-                      return MateriaCardWidget(
-                        nomeMateria: controller.materias[index].nome.name,
-                        fotoMateria: controller.materias[index].foto,
-                      );
-                    },
+              Observer(builder: (_) {
+                return Padding(
+                  padding: const EdgeInsets.only(
+                    top: 12,
+                  ),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      itemCount: controller.materias.length,
+                      itemBuilder: (context, index) {
+                        return MateriaCardWidget(
+                          nomeMateria: controller.materias[index].nome.name,
+                          fotoMateria: controller.materias[index].foto,
+                        );
+                      },
                     ),
                   ),
                 );
