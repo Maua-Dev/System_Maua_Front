@@ -24,14 +24,16 @@ class _MateriasPageState
           title: 'Matérias',
           icon: Icons.library_books,
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 16, top: 16),
-              child: Text(
-                'Matérias',
-                style: TextStyle(color: AppColors.strongLetter, fontSize: 24),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 16, top: 16),
+                child: Text(
+                  'Matérias',
+                  style: TextStyle(color: AppColors.strongLetter, fontSize: 24),
+                ),
               ),
             ),
             Observer(builder: (_) {
@@ -51,14 +53,14 @@ class _MateriasPageState
                       );
                     },
                   ),
+                );
+              }),
+              Padding(
+                padding: const EdgeInsets.only(left: 24),
+                child: Text(
+                  'PAES',
+                  style: TextStyle(color: AppColors.strongLetter, fontSize: 24),
                 ),
-              );
-            }),
-            Padding(
-              padding: const EdgeInsets.only(left: 24),
-              child: Text(
-                'PAES',
-                style: TextStyle(color: AppColors.strongLetter, fontSize: 24),
               ),
             ),
             Observer(builder: (_) {
@@ -79,11 +81,12 @@ class _MateriasPageState
                         fotoMateria: controller.materias[index].foto,
                       );
                     },
+                    ),
                   ),
-                ),
-              );
-            }),
-          ],
+                );
+              }),
+            ],
+          ),
         ),
       ),
     );
