@@ -36,8 +36,7 @@ void main() {
     ),
   ];
   setUpAll(() {
-    when(repository.retornaListaFablab())
-        .thenAnswer((_) async => fablabTeste);
+    when(repository.retornaListaFablab()).thenAnswer((_) async => fablabTeste);
     controller = ReservasFablabController(repository: repository);
   });
 

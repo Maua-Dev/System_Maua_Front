@@ -1,4 +1,4 @@
-enum FablabEnum { CORTELASER, CAMARAPINTURA, CORTELIXA, IMPRESSORA3D}
+enum FablabEnum { CORTELASER, CAMARAPINTURA, CORTELIXA, IMPRESSORA3D }
 
 extension FablabEnumExtension on FablabEnum {
   String get titulo {
