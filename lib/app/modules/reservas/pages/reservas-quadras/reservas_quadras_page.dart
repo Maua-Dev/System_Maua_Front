@@ -5,6 +5,8 @@ import 'package:system_maua_front/app/modules/reservas/pages/reservas-quadras/re
 import 'package:system_maua_front/app/modules/reservas/widgets/reservas_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 
+import 'enumerates/esportes_enum.dart';
+
 class ReservasQuadrasPage extends StatefulWidget {
   ReservasQuadrasPage({Key? key}) : super(key: key);
 
@@ -38,8 +40,8 @@ class _ReservasQuadrasPageState
                 itemCount: controller.listaQuadras.length,
                 itemBuilder: (context, index) {
                   return ReservasCard(
-                    onTap: null,
-                    titulo: controller.listaQuadras[index].titulo,
+                    onTap: () {},
+                    titulo: EsportesEnum.values[index].titulo,
                   );
                 },
               );

@@ -13,13 +13,13 @@ mixin _$ReservasQuadrasController on _ReservasQuadrasControllerBase, Store {
       Atom(name: '_ReservasQuadrasControllerBase.listaQuadras');
 
   @override
-  List<ReservasQuadrasModel> get listaQuadras {
+  List<ReservasQuadraModel> get listaQuadras {
     _$listaQuadrasAtom.reportRead();
     return super.listaQuadras;
   }
 
   @override
-  set listaQuadras(List<ReservasQuadrasModel> value) {
+  set listaQuadras(List<ReservasQuadraModel> value) {
     _$listaQuadrasAtom.reportWrite(value, super.listaQuadras, () {
       super.listaQuadras = value;
     });

@@ -1,7 +1,7 @@
 import 'package:mobx/mobx.dart';
 import 'package:system_maua_front/app/modules/reservas/pages/reservas-quadras/repositories/reservas_quadras_repository_interface.dart';
 
-import 'models/reservas_quadra_model.dart';
+import '../../models/reservas_model.dart';
 
 part 'reservas_quadras_controller.g.dart';
 
@@ -16,10 +16,10 @@ abstract class _ReservasQuadrasControllerBase with Store {
   }
 
   @observable
-  List<ReservasQuadrasModel> listaQuadras = List.empty();
+  List<ReservasQuadraModel> listaQuadras = List.empty();
 
   @action
   Future<void> getQuadras() async {
-    listaQuadras = await repository.getQuadras();
+    listaQuadras = await repository.retornaListaQuadras();
   }
 }

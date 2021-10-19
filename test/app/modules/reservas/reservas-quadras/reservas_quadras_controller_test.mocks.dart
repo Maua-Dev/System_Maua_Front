@@ -5,7 +5,7 @@
 import 'dart:async' as _i3;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:system_maua_front/app/modules/reservas/pages/reservas-quadras/models/reservas_quadra_model.dart'
+import 'package:system_maua_front/app/modules/reservas/models/reservas_model.dart'
     as _i4;
 import 'package:system_maua_front/app/modules/reservas/pages/reservas-quadras/repositories/reservas_quadras_repository_interface.dart'
     as _i2;
@@ -29,11 +29,11 @@ class MockIReservasQuadrasRepository extends _i1.Mock
   }
 
   @override
-  _i3.Future<List<_i4.ReservasQuadrasModel>> getQuadras() =>
-      (super.noSuchMethod(Invocation.method(#getQuadras, []),
-              returnValue: Future<List<_i4.ReservasQuadrasModel>>.value(
-                  <_i4.ReservasQuadrasModel>[]))
-          as _i3.Future<List<_i4.ReservasQuadrasModel>>);
+  _i3.Future<List<_i4.ReservasQuadraModel>> retornaListaQuadras() =>
+      (super.noSuchMethod(Invocation.method(#retornaListaQuadras, []),
+              returnValue: Future<List<_i4.ReservasQuadraModel>>.value(
+                  <_i4.ReservasQuadraModel>[]))
+          as _i3.Future<List<_i4.ReservasQuadraModel>>);
   @override
   String toString() => super.toString();
 }
