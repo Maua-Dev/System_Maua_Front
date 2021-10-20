@@ -21,7 +21,7 @@ extension ReservasEnumExtension on ReservasEnum {
       case ReservasEnum.QUADRA:
         return '/reservas/quadra';
       case ReservasEnum.FABLAB:
-        return '/help/video-tutorial';
+        return '/reservas/fablab';
       case ReservasEnum.LABORATORIO:
         return '/help/softwares';
     }
