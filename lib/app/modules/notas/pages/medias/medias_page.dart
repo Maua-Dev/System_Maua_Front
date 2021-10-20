@@ -112,7 +112,12 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                     itemCount: controller.medias.medias.length,
                     itemBuilder: (_, index) {
                       return InkWell(
-                        onTap: () => {Modular.to.pushNamed('/medias/notas')},
+                        onTap: () => {
+                          Modular.to.pushNamed(
+                            '/medias/notas',
+                            arguments: controller.medias.medias[index].materia,
+                          )
+                        },
                         child: Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: Row(

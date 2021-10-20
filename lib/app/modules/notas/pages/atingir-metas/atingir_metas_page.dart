@@ -9,7 +9,7 @@ import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 import 'atingir_metas_controller.dart';
 
 class AtingirMetasPage extends StatefulWidget {
-  const AtingirMetasPage({Key? key}) : super(key: key);
+  const AtingirMetasPage({Key? key, nomeMateria}) : super(key: key);
   @override
   AtingirMetasPageState createState() => AtingirMetasPageState();
 }
@@ -126,7 +126,7 @@ class AtingirMetasPageState
                                   padding: EdgeInsets.only(
                                       right: 16.0, left: 16, top: 8),
                                   child: Text(
-                                    controller.materia.nome,
+                                    Modular.args!.data as String,
                                     style: AppTextStyles.bodyBold,
                                     textAlign: TextAlign.center,
                                   ),
