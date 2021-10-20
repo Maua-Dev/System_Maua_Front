@@ -3,13 +3,15 @@ import 'package:system_maua_front/app/modules/help/pages/help-avisos/help_avisos
 import 'package:system_maua_front/app/modules/help/pages/help-avisos/help_avisos_page.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-avisos/repositories/help_avisos_repository.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-bolsas/help_bolsas_page.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-estagio/help_estagio_module.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/help_faq_controller.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/help_faq_page.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-faq/repositories/help_faq_repository.dart';
-import 'package:system_maua_front/app/modules/help/pages/help-intercambio/help_intercambio_page.dart';
+import 'package:system_maua_front/app/modules/help/pages/help-intercambio/help_intercambio_module.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/help_softwares_page.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/repositories/help_softwares_repository.dart';
 import 'package:system_maua_front/app/modules/help/pages/help-softwares/help_softwares_controller.dart';
+import 'package:system_maua_front/app/modules/help/pages/video-tutorial/help_video_tutorial_module.dart';
 import 'help_page.dart';
 
 class HelpModule extends Module {
@@ -29,8 +31,10 @@ class HelpModule extends Module {
     ChildRoute(Modular.initialRoute, child: (_, args) => HelpPage()),
     ChildRoute('/avisos', child: (_, args) => HelpAvisosPage()),
     ChildRoute('/bolsas', child: (_, args) => HelpBolsasPage()),
-    ChildRoute('/intercambio', child: (_, args) => HelpIntercambioPage()),
+    ModuleRoute('/intercambio', module: HelpIntercambioModule()),
     ChildRoute('/softwares', child: (_, args) => HelpSoftwaresPage()),
-    ChildRoute('/faq', child: (_, args) => HelpFaqPage())
+    ChildRoute('/faq', child: (_, args) => HelpFaqPage()),
+    ModuleRoute('/video-tutorial', module: HelpVideoTutorialModule()),
+    ModuleRoute('/estagio', module: HelpEstagioModule()),
   ];
 }

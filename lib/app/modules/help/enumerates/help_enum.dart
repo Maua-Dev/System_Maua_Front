@@ -36,7 +36,7 @@ extension HelpEnumExtension on HelpEnum {
       case HelpEnum.AVISOS:
         return '/help/avisos';
       case HelpEnum.VIDEO:
-        return '';
+        return '/help/video-tutorial';
       case HelpEnum.SOFTWARES:
         return '/help/softwares';
       case HelpEnum.BOLSAS:
@@ -44,7 +44,7 @@ extension HelpEnumExtension on HelpEnum {
       case HelpEnum.INTERCAMBIO:
         return '/help/intercambio';
       case HelpEnum.ESTAGIO:
-        return '';
+        return '/help/estagio';
       case HelpEnum.MAPA:
         return '';
       case HelpEnum.FAQ:

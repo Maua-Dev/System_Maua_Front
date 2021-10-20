@@ -30,6 +30,9 @@ class _CalendarioCustomWidgetState extends State<CalendarioCustomWidget> {
         widget.setDate(date);
         widget.setListaEventos();
       },
+      customGridViewPhysics: NeverScrollableScrollPhysics(),
+      pageScrollPhysics: NeverScrollableScrollPhysics(),
+      pageSnapping: true,
       isScrollable: false,
       selectedDayButtonColor: Colors.blue.shade700,
       selectedDayTextStyle: TextStyle(color: Colors.white),
