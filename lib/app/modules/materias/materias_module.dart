@@ -1,5 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/materias/materias_controller.dart';
+import 'package:system_maua_front/app/modules/materias/pages/pageview_custom.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart';
 
@@ -18,5 +19,6 @@ class MateriasModule extends Module {
       Modular.initialRoute,
       child: (_, args) => MateriasPage(),
     ),
+    ChildRoute('/pageview', child: (_, args) => PageViewCustom()),
   ];
 }
