@@ -47,6 +47,10 @@ class _MateriasPageState
                       itemCount: controller.materias.length,
                       itemBuilder: (context, index) {
                         return MateriaCardWidget(
+                          onTap: () {
+                            Modular.to.pushNamed('/materias/pageview',
+                                arguments: controller.materias[index]);
+                          },
                           nomeMateria: controller.materias[index].nome.name,
                           listaFotosProfessores:
                               controller.getFotosProfessores(index),
@@ -78,6 +82,10 @@ class _MateriasPageState
                       itemCount: controller.materias.length,
                       itemBuilder: (context, index) {
                         return MateriaCardWidget(
+                          onTap: () {
+                            Modular.to.pushNamed('/materias/pageview',
+                                arguments: controller.materias[index]);
+                          },
                           nomeMateria: controller.materias[index].nome.name,
                           listaFotosProfessores:
                               controller.getFotosProfessores(index),
