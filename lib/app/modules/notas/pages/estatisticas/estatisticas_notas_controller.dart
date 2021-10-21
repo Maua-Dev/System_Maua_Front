@@ -1,7 +1,7 @@
 import 'package:mobx/mobx.dart';
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/repositories/estatisticas_repository_interface.dart';
-import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/medias_model.dart';
-import 'models/grafico_de_barras_model.dart';
+import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/estatisticas_medias_model.dart';
+import 'models/dados_grafico_de_barras.dart';
 
 part 'estatisticas_notas_controller.g.dart';
 

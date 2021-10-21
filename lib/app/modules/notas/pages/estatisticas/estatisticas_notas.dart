@@ -8,7 +8,7 @@ import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.d
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
-import 'models/grafico_de_barras_model.dart';
+import 'models/dados_grafico_de_barras.dart';
 
 class EstatisticasPage extends StatefulWidget {
   const EstatisticasPage({Key? key, nomeMateria}) : super(key: key);

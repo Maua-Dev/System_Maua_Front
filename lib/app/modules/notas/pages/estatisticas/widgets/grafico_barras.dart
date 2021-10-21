@@ -1,6 +1,6 @@
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/grafico_de_barras_model.dart';
+import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/dados_grafico_de_barras.dart';
 
 class GraficoDeBarras extends StatelessWidget {
   final List<charts.Series<DadoGraficoDeBarrasModel, String>> seriesList;
