@@ -3,7 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/estatisticas_notas_controller.dart';
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/widgets/grafico_barras.dart';
-import 'package:system_maua_front/app/modules/notas/pages/estatisticas/widgets/medias_row.dart';
+import 'package:system_maua_front/app/modules/notas/pages/estatisticas/widgets/media_row.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
