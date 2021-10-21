@@ -2,7 +2,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/notas/pages/atingir-metas/atingir_metas_controller.dart';
 import 'package:system_maua_front/app/modules/notas/pages/atingir-metas/atingir_metas_page.dart';
 import 'package:system_maua_front/app/modules/notas/pages/atingir-metas/repositories/atingir_metas_repository.dart';
-import 'package:system_maua_front/app/modules/notas/pages/estatisticas/estatisticas.dart';
+import 'package:system_maua_front/app/modules/notas/pages/estatisticas/estatisticas_notas.dart';
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/estatisticas_controller.dart';
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/repositories/estatisticas_repository.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/medias_controller.dart';

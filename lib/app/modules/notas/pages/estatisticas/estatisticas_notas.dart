@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/estatisticas_controller.dart';
-import 'package:system_maua_front/app/modules/notas/pages/estatisticas/widgets/graficoBarras.dart';
-import 'package:system_maua_front/app/modules/notas/pages/estatisticas/widgets/medias.dart';
+import 'package:system_maua_front/app/modules/notas/pages/estatisticas/widgets/grafico_barras.dart';
+import 'package:system_maua_front/app/modules/notas/pages/estatisticas/widgets/media_row.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
@@ -28,52 +28,58 @@ class _EstatisticasPageState
             child: Column(
           children: [
             Container(
-              child: Observer(builder: (_) {
-                return Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Observer(builder: (_) {
+                            return Text(
                               Modular.args!.data as String,
                               style:
                                   AppTextStyles.bodyBold.copyWith(fontSize: 25),
                               textAlign: TextAlign.center,
-                            ),
-                          ),
+                            );
+                          }),
                         ),
-                      ],
-                    ),
-                    Media(
+                      ),
+                    ],
+                  ),
+                  Observer(builder: (_) {
+                    return MediaRow(
                       tipoDeMedia: 'Média parcial',
                       media: controller.mediaParcial,
                       azul: controller.medias.mediaParcial != null
                           ? controller.medias.mediaParcial! >=
                               controller.mediaMaua
                           : true,
-                    ),
-                    Media(
+                    );
+                  }),
+                  Observer(builder: (_) {
+                    return MediaRow(
                       tipoDeMedia: 'Média final',
                       media: controller.mediaFinal,
                       azul: controller.medias.mediaFinal != null
                           ? controller.medias.mediaFinal! >=
                               controller.mediaMaua
                           : true,
-                    ),
-                    Media(
+                    );
+                  }),
+                  Observer(builder: (_) {
+                    return MediaRow(
                       tipoDeMedia: 'Média do Tronco',
                       media: controller.mediaTronco,
                       azul: controller.medias.mediaTronco != null
                           ? controller.medias.mediaTronco! >=
                               controller.mediaMaua
                           : true,
-                    ),
-                  ],
-                );
-              }),
+                    );
+                  }),
+                ],
+              ),
             ),
             Observer(builder: (_) {
               return Expanded(
