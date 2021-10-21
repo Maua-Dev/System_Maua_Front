@@ -32,7 +32,7 @@ class VideoEspecificoCard extends StatelessWidget {
                   width: 1,
                 )),
             width: MediaQuery.of(context).size.width,
-            height: 80,
+            height: MediaQuery.of(context).size.height * 0.1,
             child: Center(
               child: Text(
                 '$titulo',
@@ -47,7 +47,7 @@ class VideoEspecificoCard extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             '$descricao',
-            style: TextStyle(fontSize: 24),
+            style: TextStyle(fontSize: 20),
           ),
         ),
         Padding(
