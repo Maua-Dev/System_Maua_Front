@@ -75,25 +75,27 @@ class _EstatisticasPageState
                 );
               }),
             ),
-            Expanded(
-              child: GraficoDeBarras(
-                seriesList: [
-                  charts.Series<DadoGraficoDeBarrasModel, String>(
-                    id: 'Alunos',
-                    colorFn: (DadoGraficoDeBarrasModel notas, __) {
-                      if (notas.nota == controller.mediaFinalArredondada) {
-                        return charts.MaterialPalette.green.shadeDefault;
-                      }
-                      return charts.MaterialPalette.blue.shadeDefault;
-                    },
-                    domainFn: (DadoGraficoDeBarrasModel nota, _) => nota.nota,
-                    measureFn: (DadoGraficoDeBarrasModel nota, _) =>
-                        nota.quantidadeAlunos,
-                    data: controller.dadosGraficoDeBarras.dados,
-                  ),
-                ],
-              ),
-            ),
+            Observer(builder: (_) {
+              return Expanded(
+                child: GraficoDeBarras(
+                  seriesList: [
+                    charts.Series<DadoGraficoDeBarrasModel, String>(
+                      id: 'Alunos',
+                      colorFn: (DadoGraficoDeBarrasModel notas, __) {
+                        if (notas.nota == controller.mediaFinalArredondada) {
+                          return charts.MaterialPalette.green.shadeDefault;
+                        }
+                        return charts.MaterialPalette.blue.shadeDefault;
+                      },
+                      domainFn: (DadoGraficoDeBarrasModel nota, _) => nota.nota,
+                      measureFn: (DadoGraficoDeBarrasModel nota, _) =>
+                          nota.quantidadeAlunos,
+                      data: controller.dadosGraficoDeBarras.dados,
+                    ),
+                  ],
+                ),
+              );
+            }),
             SizedBox(height: MediaQuery.of(context).size.height * 0.04)
           ],
         )),
