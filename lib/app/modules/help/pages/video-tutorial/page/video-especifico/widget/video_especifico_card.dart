@@ -32,7 +32,7 @@ class VideoEspecificoCard extends StatelessWidget {
                   width: 1,
                 )),
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.13,
+            height: MediaQuery.of(context).size.height * 0.1,
             child: Center(
               child: Text(
                 '$titulo',
