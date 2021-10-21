@@ -1,4 +1,3 @@
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:system_maua_front/app/modules/materias/models/materias_model.dart';
 import 'package:system_maua_front/app/modules/materias/repositories/materias_repository_interface.dart';
@@ -17,9 +16,6 @@ abstract class MateriasControllerBase with Store {
   @observable
   List<MateriasModel> materias = <MateriasModel>[];
 
-  @observable
-  late String aula;
-
   @action
   List<String> getFotosProfessores(int index) {
     var fotosProfessores = <String>[];
@@ -35,11 +31,5 @@ abstract class MateriasControllerBase with Store {
   @action
   Future<void> getMaterias() async {
     materias = await repository.getMaterias();
-  }
-
-  @action
-  void navigateThroughMaterias(int index) {
-    aula = materias[index].nome.toString();
-    Modular.to.navigate('/$aula');
   }
 }
