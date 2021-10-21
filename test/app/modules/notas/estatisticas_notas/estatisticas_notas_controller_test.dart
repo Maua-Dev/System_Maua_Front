@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:system_maua_front/app/modules/notas/pages/estatisticas/estatisticas_controller.dart';
+import 'package:system_maua_front/app/modules/notas/pages/estatisticas/estatisticas_notas_controller.dart';
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/grafico_de_barras_model.dart';
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/medias_model.dart';
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/repositories/estatisticas_repository_interface.dart';
 
-import 'estatisticas_controller_test.mocks.dart';
+import 'estatisticas_notas_controller_test.mocks.dart';
 
 @GenerateMocks([IEstatisticasRepository])
 void main() {

@@ -3,7 +3,7 @@ import 'package:system_maua_front/app/modules/notas/pages/estatisticas/repositor
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/medias_model.dart';
 import 'models/grafico_de_barras_model.dart';
 
-part 'estatisticas_controller.g.dart';
+part 'estatisticas_notas_controller.g.dart';
 
 class EstatisticasController = EstatisticasControllerBase
     with _$EstatisticasController;

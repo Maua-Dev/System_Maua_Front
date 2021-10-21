@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estatisticas_controller.dart';
+part of 'estatisticas_notas_controller.dart';
 
 // **************************************************************************
 // StoreGenerator
