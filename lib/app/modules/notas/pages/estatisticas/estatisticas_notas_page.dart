@@ -1,24 +1,25 @@
+import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/estatisticas_notas_controller.dart';
-import 'package:system_maua_front/app/modules/notas/pages/estatisticas/widgets/grafico_barras.dart';
-import 'package:system_maua_front/app/modules/notas/pages/estatisticas/widgets/media_row.dart';
+import 'package:system_maua_front/app/modules/notas/pages/estatisticas/widgets/grafico_barras_widget.dart';
+import 'package:system_maua_front/app/modules/notas/pages/estatisticas/widgets/media_row_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
 
-import 'models/dados_grafico_de_barras.dart';
+import 'models/dados_grafico_de_barras_model.dart';
 
-class EstatisticasPage extends StatefulWidget {
-  const EstatisticasPage({Key? key, nomeMateria}) : super(key: key);
+class EstatisticasNotasPage extends StatefulWidget {
+  const EstatisticasNotasPage({Key? key, nomeMateria}) : super(key: key);
 
   @override
-  _EstatisticasPageState createState() => _EstatisticasPageState();
+  _EstatisticasNotasPageState createState() => _EstatisticasNotasPageState();
 }
 
-class _EstatisticasPageState
-    extends ModularState<EstatisticasPage, EstatisticasController> {
+class _EstatisticasNotasPageState
+    extends ModularState<EstatisticasNotasPage, EstatisticasController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -46,7 +47,7 @@ class _EstatisticasPageState
                   ],
                 ),
                 Observer(builder: (_) {
-                  return MediaRow(
+                  return MediaRowWidget(
                     tipoDeMedia: 'Média parcial',
                     media: controller.mediaParcial,
                     azul: controller.medias.mediaParcial != null
@@ -56,7 +57,7 @@ class _EstatisticasPageState
                   );
                 }),
                 Observer(builder: (_) {
-                  return MediaRow(
+                  return MediaRowWidget(
                     tipoDeMedia: 'Média final',
                     media: controller.mediaFinal,
                     azul: controller.medias.mediaFinal != null
@@ -65,7 +66,7 @@ class _EstatisticasPageState
                   );
                 }),
                 Observer(builder: (_) {
-                  return MediaRow(
+                  return MediaRowWidget(
                     tipoDeMedia: 'Média do Tronco',
                     media: controller.mediaTronco,
                     azul: controller.medias.mediaTronco != null
@@ -77,7 +78,7 @@ class _EstatisticasPageState
             )),
             Observer(builder: (_) {
               return Expanded(
-                child: GraficoDeBarras(
+                child: GraficoDeBarrasWidget(
                   seriesList: [
                     charts.Series<DadoGraficoDeBarrasModel, String>(
                       id: 'Alunos',

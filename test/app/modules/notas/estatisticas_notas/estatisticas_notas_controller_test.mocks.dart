@@ -5,7 +5,7 @@
 import 'dart:async' as _i5;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/dados_grafico_de_barras.dart'
+import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/dados_grafico_de_barras_model.dart'
     as _i2;
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/estatisticas_medias_model.dart'
     as _i3;

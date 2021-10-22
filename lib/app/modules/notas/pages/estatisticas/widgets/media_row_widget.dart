@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
-class MediaRow extends StatelessWidget {
+class MediaRowWidget extends StatelessWidget {
   final String tipoDeMedia;
   final String media;
   final bool azul;
-  const MediaRow({
+  const MediaRowWidget({
     Key? key,
     required this.tipoDeMedia,
     required this.media,

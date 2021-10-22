@@ -1,4 +1,4 @@
-import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/dados_grafico_de_barras.dart';
+import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/dados_grafico_de_barras_model.dart';
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/estatisticas_medias_model.dart';
 import 'estatisticas_repository_interface.dart';
 

@@ -1,11 +1,11 @@
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/dados_grafico_de_barras.dart';
+import 'package:system_maua_front/app/modules/notas/pages/estatisticas/models/dados_grafico_de_barras_model.dart';
 
-class GraficoDeBarras extends StatelessWidget {
+class GraficoDeBarrasWidget extends StatelessWidget {
   final List<charts.Series<DadoGraficoDeBarrasModel, String>> seriesList;
 
-  const GraficoDeBarras({
+  const GraficoDeBarrasWidget({
     Key? key,
     required this.seriesList,
   }) : super(key: key);
