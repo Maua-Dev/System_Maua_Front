@@ -44,7 +44,7 @@ class AtingirMetasPageState
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   width:
-                                      MediaQuery.of(context).size.height * 0.16,
+                                      MediaQuery.of(context).size.width * 0.37,
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -77,7 +77,7 @@ class AtingirMetasPageState
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   width:
-                                      MediaQuery.of(context).size.height * 0.16,
+                                      MediaQuery.of(context).size.width * 0.37,
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
