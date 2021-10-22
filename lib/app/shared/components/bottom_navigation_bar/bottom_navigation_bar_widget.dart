@@ -18,8 +18,12 @@ class BottomNavigationBarWidget extends StatelessWidget {
       curve: Curves.easeInOut,
       duration: Duration(milliseconds: 300),
       height: isOpen
-          ? MediaQuery.of(context).size.height * 0.4
-          : MediaQuery.of(context).size.height * 0.1,
+          ? (MediaQuery.of(context).size.height > 760
+              ? MediaQuery.of(context).size.height * 0.35
+              : MediaQuery.of(context).size.height * 0.4)
+          : (MediaQuery.of(context).size.height > 760
+              ? MediaQuery.of(context).size.height * 0.09
+              : MediaQuery.of(context).size.height * 0.1),
       child: BottomAppBar(
         shape: CircularNotchedRectangle(),
         child: Container(
@@ -28,8 +32,14 @@ class BottomNavigationBarWidget extends StatelessWidget {
                 ? ListView(
                     children: [
                       Container(
-                          height: MediaQuery.of(context).size.height * 0.09,
-                          child: ClosedBottomNavigationBar()),
+                          height: MediaQuery.of(context).size.height < 650
+                              ? MediaQuery.of(context).size.height * 0.11
+                              : MediaQuery.of(context).size.height * 0.09,
+                          child: ClosedBottomNavigationBar(
+                            onPressed: () {
+                              onPressed!();
+                            },
+                          )),
                       Container(
                           height: MediaQuery.of(context).size.height * 0.31,
                           padding: const EdgeInsets.symmetric(horizontal: 24),
