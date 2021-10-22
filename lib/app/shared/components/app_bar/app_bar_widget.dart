@@ -21,7 +21,9 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Padding(
-        padding: const EdgeInsets.only(right: 25),
+        padding: EdgeInsets.only(
+          right: MediaQuery.of(context).size.width * 0.15,
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
