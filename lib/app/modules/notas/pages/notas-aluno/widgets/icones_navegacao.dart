@@ -15,7 +15,9 @@ class IconesNavegacao extends StatelessWidget {
           Column(
             children: [
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Modular.to.pushNamed('/medias/atividades');
+                  },
                   icon: Icon(
                     Icons.book,
                     color: AppColors.darkBlue,
