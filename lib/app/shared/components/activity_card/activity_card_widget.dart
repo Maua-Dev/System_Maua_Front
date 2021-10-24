@@ -32,9 +32,7 @@ class ActivityCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         child: InkWell(
-          onTap: () {
-            print('cliquei');
-          },
+          onTap: () {},
           child: Container(
             padding:
                 const EdgeInsets.only(top: 10, left: 12, right: 12, bottom: 10),

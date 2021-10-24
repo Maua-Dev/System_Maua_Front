@@ -42,7 +42,6 @@ class ChipWidget extends StatelessWidget {
       padding: EdgeInsets.all(8.0),
       selected: selected,
       onSelected: (evt) {
-        print(evt);
         controllerMedias.toggleOpcao(label);
       },
     );

@@ -37,7 +37,6 @@ class ActivitiesRepository implements IActivitiesRepository {
 
   @override
   Future<List<ActivityModel>> getActivities() {
-    print(activities);
     return Future.value(activities);
   }
 }

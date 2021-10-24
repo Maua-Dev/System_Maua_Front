@@ -32,6 +32,5 @@ abstract class ActivitiesControllerBase with Store {
   @action
   Future<void> getActivities() async {
     activities = await repository.getActivities();
-    print(controllerFilterPeriod.filterValue);
   }
 }
