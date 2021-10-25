@@ -60,13 +60,23 @@ void main() {
     ),
   ];
 
+  var mediaDeAtividadesDouble = 7.0;
+  var mediaDeAtividades = '7,0';
+
   setUpAll(() {
     when(repository.getAtividades()).thenAnswer((_) async => atividades);
+    when(repository.getMediaDeAtividades())
+        .thenAnswer((_) async => mediaDeAtividadesDouble);
     atividadesController = AtividadesController(repository);
   });
 
   test('[TEST] - getAtividades', () async {
     await atividadesController.getAtividades();
     expect(atividadesController.atividades, atividades);
+  });
+
+  test('[TEST] - getMediaDeAtividades', () async {
+    await atividadesController.getMediaDeAtividades();
+    expect(atividadesController.mediaDeAtividades, mediaDeAtividades);
   });
 }

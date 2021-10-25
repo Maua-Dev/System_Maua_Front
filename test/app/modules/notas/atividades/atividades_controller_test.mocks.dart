@@ -35,5 +35,9 @@ class MockIAtividadesRepository extends _i1.Mock
               Future<List<_i4.AtividadeModel>>.value(<_i4.AtividadeModel>[]))
       as _i3.Future<List<_i4.AtividadeModel>>);
   @override
+  _i3.Future<double> getMediaDeAtividades() =>
+      (super.noSuchMethod(Invocation.method(#getMediaDeAtividades, []),
+          returnValue: Future<double>.value(0.0)) as _i3.Future<double>);
+  @override
   String toString() => super.toString();
 }

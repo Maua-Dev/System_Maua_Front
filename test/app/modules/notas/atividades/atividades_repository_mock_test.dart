@@ -8,7 +8,11 @@ void main() {
     atividadesRepository = AtividadesRepository();
   });
 
-  test('[TEST] - atingirMetasRepository', () {
+  test('[TEST] - atividadesRepository - Atividades', () {
     expect(atividadesRepository.atividades.isNotEmpty, true);
+  });
+
+  test('[TEST] - atividadesRepository - Media de atividades', () {
+    expect(atividadesRepository.mediaDeAtividades, 7.0);
   });
 }
