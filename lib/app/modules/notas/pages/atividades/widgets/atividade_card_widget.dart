@@ -24,13 +24,12 @@ class AtividadeCardWidget extends StatelessWidget {
             child: InkWell(
               onTap: () {},
               child: Container(
-                // height: 125,
                 child: Center(
                     child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Column(
                     children: [
-                      Text(nomeAtividade),
+                      Center(child: Text(nomeAtividade)),
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.006,
                       ),

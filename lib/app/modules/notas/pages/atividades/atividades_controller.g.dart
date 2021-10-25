@@ -16,6 +16,13 @@ mixin _$AtividadesController on AtividadesControllerBase, Store {
       (_$mediaMauaComputed ??= Computed<int>(() => super.mediaMaua,
               name: 'AtividadesControllerBase.mediaMaua'))
           .value;
+  Computed<String>? _$mediaDeAtividadesComputed;
+
+  @override
+  String get mediaDeAtividades => (_$mediaDeAtividadesComputed ??=
+          Computed<String>(() => super.mediaDeAtividades,
+              name: 'AtividadesControllerBase.mediaDeAtividades'))
+      .value;
 
   final _$atividadesAtom = Atom(name: 'AtividadesControllerBase.atividades');
 
@@ -32,6 +39,23 @@ mixin _$AtividadesController on AtividadesControllerBase, Store {
     });
   }
 
+  final _$mediaDeAtividadesDoubleAtom =
+      Atom(name: 'AtividadesControllerBase.mediaDeAtividadesDouble');
+
+  @override
+  double get mediaDeAtividadesDouble {
+    _$mediaDeAtividadesDoubleAtom.reportRead();
+    return super.mediaDeAtividadesDouble;
+  }
+
+  @override
+  set mediaDeAtividadesDouble(double value) {
+    _$mediaDeAtividadesDoubleAtom
+        .reportWrite(value, super.mediaDeAtividadesDouble, () {
+      super.mediaDeAtividadesDouble = value;
+    });
+  }
+
   final _$getAtividadesAsyncAction =
       AsyncAction('AtividadesControllerBase.getAtividades');
 
@@ -40,11 +64,22 @@ mixin _$AtividadesController on AtividadesControllerBase, Store {
     return _$getAtividadesAsyncAction.run(() => super.getAtividades());
   }
 
+  final _$getMediaDeAtividadesAsyncAction =
+      AsyncAction('AtividadesControllerBase.getMediaDeAtividades');
+
+  @override
+  Future<void> getMediaDeAtividades() {
+    return _$getMediaDeAtividadesAsyncAction
+        .run(() => super.getMediaDeAtividades());
+  }
+
   @override
   String toString() {
     return '''
 atividades: ${atividades},
-mediaMaua: ${mediaMaua}
+mediaDeAtividadesDouble: ${mediaDeAtividadesDouble},
+mediaMaua: ${mediaMaua},
+mediaDeAtividades: ${mediaDeAtividades}
     ''';
   }
 }

@@ -12,16 +12,29 @@ abstract class AtividadesControllerBase with Store {
 
   AtividadesControllerBase(this.atividadesRepository) {
     getAtividades();
+    getMediaDeAtividades();
   }
 
   @computed
   int get mediaMaua => 6;
 
+  @computed
+  String get mediaDeAtividades =>
+      mediaDeAtividadesDouble.toStringAsFixed(1).replaceAll('.', ',');
+
   @observable
   List<AtividadeModel> atividades = [AtividadeModel.newInstance()];
+
+  @observable
+  double mediaDeAtividadesDouble = 0;
 
   @action
   Future<void> getAtividades() async {
     atividades = await atividadesRepository.getAtividades();
+  }
+
+  @action
+  Future<void> getMediaDeAtividades() async {
+    mediaDeAtividadesDouble = await atividadesRepository.getMediaDeAtividades();
   }
 }

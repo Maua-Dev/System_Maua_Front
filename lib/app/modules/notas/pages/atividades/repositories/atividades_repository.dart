@@ -50,8 +50,15 @@ class AtividadesRepository implements IAtividadesRepository {
     ),
   ];
 
+  double mediaDeAtividades = 7;
+
   @override
   Future<List<AtividadeModel>> getAtividades() {
     return Future.value(atividades);
+  }
+
+  @override
+  Future<double> getMediaDeAtividades() {
+    return Future.value(mediaDeAtividades);
   }
 }

@@ -2,4 +2,5 @@ import 'package:system_maua_front/app/modules/notas/pages/atividades/models/ativ
 
 abstract class IAtividadesRepository {
   Future<List<AtividadeModel>> getAtividades();
+  Future<double> getMediaDeAtividades();
 }
