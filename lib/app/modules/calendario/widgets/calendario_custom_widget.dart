@@ -47,7 +47,7 @@ class _CalendarioCustomWidgetState extends State<CalendarioCustomWidget> {
       markedDatesMap: widget.markedDateMap,
       headerTextStyle:
           AppTextStyles.appBarHomeTitle.copyWith(color: AppColors.strongLetter),
-      markedDateIconMaxShown: 2,
+      showIconBehindDayText: true,
       todayButtonColor: Color(0x00000000),
       todayTextStyle: TextStyle(color: Colors.black),
       markedDateIconBuilder: (event) => event.icon,
