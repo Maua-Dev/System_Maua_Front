@@ -19,6 +19,13 @@ class CalendarRepository implements ICalendarioRepository {
         tipoEventoEnum: EventoEnum.CURSO),
     EventoModel(
         titulo: 'Prova de Física II',
+        descricao:
+            'Sala H205, Matéria: Hidrostática Sala H205, Matéria: Hidrostática Sala H205, Matéria: Hidrostática Sala H205, Matéria: Hidrostática Sala H205, Matéria: Hidrostática',
+        dateTime: DateTime(2021, 08, 03),
+        horario: '13h',
+        tipoEventoEnum: EventoEnum.CURSO),
+    EventoModel(
+        titulo: 'Prova de Física II',
         descricao: 'Sala H205, Matéria: Hidrostática',
         dateTime: DateTime(2021, 08, 03),
         horario: '13h',
