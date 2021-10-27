@@ -22,6 +22,7 @@ class _PageViewCustomState extends State<PageViewCustom> {
           tipoMateria: widget.materia.nome,
           foto: widget.materia.foto,
           professores: widget.materia.professores!,
+          arquivo: widget.materia.planoDeEnsino,
         ),
         TestPage(),
       ],
