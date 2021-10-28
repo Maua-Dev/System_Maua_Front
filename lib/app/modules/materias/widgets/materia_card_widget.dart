@@ -4,6 +4,7 @@ import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 class MateriaCardWidget extends StatelessWidget {
   final String nomeMateria;
   final String fotoMateria;
+  final List<String>? listaFotosProfessores;
   final void Function()? onTap;
   const MateriaCardWidget(
       {Key? key,
