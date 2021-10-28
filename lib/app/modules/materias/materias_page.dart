@@ -52,8 +52,6 @@ class _MateriasPageState
                                 arguments: controller.materias[index]);
                           },
                           nomeMateria: controller.materias[index].nome.name,
-                          listaFotosProfessores:
-                              controller.getFotosProfessores(index),
                           fotoMateria: controller.materias[index].foto,
                         );
                       },
@@ -74,7 +72,7 @@ class _MateriasPageState
                     top: 12,
                   ),
                   child: Container(
-                    width: MediaQuery.of(context).size.width,
+                    width: MediaQuery.of(context).size.width * 0.9,
                     height: MediaQuery.of(context).size.height * 0.3,
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
@@ -87,8 +85,6 @@ class _MateriasPageState
                                 arguments: controller.materias[index]);
                           },
                           nomeMateria: controller.materias[index].nome.name,
-                          listaFotosProfessores:
-                              controller.getFotosProfessores(index),
                           fotoMateria: controller.materias[index].foto,
                         );
                       },

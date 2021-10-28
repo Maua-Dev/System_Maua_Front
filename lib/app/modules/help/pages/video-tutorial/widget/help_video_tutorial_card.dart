@@ -30,7 +30,7 @@ class VideoTutorialCard extends StatelessWidget {
                 width: 1,
               )),
           width: MediaQuery.of(context).size.width,
-          height: 100,
+          height: MediaQuery.of(context).size.height * 0.13,
           child: Row(
             children: [
               Expanded(

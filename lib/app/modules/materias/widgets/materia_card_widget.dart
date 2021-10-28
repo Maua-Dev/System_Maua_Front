@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/app/modules/materias/widgets/grid_fotos_professores.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 
 class MateriaCardWidget extends StatelessWidget {
   final String nomeMateria;
-  final List<String>? listaFotosProfessores;
   final String fotoMateria;
   final void Function()? onTap;
   const MateriaCardWidget(
@@ -58,11 +56,6 @@ class MateriaCardWidget extends StatelessWidget {
                 ),
               ],
             ),
-            Center(
-              child: GridFotosProfessores(
-                listaFotos: listaFotosProfessores,
-              ),
-            )
           ]),
         ),
       ),

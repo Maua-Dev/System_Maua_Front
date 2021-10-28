@@ -19,9 +19,9 @@ extension ReservasEnumExtension on ReservasEnum {
   String get pushNamed {
     switch (this) {
       case ReservasEnum.QUADRA:
-        return '/help/avisos';
+        return '/reservas/quadra';
       case ReservasEnum.FABLAB:
-        return '/help/video-tutorial';
+        return '/reservas/fablab';
       case ReservasEnum.LABORATORIO:
         return '/help/softwares';
     }

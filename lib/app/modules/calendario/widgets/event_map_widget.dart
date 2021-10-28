@@ -12,8 +12,8 @@ class EventMapWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 1),
       child: Container(
-        height: 8,
-        width: 8,
+        height: MediaQuery.of(context).size.height < 600 ? 6 : 8,
+        width: MediaQuery.of(context).size.height < 600 ? 6 : 8,
         decoration: BoxDecoration(
           color: corAtividade,
           shape: BoxShape.rectangle,

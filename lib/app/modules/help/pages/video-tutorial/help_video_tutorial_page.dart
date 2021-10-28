@@ -28,7 +28,7 @@ class _HelpVideoTutorialPageState
               padding: const EdgeInsets.only(top: 8),
               child: Text(
                 'Abaixo está uma lista de \nvideos para se assistirem em \nrelação ao melhor \naproveitamento da nossa \nplataforma',
-                style: TextStyle(fontSize: 24),
+                style: TextStyle(fontSize: 20),
               ),
             ),
             Observer(builder: (_) {
