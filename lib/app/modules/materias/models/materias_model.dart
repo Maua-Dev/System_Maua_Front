@@ -8,5 +8,9 @@ class MateriasModel {
   final List<ProfessoresModel>? professores;
   final ArquivosModel? planoDeEnsino;
 
-  MateriasModel({required this.nome, required this.foto, this.professores, this.planoDeEnsino});
+  MateriasModel(
+      {required this.nome,
+      required this.foto,
+      this.professores,
+      this.planoDeEnsino});
 }
