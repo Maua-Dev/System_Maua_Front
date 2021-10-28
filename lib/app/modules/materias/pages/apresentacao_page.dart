@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/app/modules/materias/pages/widgets/grid_fotos_nome_professores.dart';
+import 'package:system_maua_front/app/modules/materias/pages/widgets/grid_docentes_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 import 'package:system_maua_front/app/shared/models/arquivos_model.dart';
@@ -106,7 +106,7 @@ class ApresentacaoPage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * .9,
                   height: MediaQuery.of(context).size.height * .3,
                   child: Expanded(
-                    child: GridFotoNomeProfessores(
+                    child: GridDocentesWidget(
                       listaProfessores: professores,
                     ),
                   ),

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/modules/materias/pages/widgets/professores_widget.dart';
 import 'package:system_maua_front/app/shared/models/professores_model.dart';
 
-class GridFotoNomeProfessores extends StatelessWidget {
+class GridDocentesWidget extends StatelessWidget {
   final List<ProfessoresModel>? listaProfessores;
-  const GridFotoNomeProfessores({
+  const GridDocentesWidget({
     Key? key,
     this.listaProfessores,
   }) : super(key: key);

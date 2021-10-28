@@ -31,7 +31,9 @@ class ProfessoresWidget extends StatelessWidget {
           children: [
             Text(
               listaProfessores![index].nome,
-              style: TextStyle(color: AppColors.strongLetter, fontSize: 18),
+              style: TextStyle(
+                  color: AppColors.strongLetter,
+                  fontSize: MediaQuery.of(context).size.width < 350 ? 12 : 18),
             ),
             GestureDetector(
               onTap: () {},
@@ -43,7 +45,10 @@ class ProfessoresWidget extends StatelessWidget {
                   ),
                   Text(
                     'Mensagem',
-                    style: TextStyle(color: AppColors.lightBlue, fontSize: 14),
+                    style: TextStyle(
+                        color: AppColors.lightBlue,
+                        fontSize:
+                            MediaQuery.of(context).size.width < 350 ? 9 : 14),
                   ),
                 ],
               ),
