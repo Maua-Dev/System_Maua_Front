@@ -10,7 +10,7 @@ import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 import 'notas_aluno_controller.dart';
 
 class NotasAlunoPage extends StatefulWidget {
-  const NotasAlunoPage({Key? key}) : super(key: key);
+  const NotasAlunoPage({Key? key, nomeMateria}) : super(key: key);
   @override
   NotasAlunoPageState createState() => NotasAlunoPageState();
 }
@@ -32,7 +32,9 @@ class NotasAlunoPageState
                 padding: const EdgeInsets.only(top: 8, bottom: 32),
                 child: Column(
                   children: [
-                    IconesNavegacao(),
+                    IconesNavegacao(
+                      nomeMateria: Modular.args!.data as String,
+                    ),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.02,
                     ),
@@ -61,7 +63,7 @@ class NotasAlunoPageState
                                   padding: EdgeInsets.only(
                                       right: 16.0, left: 16, top: 8),
                                   child: Text(
-                                    controller.materia.nome,
+                                    Modular.args!.data as String,
                                     style: AppTextStyles.bodyBold,
                                     textAlign: TextAlign.center,
                                   ),
