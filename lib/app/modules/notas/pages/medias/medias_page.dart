@@ -3,6 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/filtro_ano/filtro_widget.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/opcao_chip/opcao_chip.dart';
+import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/todos_filtros/todos_filtros_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
@@ -20,7 +21,18 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBarWidget(title: 'Médias', icon: Icons.fact_check),
+        appBar: AppBarWidget(
+          title: 'Médias',
+          icon: Icons.fact_check,
+          actionWidget: IconButton(
+            onPressed: () {
+              controller.abreFiltros();
+            },
+            icon: Icon(
+              Icons.filter_alt,
+            ),
+          ),
+        ),
         body: Container(
             child: Column(
           children: [
@@ -32,14 +44,11 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              'Engenharia de Computação',
-                              style:
-                                  AppTextStyles.bodyBold.copyWith(fontSize: 25),
-                              textAlign: TextAlign.center,
-                            ),
+                          child: Text(
+                            'Engenharia de Computação',
+                            style:
+                                AppTextStyles.bodyBold.copyWith(fontSize: 25),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -65,42 +74,51 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                         ],
                       ),
                     ),
-                    Observer(builder: (_) {
-                      return FiltroWidget(
-                        listOptions: controller.filtros.anos,
-                      );
-                    }),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Column(children: [
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 15.0),
-                            child: ChipWidget(
-                              label: '1º Semestre',
-                              selected: controller.filtros.primeiroSem,
-                            ),
-                          ),
-                          ChipWidget(
-                            label: '2º Semestre',
-                            selected: controller.filtros.segundoSem,
+                    // Observer(builder: (_) {
+                    //   return FiltroWidget(
+                    //     listOptions: controller.filtros.anos,
+                    //   );
+                    // }),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    //   children: [
+                    //     Column(children: [
+                    //       Padding(
+                    //         padding: const EdgeInsets.only(bottom: 15.0),
+                    //         child: ChipWidget(
+                    //           label: '1º Semestre',
+                    //           selected: controller.filtros.primeiroSem,
+                    //         ),
+                    //       ),
+                    //       ChipWidget(
+                    //         label: '2º Semestre',
+                    //         selected: controller.filtros.segundoSem,
+                    //       )
+                    //     ]),
+                    //     Column(children: [
+                    //       Padding(
+                    //         padding: const EdgeInsets.only(bottom: 15.0),
+                    //         child: ChipWidget(
+                    //           label: 'Provas',
+                    //           selected: controller.filtros.provas,
+                    //         ),
+                    //       ),
+                    //       ChipWidget(
+                    //         label: 'Trabalhos',
+                    //         selected: controller.filtros.trabalhos,
+                    //       )
+                    //     ]),
+                    //   ],
+                    // )
+                    controller.filtrosAbertos
+                        ? TodosFiltrosWidget(
+                            anos: controller.filtros.anos,
+                            primeiroSem: controller.filtros.primeiroSem,
+                            segundoSem: controller.filtros.segundoSem,
+                            provas: controller.filtros.provas,
+                            trabalhos: controller.filtros.trabalhos,
                           )
-                        ]),
-                        Column(children: [
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 15.0),
-                            child: ChipWidget(
-                              label: 'Provas',
-                              selected: controller.filtros.provas,
-                            ),
-                          ),
-                          ChipWidget(
-                            label: 'Trabalhos',
-                            selected: controller.filtros.trabalhos,
-                          )
-                        ]),
-                      ],
-                    )
+                        : Container()
                   ],
                 );
               }),
@@ -120,9 +138,8 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                             children: [
                               Text(
                                 controller.medias.medias[index].materia,
-                                style: AppTextStyles.lightBody.copyWith(
+                                style: AppTextStyles.body.copyWith(
                                   fontSize: 15,
-                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                               Text(

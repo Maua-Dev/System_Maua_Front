@@ -31,6 +31,14 @@ abstract class MediasControllerBase with Store {
   @observable
   FiltroMediasModel filtros = FiltroMediasModel.newInstance();
 
+  @observable
+  bool filtrosAbertos = false;
+
+  @action
+  void abreFiltros() {
+    filtrosAbertos = !filtrosAbertos;
+  }
+
   @action
   Future<void> getFiltros() async {
     filtros = await filtrosRepository.getFiltros();

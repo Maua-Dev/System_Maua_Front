@@ -47,6 +47,22 @@ mixin _$MediasController on MediasControllerBase, Store {
     });
   }
 
+  final _$filtrosAbertosAtom =
+      Atom(name: 'MediasControllerBase.filtrosAbertos');
+
+  @override
+  bool get filtrosAbertos {
+    _$filtrosAbertosAtom.reportRead();
+    return super.filtrosAbertos;
+  }
+
+  @override
+  set filtrosAbertos(bool value) {
+    _$filtrosAbertosAtom.reportWrite(value, super.filtrosAbertos, () {
+      super.filtrosAbertos = value;
+    });
+  }
+
   final _$getFiltrosAsyncAction =
       AsyncAction('MediasControllerBase.getFiltros');
 
@@ -70,11 +86,26 @@ mixin _$MediasController on MediasControllerBase, Store {
     return _$toggleOpcaoAsyncAction.run(() => super.toggleOpcao(label));
   }
 
+  final _$MediasControllerBaseActionController =
+      ActionController(name: 'MediasControllerBase');
+
+  @override
+  void abreFiltros() {
+    final _$actionInfo = _$MediasControllerBaseActionController.startAction(
+        name: 'MediasControllerBase.abreFiltros');
+    try {
+      return super.abreFiltros();
+    } finally {
+      _$MediasControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''
 medias: ${medias},
 filtros: ${filtros},
+filtrosAbertos: ${filtrosAbertos},
 mediaMaua: ${mediaMaua}
     ''';
   }
