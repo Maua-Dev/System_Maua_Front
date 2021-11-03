@@ -52,7 +52,7 @@ class _CalendarioPageState
                     const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
                 child: Divider(
                   height: 2,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ),
               Observer(
