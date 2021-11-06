@@ -31,8 +31,8 @@ class ChipWidget extends StatelessWidget {
           child: Text(
             label,
             style: TextStyle(
-              color: selected ? AppColors.white : AppColors.lightLetter,
-            ),
+                color: selected ? AppColors.white : AppColors.lightLetter,
+                fontSize: 15),
           ),
         ),
       ),

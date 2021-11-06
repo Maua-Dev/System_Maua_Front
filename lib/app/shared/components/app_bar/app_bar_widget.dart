@@ -22,7 +22,9 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Padding(
         padding: EdgeInsets.only(
-          right: MediaQuery.of(context).size.width * 0.15,
+          right: actionWidget == null
+              ? MediaQuery.of(context).size.width * 0.15
+              : MediaQuery.of(context).size.width * 0.10,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
