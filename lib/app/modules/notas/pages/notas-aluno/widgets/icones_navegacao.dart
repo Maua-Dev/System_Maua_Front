@@ -4,7 +4,9 @@ import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class IconesNavegacao extends StatelessWidget {
-  const IconesNavegacao({Key? key}) : super(key: key);
+  final String nomeMateria;
+  const IconesNavegacao({Key? key, required this.nomeMateria})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,10 @@ class IconesNavegacao extends StatelessWidget {
             children: [
               IconButton(
                   onPressed: () {
-                    Modular.to.pushNamed('/medias/atingir-metas');
+                    Modular.to.pushNamed(
+                      '/medias/atingir-metas',
+                      arguments: nomeMateria,
+                    );
                   },
                   icon: Icon(
                     Icons.my_location_outlined,
@@ -45,7 +50,12 @@ class IconesNavegacao extends StatelessWidget {
           Column(
             children: [
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Modular.to.pushNamed(
+                      '/medias/estatisticas',
+                      arguments: nomeMateria,
+                    );
+                  },
                   icon: Icon(
                     Icons.insert_chart,
                     color: AppColors.darkBlue,
