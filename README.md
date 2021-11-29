@@ -2,6 +2,7 @@
 [![codecov](https://codecov.io/gh/Maua-Dev/System_Maua_Front/branch/develop/graph/badge.svg?token=DUL3UPD6I6)](https://codecov.io/gh/Maua-Dev/System_Maua_Front)
 [![WorkFlow CI Test](https://github.com/Maua-Dev/System_Maua_Front/actions/workflows/flutter_CI.yml/badge.svg)](https://github.com/Maua-Dev/System_Maua_Front/actions/workflows/flutter_CI.yml)
 [![WorkFlow CI Analyze](https://github.com/Maua-Dev/System_Maua_Front/actions/workflows/flutter_CI_analyze.yml/badge.svg)](https://github.com/Maua-Dev/System_Maua_Front/actions/workflows/flutter_CI_analyze.yml)
+[![Board Status](https://dev.azure.com/devcommunitymaua/f8e2629a-09b1-4caf-9a6e-2ba04f3cc258/a4f21250-2c90-44f9-9e39-3eb1bed6c33b/_apis/work/boardbadge/3b780ee1-b6ca-4032-82d6-a193f6181611)](https://dev.azure.com/devcommunitymaua/f8e2629a-09b1-4caf-9a6e-2ba04f3cc258/_boards/board/t/a4f21250-2c90-44f9-9e39-3eb1bed6c33b/Microsoft.RequirementCategory/)
 # Sistema da Mauá de Alunos
 
 Projeto do Dev Community Mauá
