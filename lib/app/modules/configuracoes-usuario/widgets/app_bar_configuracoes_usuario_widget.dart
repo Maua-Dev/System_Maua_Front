@@ -38,7 +38,8 @@ class AppBarConfiguracoesUsuario extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 48),
+            padding: EdgeInsets.only(
+                left: MediaQuery.of(context).size.width < 400 ? 32 : 48),
             child: Column(
               children: [
                 Text(nomeAluno,

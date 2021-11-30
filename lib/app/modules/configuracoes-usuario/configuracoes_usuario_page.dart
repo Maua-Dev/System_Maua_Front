@@ -40,7 +40,7 @@ class _ConfiguracoesUsuarioPageState extends State<ConfiguracoesUsuarioPage> {
                   )),
                   padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(
                       EdgeInsets.symmetric(
-                          vertical: 12,
+                          vertical: 16,
                           horizontal: MediaQuery.of(context).size.width * 0.4)),
                   backgroundColor:
                       MaterialStateProperty.all<Color?>(AppColors.lightBlue),

@@ -31,8 +31,8 @@ class NavigationWidget extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 16),
                       child: Text(titulo,
-                          style: AppTextStyles.appBarHomeBody
-                              .copyWith(color: Colors.black)),
+                          style:
+                              AppTextStyles.body.copyWith(color: Colors.black)),
                     ),
                   ],
                 ),
