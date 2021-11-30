@@ -10,7 +10,11 @@ class ConfiguracoesUsuarioModule extends Module {
   final List<ModularRoute> routes = [
     ChildRoute(
       Modular.initialRoute,
-      child: (_, args) => ConfiguracoesUsuarioPage(),
+      child: (_, args) => ConfiguracoesUsuarioPage(
+        nomeAluno: args.data as String,
+        raAluno: args.data as String,
+        fotoALuno: args.data as String,
+      ),
     ),
   ];
 }
