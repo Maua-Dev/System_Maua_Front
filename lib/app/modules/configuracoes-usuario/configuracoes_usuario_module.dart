@@ -11,10 +11,10 @@ class ConfiguracoesUsuarioModule extends Module {
     ChildRoute(
       Modular.initialRoute,
       child: (_, args) => ConfiguracoesUsuarioPage(
-        nomeAluno: args.data as String,
-        raAluno: args.data as String,
-        fotoALuno: args.data as String,
-      ),
+          // nomeAluno: args.data as String,
+          // raAluno: args.data as String,
+          // fotoALuno: args.data as String,
+          ),
     ),
   ];
 }
