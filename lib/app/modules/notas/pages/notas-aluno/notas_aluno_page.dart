@@ -2,7 +2,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/widgets/grid_avaliacao_widget.dart';
-import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/widgets/icones_navegacao.dart';
+import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/widgets/row_navegacao_notas_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
@@ -32,7 +32,7 @@ class NotasAlunoPageState
                 padding: const EdgeInsets.only(top: 8, bottom: 32),
                 child: Column(
                   children: [
-                    IconesNavegacao(
+                    RowNavegacaoNotasWidget(
                       nomeMateria: Modular.args!.data as String,
                     ),
                     SizedBox(
