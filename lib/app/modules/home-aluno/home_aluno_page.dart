@@ -24,6 +24,11 @@ class _HomeAlunoPageState
       children: [
         Observer(builder: (_) {
           return AppBarHomeWidget(
+            onTap: () {
+              Modular.to.pushNamed(
+                '/configuracoes-usuario/',
+              );
+            },
             usuario: controller.aluno.nome,
             ra: controller.aluno.ra,
             materia: controller.aula.tipoMateriaEnum?.name ?? '',
