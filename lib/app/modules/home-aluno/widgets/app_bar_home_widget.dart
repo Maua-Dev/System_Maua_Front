@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/shared/components/aula_card/aula_card_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
-
 import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
