@@ -13,6 +13,7 @@ class AppColors {
   static final lightLetter = Color(0xFFA6A1B2);
   static final red = Color(0xFFFF0000);
   static final textButtonCollor = Color.fromRGBO(32, 47, 232, 1);
+  static final buttonTeste = Color.fromRGBO(32, 47, 232, 1);
 
   static final BoxShadow shadow = BoxShadow(
       color: Colors.grey.withOpacity(0.2),
