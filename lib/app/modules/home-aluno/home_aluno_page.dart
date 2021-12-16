@@ -26,7 +26,7 @@ class _HomeAlunoPageState
           return AppBarHomeWidget(
             onTap: () {
               Modular.to.pushNamed(
-                '/configuracoes-usuario/',
+                '/configuracoes-usuario?nomeAluno=${controller.aluno.nome}&raAluno=${controller.aluno.ra}&fotoALuno=https://avatars.githubusercontent.com/u/24724451?v=4',
               );
             },
             usuario: controller.aluno.nome,

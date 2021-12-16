@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/modules/help/pages/video-tutorial/page/video-especifico/widget/video_player_card.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
