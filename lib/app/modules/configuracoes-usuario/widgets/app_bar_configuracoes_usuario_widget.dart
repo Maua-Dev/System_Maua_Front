@@ -5,8 +5,12 @@ import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 class AppBarConfiguracoesUsuario extends StatelessWidget {
   final String nomeAluno;
   final String raAluno;
+  final String fotoAluno;
   const AppBarConfiguracoesUsuario(
-      {Key? key, required this.nomeAluno, required this.raAluno})
+      {Key? key,
+      required this.nomeAluno,
+      required this.raAluno,
+      required this.fotoAluno})
       : super(key: key);
 
   @override
@@ -31,8 +35,7 @@ class AppBarConfiguracoesUsuario extends StatelessWidget {
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                          image: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/24724451?v=4'),
+                          image: NetworkImage(fotoAluno),
                         ))),
               ),
             ),

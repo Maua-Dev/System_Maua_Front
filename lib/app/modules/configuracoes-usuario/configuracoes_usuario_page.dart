@@ -5,8 +5,14 @@ import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class ConfiguracoesUsuarioPage extends StatefulWidget {
+  final String nomeAluno;
+  final String raAluno;
+  final String fotoALuno;
   const ConfiguracoesUsuarioPage({
     Key? key,
+    required this.nomeAluno,
+    required this.raAluno,
+    required this.fotoALuno,
   }) : super(key: key);
 
   @override
@@ -22,7 +28,10 @@ class _ConfiguracoesUsuarioPageState extends State<ConfiguracoesUsuarioPage> {
         body: Column(
           children: [
             AppBarConfiguracoesUsuario(
-                nomeAluno: 'Hector Guerrini', raAluno: '17.00163-3'),
+              nomeAluno: widget.nomeAluno,
+              raAluno: widget.raAluno,
+              fotoAluno: widget.fotoALuno,
+            ),
             Divider(
               thickness: 3,
             ),
