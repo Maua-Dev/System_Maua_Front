@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/shared/components/aula_card/aula_card_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
-
 import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
@@ -11,12 +10,14 @@ class AppBarHomeWidget extends StatelessWidget {
   final String materia;
   final String duracao;
   final String local;
+  final void Function()? onTap;
 
   const AppBarHomeWidget(
       {required this.usuario,
       required this.ra,
       required this.materia,
       required this.duracao,
+      required this.onTap,
       required this.local});
   @override
   Widget build(BuildContext context) {
@@ -42,15 +43,18 @@ class AppBarHomeWidget extends StatelessWidget {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(3),
-                    child: Container(
-                        width: MediaQuery.of(context).size.height * 0.115,
-                        height: MediaQuery.of(context).size.height * 0.115,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://avatars.githubusercontent.com/u/24724451?v=4'),
-                            ))),
+                    child: GestureDetector(
+                      onTap: onTap,
+                      child: Container(
+                          width: MediaQuery.of(context).size.height * 0.115,
+                          height: MediaQuery.of(context).size.height * 0.115,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(100),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                    'https://avatars.githubusercontent.com/u/24724451?v=4'),
+                              ))),
+                    ),
                   ),
                 ),
                 Column(

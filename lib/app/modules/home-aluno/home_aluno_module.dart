@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:system_maua_front/app/modules/configuracoes-usuario/configuracoes_usuario_page.dart';
 import 'package:system_maua_front/app/modules/home-aluno/repositories/home_aluno_repository.dart';
 import 'home_aluno_controller.dart';
 
@@ -18,5 +19,7 @@ class HomeAlunoModule extends Module {
       Modular.initialRoute,
       child: (_, args) => HomeAlunoPage(),
     ),
+    ChildRoute('/configuracoes-usuario',
+        child: (context, args) => ConfiguracoesUsuarioPage()),
   ];
 }
