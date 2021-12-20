@@ -37,13 +37,24 @@ class _HomeAlunoPageState
           );
         }),
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.27,
+          height: MediaQuery.of(context).size.height * 0.25,
+        ),
+        NavigationButtonWidget(
+          title: 'Sem notificações',
+          icon: Icons.notifications,
+          onTap: () {},
         ),
         NavigationButtonWidget(
           title: 'Entregas da semana',
+          icon: Icons.playlist_add_check,
           onTap: () {
             Modular.to.navigate('/activities');
           },
+        ),
+        NavigationButtonWidget(
+          title: 'Mural de avisos',
+          icon: Icons.info,
+          onTap: () {},
         ),
       ],
     );
