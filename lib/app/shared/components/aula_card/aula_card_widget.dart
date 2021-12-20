@@ -20,7 +20,7 @@ class AulaCardWidget extends StatelessWidget {
       child: Container(
         height: MediaQuery.of(context).size.height * 0.3,
         decoration: BoxDecoration(
-          border: Border.all(width: 2, color: AppColors.white),
+          border: Border.all(width: 3, color: AppColors.white),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Padding(
@@ -33,7 +33,8 @@ class AulaCardWidget extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.15,
                 decoration: BoxDecoration(
                     color: AppColors.white,
-                    borderRadius: BorderRadius.circular(10)),
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(width: 1, color: AppColors.borderGrey)),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Row(
@@ -50,7 +51,10 @@ class AulaCardWidget extends StatelessWidget {
                               ),
                               Text(materia,
                                   style: AppTextStyles.lightBody.copyWith(
-                                    fontSize: 20,
+                                    fontSize:
+                                        MediaQuery.of(context).size.width < 350
+                                            ? 18
+                                            : 20,
                                   ))
                             ]),
                       )
@@ -66,7 +70,9 @@ class AulaCardWidget extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.12,
                       decoration: BoxDecoration(
                           color: AppColors.white,
-                          borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                              width: 1, color: AppColors.borderGrey)),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 12),
                         child: Row(
@@ -74,21 +80,23 @@ class AulaCardWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Flexible(
-                              child: Padding(
-                                padding: const EdgeInsets.only(right: 8),
-                                child: Icon(
-                                  Icons.alarm,
-                                  size: 40,
-                                  color: AppColors.thinLetter,
-                                ),
+                              child: Icon(
+                                Icons.alarm,
+                                size: MediaQuery.of(context).size.width < 350
+                                    ? 32
+                                    : 40,
+                                color: AppColors.thinLetter,
                               ),
                             ),
                             Expanded(
                               flex: 2,
                               child: Text(
                                 duracao,
-                                style: AppTextStyles.lightBody
-                                    .copyWith(fontSize: 20),
+                                style: AppTextStyles.lightBody.copyWith(
+                                    fontSize:
+                                        MediaQuery.of(context).size.width < 350
+                                            ? 16
+                                            : 20),
                               ),
                             )
                           ],
@@ -103,7 +111,9 @@ class AulaCardWidget extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.12,
                     decoration: BoxDecoration(
                         color: AppColors.white,
-                        borderRadius: BorderRadius.circular(10)),
+                        borderRadius: BorderRadius.circular(10),
+                        border:
+                            Border.all(width: 1, color: AppColors.borderGrey)),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 12),
                       child: Row(
@@ -114,14 +124,19 @@ class AulaCardWidget extends StatelessWidget {
                             padding: const EdgeInsets.only(right: 8),
                             child: Icon(
                               Icons.room_rounded,
-                              size: 40,
+                              size: MediaQuery.of(context).size.width < 350
+                                  ? 32
+                                  : 40,
                               color: AppColors.thinLetter,
                             ),
                           ),
                           Text(
                             local,
-                            style:
-                                AppTextStyles.lightBody.copyWith(fontSize: 20),
+                            style: AppTextStyles.lightBody.copyWith(
+                                fontSize:
+                                    MediaQuery.of(context).size.width < 350
+                                        ? 16
+                                        : 20),
                           )
                         ],
                       ),

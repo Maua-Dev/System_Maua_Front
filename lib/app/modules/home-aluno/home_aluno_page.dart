@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/home-aluno/widgets/app_bar_home_widget.dart';
+import 'package:system_maua_front/app/modules/home-aluno/widgets/navigation_button_widget.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
-import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 
 import 'home_aluno_controller.dart';
 
@@ -37,44 +37,25 @@ class _HomeAlunoPageState
           );
         }),
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.27,
+          height: MediaQuery.of(context).size.height * 0.25,
         ),
-        Expanded(
-          child: ListView.builder(
-            itemCount: 1,
-            itemBuilder: (BuildContext context, int index) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: Material(
-                    color: AppColors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    child: InkWell(
-                      onTap: () {
-                        Modular.to.navigate('/activities');
-                      },
-                      child: Container(
-                        height: MediaQuery.of(context).size.height * 0.12,
-                        child: Center(
-                            child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.playlist_add_check,
-                              size: 40,
-                              color: AppColors.thinLetter,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('Entregas da semana'),
-                          ],
-                        )),
-                      ),
-                    )),
-              );
-            },
-          ),
-        )
+        NavigationButtonWidget(
+          title: 'Sem notificações',
+          icon: Icons.notifications,
+          onTap: () {},
+        ),
+        NavigationButtonWidget(
+          title: 'Entregas da semana',
+          icon: Icons.playlist_add_check,
+          onTap: () {
+            Modular.to.navigate('/activities');
+          },
+        ),
+        NavigationButtonWidget(
+          title: 'Mural de avisos',
+          icon: Icons.info,
+          onTap: () {},
+        ),
       ],
     );
   }
