@@ -4,7 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/shared/components/activity_card/activity_card_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/components/filter_period/filter_period_widget.dart';
-import 'package:system_maua_front/app/shared/components/progress_indicator/progress_indicator_widget.dart';
+import 'package:system_maua_front/app/shared/components/progress_indicator/linear_progress_indicator_custom_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 import 'activities_controller.dart';
 
@@ -53,7 +53,7 @@ class _ActivitiesPageState
                     padding: const EdgeInsets.symmetric(
                         horizontal: 25, vertical: 15),
                     child: Observer(builder: (_) {
-                      return ProgressIndicatorWidget(
+                      return LinearProgressIndicatorCustomWidget(
                         value: controller.activitiesDeliveredPercentual,
                       );
                     }),
