@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class ProgressIndicatorWidget extends StatelessWidget {
+class LinearProgressIndicatorCustomWidget extends StatelessWidget {
   final double value;
-  const ProgressIndicatorWidget({
+  const LinearProgressIndicatorCustomWidget({
     Key? key,
     required this.value,
   }) : super(key: key);
