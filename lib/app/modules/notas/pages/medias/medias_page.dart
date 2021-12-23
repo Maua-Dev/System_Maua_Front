@@ -57,7 +57,7 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                             ),
                           ),
                           Text(
-                            '8.7',
+                            '8,7',
                             style: AppTextStyles.body.copyWith(
                               fontWeight: FontWeight.w600,
                             ),
@@ -131,7 +131,7 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                                 ),
                               ),
                               Text(
-                                '${controller.medias.medias[index].media ?? '-'}',
+                                '${controller.medias.medias[index].getMediaComputada}',
                                 style: AppTextStyles.lightBody.copyWith(
                                   color:
                                       controller.medias.medias[index].media !=
