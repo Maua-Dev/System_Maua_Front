@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:hive/hive.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/filtro_ano/filtro_widget.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/opcao_chip/opcao_chip.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
+import 'package:system_maua_front/app/shared/lista_notas/lista_notas_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 import 'medias_controller.dart';
@@ -111,54 +113,30 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                   return ListView.separated(
                     itemCount: controller.medias.medias.length,
                     itemBuilder: (_, index) {
-                      return InkWell(
+                      return ListaNotasCard(
                         onTap: () => {
                           Modular.to.pushNamed(
                             '/medias/notas',
                             arguments: controller.medias.medias[index].materia,
                           )
                         },
-                        child: Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                controller.medias.medias[index].materia,
-                                style: AppTextStyles.lightBody.copyWith(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              Text(
-                                '${controller.medias.medias[index].media ?? '-'}',
-                                style: AppTextStyles.lightBody.copyWith(
-                                  color:
-                                      controller.medias.medias[index].media !=
-                                              null
-                                          ? controller.medias.medias[index]
-                                                      .media! >=
-                                                  controller.mediaMaua
-                                              ? AppColors.thinLetter
-                                              : AppColors.red
-                                          : AppColors.thinLetter,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
+                        texto: controller.medias.medias[index].materia,
+                        nota: controller.medias.medias[index].media,
+                        mediaMaua: controller.mediaMaua,
                       );
                     },
                     separatorBuilder: (BuildContext context, int index) {
                       return Container(
                         height: 1.5,
-                        color: AppColors.stroke,
+                        color: Colors.black,
                       );
                     },
                   );
                 },
               ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.03,
             ),
           ],
         )),
