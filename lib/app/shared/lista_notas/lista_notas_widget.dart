@@ -37,8 +37,7 @@ class ListaNotasCard extends StatelessWidget {
               '${nota ?? '-'}',
               style: AppTextStyles.lightBody.copyWith(
                 color: nota != null
-                    ? nota! >=
-                            mediaMaua!
+                    ? nota! >= mediaMaua!
                         ? Colors.black
                         : AppColors.red
                     : Colors.black,
