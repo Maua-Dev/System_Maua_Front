@@ -57,19 +57,17 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                             ),
                           ),
                           Text(
-                            '8.7',
+                            controller.coeficienteRendimentoComputado,
                             style: AppTextStyles.body.copyWith(
                               fontWeight: FontWeight.w600,
                             ),
-                          ),
+                          )
                         ],
                       ),
                     ),
-                    Observer(builder: (_) {
-                      return FiltroWidget(
-                        listOptions: controller.filtros.anos,
-                      );
-                    }),
+                    FiltroWidget(
+                      listOptions: controller.filtros.anos,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [

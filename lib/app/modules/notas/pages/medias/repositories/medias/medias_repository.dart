@@ -53,8 +53,15 @@ class MediasRepository implements IMediasRepository {
     ],
   );
 
+  var coeficiente = 8.7;
+
   @override
   Future<MediasModel> getMedias() {
     return Future.value(todasMedias);
+  }
+
+  @override
+  Future<double> getCoeficienteRendimento() {
+    return Future.value(coeficiente);
   }
 }

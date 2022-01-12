@@ -20,6 +20,7 @@ abstract class MediasControllerBase with Store {
   MediasControllerBase(this.mediasRepository, this.filtrosRepository) {
     getFiltros();
     getMedias();
+    getCoeficiente();
   }
 
   @computed
@@ -27,6 +28,13 @@ abstract class MediasControllerBase with Store {
 
   @observable
   MediasModel medias = MediasModel.newInstance();
+
+  @observable
+  var coeficienteRendimento = 0.0;
+
+  @computed
+  String get coeficienteRendimentoComputado =>
+      coeficienteRendimento.toString().replaceAll('.', ',');
 
   @observable
   FiltroMediasModel filtros = FiltroMediasModel.newInstance();
@@ -39,7 +47,11 @@ abstract class MediasControllerBase with Store {
   @action
   Future<void> getMedias() async {
     medias = await mediasRepository.getMedias();
-    print(controllerFiltroAno.ano);
+  }
+
+  @action
+  Future<void> getCoeficiente() async {
+    coeficienteRendimento = await mediasRepository.getCoeficienteRendimento();
   }
 
   @action
