@@ -27,4 +27,8 @@ void main() {
         true);
     expect(mediasRepository.todasMedias.medias.isNotEmpty, true);
   });
+
+  test('[TEST] - getCoeficiente', () {
+    expect(mediasRepository.coeficiente.isFinite, true);
+  });
 }

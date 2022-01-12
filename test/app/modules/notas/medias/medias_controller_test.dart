@@ -20,6 +20,8 @@ void main() {
 
   late MediasController mediasController;
 
+  var coeficienteTeste = 9.0;
+
   var filtrosTest = FiltroMediasModel(
     anos: ['2020', '2021', '2022'],
     primeiroSem: true,
@@ -81,6 +83,8 @@ void main() {
   setUpAll(() {
     when(filtroRepository.getFiltros()).thenAnswer((_) async => filtrosTest);
     when(mediasRepository.getMedias()).thenAnswer((_) async => mediasTest);
+    when(mediasRepository.getCoeficienteRendimento())
+        .thenAnswer((_) async => coeficienteTeste);
     mediasController = MediasController(mediasRepository, filtroRepository);
   });
 
@@ -92,5 +96,10 @@ void main() {
   test('[TEST] - getMedias', () async {
     await mediasController.getMedias();
     expect(mediasController.medias, mediasTest);
+  });
+
+  test('[TEST] - getCoeficiente', () async {
+    await mediasController.getCoeficiente();
+    expect(mediasController.coeficienteRendimento, coeficienteTeste);
   });
 }

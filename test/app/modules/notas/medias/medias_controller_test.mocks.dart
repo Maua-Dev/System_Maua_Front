@@ -61,5 +61,9 @@ class MockIMediasRepository extends _i1.Mock implements _i6.IMediasRepository {
               returnValue: Future<_i3.MediasModel>.value(_FakeMediasModel_1()))
           as _i5.Future<_i3.MediasModel>);
   @override
+  _i5.Future<double> getCoeficienteRendimento() =>
+      (super.noSuchMethod(Invocation.method(#getCoeficienteRendimento, []),
+          returnValue: Future<double>.value(0.0)) as _i5.Future<double>);
+  @override
   String toString() => super.toString();
 }

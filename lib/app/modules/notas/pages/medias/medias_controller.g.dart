@@ -16,6 +16,14 @@ mixin _$MediasController on MediasControllerBase, Store {
       (_$mediaMauaComputed ??= Computed<int>(() => super.mediaMaua,
               name: 'MediasControllerBase.mediaMaua'))
           .value;
+  Computed<String>? _$coeficienteRendimentoComputadoComputed;
+
+  @override
+  String get coeficienteRendimentoComputado =>
+      (_$coeficienteRendimentoComputadoComputed ??= Computed<String>(
+              () => super.coeficienteRendimentoComputado,
+              name: 'MediasControllerBase.coeficienteRendimentoComputado'))
+          .value;
 
   final _$mediasAtom = Atom(name: 'MediasControllerBase.medias');
 
@@ -29,6 +37,23 @@ mixin _$MediasController on MediasControllerBase, Store {
   set medias(MediasModel value) {
     _$mediasAtom.reportWrite(value, super.medias, () {
       super.medias = value;
+    });
+  }
+
+  final _$coeficienteRendimentoAtom =
+      Atom(name: 'MediasControllerBase.coeficienteRendimento');
+
+  @override
+  double get coeficienteRendimento {
+    _$coeficienteRendimentoAtom.reportRead();
+    return super.coeficienteRendimento;
+  }
+
+  @override
+  set coeficienteRendimento(double value) {
+    _$coeficienteRendimentoAtom.reportWrite(value, super.coeficienteRendimento,
+        () {
+      super.coeficienteRendimento = value;
     });
   }
 
@@ -62,6 +87,14 @@ mixin _$MediasController on MediasControllerBase, Store {
     return _$getMediasAsyncAction.run(() => super.getMedias());
   }
 
+  final _$getCoeficienteAsyncAction =
+      AsyncAction('MediasControllerBase.getCoeficiente');
+
+  @override
+  Future<void> getCoeficiente() {
+    return _$getCoeficienteAsyncAction.run(() => super.getCoeficiente());
+  }
+
   final _$toggleOpcaoAsyncAction =
       AsyncAction('MediasControllerBase.toggleOpcao');
 
@@ -74,8 +107,10 @@ mixin _$MediasController on MediasControllerBase, Store {
   String toString() {
     return '''
 medias: ${medias},
+coeficienteRendimento: ${coeficienteRendimento},
 filtros: ${filtros},
-mediaMaua: ${mediaMaua}
+mediaMaua: ${mediaMaua},
+coeficienteRendimentoComputado: ${coeficienteRendimentoComputado}
     ''';
   }
 }
