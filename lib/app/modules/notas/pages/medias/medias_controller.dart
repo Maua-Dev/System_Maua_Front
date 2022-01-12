@@ -39,7 +39,6 @@ abstract class MediasControllerBase with Store {
   @action
   Future<void> getMedias() async {
     medias = await mediasRepository.getMedias();
-    print(controllerFiltroAno.ano);
   }
 
   @action
