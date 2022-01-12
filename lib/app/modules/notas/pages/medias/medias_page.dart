@@ -129,7 +129,7 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                                 ),
                               ),
                               Text(
-                                '${controller.medias.medias[index].media ?? '-'}',
+                                '${controller.medias.medias[index].getMediaComputada}',
                                 style: AppTextStyles.lightBody.copyWith(
                                   color:
                                       controller.medias.medias[index].media !=
