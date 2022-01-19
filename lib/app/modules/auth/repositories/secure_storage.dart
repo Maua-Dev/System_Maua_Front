@@ -20,4 +20,9 @@ class SecureStorage implements ISecureStorage {
   Future<void> saveToken(String token) async {
     await storage.put('accessToken', token);
   }
+
+  @override
+  Future<void> cleanToken() async {
+    await storage.clear();
+  }
 }
