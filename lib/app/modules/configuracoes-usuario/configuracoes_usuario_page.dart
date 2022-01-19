@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/auth/auth_controller.dart';
-import 'package:system_maua_front/app/modules/auth/auth_module.dart';
 import 'package:system_maua_front/app/modules/configuracoes-usuario/widgets/app_bar_configuracoes_usuario_widget.dart';
 import 'package:system_maua_front/app/modules/configuracoes-usuario/widgets/navigation_widget.dart';
-import 'package:system_maua_front/app/modules/landing/landing_module.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
