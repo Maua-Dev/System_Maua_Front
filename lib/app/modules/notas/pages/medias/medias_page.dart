@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/coeficiente-rendimento/coeficiente_widget.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/filtro_ano/filtro_widget.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/opcao_chip/opcao_chip.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
@@ -47,23 +48,8 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10.0, vertical: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text(
-                            'Coeficiente de Rendimento',
-                            style: AppTextStyles.lightBody.copyWith(
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          Text(
-                            '8.7',
-                            style: AppTextStyles.body.copyWith(
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ],
-                      ),
+                      child: CoeficienteWidget(
+                          titulo: 'Coeficiente de Rendimento', nota: '8,7'),
                     ),
                     Observer(builder: (_) {
                       return FiltroWidget(
