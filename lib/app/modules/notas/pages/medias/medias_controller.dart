@@ -25,6 +25,9 @@ abstract class MediasControllerBase with Store {
   @computed
   int get mediaMaua => 6;
 
+  @computed
+  String get mediaGeral => medias.mediaGeral.toString();
+
   @observable
   MediasModel medias = MediasModel.newInstance();
 

@@ -5,6 +5,7 @@ import 'medias_repository_interface.dart';
 class MediasRepository implements IMediasRepository {
   MediasModel todasMedias = MediasModel(
     nomeGraduacao: 'Engenharia de Computação',
+    mediaGeral: 8.8,
     ano: 2021,
     medias: [
       MediaModel(

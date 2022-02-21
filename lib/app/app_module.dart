@@ -1,7 +1,9 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/login/login_module.dart';
 import 'package:system_maua_front/app/modules/splash/splash_module.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
+import 'package:system_maua_front/app/shared/dio/dio_options.dart';
 import 'modules/auth/auth_guard.dart';
 import 'modules/auth/auth_module.dart';
 import 'package:system_maua_front/app/shared/components/filter_period/filter_period_controller.dart';
@@ -17,6 +19,7 @@ class AppModule extends Module {
     Bind.lazySingleton((i) => BottomNavigationBarController()),
     Bind.lazySingleton((i) => FilterPeriodController()),
     Bind.lazySingleton((i) => FiltroController()),
+    Bind.lazySingleton((i) => Dio(mauaOptions))
   ];
 
   @override
