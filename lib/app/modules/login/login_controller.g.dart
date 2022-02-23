@@ -40,21 +40,6 @@ mixin _$LoginController on _LoginController, Store {
     });
   }
 
-  final _$isCheckedAtom = Atom(name: '_LoginController.isChecked');
-
-  @override
-  bool get isChecked {
-    _$isCheckedAtom.reportRead();
-    return super.isChecked;
-  }
-
-  @override
-  set isChecked(bool value) {
-    _$isCheckedAtom.reportWrite(value, super.isChecked, () {
-      super.isChecked = value;
-    });
-  }
-
   final _$emailAtom = Atom(name: '_LoginController.email');
 
   @override
@@ -85,6 +70,22 @@ mixin _$LoginController on _LoginController, Store {
     });
   }
 
+  final _$loginModalIsOpenAtom =
+      Atom(name: '_LoginController.loginModalIsOpen');
+
+  @override
+  bool get loginModalIsOpen {
+    _$loginModalIsOpenAtom.reportRead();
+    return super.loginModalIsOpen;
+  }
+
+  @override
+  set loginModalIsOpen(bool value) {
+    _$loginModalIsOpenAtom.reportWrite(value, super.loginModalIsOpen, () {
+      super.loginModalIsOpen = value;
+    });
+  }
+
   final _$loginAsyncAction = AsyncAction('_LoginController.login');
 
   @override
@@ -96,11 +97,11 @@ mixin _$LoginController on _LoginController, Store {
       ActionController(name: '_LoginController');
 
   @override
-  void setIsChecked(bool? value) {
+  void openLoginModal() {
     final _$actionInfo = _$_LoginControllerActionController.startAction(
-        name: '_LoginController.setIsChecked');
+        name: '_LoginController.openLoginModal');
     try {
-      return super.setIsChecked(value);
+      return super.openLoginModal();
     } finally {
       _$_LoginControllerActionController.endAction(_$actionInfo);
     }
@@ -144,9 +145,9 @@ mixin _$LoginController on _LoginController, Store {
     return '''
 passwordVisibility: ${passwordVisibility},
 erros: ${erros},
-isChecked: ${isChecked},
 email: ${email},
-password: ${password}
+password: ${password},
+loginModalIsOpen: ${loginModalIsOpen}
     ''';
   }
 }

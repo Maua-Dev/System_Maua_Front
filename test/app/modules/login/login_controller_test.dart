@@ -22,8 +22,8 @@ void main() {
   });
 
   test('[TEST] - setIsChecked', () async {
-    controller.setIsChecked(true);
-    expect(controller.isChecked, true);
+    controller.openLoginModal();
+    expect(controller.loginModalIsOpen, true);
   });
 
   test('[TEST] - setEmail', () async {
