@@ -23,6 +23,7 @@ void main() {
 
   test('[TEST] - setIsChecked', () async {
     controller.openLoginModal();
+    await Future.delayed(Duration(seconds: 4));
     expect(controller.loginModalIsOpen, true);
   });
 
