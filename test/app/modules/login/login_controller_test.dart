@@ -21,7 +21,7 @@ void main() {
     controller = LoginController(mockAuth);
   });
 
-  test('[TEST] - setIsChecked', () async {
+  test('[TEST] - openLoginModal', () async {
     controller.openLoginModal();
     await Future.delayed(Duration(seconds: 4));
     expect(controller.loginModalIsOpen, true);
