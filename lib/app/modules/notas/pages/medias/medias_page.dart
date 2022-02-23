@@ -35,7 +35,7 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
-                              'Engenharia de Computação',
+                              controller.medias.nomeGraduacao,
                               style:
                                   AppTextStyles.bodyBold.copyWith(fontSize: 25),
                               textAlign: TextAlign.center,
@@ -51,13 +51,13 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Text(
-                            'Coeficiente de Rendimento',
+                            'Média Geral:',
                             style: AppTextStyles.lightBody.copyWith(
                               fontWeight: FontWeight.w600,
                             ),
                           ),
                           Text(
-                            '8,7',
+                            controller.mediaGeral,
                             style: AppTextStyles.body.copyWith(
                               fontWeight: FontWeight.w600,
                             ),
