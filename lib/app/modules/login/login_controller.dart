@@ -10,7 +10,9 @@ class LoginController = _LoginController with _$LoginController;
 abstract class _LoginController with Store {
   final AuthController authController;
 
-  _LoginController(this.authController);
+  _LoginController(this.authController) {
+    openLoginModal();
+  }
 
   @observable
   bool passwordVisibility = true;
@@ -19,17 +21,19 @@ abstract class _LoginController with Store {
   String erros = '';
 
   @observable
-  bool isChecked = false;
-
-  @observable
   String email = '';
 
   @observable
   String password = '';
 
+  @observable
+  bool loginModalIsOpen = false;
+
   @action
-  void setIsChecked(bool? value) {
-    isChecked = value ?? false;
+  void openLoginModal() {
+    Future.delayed(Duration(seconds: 2)).then((value) {
+      loginModalIsOpen = true;
+    });
   }
 
   @action
@@ -45,7 +49,7 @@ abstract class _LoginController with Store {
   @action
   Future<void> login() async {
     try {
-      await authController.loginWithEmail(email, password, isChecked);
+      await authController.loginWithEmail(email, password, true);
       if (authController.isLogged) {
         Modular.to.navigate('/home');
       }

@@ -61,6 +61,11 @@ class MockAuthController extends _i1.Mock implements _i4.AuthController {
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
   @override
+  _i5.Future<void> logout() =>
+      (super.noSuchMethod(Invocation.method(#logout, []),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
+  @override
   String toString() => super.toString();
 }
 

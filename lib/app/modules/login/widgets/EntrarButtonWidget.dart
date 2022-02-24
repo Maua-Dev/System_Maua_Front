@@ -13,7 +13,7 @@ class EntrarButtonWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Container(
-        width: MediaQuery.of(context).size.width * .5,
+        width: MediaQuery.of(context).size.width * .7,
         height: 50,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(

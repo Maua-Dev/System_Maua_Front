@@ -21,9 +21,10 @@ void main() {
     controller = LoginController(mockAuth);
   });
 
-  test('[TEST] - setIsChecked', () async {
-    controller.setIsChecked(true);
-    expect(controller.isChecked, true);
+  test('[TEST] - openLoginModal', () async {
+    controller.openLoginModal();
+    await Future.delayed(Duration(seconds: 4));
+    expect(controller.loginModalIsOpen, true);
   });
 
   test('[TEST] - setEmail', () async {

@@ -57,5 +57,10 @@ class MockISecureStorage extends _i1.Mock implements _i4.ISecureStorage {
       (super.noSuchMethod(Invocation.method(#getToken, []),
           returnValue: Future<String?>.value()) as _i3.Future<String?>);
   @override
+  _i3.Future<void> cleanToken() =>
+      (super.noSuchMethod(Invocation.method(#cleanToken, []),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub: Future<void>.value()) as _i3.Future<void>);
+  @override
   String toString() => super.toString();
 }
