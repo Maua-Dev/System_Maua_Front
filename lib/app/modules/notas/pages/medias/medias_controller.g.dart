@@ -16,6 +16,13 @@ mixin _$MediasController on MediasControllerBase, Store {
       (_$mediaMauaComputed ??= Computed<int>(() => super.mediaMaua,
               name: 'MediasControllerBase.mediaMaua'))
           .value;
+  Computed<String>? _$mediaGeralComputed;
+
+  @override
+  String get mediaGeral =>
+      (_$mediaGeralComputed ??= Computed<String>(() => super.mediaGeral,
+              name: 'MediasControllerBase.mediaGeral'))
+          .value;
 
   final _$mediasAtom = Atom(name: 'MediasControllerBase.medias');
 
@@ -75,7 +82,8 @@ mixin _$MediasController on MediasControllerBase, Store {
     return '''
 medias: ${medias},
 filtros: ${filtros},
-mediaMaua: ${mediaMaua}
+mediaMaua: ${mediaMaua},
+mediaGeral: ${mediaGeral}
     ''';
   }
 }
