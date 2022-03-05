@@ -20,33 +20,38 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Padding(
-        padding: EdgeInsets.only(
-          right: MediaQuery.of(context).size.width * 0.15,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              child: Icon(icon),
-            ),
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          if (leadingWidget == null)
             SizedBox(
-              width: 10,
+              width: MediaQuery.of(context).size.width * 0.07,
             ),
-            Container(
-              child: Text(title),
-            ),
-          ],
-        ),
+          Container(
+            child: Icon(icon),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Container(
+            child: Text(title),
+          ),
+        ],
       ),
       leading: leadingWidget,
       actions: <Widget>[
-        Padding(
-          padding: const EdgeInsets.only(right: 15.0),
-          child: Container(
+        if (actionWidget != null)
+          Container(
             child: actionWidget,
-          ),
-        )
+          )
+        else
+          Padding(
+            padding:
+                EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.15),
+            child: Container(
+              child: actionWidget,
+            ),
+          )
       ],
       flexibleSpace: Container(
         decoration: BoxDecoration(
