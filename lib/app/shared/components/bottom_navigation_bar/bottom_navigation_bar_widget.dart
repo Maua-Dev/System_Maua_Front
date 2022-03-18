@@ -55,7 +55,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
                                 titulo: 'Matérias',
                                 icon: Icons.library_books,
                                 onTap: () {
-                                  Modular.to.pushNamed('/materias');
+                                  Modular.to.navigate('/materias');
                                   onPressed!();
                                 },
                               ),
@@ -63,7 +63,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
                                 titulo: 'Mural',
                                 icon: Icons.language,
                                 onTap: () {
-                                  Modular.to.pushNamed('/mural');
+                                  Modular.to.navigate('/mural');
                                   onPressed!();
                                 },
                               ),
@@ -71,7 +71,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
                                 titulo: 'ICs',
                                 icon: Icons.biotech_rounded,
                                 onTap: () {
-                                  Modular.to.pushNamed('/ic');
+                                  Modular.to.navigate('/ic');
                                   onPressed!();
                                 },
                               ),
@@ -79,7 +79,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
                                 titulo: 'Reservas',
                                 icon: FontAwesome.calendar,
                                 onTap: () {
-                                  Modular.to.pushNamed('/reservas');
+                                  Modular.to.navigate('/reservas');
                                   onPressed!();
                                 },
                               ),
