@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/coeficiente-rendimento/coeficiente_widget.dart';
-import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/filtro_ano/filtro_widget.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/opcao_chip/opcao_chip.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/lista_notas/lista_notas_widget.dart';
@@ -34,16 +33,19 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                       children: [
                         Expanded(
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.fromLTRB(8, 8, 8, 4),
                             child: Text(
                               'Engenharia de Computação',
                               style:
-                                  AppTextStyles.bodyBold.copyWith(fontSize: 25),
+                                  AppTextStyles.bodyBold.copyWith(fontSize: 22),
                               textAlign: TextAlign.center,
                             ),
                           ),
                         ),
                       ],
+                    ),
+                    Divider(
+                      color: Colors.black,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
@@ -51,42 +53,15 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                       child: CoeficienteWidget(
                           titulo: 'Coeficiente de Rendimento', nota: '8,7'),
                     ),
-                    Observer(builder: (_) {
-                      return FiltroWidget(
-                        listOptions: controller.filtros.anos,
-                      );
-                    }),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Column(children: [
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 15.0),
-                            child: ChipWidget(
-                              label: '1º Semestre',
-                              selected: controller.filtros.primeiroSem,
-                            ),
-                          ),
-                          ChipWidget(
-                            label: '2º Semestre',
-                            selected: controller.filtros.segundoSem,
-                          )
-                        ]),
-                        Column(children: [
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 15.0),
-                            child: ChipWidget(
-                              label: 'Provas',
-                              selected: controller.filtros.provas,
-                            ),
-                          ),
-                          ChipWidget(
-                            label: 'Trabalhos',
-                            selected: controller.filtros.trabalhos,
-                          )
-                        ]),
-                      ],
-                    )
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Matérias',
+                        style: AppTextStyles.bodyBold.copyWith(
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
                   ],
                 );
               }),
@@ -94,33 +69,28 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
             Expanded(
               child: Observer(
                 builder: (_) {
-                  return ListView.separated(
+                  return ListView.builder(
                     itemCount: controller.medias.medias.length,
                     itemBuilder: (_, index) {
-                      return ListaNotasCard(
-                        onTap: () => {
-                          Modular.to.pushNamed(
-                            '/medias/notas',
-                            arguments: controller.medias.medias[index].materia,
-                          )
-                        },
-                        texto: controller.medias.medias[index].materia,
-                        nota: controller.medias.medias[index].media,
-                        mediaMaua: controller.mediaMaua,
-                      );
-                    },
-                    separatorBuilder: (BuildContext context, int index) {
-                      return Container(
-                        height: 1.5,
-                        color: Colors.black,
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ListaNotasCard(
+                          onTap: () => {
+                            Modular.to.pushNamed(
+                              '/medias/notas',
+                              arguments:
+                                  controller.medias.medias[index].materia,
+                            )
+                          },
+                          texto: controller.medias.medias[index].materia,
+                          nota: controller.medias.medias[index].media,
+                          mediaMaua: controller.mediaMaua,
+                        ),
                       );
                     },
                   );
                 },
               ),
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.03,
             ),
           ],
         )),

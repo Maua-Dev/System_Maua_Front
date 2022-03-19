@@ -9,11 +9,11 @@ class MediasRepository implements IMediasRepository {
     medias: [
       MediaModel(
         materia: 'Cálculo Diferencial e Integral II',
-        media: 8.0,
+        media: 8.5,
       ),
       MediaModel(
         materia: 'Física II',
-        media: 7.0,
+        media: 7.5,
       ),
       MediaModel(
         materia: 'Resistência dos materiais',

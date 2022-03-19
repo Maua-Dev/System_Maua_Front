@@ -26,8 +26,8 @@ class CoeficienteWidget extends StatelessWidget {
               color: Colors.white,
               width: 1,
             )),
-        width: MediaQuery.of(context).size.width * 0.9,
-        height: MediaQuery.of(context).size.height * 0.05,
+        width: MediaQuery.of(context).size.width * 0.75,
+        height: MediaQuery.of(context).size.height * 0.042,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 2),
           child: Row(
