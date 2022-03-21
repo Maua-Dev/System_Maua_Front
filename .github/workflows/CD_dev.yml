@@ -2,10 +2,8 @@ name: CD Dev
 
 on:
   workflow_dispatch:
-  pull_request:
-    branches: [develop]
   push:
-    branches: [develop]
+    branches: [homolog]
 jobs:
   build_Android_App:
     name: Build APP Bundle

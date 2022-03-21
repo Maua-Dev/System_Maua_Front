@@ -29,6 +29,7 @@ void main() {
   );
 
   var mediasTest = MediasModel(
+    mediaGeral: 9.0,
     nomeGraduacao: 'Engenharia de Computação',
     ano: 2021,
     medias: [

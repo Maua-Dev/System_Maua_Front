@@ -23,7 +23,7 @@ class ClosedBottomNavigationBar extends StatelessWidget {
             size: MediaQuery.of(context).size.height * 0.04,
             icon: Icons.calendar_today,
             onPressed: () {
-              Modular.to.pushNamed('/calendario');
+              Modular.to.navigate('/calendario');
               onPressed!();
             }),
         Padding(
@@ -34,14 +34,14 @@ class ClosedBottomNavigationBar extends StatelessWidget {
             size: MediaQuery.of(context).size.height * 0.049,
             icon: Icons.fact_check,
             onPressed: () {
-              Modular.to.pushNamed('/medias');
+              Modular.to.navigate('/medias');
               onPressed!();
             }),
         IconButtonCustomWidget(
             size: MediaQuery.of(context).size.height * 0.049,
             icon: Icons.help_outline_outlined,
             onPressed: () {
-              Modular.to.pushNamed('/help');
+              Modular.to.navigate('/help');
               onPressed!();
             }),
       ],

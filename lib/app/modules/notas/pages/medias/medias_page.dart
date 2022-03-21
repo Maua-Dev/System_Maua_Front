@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/coeficiente-rendimento/coeficiente_widget.dart';
-import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/opcao_chip/opcao_chip.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/lista_notas/lista_notas_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
@@ -35,7 +34,7 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(8, 8, 8, 4),
                             child: Text(
-                              'Engenharia de Computação',
+                              controller.medias.nomeGraduacao,
                               style:
                                   AppTextStyles.bodyBold.copyWith(fontSize: 22),
                               textAlign: TextAlign.center,

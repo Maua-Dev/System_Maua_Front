@@ -25,6 +25,9 @@ abstract class MediasControllerBase with Store {
   @computed
   int get mediaMaua => 6;
 
+  @computed
+  String get mediaGeral => medias.mediaGeral.toString();
+
   @observable
   MediasModel medias = MediasModel.newInstance();
 
@@ -39,7 +42,6 @@ abstract class MediasControllerBase with Store {
   @action
   Future<void> getMedias() async {
     medias = await mediasRepository.getMedias();
-    print(controllerFiltroAno.ano);
   }
 
   @action

@@ -33,4 +33,9 @@ class AuthController {
       _loggedIn = false;
     }
   }
+
+  Future<void> logout() async {
+    await storage.cleanToken();
+    _loggedIn = false;
+  }
 }
