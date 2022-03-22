@@ -18,7 +18,7 @@ class EntrarButtonWidget extends StatelessWidget {
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               onPrimary: Colors.white,
-              primary: AppColors.button,
+              primary: AppColors.buttonBrandingBlue,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10))),
           onPressed: onPressed,

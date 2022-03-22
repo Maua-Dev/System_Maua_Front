@@ -29,7 +29,7 @@ class NotasCardWidget extends StatelessWidget {
               Text(
                 tituloAvaliacao.name + ': ',
                 style:
-                    AppTextStyles.body.copyWith(color: AppColors.strongLetter),
+                    AppTextStyles.body.copyWith(color: AppColors.generalLetter),
               ),
               Text(
                 notaAvaliacao == null
@@ -40,7 +40,7 @@ class NotasCardWidget extends StatelessWidget {
                         ? null
                         : notaAvaliacao! < 6.0
                             ? Colors.red
-                            : AppColors.strongLetter),
+                            : AppColors.generalLetter),
               )
             ],
           ),

@@ -27,7 +27,7 @@ class FiltroWidget extends StatelessWidget {
           elevation: 16,
           style: TextStyle(
             fontSize: 24,
-            color: AppColors.strongLetter,
+            color: AppColors.generalLetter,
           ),
           underline: Container(
             height: 0,

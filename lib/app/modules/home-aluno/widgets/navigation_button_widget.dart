@@ -21,7 +21,7 @@ class NavigationButtonWidget extends StatelessWidget {
           decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(width: 1, color: AppColors.borderGrey),
+              border: Border.all(width: 1, color: AppColors.shape),
               boxShadow: [AppColors.shadow]),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -31,7 +31,7 @@ class NavigationButtonWidget extends StatelessWidget {
                 Icon(
                   icon,
                   size: MediaQuery.of(context).size.width < 350 ? 36 : 48,
-                  color: AppColors.thinLetter,
+                  color: AppColors.lightLetter,
                 ),
                 SizedBox(
                   width: 24,

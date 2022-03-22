@@ -22,8 +22,8 @@ class AppWidget extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'NotoSans',
           colorScheme: ColorScheme.light().copyWith(
-            primary: AppColors.darkBlue,
-            secondary: AppColors.lightBlue,
+            primary: AppColors.buttonBrandingBlue,
+            secondary: AppColors.buttonLightBlue,
             surface: AppColors.background,
           ),
           textTheme: TextTheme(
@@ -32,7 +32,7 @@ class AppWidget extends StatelessWidget {
             headline6: AppTextStyles.lightBody,
           ),
           appBarTheme: AppBarTheme(
-            color: AppColors.darkBlue,
+            color: AppColors.buttonBrandingBlue,
             centerTitle: true,
             toolbarTextStyle: AppTextStyles.appBarTitle,
           ),

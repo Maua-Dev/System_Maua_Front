@@ -38,7 +38,8 @@ class AppBarHomeWidget extends StatelessWidget {
                   width: MediaQuery.of(context).size.height * 0.13,
                   height: MediaQuery.of(context).size.height * 0.13,
                   decoration: BoxDecoration(
-                    border: Border.all(width: 2, color: AppColors.white),
+                    border:
+                        Border.all(width: 2, color: AppColors.textButtonCollor),
                     borderRadius: BorderRadius.circular(100),
                   ),
                   child: Padding(

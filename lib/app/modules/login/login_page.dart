@@ -49,7 +49,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                             ? MediaQuery.of(context).size.height * 0.6
                             : 0,
                         decoration: BoxDecoration(
-                          color: AppColors.borderGrey,
+                          color: AppColors.shape,
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(30.0),
                             topRight: Radius.circular(30.0),
@@ -68,7 +68,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                                     child: Text(
                                       'Insira seus dados',
                                       style: TextStyle(
-                                        color: AppColors.darkBlue,
+                                        color: AppColors.buttonBrandingBlue,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
@@ -85,11 +85,11 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(10))),
                                         labelStyle: TextStyle(
-                                            color: AppColors.strongLetter),
+                                            color: AppColors.generalLetter),
                                         labelText: 'Email',
                                         prefixIcon: Icon(
                                           Icons.mail,
-                                          color: AppColors.darkBlue,
+                                          color: AppColors.buttonBrandingBlue,
                                         ),
                                       ),
                                     ),
@@ -106,7 +106,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                                           decoration: InputDecoration(
                                               labelStyle: TextStyle(
                                                   color:
-                                                      AppColors.strongLetter),
+                                                      AppColors.generalLetter),
                                               border: OutlineInputBorder(
                                                   borderRadius:
                                                       BorderRadius.all(
@@ -119,12 +119,14 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                                                   controller.passwordVisibility
                                                       ? Icons.visibility_off
                                                       : Icons.visibility,
-                                                  color: AppColors.darkBlue,
+                                                  color: AppColors
+                                                      .buttonBrandingBlue,
                                                 ),
                                               ),
                                               prefixIcon: Icon(
                                                 Icons.vpn_key,
-                                                color: AppColors.darkBlue,
+                                                color: AppColors
+                                                    .buttonBrandingBlue,
                                               )),
                                         );
                                       },
@@ -142,7 +144,8 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                                           child: Text(
                                             'Esqueci minha senha',
                                             style: TextStyle(
-                                                color: AppColors.button),
+                                                color: AppColors
+                                                    .buttonBrandingBlue),
                                           ),
                                         ),
                                       ]),
@@ -153,7 +156,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                                     return Center(
                                       child: Text(
                                         controller.erros,
-                                        style: TextStyle(color: AppColors.red),
+                                        style: TextStyle(color: Colors.red),
                                       ),
                                     );
                                   }),

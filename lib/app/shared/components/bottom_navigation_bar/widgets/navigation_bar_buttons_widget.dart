@@ -25,14 +25,15 @@ class NavigationBarButtonsWidget extends StatelessWidget {
         children: [
           Icon(
             icon,
-            color: AppColors.darkBlue,
+            color: AppColors.buttonBrandingBlue,
             size: 36,
           ),
           FittedBox(
             fit: BoxFit.scaleDown,
             child: Text(titulo,
                 style: AppTextStyles.body.copyWith(
-                    color: AppColors.darkBlue, fontWeight: FontWeight.bold)),
+                    color: AppColors.buttonBrandingBlue,
+                    fontWeight: FontWeight.bold)),
           ),
         ],
       ),

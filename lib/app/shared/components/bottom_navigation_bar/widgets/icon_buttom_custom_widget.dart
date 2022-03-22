@@ -16,7 +16,7 @@ class IconButtonCustomWidget extends StatelessWidget {
       padding: const EdgeInsets.only(top: 16),
       iconSize: size,
       icon: Icon(icon),
-      color: AppColors.white,
+      color: AppColors.textButtonCollor,
       onPressed: onPressed,
     );
   }

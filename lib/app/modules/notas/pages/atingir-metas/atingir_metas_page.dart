@@ -36,7 +36,7 @@ class AtingirMetasPageState
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Material(
-                            color: AppColors.white,
+                            color: AppColors.textButtonCollor,
                             borderRadius: BorderRadius.circular(10),
                             child: InkWell(
                               onTap: controller.getNotasCalculadas,
@@ -52,12 +52,13 @@ class AtingirMetasPageState
                                         'Calcular',
                                         style: AppTextStyles.appBarTitle
                                             .copyWith(
-                                                color: AppColors.darkBlue),
+                                                color: AppColors
+                                                    .buttonBrandingBlue),
                                       ),
                                       SizedBox(width: 5),
                                       Icon(
                                         Icons.my_location_outlined,
-                                        color: AppColors.darkBlue,
+                                        color: AppColors.buttonBrandingBlue,
                                       ),
                                     ],
                                   ),
@@ -69,7 +70,7 @@ class AtingirMetasPageState
                             width: 5,
                           ),
                           Material(
-                            color: AppColors.white,
+                            color: AppColors.textButtonCollor,
                             borderRadius: BorderRadius.circular(10),
                             child: InkWell(
                               onTap: controller.getMateria,
@@ -85,12 +86,13 @@ class AtingirMetasPageState
                                         'Editar',
                                         style: AppTextStyles.appBarTitle
                                             .copyWith(
-                                                color: AppColors.darkBlue),
+                                                color: AppColors
+                                                    .buttonBrandingBlue),
                                       ),
                                       SizedBox(width: 5),
                                       Icon(
                                         Icons.edit,
-                                        color: AppColors.darkBlue,
+                                        color: AppColors.buttonBrandingBlue,
                                       ),
                                     ],
                                   ),
@@ -104,7 +106,7 @@ class AtingirMetasPageState
                     Container(
                       width: MediaQuery.of(context).size.width * 0.8,
                       decoration: BoxDecoration(
-                        color: AppColors.white,
+                        color: AppColors.textButtonCollor,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -118,7 +120,7 @@ class AtingirMetasPageState
                               decoration: BoxDecoration(
                                 border: Border(
                                   bottom: BorderSide(
-                                      width: 2.0, color: AppColors.stroke),
+                                      width: 2.0, color: AppColors.shape),
                                 ),
                               ),
                               child: Observer(builder: (_) {
@@ -149,7 +151,7 @@ class AtingirMetasPageState
                     Container(
                         width: MediaQuery.of(context).size.width * 0.8,
                         decoration: BoxDecoration(
-                          color: AppColors.white,
+                          color: AppColors.textButtonCollor,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(
@@ -177,7 +179,7 @@ class AtingirMetasPageState
                     Container(
                         width: MediaQuery.of(context).size.width * 0.8,
                         decoration: BoxDecoration(
-                          color: AppColors.white,
+                          color: AppColors.textButtonCollor,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(

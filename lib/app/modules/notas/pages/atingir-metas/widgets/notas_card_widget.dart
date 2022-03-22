@@ -42,7 +42,7 @@ class _NotasCardWidgetState extends State<NotasCardWidget> {
               Text(
                 widget.tituloAvaliacao.name + ': ',
                 style:
-                    AppTextStyles.body.copyWith(color: AppColors.strongLetter),
+                    AppTextStyles.body.copyWith(color: AppColors.generalLetter),
               ),
               Container(
                 child: widget.notaAvaliacao == null
@@ -80,7 +80,7 @@ class _NotasCardWidgetState extends State<NotasCardWidget> {
                                 ? null
                                 : widget.notaAvaliacao! < 6.0
                                     ? Colors.red
-                                    : AppColors.strongLetter),
+                                    : AppColors.generalLetter),
                       ),
               )
             ],

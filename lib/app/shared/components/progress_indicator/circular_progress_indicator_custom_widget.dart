@@ -7,7 +7,7 @@ class CircularProgressIndicatorCustomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircularProgressIndicator(
-      valueColor: AlwaysStoppedAnimation<Color>(AppColors.darkBlue),
+      valueColor: AlwaysStoppedAnimation<Color>(AppColors.buttonBrandingBlue),
     );
   }
 }
