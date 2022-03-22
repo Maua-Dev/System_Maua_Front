@@ -2,17 +2,13 @@
 // in system_maua_front/test/app/modules/notas/medias/medias_controller_test.dart.
 // Do not manually edit this file.
 
-import 'dart:async' as _i5;
+import 'dart:async' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:system_maua_front/app/modules/notas/pages/medias/models/filtros/filters_model.dart'
-    as _i2;
 import 'package:system_maua_front/app/modules/notas/pages/medias/models/medias/medias_model.dart'
-    as _i3;
-import 'package:system_maua_front/app/modules/notas/pages/medias/repositories/filtros/filtros_medias_repository_interface.dart'
-    as _i4;
+    as _i2;
 import 'package:system_maua_front/app/modules/notas/pages/medias/repositories/medias/medias_repository_interface.dart'
-    as _i6;
+    as _i3;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -24,39 +20,19 @@ import 'package:system_maua_front/app/modules/notas/pages/medias/repositories/me
 // ignore_for_file: unnecessary_parenthesis
 // ignore_for_file: camel_case_types
 
-class _FakeFiltroMediasModel_0 extends _i1.Fake
-    implements _i2.FiltroMediasModel {}
-
-class _FakeMediasModel_1 extends _i1.Fake implements _i3.MediasModel {}
-
-/// A class which mocks [IFiltroMediasRepository].
-///
-/// See the documentation for Mockito's code generation for more information.
-class MockIFiltroMediasRepository extends _i1.Mock
-    implements _i4.IFiltroMediasRepository {
-  MockIFiltroMediasRepository() {
-    _i1.throwOnMissingStub(this);
-  }
-
-  @override
-  _i5.Future<_i2.FiltroMediasModel> getFiltros() => (super.noSuchMethod(
-          Invocation.method(#getFiltros, []),
-          returnValue:
-              Future<_i2.FiltroMediasModel>.value(_FakeFiltroMediasModel_0()))
-      as _i5.Future<_i2.FiltroMediasModel>);
-}
+class _FakeMediasModel_0 extends _i1.Fake implements _i2.MediasModel {}
 
 /// A class which mocks [IMediasRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockIMediasRepository extends _i1.Mock implements _i6.IMediasRepository {
+class MockIMediasRepository extends _i1.Mock implements _i3.IMediasRepository {
   MockIMediasRepository() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i5.Future<_i3.MediasModel> getMedias() =>
+  _i4.Future<_i2.MediasModel> getMedias() =>
       (super.noSuchMethod(Invocation.method(#getMedias, []),
-              returnValue: Future<_i3.MediasModel>.value(_FakeMediasModel_1()))
-          as _i5.Future<_i3.MediasModel>);
+              returnValue: Future<_i2.MediasModel>.value(_FakeMediasModel_0()))
+          as _i4.Future<_i2.MediasModel>);
 }

@@ -39,29 +39,6 @@ mixin _$MediasController on MediasControllerBase, Store {
     });
   }
 
-  final _$filtrosAtom = Atom(name: 'MediasControllerBase.filtros');
-
-  @override
-  FiltroMediasModel get filtros {
-    _$filtrosAtom.reportRead();
-    return super.filtros;
-  }
-
-  @override
-  set filtros(FiltroMediasModel value) {
-    _$filtrosAtom.reportWrite(value, super.filtros, () {
-      super.filtros = value;
-    });
-  }
-
-  final _$getFiltrosAsyncAction =
-      AsyncAction('MediasControllerBase.getFiltros');
-
-  @override
-  Future<void> getFiltros() {
-    return _$getFiltrosAsyncAction.run(() => super.getFiltros());
-  }
-
   final _$getMediasAsyncAction = AsyncAction('MediasControllerBase.getMedias');
 
   @override
@@ -69,19 +46,10 @@ mixin _$MediasController on MediasControllerBase, Store {
     return _$getMediasAsyncAction.run(() => super.getMedias());
   }
 
-  final _$toggleOpcaoAsyncAction =
-      AsyncAction('MediasControllerBase.toggleOpcao');
-
-  @override
-  Future<void> toggleOpcao(String label) {
-    return _$toggleOpcaoAsyncAction.run(() => super.toggleOpcao(label));
-  }
-
   @override
   String toString() {
     return '''
 medias: ${medias},
-filtros: ${filtros},
 mediaMaua: ${mediaMaua},
 mediaGeral: ${mediaGeral}
     ''';

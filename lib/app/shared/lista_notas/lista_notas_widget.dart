@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_launcher_icons/xml_templates.dart';
 
 class ListaNotasCard extends StatelessWidget {
   final Function()? onTap;
