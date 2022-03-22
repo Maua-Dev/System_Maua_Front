@@ -31,12 +31,13 @@ class ChipWidget extends StatelessWidget {
           child: Text(
             label,
             style: TextStyle(
-              color: selected ? AppColors.white : AppColors.lightLetter,
+              color:
+                  selected ? AppColors.textButtonCollor : AppColors.lightLetter,
             ),
           ),
         ),
       ),
-      selectedColor: AppColors.button,
+      selectedColor: AppColors.buttonBrandingBlue,
       elevation: 1.0,
       shadowColor: Colors.grey[60],
       padding: EdgeInsets.all(8.0),

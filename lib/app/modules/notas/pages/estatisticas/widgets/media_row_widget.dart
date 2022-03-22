@@ -28,7 +28,7 @@ class MediaRowWidget extends StatelessWidget {
                   child: Text(
                     media,
                     style: AppTextStyles.body.copyWith(
-                        color: azul ? AppColors.lightBlue : AppColors.red),
+                        color: azul ? AppColors.buttonLightBlue : Colors.red),
                   ))
             ],
           ),

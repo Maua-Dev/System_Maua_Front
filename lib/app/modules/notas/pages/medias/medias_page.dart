@@ -139,9 +139,9 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                                           ? controller.medias.medias[index]
                                                       .media! >=
                                                   controller.mediaMaua
-                                              ? AppColors.thinLetter
-                                              : AppColors.red
-                                          : AppColors.thinLetter,
+                                              ? AppColors.lightLetter
+                                              : Colors.red
+                                          : AppColors.lightLetter,
                                   fontWeight: FontWeight.w600,
                                 ),
                               )
@@ -153,7 +153,7 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                     separatorBuilder: (BuildContext context, int index) {
                       return Container(
                         height: 1.5,
-                        color: AppColors.stroke,
+                        color: AppColors.shape,
                       );
                     },
                   );

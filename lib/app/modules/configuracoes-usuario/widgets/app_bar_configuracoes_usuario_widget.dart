@@ -24,7 +24,7 @@ class AppBarConfiguracoesUsuario extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.115,
             decoration: BoxDecoration(
               color: Colors.white,
-              border: Border.all(width: 2, color: AppColors.lightBlue),
+              border: Border.all(width: 2, color: AppColors.buttonLightBlue),
               shape: BoxShape.circle,
             ),
             child: Center(

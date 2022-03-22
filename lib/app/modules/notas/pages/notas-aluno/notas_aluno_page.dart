@@ -41,7 +41,7 @@ class NotasAlunoPageState
                     Container(
                       width: MediaQuery.of(context).size.width * 0.8,
                       decoration: BoxDecoration(
-                        color: AppColors.white,
+                        color: AppColors.textButtonCollor,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -55,7 +55,7 @@ class NotasAlunoPageState
                               decoration: BoxDecoration(
                                 border: Border(
                                   bottom: BorderSide(
-                                      width: 2.0, color: AppColors.stroke),
+                                      width: 2.0, color: AppColors.shape),
                                 ),
                               ),
                               child: Observer(builder: (_) {
@@ -86,7 +86,7 @@ class NotasAlunoPageState
                     Container(
                         width: MediaQuery.of(context).size.width * 0.8,
                         decoration: BoxDecoration(
-                          color: AppColors.white,
+                          color: AppColors.textButtonCollor,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(
@@ -112,7 +112,7 @@ class NotasAlunoPageState
                     Container(
                         width: MediaQuery.of(context).size.width * 0.8,
                         decoration: BoxDecoration(
-                          color: AppColors.white,
+                          color: AppColors.textButtonCollor,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(

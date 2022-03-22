@@ -57,8 +57,8 @@ class _ConfiguracoesUsuarioPageState
                       EdgeInsets.symmetric(
                           vertical: 16,
                           horizontal: MediaQuery.of(context).size.width * 0.4)),
-                  backgroundColor:
-                      MaterialStateProperty.all<Color?>(AppColors.lightBlue),
+                  backgroundColor: MaterialStateProperty.all<Color?>(
+                      AppColors.buttonLightBlue),
                   elevation: MaterialStateProperty.all<double?>(10),
                 ),
                 child: Text(

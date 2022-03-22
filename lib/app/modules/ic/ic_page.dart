@@ -36,7 +36,7 @@ class _IcPageState extends ModularState<IcPage, IcController> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white,
                       boxShadow: [AppColors.shadow],
-                      border: Border.all(color: AppColors.stroke, width: 2)),
+                      border: Border.all(color: AppColors.shape, width: 2)),
                   child: Column(
                     children: [
                       Padding(
@@ -69,7 +69,7 @@ class _IcPageState extends ModularState<IcPage, IcController> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white,
                       boxShadow: [AppColors.shadow],
-                      border: Border.all(color: AppColors.stroke)),
+                      border: Border.all(color: AppColors.shape)),
                   child: Column(
                     children: [
                       IcCardDropDownWidget(

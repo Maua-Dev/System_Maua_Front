@@ -20,7 +20,7 @@ class IntercambioCard extends StatelessWidget {
           child: ElevatedButton(
             onPressed: onPressed,
             style: ElevatedButton.styleFrom(
-              primary: AppColors.white,
+              primary: AppColors.textButtonCollor,
             ),
             child: Text(
               '$title',

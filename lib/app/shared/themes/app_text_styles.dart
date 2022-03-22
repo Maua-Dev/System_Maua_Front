@@ -5,28 +5,30 @@ import 'app_colors.dart';
 
 class AppTextStyles {
   static final TextStyle appBarTitle = GoogleFonts.notoSans(
-    color: AppColors.white,
+    color: AppColors.textButtonCollor,
     fontSize: 20,
     fontWeight: FontWeight.w400,
   );
 
   static final TextStyle appBarHomeTitle = GoogleFonts.notoSans(
-    color: AppColors.white,
+    color: AppColors.textButtonCollor,
     fontSize: 24,
     fontWeight: FontWeight.bold,
   );
 
   static final TextStyle appBarHomeBody = GoogleFonts.notoSans(
-      color: AppColors.white, fontSize: 22, fontWeight: FontWeight.w100);
+      color: AppColors.textButtonCollor,
+      fontSize: 22,
+      fontWeight: FontWeight.w100);
 
   static final TextStyle bodyBold = GoogleFonts.notoSans(
-    color: AppColors.strongLetter,
+    color: AppColors.generalLetter,
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );
 
   static final TextStyle body = GoogleFonts.notoSans(
-    color: AppColors.thinLetter,
+    color: AppColors.lightLetter,
     fontSize: 18,
     fontWeight: FontWeight.normal,
   );
@@ -38,7 +40,7 @@ class AppTextStyles {
   );
 
   static final TextStyle button = GoogleFonts.notoSans(
-    color: AppColors.white,
+    color: AppColors.textButtonCollor,
     fontSize: 18,
     fontWeight: FontWeight.normal,
   );

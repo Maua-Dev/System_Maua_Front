@@ -22,7 +22,7 @@ class IconesNavegacaoWidget extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: AppColors.stroke, width: 1),
+          border: Border.all(color: AppColors.shape, width: 1),
           boxShadow: [AppColors.shadow]),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -37,7 +37,7 @@ class IconesNavegacaoWidget extends StatelessWidget {
                 },
                 icon: Icon(
                   icone,
-                  color: AppColors.darkBlue,
+                  color: AppColors.buttonBrandingBlue,
                   size: 34,
                 )),
             Text(
