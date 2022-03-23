@@ -82,12 +82,13 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                             )
                           },
                           texto: controller.medias.medias[index].materia,
-                          nota: controller.medias.medias[index].media,
+                          nota:
+                              controller.medias.medias[index].getMediaComputada,
                           mediaMaua: controller.mediaMaua,
                         ),
                       );
                     },
-);
+                  );
                 },
               ),
             ),

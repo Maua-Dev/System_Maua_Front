@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ListaNotasCard extends StatelessWidget {
   final Function()? onTap;
   final String? texto;
-  final double? nota;
+  final String? nota;
   final int? mediaMaua;
 
   ListaNotasCard({
@@ -27,9 +27,9 @@ class ListaNotasCard extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.4),
-              spreadRadius: 2,
+              spreadRadius: 1,
               blurRadius: 1,
-              offset: Offset(0, 3),
+              offset: Offset(0, 2),
             ),
           ],
           borderRadius: BorderRadius.circular(10),

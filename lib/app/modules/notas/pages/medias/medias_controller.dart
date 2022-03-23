@@ -7,7 +7,6 @@ part 'medias_controller.g.dart';
 class MediasController = MediasControllerBase with _$MediasController;
 
 abstract class MediasControllerBase with Store {
-
   final IMediasRepository mediasRepository;
 
   MediasControllerBase(this.mediasRepository) {
