@@ -25,7 +25,7 @@ class NavigationWidget extends StatelessWidget {
                   children: [
                     Icon(
                       icone,
-                      color: AppColors.lightBlue,
+                      color: AppColors.buttonLightBlue,
                       size: 32,
                     ),
                     Padding(
@@ -38,7 +38,7 @@ class NavigationWidget extends StatelessWidget {
                 ),
                 Icon(
                   Icons.keyboard_arrow_right,
-                  color: AppColors.lightBlue,
+                  color: AppColors.buttonLightBlue,
                   size: 32,
                 )
               ],

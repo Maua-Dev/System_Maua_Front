@@ -28,7 +28,7 @@ class ActivityCard extends StatelessWidget {
       child: Container(
         height: MediaQuery.of(context).size.height * 0.28,
         decoration: BoxDecoration(
-          border: Border.all(width: 3, color: AppColors.stroke),
+          border: Border.all(width: 3, color: AppColors.shape),
           borderRadius: BorderRadius.circular(10),
         ),
         child: InkWell(
@@ -47,9 +47,9 @@ class ActivityCard extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 1),
                     child: Container(
                       decoration: BoxDecoration(
-                        border: Border.all(width: 1, color: AppColors.stroke),
+                        border: Border.all(width: 1, color: AppColors.shape),
                         borderRadius: BorderRadius.circular(10),
-                        color: AppColors.white,
+                        color: AppColors.textButtonCollor,
                       ),
                       child: Center(
                         child: Text(
@@ -67,9 +67,9 @@ class ActivityCard extends StatelessWidget {
                   flex: 1,
                   child: Container(
                     decoration: BoxDecoration(
-                      border: Border.all(width: 1, color: AppColors.stroke),
+                      border: Border.all(width: 1, color: AppColors.shape),
                       borderRadius: BorderRadius.circular(10),
-                      color: AppColors.white,
+                      color: AppColors.textButtonCollor,
                     ),
                     child: Center(
                       child: Text(
@@ -91,9 +91,9 @@ class ActivityCard extends StatelessWidget {
                     child: Container(
                       // height: MediaQuery.of(context).size.height * 0.075,
                       decoration: BoxDecoration(
-                        border: Border.all(width: 1, color: AppColors.stroke),
+                        border: Border.all(width: 1, color: AppColors.shape),
                         borderRadius: BorderRadius.circular(10),
-                        color: AppColors.white,
+                        color: AppColors.textButtonCollor,
                       ),
                       child: Center(
                         child: Visibility(
@@ -113,7 +113,7 @@ class ActivityCard extends StatelessWidget {
                               Icon(
                                 Icons.alarm,
                                 size: 30,
-                                color: AppColors.strongLetter,
+                                color: AppColors.generalLetter,
                               ),
                             ],
                           ),

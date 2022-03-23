@@ -32,7 +32,8 @@ class _MateriasPageState
                 padding: const EdgeInsets.only(left: 16, top: 16),
                 child: Text(
                   'Matérias',
-                  style: TextStyle(color: AppColors.strongLetter, fontSize: 24),
+                  style:
+                      TextStyle(color: AppColors.generalLetter, fontSize: 24),
                 ),
               ),
               Observer(builder: (_) {
@@ -59,7 +60,8 @@ class _MateriasPageState
                 padding: const EdgeInsets.only(left: 24),
                 child: Text(
                   'PAES',
-                  style: TextStyle(color: AppColors.strongLetter, fontSize: 24),
+                  style:
+                      TextStyle(color: AppColors.generalLetter, fontSize: 24),
                 ),
               ),
               Observer(builder: (_) {

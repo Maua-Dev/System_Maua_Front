@@ -87,7 +87,7 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                         ),
                       );
                     },
-                  );
+);
                 },
               ),
             ),

@@ -41,7 +41,7 @@ class _InformacaoMaterialPageState
               TextoCustomWidget(texto: rotaController.custoMaterial),
               TextoCustomWidget(
                   texto: rotaController.descricaoMaterial,
-                  corTexto: AppColors.thinLetter,
+                  corTexto: AppColors.lightLetter,
                   fontsize: 16),
               Row(
                 children: [
