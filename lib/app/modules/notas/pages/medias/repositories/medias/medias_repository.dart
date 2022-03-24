@@ -14,7 +14,7 @@ class MediasRepository implements IMediasRepository {
       ),
       MediaModel(
         materia: 'Física II',
-        media: 7.0,
+        media: 7.5,
       ),
       MediaModel(
         materia: 'Resistência dos materiais',

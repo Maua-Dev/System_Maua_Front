@@ -7,8 +7,6 @@ import 'package:system_maua_front/app/modules/notas/pages/estatisticas/estatisti
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/repositories/estatisticas_repository.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/medias_controller.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/medias_page.dart';
-import 'package:system_maua_front/app/modules/notas/pages/medias/repositories/filtros/filtros_medias_repository.dart';
-import 'package:system_maua_front/app/modules/notas/pages/medias/repositories/filtros/filtros_medias_repository_interface.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/repositories/medias/medias_repository.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/repositories/medias/medias_repository_interface.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/filtro_ano/filtro_controller.dart';
@@ -19,10 +17,8 @@ import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/repositori
 class NotasModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.lazySingleton((i) => MediasController(i(), i())),
+    Bind.lazySingleton((i) => MediasController(i())),
     Bind.lazySingleton<IMediasRepository>((i) => MediasRepository()),
-    Bind.lazySingleton<IFiltroMediasRepository>(
-        (i) => FiltroMediasRepository()),
     Bind.lazySingleton((i) => FiltroController()),
     Bind.lazySingleton((i) => NotasAlunoController(i())),
     Bind.lazySingleton<NotasAlunoRepository>((i) => NotasAlunoRepository()),
