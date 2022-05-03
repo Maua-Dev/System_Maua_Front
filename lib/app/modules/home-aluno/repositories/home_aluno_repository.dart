@@ -1,4 +1,3 @@
-import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 import 'package:system_maua_front/app/shared/models/aluno_model.dart';
 import 'package:system_maua_front/app/shared/models/aula_model.dart';
 
@@ -12,7 +11,7 @@ class HomeAlunoRepository implements IHomeAlunoRepository {
 
   var aula = AulaModel(
       local: 'H101',
-      tipoMateriaEnum: TipoMateriaEnum.RESMAT,
+      nomeAula: 'Resmat',
       horario: '14:00h',
       duracao: '14:00 - 15:40');
 

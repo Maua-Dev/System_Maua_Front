@@ -4,7 +4,6 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/home-aluno/widgets/app_bar_home_widget.dart';
 import 'package:system_maua_front/app/modules/home-aluno/widgets/navigation_button_widget.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
-import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 
 import 'home_aluno_controller.dart';
 
@@ -31,7 +30,7 @@ class _HomeAlunoPageState
             },
             usuario: controller.aluno.nome,
             ra: controller.aluno.ra,
-            materia: controller.aula.tipoMateriaEnum?.name ?? '',
+            materia: controller.aula.nomeAula,
             duracao: controller.aula.duracao,
             local: controller.aula.local,
           );

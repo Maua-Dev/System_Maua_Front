@@ -1,13 +1,12 @@
 import 'package:system_maua_front/app/modules/materias/models/materias_model.dart';
 import 'package:system_maua_front/app/shared/models/professores_model.dart';
-import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 
 import 'materias_repository_interface.dart';
 
 class MateriasRepository implements IMateriasRepository {
   var listaMaterias = [
     MateriasModel(
-        nome: TipoMateriaEnum.ACADEMIATALENTOS,
+        nome: 'Cálculo 1',
         foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
         professores: [
           ProfessoresModel(
@@ -19,10 +18,12 @@ class MateriasRepository implements IMateriasRepository {
           ProfessoresModel(
               nome: 'Murilo Zanini',
               foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
-        ]),
+        ],
+        codeSubject: 'ECM251'),
     MateriasModel(
-        nome: TipoMateriaEnum.CALC1,
+        nome: 'Cálculo 1',
         foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
+        codeSubject: 'ECM251',
         professores: [
           ProfessoresModel(
               nome: 'Murilo Zanini',

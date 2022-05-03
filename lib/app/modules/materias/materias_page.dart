@@ -4,7 +4,6 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/materias/materias_controller.dart';
 import 'package:system_maua_front/app/modules/materias/widgets/materia_card_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
-import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 
 class MateriasPage extends StatefulWidget {
@@ -48,8 +47,8 @@ class _MateriasPageState
                       itemCount: controller.materias.length,
                       itemBuilder: (context, index) {
                         return MateriaCardWidget(
-                          nomeMateria: controller.materias[index].nome.name,
-                          fotoMateria: controller.materias[index].foto,
+                          nomeMateria: controller.materias[index].nome,
+                          fotoMateria: controller.materias[index].foto ?? '',
                         );
                       },
                     ),
@@ -78,8 +77,8 @@ class _MateriasPageState
                       itemCount: controller.materias.length,
                       itemBuilder: (context, index) {
                         return MateriaCardWidget(
-                          nomeMateria: controller.materias[index].nome.name,
-                          fotoMateria: controller.materias[index].foto,
+                          nomeMateria: controller.materias[index].nome,
+                          fotoMateria: controller.materias[index].foto ?? '',
                         );
                       },
                     ),
