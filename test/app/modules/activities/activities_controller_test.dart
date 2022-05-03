@@ -5,7 +5,6 @@ import 'package:mockito/mockito.dart';
 import 'package:system_maua_front/app/app_module.dart';
 import 'package:system_maua_front/app/modules/activities/activities_controller.dart';
 import 'package:system_maua_front/app/modules/activities/repositories/activities_repository_interface.dart';
-import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 import 'package:system_maua_front/app/shared/models/activity_model.dart';
 
 import 'activities_controller_test.mocks.dart';
@@ -17,28 +16,28 @@ void main() {
   late ActivitiesController activitiesController;
   var activityTest = <ActivityModel>[
     ActivityModel(
-      subject: TipoMateriaEnum.FT.name,
+      subject: 'FT',
       activityName: 'Equação de Bernoulli',
       delivered: true,
       date: '21/07/2021',
       hour: '23:58',
     ),
     ActivityModel(
-      subject: TipoMateriaEnum.RESMAT.name,
+      subject: 'Resmat',
       activityName: 'Equação de Bernoulli',
       delivered: true,
       date: '22/07/2021',
       hour: '23:59',
     ),
     ActivityModel(
-      subject: TipoMateriaEnum.CALC2.name,
+      subject: 'Cálculo 2',
       activityName: 'Equação de Bernoulli',
       delivered: false,
       date: '23/07/2021',
       hour: '23:57',
     ),
     ActivityModel(
-      subject: TipoMateriaEnum.CALC2.name,
+      subject: 'Cálculo 2',
       activityName: 'Equação de Bernoulli gigante de mais aaaaa aaaaa aaaa',
       delivered: true,
       date: '24/07/2021',

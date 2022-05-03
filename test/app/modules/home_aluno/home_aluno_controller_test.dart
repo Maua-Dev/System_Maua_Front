@@ -3,7 +3,6 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:system_maua_front/app/modules/home-aluno/home_aluno_controller.dart';
 import 'package:system_maua_front/app/modules/home-aluno/repositories/home_aluno_repository_interface.dart';
-import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 import 'package:system_maua_front/app/shared/models/aluno_model.dart';
 import 'package:system_maua_front/app/shared/models/aula_model.dart';
 
@@ -15,10 +14,7 @@ void main() {
   late HomeAlunoController homeAlunoController;
   var alunoTeste = AlunoModel(nome: 'Gabriel', ra: '17.00163-3');
   var aulaTeste = AulaModel(
-      tipoMateriaEnum: TipoMateriaEnum.FT,
-      horario: '12:00',
-      duracao: '1:40',
-      local: 'H201');
+      nomeAula: 'FT', horario: '12:00', duracao: '1:40', local: 'H201');
 
   setUpAll(() {
     when(repository.getAluno()).thenAnswer((_) async => alunoTeste);

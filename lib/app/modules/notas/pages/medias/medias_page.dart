@@ -3,8 +3,8 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/coeficiente-rendimento/coeficiente_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
-import 'package:system_maua_front/app/shared/lista_notas/lista_notas_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
+import '../../../../shared/components/lista_notas/lista_notas_widget.dart';
 import 'medias_controller.dart';
 
 class MediasPage extends StatefulWidget {

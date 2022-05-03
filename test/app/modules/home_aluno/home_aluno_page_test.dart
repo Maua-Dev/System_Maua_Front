@@ -5,7 +5,6 @@ import 'package:mockito/mockito.dart';
 import 'package:system_maua_front/app/app_module.dart';
 import 'package:system_maua_front/app/modules/home-aluno/home_aluno_module.dart';
 import 'package:system_maua_front/app/modules/home-aluno/repositories/home_aluno_repository_interface.dart';
-import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 import 'package:system_maua_front/app/shared/models/aluno_model.dart';
 import 'package:system_maua_front/app/shared/models/aula_model.dart';
 
@@ -24,7 +23,7 @@ void main() {
     when(mockRepository.getAluno())
         .thenAnswer((_) async => AlunoModel(nome: 'Ronaldo', ra: '15.01310-3'));
     when(mockRepository.getAula()).thenAnswer((_) async => AulaModel(
-        tipoMateriaEnum: TipoMateriaEnum.CALC1,
+        nomeAula: 'Cálculo 2',
         local: 'H201',
         horario: '14h',
         duracao: '14 - 15'));
