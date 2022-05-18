@@ -40,7 +40,7 @@ class HelpAvisosPageState
               padding: const EdgeInsets.all(20.0),
               child: Text(
                 'Avisos Gerais da reitoria',
-                style: AppTextStyles.lightBody,
+                style: AppTextStyles.bodyH4,
               ),
             ),
           ),

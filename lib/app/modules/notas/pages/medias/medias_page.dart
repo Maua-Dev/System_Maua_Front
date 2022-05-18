@@ -35,8 +35,7 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                             padding: const EdgeInsets.fromLTRB(8, 8, 8, 4),
                             child: Text(
                               controller.medias.nomeGraduacao,
-                              style:
-                                  AppTextStyles.bodyBold.copyWith(fontSize: 22),
+                              style: AppTextStyles.bodyBoldH4,
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -56,9 +55,7 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         'Matérias',
-                        style: AppTextStyles.bodyBold.copyWith(
-                          fontSize: 18,
-                        ),
+                        style: AppTextStyles.bodyBoldH4,
                       ),
                     ),
                   ],

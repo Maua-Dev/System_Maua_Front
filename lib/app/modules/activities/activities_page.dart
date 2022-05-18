@@ -45,7 +45,7 @@ class _ActivitiesPageState
                     child: Observer(builder: (_) {
                       return Text(
                         '${controller.activitiesDelivered} de ${controller.activities.length}',
-                        style: AppTextStyles.lightBody,
+                        style: AppTextStyles.bodyH4,
                       );
                     }),
                   ),

@@ -29,7 +29,7 @@ class _OportunidadePageState
               padding: const EdgeInsets.all(20.0),
               child: Text(
                 'Oportunidades',
-                style: AppTextStyles.lightBody,
+                style: AppTextStyles.bodyH4,
                 textAlign: TextAlign.center,
               ),
             ),

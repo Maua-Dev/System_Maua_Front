@@ -36,7 +36,7 @@ class AtingirMetasPageState
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Material(
-                            color: AppColors.textButtonCollor,
+                            color: AppColors.white,
                             borderRadius: BorderRadius.circular(10),
                             child: InkWell(
                               onTap: controller.getNotasCalculadas,
@@ -50,15 +50,13 @@ class AtingirMetasPageState
                                     children: [
                                       Text(
                                         'Calcular',
-                                        style: AppTextStyles.appBarTitle
-                                            .copyWith(
-                                                color: AppColors
-                                                    .buttonBrandingBlue),
+                                        style: AppTextStyles.titleH2.copyWith(
+                                            color: AppColors.brandingBlue),
                                       ),
                                       SizedBox(width: 5),
                                       Icon(
                                         Icons.my_location_outlined,
-                                        color: AppColors.buttonBrandingBlue,
+                                        color: AppColors.brandingBlue,
                                       ),
                                     ],
                                   ),
@@ -70,7 +68,7 @@ class AtingirMetasPageState
                             width: 5,
                           ),
                           Material(
-                            color: AppColors.textButtonCollor,
+                            color: AppColors.white,
                             borderRadius: BorderRadius.circular(10),
                             child: InkWell(
                               onTap: controller.getMateria,
@@ -84,15 +82,13 @@ class AtingirMetasPageState
                                     children: [
                                       Text(
                                         'Editar',
-                                        style: AppTextStyles.appBarTitle
-                                            .copyWith(
-                                                color: AppColors
-                                                    .buttonBrandingBlue),
+                                        style: AppTextStyles.titleH2.copyWith(
+                                            color: AppColors.brandingBlue),
                                       ),
                                       SizedBox(width: 5),
                                       Icon(
                                         Icons.edit,
-                                        color: AppColors.buttonBrandingBlue,
+                                        color: AppColors.brandingBlue,
                                       ),
                                     ],
                                   ),
@@ -106,7 +102,7 @@ class AtingirMetasPageState
                     Container(
                       width: MediaQuery.of(context).size.width * 0.8,
                       decoration: BoxDecoration(
-                        color: AppColors.textButtonCollor,
+                        color: AppColors.white,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -129,7 +125,7 @@ class AtingirMetasPageState
                                       right: 16.0, left: 16, top: 8),
                                   child: Text(
                                     Modular.args!.data as String,
-                                    style: AppTextStyles.bodyBold,
+                                    style: AppTextStyles.bodyBoldH4,
                                     textAlign: TextAlign.center,
                                   ),
                                 );
@@ -151,7 +147,7 @@ class AtingirMetasPageState
                     Container(
                         width: MediaQuery.of(context).size.width * 0.8,
                         decoration: BoxDecoration(
-                          color: AppColors.textButtonCollor,
+                          color: AppColors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(
@@ -161,7 +157,7 @@ class AtingirMetasPageState
                               child: Container(
                                 child: Text(
                                   'Provas',
-                                  style: AppTextStyles.bodyBold,
+                                  style: AppTextStyles.bodyBoldH4,
                                 ),
                               ),
                             ),
@@ -179,7 +175,7 @@ class AtingirMetasPageState
                     Container(
                         width: MediaQuery.of(context).size.width * 0.8,
                         decoration: BoxDecoration(
-                          color: AppColors.textButtonCollor,
+                          color: AppColors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(
@@ -189,7 +185,7 @@ class AtingirMetasPageState
                               child: Container(
                                 child: Text(
                                   'Trabalhos',
-                                  style: AppTextStyles.bodyBold,
+                                  style: AppTextStyles.bodyBoldH4,
                                 ),
                               ),
                             ),

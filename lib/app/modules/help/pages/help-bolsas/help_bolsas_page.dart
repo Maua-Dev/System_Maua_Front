@@ -25,7 +25,7 @@ class _HelpBolsasPageState extends State<HelpBolsasPage> {
                   padding: const EdgeInsets.only(bottom: 4),
                   child: Text(
                     'Horário de atendimento: ',
-                    style: AppTextStyles.bodyBold.copyWith(fontSize: 24),
+                    style: AppTextStyles.titleH1,
                     textAlign: TextAlign.left,
                   ),
                 ),
