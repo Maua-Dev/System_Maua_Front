@@ -1,23 +1,45 @@
 {
-    "name": "system_maua_front",
-    "short_name": "system_maua_front",
+    "name": "Mauápp",
+    "short_name": "Mauápp",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Aplicação destinada a alunos do Instituto Mauá de Tecnologia.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "icons/Icon-192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
+            "src": "icons/android-launchericon-512-512.png",
+            "sizes": "512x512"
+          },
+          {
+            "src": "icons/android-launchericon-256-256.png",
+            "sizes": "256x256"
+          },
+          {
+            "src": "icons/android-launchericon-192-192.png",
+            "sizes": "192x192"
+          },
+          {
+            "src": "icons/android-launchericon-144-144.png",
+            "sizes": "144x144"
+          },
+          {
+            "src": "icons/android-launchericon-128-128.png",
+            "sizes": "128x128"
+          },
+          {
+            "src": "icons/android-launchericon-96-96.png",
+            "sizes": "96x96"
+          },
+          {
+            "src": "icons/android-launchericon-72-72.png",
+            "sizes": "72x72"
+          },
+          {
+            "src": "icons/android-launchericon-48-48.png",
+            "sizes": "48x48"
+          }
     ]
 }
