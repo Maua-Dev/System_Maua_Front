@@ -6,6 +6,7 @@ import 'package:system_maua_front/app/modules/home-aluno/widgets/navigation_butt
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 
+import '../../shared/components/dialogs/custom_alert_dialog_widget.dart';
 import 'home_aluno_controller.dart';
 
 class HomeAlunoPage extends StatefulWidget {
@@ -48,7 +49,16 @@ class _HomeAlunoPageState
           title: 'Entregas da semana',
           icon: Icons.playlist_add_check,
           onTap: () {
-            Modular.to.navigate('/activities');
+            // Modular.to.navigate('/activities');
+            showDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return const CustomAlertDialogWidget(
+                  title: 'Conteúdo indisponível!',
+                  content: 'Aguarde novas atualizações.',
+                );
+              },
+            );
           },
         ),
         NavigationButtonWidget(
