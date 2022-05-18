@@ -25,20 +25,21 @@ class NavigationWidget extends StatelessWidget {
                   children: [
                     Icon(
                       icone,
-                      color: AppColors.buttonLightBlue,
+                      color: AppColors.brandingBlue,
                       size: 32,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 16),
-                      child: Text(titulo,
-                          style:
-                              AppTextStyles.body.copyWith(color: Colors.black)),
+                      child: Text(
+                        titulo,
+                        style: AppTextStyles.cardH3,
+                      ),
                     ),
                   ],
                 ),
                 Icon(
                   Icons.keyboard_arrow_right,
-                  color: AppColors.buttonLightBlue,
+                  color: AppColors.brandingBlue,
                   size: 32,
                 )
               ],

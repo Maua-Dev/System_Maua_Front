@@ -44,9 +44,7 @@ class CoeficienteWidget extends StatelessWidget {
               ),
               Text(
                 '$nota',
-                style: AppTextStyles.bodyBold.copyWith(
-                  fontSize: 18,
-                ),
+                style: AppTextStyles.bodyBoldH4,
               ),
             ],
           ),

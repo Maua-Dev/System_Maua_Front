@@ -20,9 +20,9 @@ class AulaCardWidget extends StatelessWidget {
       child: Container(
         height: MediaQuery.of(context).size.height * 0.3,
         decoration: BoxDecoration(
-          border: Border.all(width: 3, color: AppColors.textButtonCollor),
-          borderRadius: BorderRadius.circular(10),
-        ),
+            border: Border.all(width: 3, color: AppColors.white),
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [AppColors.shadow]),
         child: Padding(
           padding: const EdgeInsets.all(5),
           child: Column(
@@ -32,7 +32,7 @@ class AulaCardWidget extends StatelessWidget {
               Container(
                 height: MediaQuery.of(context).size.height * 0.15,
                 decoration: BoxDecoration(
-                    color: AppColors.textButtonCollor,
+                    color: AppColors.white,
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(width: 1, color: AppColors.shape)),
                 child: Padding(
@@ -42,21 +42,19 @@ class AulaCardWidget extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Próxima aula',
-                                style: AppTextStyles.bodyBold,
-                              ),
-                              Text(materia,
-                                  style: AppTextStyles.lightBody.copyWith(
-                                    fontSize:
-                                        MediaQuery.of(context).size.width < 350
-                                            ? 18
-                                            : 20,
-                                  ))
-                            ]),
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Próxima aula',
+                              style: AppTextStyles.titleH2,
+                            ),
+                            Text(
+                              materia,
+                              style: AppTextStyles.cardH3,
+                            ),
+                          ],
+                        ),
                       )
                     ],
                   ),
@@ -69,7 +67,7 @@ class AulaCardWidget extends StatelessWidget {
                     child: Container(
                       height: MediaQuery.of(context).size.height * 0.12,
                       decoration: BoxDecoration(
-                          color: AppColors.textButtonCollor,
+                          color: AppColors.white,
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(width: 1, color: AppColors.shape)),
                       child: Padding(
@@ -91,11 +89,7 @@ class AulaCardWidget extends StatelessWidget {
                               flex: 2,
                               child: Text(
                                 duracao,
-                                style: AppTextStyles.lightBody.copyWith(
-                                    fontSize:
-                                        MediaQuery.of(context).size.width < 350
-                                            ? 16
-                                            : 20),
+                                style: AppTextStyles.cardH3,
                               ),
                             )
                           ],
@@ -109,7 +103,7 @@ class AulaCardWidget extends StatelessWidget {
                   Container(
                     height: MediaQuery.of(context).size.height * 0.12,
                     decoration: BoxDecoration(
-                        color: AppColors.textButtonCollor,
+                        color: AppColors.white,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(width: 1, color: AppColors.shape)),
                     child: Padding(
@@ -130,11 +124,7 @@ class AulaCardWidget extends StatelessWidget {
                           ),
                           Text(
                             local,
-                            style: AppTextStyles.lightBody.copyWith(
-                                fontSize:
-                                    MediaQuery.of(context).size.width < 350
-                                        ? 16
-                                        : 20),
+                            style: AppTextStyles.cardH3,
                           )
                         ],
                       ),

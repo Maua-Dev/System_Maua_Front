@@ -23,7 +23,7 @@ class IcDescricaoCardWidget extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 8, left: 4),
           child: Text(
             titulo,
-            style: AppTextStyles.bodyBold.copyWith(fontSize: 16),
+            style: AppTextStyles.bodyBoldH4,
             textAlign: TextAlign.left,
           ),
         ),

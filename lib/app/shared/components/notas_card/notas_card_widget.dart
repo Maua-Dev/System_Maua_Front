@@ -28,14 +28,14 @@ class NotasCardWidget extends StatelessWidget {
             children: [
               Text(
                 tituloAvaliacao.name + ': ',
-                style:
-                    AppTextStyles.body.copyWith(color: AppColors.generalLetter),
+                style: AppTextStyles.cardH3
+                    .copyWith(color: AppColors.generalLetter),
               ),
               Text(
                 notaAvaliacao == null
                     ? ''
                     : notaAvaliacao!.toStringAsFixed(1).replaceAll('.', ','),
-                style: AppTextStyles.body.copyWith(
+                style: AppTextStyles.cardH3.copyWith(
                     color: notaAvaliacao == null
                         ? null
                         : notaAvaliacao! < 6.0

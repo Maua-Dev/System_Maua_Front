@@ -43,7 +43,7 @@ class _IcPageState extends ModularState<IcPage, IcController> {
                         padding: const EdgeInsets.only(top: 8),
                         child: Text(
                           'O que é?',
-                          style: AppTextStyles.body
+                          style: AppTextStyles.cardH3
                               .copyWith(fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -100,7 +100,7 @@ class _IcPageState extends ModularState<IcPage, IcController> {
                                   child: Text(
                                     controller.listaTitulosIc[index],
                                     textAlign: TextAlign.center,
-                                    style: AppTextStyles.textButton,
+                                    style: AppTextStyles.bodyBoldH4,
                                   )),
                             );
                           },

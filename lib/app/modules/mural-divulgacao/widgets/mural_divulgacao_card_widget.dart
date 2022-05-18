@@ -55,7 +55,7 @@ class MuralDivulgacaoCardWidget extends StatelessWidget {
                                   BorderRadius.all(Radius.circular(100))),
                           child: Icon(
                             icon,
-                            color: AppColors.textButtonCollor,
+                            color: AppColors.white,
                             size: iconSize,
                           ),
                         ),

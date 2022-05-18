@@ -18,8 +18,8 @@ class CheckBoxWidget extends StatelessWidget {
         Checkbox(
           value: isChecked,
           onChanged: onChanged,
-          activeColor: AppColors.buttonBrandingBlue,
-          checkColor: AppColors.textButtonCollor,
+          activeColor: AppColors.brandingBlue,
+          checkColor: AppColors.white,
         ),
         Text(
           'Continuar conectado',

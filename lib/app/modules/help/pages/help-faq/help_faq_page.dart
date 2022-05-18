@@ -26,7 +26,7 @@ class _HelpFaqPageState extends ModularState<HelpFaqPage, HelpFaqController> {
               padding: const EdgeInsets.all(20.0),
               child: Text(
                 'Perguntas frequentes',
-                style: AppTextStyles.lightBody,
+                style: AppTextStyles.bodyH4,
                 textAlign: TextAlign.center,
               ),
             ),

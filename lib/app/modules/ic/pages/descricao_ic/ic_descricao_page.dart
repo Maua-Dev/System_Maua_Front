@@ -37,7 +37,7 @@ class _IcDescricaoPageState extends State<IcDescricaoPage> {
               children: [
                 Text(
                   model.tituloIc,
-                  style: AppTextStyles.bodyBold,
+                  style: AppTextStyles.bodyBoldH4,
                   textAlign: TextAlign.center,
                 ),
                 IcDescricaoCardWidget(
@@ -95,7 +95,7 @@ class _IcDescricaoPageState extends State<IcDescricaoPage> {
                                             child: TextButton(
                                               child: Text(
                                                 e.tituloArquivo,
-                                                style: AppTextStyles.textButton,
+                                                style: AppTextStyles.bodyBoldH4,
                                               ),
                                               onPressed: () {},
                                             ),

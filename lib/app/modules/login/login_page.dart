@@ -5,7 +5,7 @@ import 'package:system_maua_front/app/modules/login/login_controller.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
 import 'login_controller.dart';
-import 'widgets/EntrarButtonWidget.dart';
+import 'widgets/entrar_button_widget.dart';
 
 class LoginPage extends StatefulWidget {
   final String title;
@@ -68,7 +68,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                                     child: Text(
                                       'Insira seus dados',
                                       style: TextStyle(
-                                        color: AppColors.buttonBrandingBlue,
+                                        color: AppColors.brandingBlue,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
@@ -89,7 +89,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                                         labelText: 'Email',
                                         prefixIcon: Icon(
                                           Icons.mail,
-                                          color: AppColors.buttonBrandingBlue,
+                                          color: AppColors.brandingBlue,
                                         ),
                                       ),
                                     ),
@@ -119,14 +119,12 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                                                   controller.passwordVisibility
                                                       ? Icons.visibility_off
                                                       : Icons.visibility,
-                                                  color: AppColors
-                                                      .buttonBrandingBlue,
+                                                  color: AppColors.brandingBlue,
                                                 ),
                                               ),
                                               prefixIcon: Icon(
                                                 Icons.vpn_key,
-                                                color: AppColors
-                                                    .buttonBrandingBlue,
+                                                color: AppColors.brandingBlue,
                                               )),
                                         );
                                       },
@@ -144,8 +142,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                                           child: Text(
                                             'Esqueci minha senha',
                                             style: TextStyle(
-                                                color: AppColors
-                                                    .buttonBrandingBlue),
+                                                color: AppColors.brandingBlue),
                                           ),
                                         ),
                                       ]),

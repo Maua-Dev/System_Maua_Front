@@ -27,9 +27,7 @@ class HelpBolsasCardWidget extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 8, top: 8),
               child: Text(
                 '$titulo',
-                style: AppTextStyles.bodyBold.copyWith(
-                  fontSize: 22,
-                ),
+                style: AppTextStyles.titleH2,
               ),
             ),
             Text(

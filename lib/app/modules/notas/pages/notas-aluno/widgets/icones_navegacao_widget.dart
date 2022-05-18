@@ -37,12 +37,12 @@ class IconesNavegacaoWidget extends StatelessWidget {
                 },
                 icon: Icon(
                   icone,
-                  color: AppColors.buttonBrandingBlue,
+                  color: AppColors.brandingBlue,
                   size: 34,
                 )),
             Text(
               titulo,
-              style: AppTextStyles.body.copyWith(fontSize: 15),
+              style: AppTextStyles.cardH3.copyWith(fontSize: 15),
             )
           ],
         ),

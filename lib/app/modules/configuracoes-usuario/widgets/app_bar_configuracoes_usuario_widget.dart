@@ -15,44 +15,46 @@ class AppBarConfiguracoesUsuario extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.18,
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Container(
-            width: MediaQuery.of(context).size.height * 0.115,
-            height: MediaQuery.of(context).size.height * 0.115,
+            width: MediaQuery.of(context).size.height * 0.13,
+            height: MediaQuery.of(context).size.height * 0.13,
             decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(width: 2, color: AppColors.buttonLightBlue),
-              shape: BoxShape.circle,
+              border: Border.all(width: 2, color: AppColors.brandingBlue),
+              borderRadius: BorderRadius.circular(100),
             ),
-            child: Center(
-              child: FractionallySizedBox(
-                heightFactor: 0.93,
-                widthFactor: 0.93,
-                child: Container(
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                          image: NetworkImage(fotoAluno),
-                        ))),
-              ),
+            child: Padding(
+              padding: const EdgeInsets.all(3),
+              child: Container(
+                  width: MediaQuery.of(context).size.height * 0.115,
+                  height: MediaQuery.of(context).size.height * 0.115,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      image: DecorationImage(
+                        image: NetworkImage(
+                            'https://avatars.githubusercontent.com/u/24724451?v=4'),
+                      ))),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-                left: MediaQuery.of(context).size.width < 400 ? 32 : 48),
-            child: Column(
-              children: [
-                Text(nomeAluno,
-                    style: AppTextStyles.appBarHomeTitle
-                        .copyWith(color: Colors.black)),
-                Text(raAluno,
-                    style: AppTextStyles.appBarHomeBody
-                        .copyWith(color: Colors.black))
-              ],
-            ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text.rich(
+                TextSpan(
+                    text: 'Olá, ',
+                    style: AppTextStyles.titleH1,
+                    children: [
+                      TextSpan(text: nomeAluno, style: AppTextStyles.titleH1),
+                    ]),
+              ),
+              Text(raAluno, style: AppTextStyles.titleH2)
+            ],
           )
         ],
       ),
