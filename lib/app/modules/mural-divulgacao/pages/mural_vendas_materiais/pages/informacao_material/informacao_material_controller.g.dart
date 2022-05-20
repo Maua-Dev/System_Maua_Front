@@ -6,12 +6,12 @@ part of 'informacao_material_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$InformacaoMaterialController
     on InformacaoMaterialControllerBase, Store {
-  final _$materialAtom =
-      Atom(name: 'InformacaoMaterialControllerBase.material');
+  late final _$materialAtom =
+      Atom(name: 'InformacaoMaterialControllerBase.material', context: context);
 
   @override
   InformacaoMaterialModel get material {
@@ -26,8 +26,9 @@ mixin _$InformacaoMaterialController
     });
   }
 
-  final _$getMaterialEspecificoAsyncAction =
-      AsyncAction('InformacaoMaterialControllerBase.getMaterialEspecifico');
+  late final _$getMaterialEspecificoAsyncAction = AsyncAction(
+      'InformacaoMaterialControllerBase.getMaterialEspecifico',
+      context: context);
 
   @override
   Future<void> getMaterialEspecifico() {

@@ -6,10 +6,11 @@ part of 'help_faq_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$HelpFaqController on _HelpFaqControllerBase, Store {
-  final _$faqAtom = Atom(name: '_HelpFaqControllerBase.faq');
+  late final _$faqAtom =
+      Atom(name: '_HelpFaqControllerBase.faq', context: context);
 
   @override
   List<FaqModel> get faq {
@@ -24,7 +25,8 @@ mixin _$HelpFaqController on _HelpFaqControllerBase, Store {
     });
   }
 
-  final _$faqActionAtom = Atom(name: '_HelpFaqControllerBase.faqAction');
+  late final _$faqActionAtom =
+      Atom(name: '_HelpFaqControllerBase.faqAction', context: context);
 
   @override
   List<FaqPanelModel> get faqAction {
@@ -39,16 +41,16 @@ mixin _$HelpFaqController on _HelpFaqControllerBase, Store {
     });
   }
 
-  final _$getInformacaoFaqAsyncAction =
-      AsyncAction('_HelpFaqControllerBase.getInformacaoFaq');
+  late final _$getInformacaoFaqAsyncAction =
+      AsyncAction('_HelpFaqControllerBase.getInformacaoFaq', context: context);
 
   @override
   Future<void> getInformacaoFaq() {
     return _$getInformacaoFaqAsyncAction.run(() => super.getInformacaoFaq());
   }
 
-  final _$_HelpFaqControllerBaseActionController =
-      ActionController(name: '_HelpFaqControllerBase');
+  late final _$_HelpFaqControllerBaseActionController =
+      ActionController(name: '_HelpFaqControllerBase', context: context);
 
   @override
   void setFaqAction() {

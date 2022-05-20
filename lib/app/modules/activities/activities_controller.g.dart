@@ -6,7 +6,7 @@ part of 'activities_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$ActivitiesController on ActivitiesControllerBase, Store {
   Computed<int>? _$activitiesDeliveredComputed;
@@ -25,7 +25,8 @@ mixin _$ActivitiesController on ActivitiesControllerBase, Store {
               name: 'ActivitiesControllerBase.activitiesDeliveredPercentual'))
           .value;
 
-  final _$activitiesAtom = Atom(name: 'ActivitiesControllerBase.activities');
+  late final _$activitiesAtom =
+      Atom(name: 'ActivitiesControllerBase.activities', context: context);
 
   @override
   List<ActivityModel> get activities {
@@ -40,8 +41,8 @@ mixin _$ActivitiesController on ActivitiesControllerBase, Store {
     });
   }
 
-  final _$getActivitiesAsyncAction =
-      AsyncAction('ActivitiesControllerBase.getActivities');
+  late final _$getActivitiesAsyncAction =
+      AsyncAction('ActivitiesControllerBase.getActivities', context: context);
 
   @override
   Future<void> getActivities() {

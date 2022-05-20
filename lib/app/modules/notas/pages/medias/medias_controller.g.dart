@@ -6,7 +6,7 @@ part of 'medias_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$MediasController on MediasControllerBase, Store {
   Computed<int>? _$mediaMauaComputed;
@@ -24,7 +24,8 @@ mixin _$MediasController on MediasControllerBase, Store {
               name: 'MediasControllerBase.mediaGeral'))
           .value;
 
-  final _$mediasAtom = Atom(name: 'MediasControllerBase.medias');
+  late final _$mediasAtom =
+      Atom(name: 'MediasControllerBase.medias', context: context);
 
   @override
   MediasModel get medias {
@@ -39,7 +40,8 @@ mixin _$MediasController on MediasControllerBase, Store {
     });
   }
 
-  final _$getMediasAsyncAction = AsyncAction('MediasControllerBase.getMedias');
+  late final _$getMediasAsyncAction =
+      AsyncAction('MediasControllerBase.getMedias', context: context);
 
   @override
   Future<void> getMedias() {

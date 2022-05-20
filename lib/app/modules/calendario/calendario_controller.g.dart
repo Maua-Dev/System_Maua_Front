@@ -6,11 +6,11 @@ part of 'calendario_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$CalendarioController on _CalendarioControllerBase, Store {
-  final _$listEventoPanelAtom =
-      Atom(name: '_CalendarioControllerBase.listEventoPanel');
+  late final _$listEventoPanelAtom =
+      Atom(name: '_CalendarioControllerBase.listEventoPanel', context: context);
 
   @override
   List<EventoPanelModel> get listEventoPanel {
@@ -25,8 +25,8 @@ mixin _$CalendarioController on _CalendarioControllerBase, Store {
     });
   }
 
-  final _$markedDateMapAtom =
-      Atom(name: '_CalendarioControllerBase.markedDateMap');
+  late final _$markedDateMapAtom =
+      Atom(name: '_CalendarioControllerBase.markedDateMap', context: context);
 
   @override
   EventList<Event> get markedDateMap {
@@ -41,7 +41,8 @@ mixin _$CalendarioController on _CalendarioControllerBase, Store {
     });
   }
 
-  final _$avaliacoesAtom = Atom(name: '_CalendarioControllerBase.avaliacoes');
+  late final _$avaliacoesAtom =
+      Atom(name: '_CalendarioControllerBase.avaliacoes', context: context);
 
   @override
   List<EventoModel> get avaliacoes {
@@ -56,8 +57,8 @@ mixin _$CalendarioController on _CalendarioControllerBase, Store {
     });
   }
 
-  final _$selectedDateTimeAtom =
-      Atom(name: '_CalendarioControllerBase.selectedDateTime');
+  late final _$selectedDateTimeAtom = Atom(
+      name: '_CalendarioControllerBase.selectedDateTime', context: context);
 
   @override
   DateTime get selectedDateTime {
@@ -72,16 +73,16 @@ mixin _$CalendarioController on _CalendarioControllerBase, Store {
     });
   }
 
-  final _$getAvaliacoesAsyncAction =
-      AsyncAction('_CalendarioControllerBase.getAvaliacoes');
+  late final _$getAvaliacoesAsyncAction =
+      AsyncAction('_CalendarioControllerBase.getAvaliacoes', context: context);
 
   @override
   Future<void> getAvaliacoes() {
     return _$getAvaliacoesAsyncAction.run(() => super.getAvaliacoes());
   }
 
-  final _$_CalendarioControllerBaseActionController =
-      ActionController(name: '_CalendarioControllerBase');
+  late final _$_CalendarioControllerBaseActionController =
+      ActionController(name: '_CalendarioControllerBase', context: context);
 
   @override
   void setDate(DateTime date) {
