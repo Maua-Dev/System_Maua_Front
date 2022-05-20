@@ -6,11 +6,11 @@ part of 'help_estagio_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$HelpEstagioController on _HelpEstagioControllerBase, Store {
-  final _$listaEstagioAtom =
-      Atom(name: '_HelpEstagioControllerBase.listaEstagio');
+  late final _$listaEstagioAtom =
+      Atom(name: '_HelpEstagioControllerBase.listaEstagio', context: context);
 
   @override
   List<HelpEstagioModel> get listaEstagio {
@@ -25,8 +25,8 @@ mixin _$HelpEstagioController on _HelpEstagioControllerBase, Store {
     });
   }
 
-  final _$listaPanelEstagioAtom =
-      Atom(name: '_HelpEstagioControllerBase.listaPanelEstagio');
+  late final _$listaPanelEstagioAtom = Atom(
+      name: '_HelpEstagioControllerBase.listaPanelEstagio', context: context);
 
   @override
   List<HelpEstagioPanelModel> get listaPanelEstagio {
@@ -41,16 +41,16 @@ mixin _$HelpEstagioController on _HelpEstagioControllerBase, Store {
     });
   }
 
-  final _$getEstagioAsyncAction =
-      AsyncAction('_HelpEstagioControllerBase.getEstagio');
+  late final _$getEstagioAsyncAction =
+      AsyncAction('_HelpEstagioControllerBase.getEstagio', context: context);
 
   @override
   Future<void> getEstagio() {
     return _$getEstagioAsyncAction.run(() => super.getEstagio());
   }
 
-  final _$_HelpEstagioControllerBaseActionController =
-      ActionController(name: '_HelpEstagioControllerBase');
+  late final _$_HelpEstagioControllerBaseActionController =
+      ActionController(name: '_HelpEstagioControllerBase', context: context);
 
   @override
   void getListaPanelEstagio() {

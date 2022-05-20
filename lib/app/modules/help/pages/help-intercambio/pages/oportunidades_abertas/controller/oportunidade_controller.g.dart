@@ -6,11 +6,11 @@ part of 'oportunidade_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$OportunidadeController on _OportunidadeControllerBase, Store {
-  final _$listaUniversidadeAtom =
-      Atom(name: '_OportunidadeControllerBase.listaUniversidade');
+  late final _$listaUniversidadeAtom = Atom(
+      name: '_OportunidadeControllerBase.listaUniversidade', context: context);
 
   @override
   List<UniversidadeModel> get listaUniversidade {
@@ -25,8 +25,8 @@ mixin _$OportunidadeController on _OportunidadeControllerBase, Store {
     });
   }
 
-  final _$universidadeActionAtom =
-      Atom(name: '_OportunidadeControllerBase.universidadeAction');
+  late final _$universidadeActionAtom = Atom(
+      name: '_OportunidadeControllerBase.universidadeAction', context: context);
 
   @override
   List<UniversidadePanelModel> get universidadeAction {
@@ -41,16 +41,17 @@ mixin _$OportunidadeController on _OportunidadeControllerBase, Store {
     });
   }
 
-  final _$getListRepositoryAsyncAction =
-      AsyncAction('_OportunidadeControllerBase.getListRepository');
+  late final _$getListRepositoryAsyncAction = AsyncAction(
+      '_OportunidadeControllerBase.getListRepository',
+      context: context);
 
   @override
   Future<void> getListRepository() {
     return _$getListRepositoryAsyncAction.run(() => super.getListRepository());
   }
 
-  final _$_OportunidadeControllerBaseActionController =
-      ActionController(name: '_OportunidadeControllerBase');
+  late final _$_OportunidadeControllerBaseActionController =
+      ActionController(name: '_OportunidadeControllerBase', context: context);
 
   @override
   void setUniversidadeAction() {

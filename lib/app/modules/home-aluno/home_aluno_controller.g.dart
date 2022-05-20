@@ -6,10 +6,11 @@ part of 'home_aluno_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
-  final _$alunoAtom = Atom(name: 'HomeAlunoControllerBase.aluno');
+  late final _$alunoAtom =
+      Atom(name: 'HomeAlunoControllerBase.aluno', context: context);
 
   @override
   AlunoModel get aluno {
@@ -24,7 +25,8 @@ mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
     });
   }
 
-  final _$aulaAtom = Atom(name: 'HomeAlunoControllerBase.aula');
+  late final _$aulaAtom =
+      Atom(name: 'HomeAlunoControllerBase.aula', context: context);
 
   @override
   AulaModel get aula {
@@ -39,14 +41,16 @@ mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
     });
   }
 
-  final _$getAlunoAsyncAction = AsyncAction('HomeAlunoControllerBase.getAluno');
+  late final _$getAlunoAsyncAction =
+      AsyncAction('HomeAlunoControllerBase.getAluno', context: context);
 
   @override
   Future<void> getAluno() {
     return _$getAlunoAsyncAction.run(() => super.getAluno());
   }
 
-  final _$getAulaAsyncAction = AsyncAction('HomeAlunoControllerBase.getAula');
+  late final _$getAulaAsyncAction =
+      AsyncAction('HomeAlunoControllerBase.getAula', context: context);
 
   @override
   Future<void> getAula() {
