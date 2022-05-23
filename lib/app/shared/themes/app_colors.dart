@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static final brandingBlue = Color(0xFF022893);
-  static final lightBlue = Color(0xFF025ACB);
+  static final lightBlue = Color(0xFF025AC8);
   static final background = Color(0xFFFFFFFF);
   static final generalLetter = Color(0xFF151A27);
   static final lightLetter = Color(0xFF494950);
