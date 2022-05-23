@@ -36,13 +36,15 @@ class _MateriasPageState
                     itemBuilder: (context, index) {
                       return MateriaCardWidget(
                         nomeMateria: controller.materias[index].nome.name,
-                        progresso:  controller.materias[index].progresso,
+                        progresso: controller.materias[index].progresso,
                       );
                     },
                   ),
                 );
               }),
-              SizedBox(height: 16,)
+              SizedBox(
+                height: 16,
+              )
             ],
           ),
         ),
