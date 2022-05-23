@@ -7,30 +7,29 @@ import 'materias_repository_interface.dart';
 class MateriasRepository implements IMateriasRepository {
   var listaMaterias = [
     MateriasModel(
-        nome: TipoMateriaEnum.ACADEMIATALENTOS,
-        foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
-        professores: [
-          ProfessoresModel(
-              nome: 'Murilo Zanini',
-              foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
-          ProfessoresModel(
-              nome: 'Murilo Zanini',
-              foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
-          ProfessoresModel(
-              nome: 'Murilo Zanini',
-              foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
-        ]),
+      nome: TipoMateriaEnum.ACADEMIATALENTOS,
+      progresso: 0.9,
+    ),
+    MateriasModel(nome: TipoMateriaEnum.CALC1, progresso: 0.4),
+    MateriasModel(nome: TipoMateriaEnum.RESMAT, progresso: 0.0),
     MateriasModel(
-        nome: TipoMateriaEnum.CALC1,
-        foto: 'https://avatars.githubusercontent.com/u/24724451?v=4',
-        professores: [
-          ProfessoresModel(
-              nome: 'Murilo Zanini',
-              foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
-          ProfessoresModel(
-              nome: 'Murilo Zanini',
-              foto: 'https://avatars.githubusercontent.com/u/24724451?v=4'),
-        ]),
+      nome: TipoMateriaEnum.ACADEMIATALENTOS,
+      progresso: 0.9,
+    ),
+    MateriasModel(nome: TipoMateriaEnum.CALC1, progresso: 0.4),
+    MateriasModel(nome: TipoMateriaEnum.RESMAT, progresso: 0.0),
+    MateriasModel(
+      nome: TipoMateriaEnum.ACADEMIATALENTOS,
+      progresso: 0.9,
+    ),
+    MateriasModel(nome: TipoMateriaEnum.CALC1, progresso: 0.4),
+    MateriasModel(nome: TipoMateriaEnum.RESMAT, progresso: 0.0),
+    MateriasModel(
+      nome: TipoMateriaEnum.ACADEMIATALENTOS,
+      progresso: 0.9,
+    ),
+    MateriasModel(nome: TipoMateriaEnum.CALC1, progresso: 0.4),
+    MateriasModel(nome: TipoMateriaEnum.RESMAT, progresso: 1),
   ];
 
   @override

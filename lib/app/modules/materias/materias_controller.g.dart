@@ -33,20 +33,6 @@ mixin _$MateriasController on MateriasControllerBase, Store {
     return _$getMateriasAsyncAction.run(() => super.getMaterias());
   }
 
-  late final _$MateriasControllerBaseActionController =
-      ActionController(name: 'MateriasControllerBase', context: context);
-
-  @override
-  List<String> getFotosProfessores(int index) {
-    final _$actionInfo = _$MateriasControllerBaseActionController.startAction(
-        name: 'MateriasControllerBase.getFotosProfessores');
-    try {
-      return super.getFotosProfessores(index);
-    } finally {
-      _$MateriasControllerBaseActionController.endAction(_$actionInfo);
-    }
-  }
-
   @override
   String toString() {
     return '''

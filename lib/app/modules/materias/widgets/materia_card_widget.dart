@@ -3,55 +3,77 @@ import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 
 class MateriaCardWidget extends StatelessWidget {
   final String nomeMateria;
-  final String fotoMateria;
-  const MateriaCardWidget(
-      {Key? key, required this.nomeMateria, required this.fotoMateria})
-      : super(key: key);
+  final double progresso;
+  const MateriaCardWidget({
+    Key? key,
+    required this.nomeMateria,
+    required this.progresso,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-      child: GestureDetector(
-        onTap: () {},
+    return GestureDetector(
+      onTap: () {},
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 26),
         child: Container(
-          height: MediaQuery.of(context).size.height * 0.16,
-          width: MediaQuery.of(context).size.width * 0.45,
           decoration: BoxDecoration(
               boxShadow: [AppColors.shadow],
               borderRadius: BorderRadius.circular(10),
-              color: Colors.white),
-          child: Stack(children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              color: AppColors.lightBlue),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 10),
+            child: Column(
               children: [
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.095,
-                  width: MediaQuery.of(context).size.width * 0.5,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(10),
-                        topLeft: Radius.circular(10)),
-                    image: DecorationImage(
-                        image: NetworkImage(fotoMateria), fit: BoxFit.cover),
-                  ),
-                ),
-                Container(
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 8, right: 8, bottom: 8),
-                    child: Center(
+                Row(
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.8,
                       child: Text(
                         nomeMateria,
-                        textAlign: TextAlign.center,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
-                  ),
+                  ],
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Progresso:',
+                      style: TextStyle(color: Colors.white, fontSize: 12),
+                    ),
+                    Text(
+                      '${(progresso * 100).round()}%',
+                      style: TextStyle(color: Colors.white, fontSize: 12),
+                    )
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Stack(
+                    children: [
+                      Container(
+                        height: 10,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: AppColors.shape),
+                      ),
+                      Container(
+                        width:
+                            MediaQuery.of(context).size.width * 0.8 * progresso,
+                        height: 10,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: Colors.green),
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
-          ]),
+          ),
         ),
       ),
     );
