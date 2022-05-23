@@ -5,7 +5,6 @@ import 'package:system_maua_front/app/modules/materias/materias_controller.dart'
 import 'package:system_maua_front/app/modules/materias/widgets/materia_card_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
-import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 
 class MateriasPage extends StatefulWidget {
   MateriasPage({Key? key}) : super(key: key);

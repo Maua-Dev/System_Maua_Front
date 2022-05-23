@@ -1,5 +1,4 @@
 import 'package:system_maua_front/app/modules/materias/models/materias_model.dart';
-import 'package:system_maua_front/app/shared/models/professores_model.dart';
 import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
 
 import 'materias_repository_interface.dart';
