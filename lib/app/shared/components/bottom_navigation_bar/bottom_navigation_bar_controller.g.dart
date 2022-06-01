@@ -26,6 +26,31 @@ mixin _$BottomNavigationBarController
     });
   }
 
+  late final _$currentIndexAtom = Atom(
+      name: 'BottomNavigationBarControllerBase.currentIndex', context: context);
+
+  @override
+  int get currentIndex {
+    _$currentIndexAtom.reportRead();
+    return super.currentIndex;
+  }
+
+  @override
+  set currentIndex(int value) {
+    _$currentIndexAtom.reportWrite(value, super.currentIndex, () {
+      super.currentIndex = value;
+    });
+  }
+
+  late final _$alternatePageAsyncAction = AsyncAction(
+      'BottomNavigationBarControllerBase.alternatePage',
+      context: context);
+
+  @override
+  Future<void> alternatePage(int index) {
+    return _$alternatePageAsyncAction.run(() => super.alternatePage(index));
+  }
+
   late final _$trocaOpenAsyncAction = AsyncAction(
       'BottomNavigationBarControllerBase.trocaOpen',
       context: context);
@@ -38,7 +63,8 @@ mixin _$BottomNavigationBarController
   @override
   String toString() {
     return '''
-isOpen: ${isOpen}
+isOpen: ${isOpen},
+currentIndex: ${currentIndex}
     ''';
   }
 }

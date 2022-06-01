@@ -21,52 +21,54 @@ class _HomeAlunoPageState
   var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Observer(builder: (_) {
-          return AppBarHomeWidget(
-            onTap: () {
-              Modular.to.pushNamed(
-                '/configuracoes-usuario?nomeAluno=${controller.aluno.nome}&raAluno=${controller.aluno.ra}&fotoALuno=https://avatars.githubusercontent.com/u/24724451?v=4',
-              );
-            },
-            usuario: controller.aluno.nome,
-            ra: controller.aluno.ra,
-            materia: controller.aula.tipoMateriaEnum?.name ?? '',
-            duracao: controller.aula.duracao,
-            local: controller.aula.local,
-          );
-        }),
-        SizedBox(
-          height: MediaQuery.of(context).size.height * 0.25,
-        ),
-        NavigationButtonWidget(
-          title: 'Sem notificações',
-          icon: Icons.notifications,
-          onTap: () {},
-        ),
-        NavigationButtonWidget(
-          title: 'Entregas da semana',
-          icon: Icons.playlist_add_check,
-          onTap: () {
-            // Modular.to.navigate('/activities');
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return const CustomAlertDialogWidget(
-                  title: 'Conteúdo indisponível!',
-                  content: 'Aguarde novas atualizações.',
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Observer(builder: (_) {
+            return AppBarHomeWidget(
+              onTap: () {
+                Modular.to.pushNamed(
+                  '/configuracoes-usuario?nomeAluno=${controller.aluno.nome}&raAluno=${controller.aluno.ra}&fotoALuno=https://avatars.githubusercontent.com/u/24724451?v=4',
                 );
               },
+              usuario: controller.aluno.nome,
+              ra: controller.aluno.ra,
+              materia: controller.aula.tipoMateriaEnum?.name ?? '',
+              duracao: controller.aula.duracao,
+              local: controller.aula.local,
             );
-          },
-        ),
-        NavigationButtonWidget(
-          title: 'Mural de avisos',
-          icon: Icons.info,
-          onTap: () {},
-        ),
-      ],
+          }),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.25,
+          ),
+          NavigationButtonWidget(
+            title: 'Sem notificações',
+            icon: Icons.notifications,
+            onTap: () {},
+          ),
+          NavigationButtonWidget(
+            title: 'Entregas da semana',
+            icon: Icons.playlist_add_check,
+            onTap: () {
+              // Modular.to.navigate('/activities');
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return const CustomAlertDialogWidget(
+                    title: 'Conteúdo indisponível!',
+                    content: 'Aguarde novas atualizações.',
+                  );
+                },
+              );
+            },
+          ),
+          NavigationButtonWidget(
+            title: 'Mural de avisos',
+            icon: Icons.info,
+            onTap: () {},
+          ),
+        ],
+      ),
     );
   }
 }
