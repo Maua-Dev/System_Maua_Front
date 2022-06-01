@@ -9,6 +9,14 @@ abstract class BottomNavigationBarControllerBase with Store {
   @observable
   bool isOpen = false;
 
+  @observable
+  int currentIndex = 0;
+
+  @action
+  Future<void> alternatePage(int index) async {
+    currentIndex = index;
+  }
+
   @action
   Future<void> trocaOpen() async {
     isOpen = !isOpen;
