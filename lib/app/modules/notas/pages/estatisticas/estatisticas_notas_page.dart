@@ -39,7 +39,7 @@ class _EstatisticasNotasPageState
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           Modular.args!.data as String,
-                          style: AppTextStyles.bodyBold.copyWith(fontSize: 25),
+                          style: AppTextStyles.bodyBoldH4,
                           textAlign: TextAlign.center,
                         ),
                       ),

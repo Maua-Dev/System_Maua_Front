@@ -40,9 +40,7 @@ class VideoTutorialCard extends StatelessWidget {
                   children: [
                     Text(
                       '$titulo',
-                      style: AppTextStyles.bodyBold.copyWith(
-                        fontSize: 20,
-                      ),
+                      style: AppTextStyles.bodyBoldH4,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 4),

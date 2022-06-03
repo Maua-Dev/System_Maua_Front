@@ -68,8 +68,7 @@ class _CalendarioPageState
                                   '  •  ' +
                                   controller.listEventoPanel[0].evento
                                       .getDataFormatada,
-                              style:
-                                  AppTextStyles.bodyBold.copyWith(fontSize: 24),
+                              style: AppTextStyles.titleH1,
                               textAlign: TextAlign.center,
                             ),
                           ),

@@ -41,8 +41,8 @@ class _NotasCardWidgetState extends State<NotasCardWidget> {
             children: [
               Text(
                 widget.tituloAvaliacao.name + ': ',
-                style:
-                    AppTextStyles.body.copyWith(color: AppColors.generalLetter),
+                style: AppTextStyles.cardH3
+                    .copyWith(color: AppColors.generalLetter),
               ),
               Container(
                 child: widget.notaAvaliacao == null
@@ -75,7 +75,7 @@ class _NotasCardWidgetState extends State<NotasCardWidget> {
                             : widget.notaAvaliacao!
                                 .toStringAsFixed(1)
                                 .replaceAll('.', ','),
-                        style: AppTextStyles.body.copyWith(
+                        style: AppTextStyles.cardH3.copyWith(
                             color: widget.notaAvaliacao == null
                                 ? null
                                 : widget.notaAvaliacao! < 6.0

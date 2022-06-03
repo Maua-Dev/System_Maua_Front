@@ -27,7 +27,7 @@ class _HelpSoftwaresPageState
               padding: const EdgeInsets.all(20.0),
               child: Text(
                 'Softwares disponiveis para poder auxiliar no estudo',
-                style: AppTextStyles.lightBody,
+                style: AppTextStyles.bodyH4,
                 textAlign: TextAlign.center,
               ),
             ),

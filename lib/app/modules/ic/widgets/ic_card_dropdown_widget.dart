@@ -28,7 +28,7 @@ class IcCardDropDownWidget<T> extends StatelessWidget {
         value: value,
         onChanged: onChanged,
         items: items,
-        style: AppTextStyles.body.copyWith(
+        style: AppTextStyles.cardH3.copyWith(
           fontWeight: FontWeight.bold,
         ),
         decoration: InputDecoration(

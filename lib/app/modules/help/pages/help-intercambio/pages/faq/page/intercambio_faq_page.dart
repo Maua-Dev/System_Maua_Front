@@ -29,7 +29,7 @@ class _FaqIntercambioPageState
               padding: const EdgeInsets.all(20.0),
               child: Text(
                 'Perguntas frequentes',
-                style: AppTextStyles.lightBody,
+                style: AppTextStyles.bodyH4,
                 textAlign: TextAlign.center,
               ),
             ),

@@ -41,7 +41,7 @@ class NotasAlunoPageState
                     Container(
                       width: MediaQuery.of(context).size.width * 0.8,
                       decoration: BoxDecoration(
-                        color: AppColors.textButtonCollor,
+                        color: AppColors.white,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -64,7 +64,7 @@ class NotasAlunoPageState
                                       right: 16.0, left: 16, top: 8),
                                   child: Text(
                                     Modular.args!.data as String,
-                                    style: AppTextStyles.bodyBold,
+                                    style: AppTextStyles.bodyBoldH4,
                                     textAlign: TextAlign.center,
                                   ),
                                 );
@@ -86,7 +86,7 @@ class NotasAlunoPageState
                     Container(
                         width: MediaQuery.of(context).size.width * 0.8,
                         decoration: BoxDecoration(
-                          color: AppColors.textButtonCollor,
+                          color: AppColors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(
@@ -96,7 +96,7 @@ class NotasAlunoPageState
                               child: Container(
                                 child: Text(
                                   'Provas',
-                                  style: AppTextStyles.bodyBold,
+                                  style: AppTextStyles.bodyBoldH4,
                                 ),
                               ),
                             ),
@@ -112,7 +112,7 @@ class NotasAlunoPageState
                     Container(
                         width: MediaQuery.of(context).size.width * 0.8,
                         decoration: BoxDecoration(
-                          color: AppColors.textButtonCollor,
+                          color: AppColors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(
@@ -122,7 +122,7 @@ class NotasAlunoPageState
                               child: Container(
                                 child: Text(
                                   'Trabalhos',
-                                  style: AppTextStyles.bodyBold,
+                                  style: AppTextStyles.bodyBoldH4,
                                 ),
                               ),
                             ),

@@ -31,7 +31,7 @@ class EstagiosCardWidget extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 child: Text(
                   descricao!,
-                  style: AppTextStyles.lightBody.copyWith(fontSize: 16),
+                  style: AppTextStyles.bodyH4,
                   textAlign: TextAlign.left,
                 ),
               ),

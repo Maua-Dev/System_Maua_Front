@@ -38,7 +38,7 @@ class NavigationButtonWidget extends StatelessWidget {
                 ),
                 Text(
                   title,
-                  style: AppTextStyles.body.copyWith(
+                  style: AppTextStyles.cardH3.copyWith(
                       fontSize:
                           MediaQuery.of(context).size.width < 350 ? 16 : 18),
                 ),

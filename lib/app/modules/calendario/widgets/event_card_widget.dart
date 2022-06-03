@@ -53,7 +53,7 @@ class _EventCardWidgetState extends State<EventCardWidget> {
                       Expanded(
                         child: Text(
                           widget.titulo + ' - ' + widget.horario,
-                          style: AppTextStyles.bodyBold,
+                          style: AppTextStyles.bodyBoldH4,
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -65,7 +65,7 @@ class _EventCardWidgetState extends State<EventCardWidget> {
                       const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                   child: Text(
                     widget.descricao,
-                    style: AppTextStyles.body.copyWith(fontSize: 16),
+                    style: AppTextStyles.cardH3.copyWith(fontSize: 16),
                     textAlign: TextAlign.left,
                   ),
                 ),

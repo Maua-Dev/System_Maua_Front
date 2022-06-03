@@ -25,7 +25,7 @@ class IcCardCustomWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 16),
             child: Text(
               titulo,
-              style: AppTextStyles.body.copyWith(
+              style: AppTextStyles.cardH3.copyWith(
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,

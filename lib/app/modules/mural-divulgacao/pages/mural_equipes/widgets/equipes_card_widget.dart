@@ -33,7 +33,7 @@ class EquipesCardWidget extends StatelessWidget {
                   children: [
                     Text(
                       descricao!,
-                      style: AppTextStyles.lightBody.copyWith(fontSize: 16),
+                      style: AppTextStyles.bodyH4,
                       textAlign: TextAlign.left,
                     ),
                     Padding(

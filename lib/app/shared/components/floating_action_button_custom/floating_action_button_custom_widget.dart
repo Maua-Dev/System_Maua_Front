@@ -22,7 +22,7 @@ class _FloatingActionButtonCustomWidgetState
       height: 64,
       child: FloatingActionButton(
           elevation: 10,
-          backgroundColor: AppColors.textButtonCollor,
+          backgroundColor: AppColors.white,
           onPressed: () {
             if (widget.onPressed != null) {
               widget.onPressed!();
@@ -31,12 +31,12 @@ class _FloatingActionButtonCustomWidgetState
           child: widget.isOpen
               ? Icon(
                   Icons.close,
-                  color: AppColors.buttonBrandingBlue,
+                  color: AppColors.brandingBlue,
                   size: 30,
                 )
               : Icon(
                   Icons.menu,
-                  color: AppColors.buttonBrandingBlue,
+                  color: AppColors.brandingBlue,
                   size: 30,
                 )),
     );

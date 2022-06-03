@@ -35,9 +35,7 @@ class VideoEspecificoCard extends StatelessWidget {
             child: Center(
               child: Text(
                 '$titulo',
-                style: AppTextStyles.bodyBold.copyWith(
-                  fontSize: 20,
-                ),
+                style: AppTextStyles.bodyBoldH4,
               ),
             ),
           ),

@@ -38,8 +38,7 @@ class AppBarHomeWidget extends StatelessWidget {
                   width: MediaQuery.of(context).size.height * 0.13,
                   height: MediaQuery.of(context).size.height * 0.13,
                   decoration: BoxDecoration(
-                    border:
-                        Border.all(width: 2, color: AppColors.textButtonCollor),
+                    border: Border.all(width: 2, color: AppColors.white),
                     borderRadius: BorderRadius.circular(100),
                   ),
                   child: Padding(
@@ -65,17 +64,20 @@ class AppBarHomeWidget extends StatelessWidget {
                     Text.rich(
                       TextSpan(
                           text: 'Olá, ',
-                          style: AppTextStyles.appBarHomeBody,
+                          style: AppTextStyles.titleH1
+                              .copyWith(color: AppColors.white),
                           children: [
                             TextSpan(
                                 text: usuario,
-                                style: AppTextStyles.appBarHomeTitle),
+                                style: AppTextStyles.titleH1
+                                    .copyWith(color: AppColors.white)),
                           ]),
                       key: ValueKey('titleUser'),
                     ),
                     Text(
                       ra,
-                      style: AppTextStyles.appBarHomeBody,
+                      style: AppTextStyles.titleH2
+                          .copyWith(color: AppColors.white),
                     )
                   ],
                 ),

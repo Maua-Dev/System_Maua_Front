@@ -43,27 +43,17 @@ class _ConfiguracoesUsuarioPageState
             NavigationWidget(titulo: 'Help', icone: Icons.help_outline),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 24),
-              child: TextButton(
+              child: ElevatedButton(
                 onPressed: () async {
                   await controller.logout();
                   Modular.to.navigate('/login');
                 },
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all<OutlinedBorder?>(
-                      RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  )),
-                  padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(
-                      EdgeInsets.symmetric(
-                          vertical: 16,
-                          horizontal: MediaQuery.of(context).size.width * 0.4)),
-                  backgroundColor: MaterialStateProperty.all<Color?>(
-                      AppColors.buttonLightBlue),
-                  elevation: MaterialStateProperty.all<double?>(10),
+                style: ElevatedButton.styleFrom(
+                  fixedSize: Size(MediaQuery.of(context).size.width * .7, 50),
                 ),
                 child: Text(
                   'Sair',
-                  style: AppTextStyles.appBarHomeBody.copyWith(fontSize: 20),
+                  style: AppTextStyles.cardH3.copyWith(color: AppColors.white),
                 ),
               ),
             )

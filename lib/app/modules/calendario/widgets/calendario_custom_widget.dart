@@ -40,25 +40,24 @@ class _CalendarioCustomWidgetState extends State<CalendarioCustomWidget> {
       daysTextStyle: TextStyle(color: Colors.black),
       nextDaysTextStyle: TextStyle(color: Colors.grey),
       prevDaysTextStyle: TextStyle(color: Colors.grey),
-      weekdayTextStyle: AppTextStyles.appBarHomeTitle
+      weekdayTextStyle: AppTextStyles.titleH1
           .copyWith(color: AppColors.generalLetter, fontSize: 18),
       height: MediaQuery.of(context).size.height < 600 ? 330 : 380,
       selectedDateTime: widget.selectedDateTime,
       markedDatesMap: widget.markedDateMap,
-      headerTextStyle: AppTextStyles.appBarHomeTitle
-          .copyWith(color: AppColors.textButtonCollor),
+      headerTextStyle: AppTextStyles.titleH1.copyWith(color: AppColors.white),
       showIconBehindDayText: true,
       todayButtonColor: Color(0x00000000),
       todayTextStyle: TextStyle(color: Colors.black),
       markedDateIconBuilder: (event) => event.icon,
       leftButtonIcon: Icon(
         Icons.arrow_back,
-        color: AppColors.textButtonCollor,
+        color: AppColors.white,
         size: 28,
       ),
       rightButtonIcon: Icon(
         Icons.arrow_forward,
-        color: AppColors.textButtonCollor,
+        color: AppColors.white,
         size: 28,
       ),
     );
