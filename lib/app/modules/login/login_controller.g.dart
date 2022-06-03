@@ -6,11 +6,11 @@ part of 'login_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$LoginController on _LoginController, Store {
-  late final _$passwordVisibilityAtom =
-      Atom(name: '_LoginController.passwordVisibility', context: context);
+  final _$passwordVisibilityAtom =
+      Atom(name: '_LoginController.passwordVisibility');
 
   @override
   bool get passwordVisibility {
@@ -25,8 +25,7 @@ mixin _$LoginController on _LoginController, Store {
     });
   }
 
-  late final _$errosAtom =
-      Atom(name: '_LoginController.erros', context: context);
+  final _$errosAtom = Atom(name: '_LoginController.erros');
 
   @override
   String get erros {
@@ -41,8 +40,7 @@ mixin _$LoginController on _LoginController, Store {
     });
   }
 
-  late final _$emailAtom =
-      Atom(name: '_LoginController.email', context: context);
+  final _$emailAtom = Atom(name: '_LoginController.email');
 
   @override
   String get email {
@@ -57,8 +55,7 @@ mixin _$LoginController on _LoginController, Store {
     });
   }
 
-  late final _$passwordAtom =
-      Atom(name: '_LoginController.password', context: context);
+  final _$passwordAtom = Atom(name: '_LoginController.password');
 
   @override
   String get password {
@@ -73,8 +70,8 @@ mixin _$LoginController on _LoginController, Store {
     });
   }
 
-  late final _$loginModalIsOpenAtom =
-      Atom(name: '_LoginController.loginModalIsOpen', context: context);
+  final _$loginModalIsOpenAtom =
+      Atom(name: '_LoginController.loginModalIsOpen');
 
   @override
   bool get loginModalIsOpen {
@@ -89,16 +86,15 @@ mixin _$LoginController on _LoginController, Store {
     });
   }
 
-  late final _$loginAsyncAction =
-      AsyncAction('_LoginController.login', context: context);
+  final _$loginAsyncAction = AsyncAction('_LoginController.login');
 
   @override
   Future<void> login() {
     return _$loginAsyncAction.run(() => super.login());
   }
 
-  late final _$_LoginControllerActionController =
-      ActionController(name: '_LoginController', context: context);
+  final _$_LoginControllerActionController =
+      ActionController(name: '_LoginController');
 
   @override
   void openLoginModal() {

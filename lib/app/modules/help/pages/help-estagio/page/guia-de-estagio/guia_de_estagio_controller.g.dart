@@ -6,11 +6,11 @@ part of 'guia_de_estagio_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$GuiaEstagioController on _GuiaEstagioControllerBase, Store {
-  late final _$listaGuiaEstagioAtom = Atom(
-      name: '_GuiaEstagioControllerBase.listaGuiaEstagio', context: context);
+  final _$listaGuiaEstagioAtom =
+      Atom(name: '_GuiaEstagioControllerBase.listaGuiaEstagio');
 
   @override
   List<GuiaEstagioModel> get listaGuiaEstagio {
@@ -25,9 +25,8 @@ mixin _$GuiaEstagioController on _GuiaEstagioControllerBase, Store {
     });
   }
 
-  late final _$listaPanelGuiaEstagioAtom = Atom(
-      name: '_GuiaEstagioControllerBase.listaPanelGuiaEstagio',
-      context: context);
+  final _$listaPanelGuiaEstagioAtom =
+      Atom(name: '_GuiaEstagioControllerBase.listaPanelGuiaEstagio');
 
   @override
   List<GuiaEstagioPanelModel> get listaPanelGuiaEstagio {
@@ -43,17 +42,16 @@ mixin _$GuiaEstagioController on _GuiaEstagioControllerBase, Store {
     });
   }
 
-  late final _$getGuiaEstagioAsyncAction = AsyncAction(
-      '_GuiaEstagioControllerBase.getGuiaEstagio',
-      context: context);
+  final _$getGuiaEstagioAsyncAction =
+      AsyncAction('_GuiaEstagioControllerBase.getGuiaEstagio');
 
   @override
   Future<void> getGuiaEstagio() {
     return _$getGuiaEstagioAsyncAction.run(() => super.getGuiaEstagio());
   }
 
-  late final _$_GuiaEstagioControllerBaseActionController =
-      ActionController(name: '_GuiaEstagioControllerBase', context: context);
+  final _$_GuiaEstagioControllerBaseActionController =
+      ActionController(name: '_GuiaEstagioControllerBase');
 
   @override
   void getListaPanelGuiaEstagio() {

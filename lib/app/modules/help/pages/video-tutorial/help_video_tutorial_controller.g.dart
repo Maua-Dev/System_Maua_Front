@@ -6,11 +6,11 @@ part of 'help_video_tutorial_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$HelpVideoTutorialController on _HelpVideoTutorialControllerBase, Store {
-  late final _$listaVideosAtom = Atom(
-      name: '_HelpVideoTutorialControllerBase.listaVideos', context: context);
+  final _$listaVideosAtom =
+      Atom(name: '_HelpVideoTutorialControllerBase.listaVideos');
 
   @override
   List<VideoTutorialModel> get listaVideos {
@@ -25,9 +25,8 @@ mixin _$HelpVideoTutorialController on _HelpVideoTutorialControllerBase, Store {
     });
   }
 
-  late final _$getVideosAsyncAction = AsyncAction(
-      '_HelpVideoTutorialControllerBase.getVideos',
-      context: context);
+  final _$getVideosAsyncAction =
+      AsyncAction('_HelpVideoTutorialControllerBase.getVideos');
 
   @override
   Future<void> getVideos() {

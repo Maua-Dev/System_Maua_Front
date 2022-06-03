@@ -6,7 +6,7 @@ part of 'atingir_metas_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$AtingirMetasController on _AtingirMetasControllerBase, Store {
   Computed<String>? _$notaComputadaComputed;
@@ -17,8 +17,7 @@ mixin _$AtingirMetasController on _AtingirMetasControllerBase, Store {
               name: '_AtingirMetasControllerBase.notaComputada'))
           .value;
 
-  late final _$materiaAtom =
-      Atom(name: '_AtingirMetasControllerBase.materia', context: context);
+  final _$materiaAtom = Atom(name: '_AtingirMetasControllerBase.materia');
 
   @override
   MateriaModel get materia {
@@ -33,8 +32,8 @@ mixin _$AtingirMetasController on _AtingirMetasControllerBase, Store {
     });
   }
 
-  late final _$metasParaCalculoAtom = Atom(
-      name: '_AtingirMetasControllerBase.metasParaCalculo', context: context);
+  final _$metasParaCalculoAtom =
+      Atom(name: '_AtingirMetasControllerBase.metasParaCalculo');
 
   @override
   Map<String, String> get metasParaCalculo {
@@ -49,8 +48,8 @@ mixin _$AtingirMetasController on _AtingirMetasControllerBase, Store {
     });
   }
 
-  late final _$setNotaAsyncAction =
-      AsyncAction('_AtingirMetasControllerBase.setNota', context: context);
+  final _$setNotaAsyncAction =
+      AsyncAction('_AtingirMetasControllerBase.setNota');
 
   @override
   Future<void> setNota(String value, AvaliacaoEnum tituloAvaliacao) {
@@ -58,17 +57,16 @@ mixin _$AtingirMetasController on _AtingirMetasControllerBase, Store {
         .run(() => super.setNota(value, tituloAvaliacao));
   }
 
-  late final _$getMateriaAsyncAction =
-      AsyncAction('_AtingirMetasControllerBase.getMateria', context: context);
+  final _$getMateriaAsyncAction =
+      AsyncAction('_AtingirMetasControllerBase.getMateria');
 
   @override
   Future<void> getMateria() {
     return _$getMateriaAsyncAction.run(() => super.getMateria());
   }
 
-  late final _$getNotasCalculadasAsyncAction = AsyncAction(
-      '_AtingirMetasControllerBase.getNotasCalculadas',
-      context: context);
+  final _$getNotasCalculadasAsyncAction =
+      AsyncAction('_AtingirMetasControllerBase.getNotasCalculadas');
 
   @override
   Future<void> getNotasCalculadas() {

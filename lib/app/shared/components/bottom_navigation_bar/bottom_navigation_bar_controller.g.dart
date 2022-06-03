@@ -6,12 +6,11 @@ part of 'bottom_navigation_bar_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$BottomNavigationBarController
     on BottomNavigationBarControllerBase, Store {
-  late final _$isOpenAtom =
-      Atom(name: 'BottomNavigationBarControllerBase.isOpen', context: context);
+  final _$isOpenAtom = Atom(name: 'BottomNavigationBarControllerBase.isOpen');
 
   @override
   bool get isOpen {
@@ -26,8 +25,8 @@ mixin _$BottomNavigationBarController
     });
   }
 
-  late final _$currentIndexAtom = Atom(
-      name: 'BottomNavigationBarControllerBase.currentIndex', context: context);
+  final _$currentIndexAtom =
+      Atom(name: 'BottomNavigationBarControllerBase.currentIndex');
 
   @override
   int get currentIndex {
@@ -42,18 +41,16 @@ mixin _$BottomNavigationBarController
     });
   }
 
-  late final _$alternatePageAsyncAction = AsyncAction(
-      'BottomNavigationBarControllerBase.alternatePage',
-      context: context);
+  final _$alternatePageAsyncAction =
+      AsyncAction('BottomNavigationBarControllerBase.alternatePage');
 
   @override
   Future<void> alternatePage(int index) {
     return _$alternatePageAsyncAction.run(() => super.alternatePage(index));
   }
 
-  late final _$trocaOpenAsyncAction = AsyncAction(
-      'BottomNavigationBarControllerBase.trocaOpen',
-      context: context);
+  final _$trocaOpenAsyncAction =
+      AsyncAction('BottomNavigationBarControllerBase.trocaOpen');
 
   @override
   Future<void> trocaOpen() {

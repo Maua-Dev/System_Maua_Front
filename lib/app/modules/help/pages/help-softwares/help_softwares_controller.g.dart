@@ -6,11 +6,10 @@ part of 'help_softwares_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$HelpSoftwaresController on _HelpSoftwaresControllerBase, Store {
-  late final _$softwaresAtom =
-      Atom(name: '_HelpSoftwaresControllerBase.softwares', context: context);
+  final _$softwaresAtom = Atom(name: '_HelpSoftwaresControllerBase.softwares');
 
   @override
   List<SoftwaresModel> get softwares {
@@ -25,8 +24,8 @@ mixin _$HelpSoftwaresController on _HelpSoftwaresControllerBase, Store {
     });
   }
 
-  late final _$softwaresActionAtom = Atom(
-      name: '_HelpSoftwaresControllerBase.softwaresAction', context: context);
+  final _$softwaresActionAtom =
+      Atom(name: '_HelpSoftwaresControllerBase.softwaresAction');
 
   @override
   List<SoftwaresPanelModel> get softwaresAction {
@@ -41,9 +40,8 @@ mixin _$HelpSoftwaresController on _HelpSoftwaresControllerBase, Store {
     });
   }
 
-  late final _$getInformacaoSoftwaresAsyncAction = AsyncAction(
-      '_HelpSoftwaresControllerBase.getInformacaoSoftwares',
-      context: context);
+  final _$getInformacaoSoftwaresAsyncAction =
+      AsyncAction('_HelpSoftwaresControllerBase.getInformacaoSoftwares');
 
   @override
   Future<void> getInformacaoSoftwares() {
@@ -51,8 +49,8 @@ mixin _$HelpSoftwaresController on _HelpSoftwaresControllerBase, Store {
         .run(() => super.getInformacaoSoftwares());
   }
 
-  late final _$_HelpSoftwaresControllerBaseActionController =
-      ActionController(name: '_HelpSoftwaresControllerBase', context: context);
+  final _$_HelpSoftwaresControllerBaseActionController =
+      ActionController(name: '_HelpSoftwaresControllerBase');
 
   @override
   void setSoftwaresAction() {
