@@ -17,18 +17,6 @@ abstract class MateriasControllerBase with Store {
   List<MateriasModel> materias = <MateriasModel>[];
 
   @action
-  List<String> getFotosProfessores(int index) {
-    var fotosProfessores = <String>[];
-    if (materias[index].professores != null) {
-      for (var i = 0; i < materias[index].professores!.length; i++) {
-        fotosProfessores.add(materias[index].professores![i].foto!);
-      }
-      return fotosProfessores;
-    }
-    return [];
-  }
-
-  @action
   Future<void> getMaterias() async {
     materias = await repository.getMaterias();
   }
