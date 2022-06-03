@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:fluttericon/font_awesome_icons.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/widgets/closed_bottom_navigation_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
@@ -36,11 +35,7 @@ class BottomNavigationBarWidget extends StatelessWidget {
                           height: MediaQuery.of(context).size.height < 650
                               ? MediaQuery.of(context).size.height * 0.11
                               : MediaQuery.of(context).size.height * 0.09,
-                          child: ClosedBottomNavigationBar(
-                            onPressed: () {
-                              onPressed!();
-                            },
-                          )),
+                          child: ClosedBottomNavigationBar()),
                       Container(
                           height: MediaQuery.of(context).size.height * 0.31,
                           padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -53,10 +48,18 @@ class BottomNavigationBarWidget extends StatelessWidget {
                             mainAxisSpacing: 24,
                             children: [
                               NavigationBarButtonsWidget(
-                                titulo: 'Matérias',
-                                icon: Icons.library_books,
+                                titulo: 'Calendário',
+                                icon: Icons.calendar_month,
                                 onTap: () {
-                                  Modular.to.navigate('/materias');
+                                  showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return const CustomAlertDialogWidget(
+                                        title: 'Conteúdo indisponível!',
+                                        content: 'Aguarde novas atualizações.',
+                                      );
+                                    },
+                                  );
                                   onPressed!();
                                 },
                               ),
