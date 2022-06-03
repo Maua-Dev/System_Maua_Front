@@ -6,7 +6,7 @@ part of 'ic_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$IcController on IcControllerBase, Store {
   Computed<List<String>>? _$listaTitulosIcComputed;
@@ -17,7 +17,8 @@ mixin _$IcController on IcControllerBase, Store {
               name: 'IcControllerBase.listaTitulosIc'))
       .value;
 
-  final _$troncoAtom = Atom(name: 'IcControllerBase.tronco');
+  late final _$troncoAtom =
+      Atom(name: 'IcControllerBase.tronco', context: context);
 
   @override
   TroncoEnum get tronco {
@@ -32,7 +33,8 @@ mixin _$IcController on IcControllerBase, Store {
     });
   }
 
-  final _$dadosTroncoAtom = Atom(name: 'IcControllerBase.dadosTronco');
+  late final _$dadosTroncoAtom =
+      Atom(name: 'IcControllerBase.dadosTronco', context: context);
 
   @override
   List<IcModel> get dadosTronco {
@@ -47,15 +49,16 @@ mixin _$IcController on IcControllerBase, Store {
     });
   }
 
-  final _$getDadosTroncoAsyncAction =
-      AsyncAction('IcControllerBase.getDadosTronco');
+  late final _$getDadosTroncoAsyncAction =
+      AsyncAction('IcControllerBase.getDadosTronco', context: context);
 
   @override
   Future<void> getDadosTronco() {
     return _$getDadosTroncoAsyncAction.run(() => super.getDadosTronco());
   }
 
-  final _$setTroncoAsyncAction = AsyncAction('IcControllerBase.setTronco');
+  late final _$setTroncoAsyncAction =
+      AsyncAction('IcControllerBase.setTronco', context: context);
 
   @override
   Future<void> setTronco(TroncoEnum value) {

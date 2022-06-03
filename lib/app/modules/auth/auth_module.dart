@@ -10,7 +10,10 @@ class AuthModule extends Module {
   final List<Bind> binds = [
     Bind.lazySingleton<AuthController>(
         (i) => AuthController(
-            repository: i<IAuthRepository>(), storage: i<ISecureStorage>()),
+              repository: i<IAuthRepository>(),
+              storage: i<ISecureStorage>(),
+              analytics: i(),
+            ),
         export: true),
     Bind.lazySingleton<IAuthRepository>((i) => AuthRepositoryMock(),
         export: true),

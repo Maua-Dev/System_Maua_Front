@@ -6,11 +6,11 @@ part of 'mural_estagios_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$MuralEstagiosController on _MuralEstagiosControllerBase, Store {
-  final _$listaEstagiosAtom =
-      Atom(name: '_MuralEstagiosControllerBase.listaEstagios');
+  late final _$listaEstagiosAtom = Atom(
+      name: '_MuralEstagiosControllerBase.listaEstagios', context: context);
 
   @override
   List<EstagiosModel> get listaEstagios {
@@ -25,8 +25,9 @@ mixin _$MuralEstagiosController on _MuralEstagiosControllerBase, Store {
     });
   }
 
-  final _$listaPanelEstagiosAtom =
-      Atom(name: '_MuralEstagiosControllerBase.listaPanelEstagios');
+  late final _$listaPanelEstagiosAtom = Atom(
+      name: '_MuralEstagiosControllerBase.listaPanelEstagios',
+      context: context);
 
   @override
   List<ListPanelModel<EstagiosModel>> get listaPanelEstagios {
@@ -41,16 +42,16 @@ mixin _$MuralEstagiosController on _MuralEstagiosControllerBase, Store {
     });
   }
 
-  final _$getEstagiosAsyncAction =
-      AsyncAction('_MuralEstagiosControllerBase.getEstagios');
+  late final _$getEstagiosAsyncAction =
+      AsyncAction('_MuralEstagiosControllerBase.getEstagios', context: context);
 
   @override
   Future<void> getEstagios() {
     return _$getEstagiosAsyncAction.run(() => super.getEstagios());
   }
 
-  final _$_MuralEstagiosControllerBaseActionController =
-      ActionController(name: '_MuralEstagiosControllerBase');
+  late final _$_MuralEstagiosControllerBaseActionController =
+      ActionController(name: '_MuralEstagiosControllerBase', context: context);
 
   @override
   void setListaPanelEstagios() {
