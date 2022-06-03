@@ -25,8 +25,8 @@ mixin _$BottomNavigationBarController
     });
   }
 
-  late final _$currentIndexAtom = Atom(
-      name: 'BottomNavigationBarControllerBase.currentIndex', context: context);
+  final _$currentIndexAtom =
+      Atom(name: 'BottomNavigationBarControllerBase.currentIndex');
 
   @override
   int get currentIndex {
@@ -41,18 +41,16 @@ mixin _$BottomNavigationBarController
     });
   }
 
-  late final _$alternatePageAsyncAction = AsyncAction(
-      'BottomNavigationBarControllerBase.alternatePage',
-      context: context);
+  final _$alternatePageAsyncAction =
+      AsyncAction('BottomNavigationBarControllerBase.alternatePage');
 
   @override
   Future<void> alternatePage(int index) {
     return _$alternatePageAsyncAction.run(() => super.alternatePage(index));
   }
 
-  late final _$trocaOpenAsyncAction = AsyncAction(
-      'BottomNavigationBarControllerBase.trocaOpen',
-      context: context);
+  final _$trocaOpenAsyncAction =
+      AsyncAction('BottomNavigationBarControllerBase.trocaOpen');
 
   @override
   Future<void> trocaOpen() {
