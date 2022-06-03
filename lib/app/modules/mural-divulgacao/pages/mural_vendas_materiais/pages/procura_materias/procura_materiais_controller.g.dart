@@ -6,11 +6,10 @@ part of 'procura_materiais_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$ProcuraMateriaisController on ProcuraMateriaisControllerBase, Store {
-  late final _$materialAtom =
-      Atom(name: 'ProcuraMateriaisControllerBase.material', context: context);
+  final _$materialAtom = Atom(name: 'ProcuraMateriaisControllerBase.material');
 
   @override
   String get material {
@@ -25,8 +24,8 @@ mixin _$ProcuraMateriaisController on ProcuraMateriaisControllerBase, Store {
     });
   }
 
-  late final _$listaMateriaisAtom = Atom(
-      name: 'ProcuraMateriaisControllerBase.listaMateriais', context: context);
+  final _$listaMateriaisAtom =
+      Atom(name: 'ProcuraMateriaisControllerBase.listaMateriais');
 
   @override
   List<MateriaisEnum> get listaMateriais {
@@ -41,8 +40,8 @@ mixin _$ProcuraMateriaisController on ProcuraMateriaisControllerBase, Store {
     });
   }
 
-  late final _$nomesMateriaisAtom = Atom(
-      name: 'ProcuraMateriaisControllerBase.nomesMateriais', context: context);
+  final _$nomesMateriaisAtom =
+      Atom(name: 'ProcuraMateriaisControllerBase.nomesMateriais');
 
   @override
   List<String> get nomesMateriais {
@@ -57,9 +56,8 @@ mixin _$ProcuraMateriaisController on ProcuraMateriaisControllerBase, Store {
     });
   }
 
-  late final _$ProcuraMateriaisControllerBaseActionController =
-      ActionController(
-          name: 'ProcuraMateriaisControllerBase', context: context);
+  final _$ProcuraMateriaisControllerBaseActionController =
+      ActionController(name: 'ProcuraMateriaisControllerBase');
 
   @override
   void getListaMateriais() {

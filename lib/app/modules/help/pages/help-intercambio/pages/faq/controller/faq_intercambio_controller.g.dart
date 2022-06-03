@@ -6,11 +6,10 @@ part of 'faq_intercambio_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$FaqIntercambioController on _FaqIntercambioControllerBase, Store {
-  late final _$listaFaqAtom =
-      Atom(name: '_FaqIntercambioControllerBase.listaFaq', context: context);
+  final _$listaFaqAtom = Atom(name: '_FaqIntercambioControllerBase.listaFaq');
 
   @override
   List<FaqModel> get listaFaq {
@@ -25,8 +24,7 @@ mixin _$FaqIntercambioController on _FaqIntercambioControllerBase, Store {
     });
   }
 
-  late final _$faqActionAtom =
-      Atom(name: '_FaqIntercambioControllerBase.faqAction', context: context);
+  final _$faqActionAtom = Atom(name: '_FaqIntercambioControllerBase.faqAction');
 
   @override
   List<FaqPanelModel> get faqAction {
@@ -41,17 +39,16 @@ mixin _$FaqIntercambioController on _FaqIntercambioControllerBase, Store {
     });
   }
 
-  late final _$getListRepositoryAsyncAction = AsyncAction(
-      '_FaqIntercambioControllerBase.getListRepository',
-      context: context);
+  final _$getListRepositoryAsyncAction =
+      AsyncAction('_FaqIntercambioControllerBase.getListRepository');
 
   @override
   Future<void> getListRepository() {
     return _$getListRepositoryAsyncAction.run(() => super.getListRepository());
   }
 
-  late final _$_FaqIntercambioControllerBaseActionController =
-      ActionController(name: '_FaqIntercambioControllerBase', context: context);
+  final _$_FaqIntercambioControllerBaseActionController =
+      ActionController(name: '_FaqIntercambioControllerBase');
 
   @override
   void setFaqAction() {

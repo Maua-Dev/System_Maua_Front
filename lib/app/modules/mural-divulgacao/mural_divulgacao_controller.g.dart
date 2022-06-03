@@ -6,12 +6,11 @@ part of 'mural_divulgacao_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$MuralDivulgacaoController on _MuralDivulgacaoControllerBase, Store {
-  late final _$informacaoCaNaoLidoAtom = Atom(
-      name: '_MuralDivulgacaoControllerBase.informacaoCaNaoLido',
-      context: context);
+  final _$informacaoCaNaoLidoAtom =
+      Atom(name: '_MuralDivulgacaoControllerBase.informacaoCaNaoLido');
 
   @override
   int get informacaoCaNaoLido {
@@ -26,9 +25,8 @@ mixin _$MuralDivulgacaoController on _MuralDivulgacaoControllerBase, Store {
     });
   }
 
-  late final _$informacaoVendasNaoLidoAtom = Atom(
-      name: '_MuralDivulgacaoControllerBase.informacaoVendasNaoLido',
-      context: context);
+  final _$informacaoVendasNaoLidoAtom =
+      Atom(name: '_MuralDivulgacaoControllerBase.informacaoVendasNaoLido');
 
   @override
   int get informacaoVendasNaoLido {
@@ -44,9 +42,8 @@ mixin _$MuralDivulgacaoController on _MuralDivulgacaoControllerBase, Store {
     });
   }
 
-  late final _$informacaoEquipesNaoLidoAtom = Atom(
-      name: '_MuralDivulgacaoControllerBase.informacaoEquipesNaoLido',
-      context: context);
+  final _$informacaoEquipesNaoLidoAtom =
+      Atom(name: '_MuralDivulgacaoControllerBase.informacaoEquipesNaoLido');
 
   @override
   int get informacaoEquipesNaoLido {
@@ -62,9 +59,8 @@ mixin _$MuralDivulgacaoController on _MuralDivulgacaoControllerBase, Store {
     });
   }
 
-  late final _$informacaoEstagioNaoLidoAtom = Atom(
-      name: '_MuralDivulgacaoControllerBase.informacaoEstagioNaoLido',
-      context: context);
+  final _$informacaoEstagioNaoLidoAtom =
+      Atom(name: '_MuralDivulgacaoControllerBase.informacaoEstagioNaoLido');
 
   @override
   int get informacaoEstagioNaoLido {
@@ -80,36 +76,32 @@ mixin _$MuralDivulgacaoController on _MuralDivulgacaoControllerBase, Store {
     });
   }
 
-  late final _$getCaLengthAsyncAction = AsyncAction(
-      '_MuralDivulgacaoControllerBase.getCaLength',
-      context: context);
+  final _$getCaLengthAsyncAction =
+      AsyncAction('_MuralDivulgacaoControllerBase.getCaLength');
 
   @override
   Future<int> getCaLength() {
     return _$getCaLengthAsyncAction.run(() => super.getCaLength());
   }
 
-  late final _$getVendasLengthAsyncAction = AsyncAction(
-      '_MuralDivulgacaoControllerBase.getVendasLength',
-      context: context);
+  final _$getVendasLengthAsyncAction =
+      AsyncAction('_MuralDivulgacaoControllerBase.getVendasLength');
 
   @override
   Future<int> getVendasLength() {
     return _$getVendasLengthAsyncAction.run(() => super.getVendasLength());
   }
 
-  late final _$getEquipesLengthAsyncAction = AsyncAction(
-      '_MuralDivulgacaoControllerBase.getEquipesLength',
-      context: context);
+  final _$getEquipesLengthAsyncAction =
+      AsyncAction('_MuralDivulgacaoControllerBase.getEquipesLength');
 
   @override
   Future<int> getEquipesLength() {
     return _$getEquipesLengthAsyncAction.run(() => super.getEquipesLength());
   }
 
-  late final _$getEstagioLengthAsyncAction = AsyncAction(
-      '_MuralDivulgacaoControllerBase.getEstagioLength',
-      context: context);
+  final _$getEstagioLengthAsyncAction =
+      AsyncAction('_MuralDivulgacaoControllerBase.getEstagioLength');
 
   @override
   Future<int> getEstagioLength() {

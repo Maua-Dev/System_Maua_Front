@@ -6,7 +6,7 @@ part of 'estatisticas_notas_controller.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$EstatisticasController on EstatisticasControllerBase, Store {
   Computed<int>? _$mediaMauaComputed;
@@ -45,9 +45,8 @@ mixin _$EstatisticasController on EstatisticasControllerBase, Store {
               name: 'EstatisticasControllerBase.mediaFinalArredondada'))
       .value;
 
-  late final _$dadosGraficoDeBarrasAtom = Atom(
-      name: 'EstatisticasControllerBase.dadosGraficoDeBarras',
-      context: context);
+  final _$dadosGraficoDeBarrasAtom =
+      Atom(name: 'EstatisticasControllerBase.dadosGraficoDeBarras');
 
   @override
   DadosGraficoDeBarrasModel get dadosGraficoDeBarras {
@@ -63,8 +62,7 @@ mixin _$EstatisticasController on EstatisticasControllerBase, Store {
     });
   }
 
-  late final _$mediasAtom =
-      Atom(name: 'EstatisticasControllerBase.medias', context: context);
+  final _$mediasAtom = Atom(name: 'EstatisticasControllerBase.medias');
 
   @override
   EstatisticasMediasModel get medias {
@@ -79,9 +77,8 @@ mixin _$EstatisticasController on EstatisticasControllerBase, Store {
     });
   }
 
-  late final _$getDadosGraficoDeBarrasAsyncAction = AsyncAction(
-      'EstatisticasControllerBase.getDadosGraficoDeBarras',
-      context: context);
+  final _$getDadosGraficoDeBarrasAsyncAction =
+      AsyncAction('EstatisticasControllerBase.getDadosGraficoDeBarras');
 
   @override
   Future<void> getDadosGraficoDeBarras() {
@@ -89,9 +86,8 @@ mixin _$EstatisticasController on EstatisticasControllerBase, Store {
         .run(() => super.getDadosGraficoDeBarras());
   }
 
-  late final _$getEstatisticasMediasAsyncAction = AsyncAction(
-      'EstatisticasControllerBase.getEstatisticasMedias',
-      context: context);
+  final _$getEstatisticasMediasAsyncAction =
+      AsyncAction('EstatisticasControllerBase.getEstatisticasMedias');
 
   @override
   Future<void> getEstatisticasMedias() {
