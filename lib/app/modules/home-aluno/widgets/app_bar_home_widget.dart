@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/app/shared/components/aula_card/aula_card_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class AppBarHomeWidget extends StatelessWidget {
-  final String usuario;
+  final String user;
   final String ra;
-  final String materia;
-  final String duracao;
-  final String local;
+  // final List<ClassesModel> classesOfDay;
   final void Function()? onTap;
 
   const AppBarHomeWidget(
-      {required this.usuario,
+      {required this.user,
       required this.ra,
-      required this.materia,
-      required this.duracao,
       required this.onTap,
-      required this.local});
+      // required this.classesOfDay
+      });
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -68,7 +64,7 @@ class AppBarHomeWidget extends StatelessWidget {
                               .copyWith(color: AppColors.white),
                           children: [
                             TextSpan(
-                                text: usuario,
+                                text: user,
                                 style: AppTextStyles.titleH1
                                     .copyWith(color: AppColors.white)),
                           ]),
@@ -85,16 +81,6 @@ class AppBarHomeWidget extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
-          top: MediaQuery.of(context).size.height * 0.18,
-          right: 0,
-          left: 0,
-          child: AulaCardWidget(
-            materia: materia,
-            duracao: duracao,
-            local: local,
-          ),
-        )
       ],
     );
   }

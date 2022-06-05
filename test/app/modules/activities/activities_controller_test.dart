@@ -17,28 +17,28 @@ void main() {
   late ActivitiesController activitiesController;
   var activityTest = <ActivityModel>[
     ActivityModel(
-      subject: TipoMateriaEnum.FT.name,
+      subject: SubjectEnum.FT.name,
       activityName: 'Equação de Bernoulli',
       delivered: true,
       date: '21/07/2021',
       hour: '23:58',
     ),
     ActivityModel(
-      subject: TipoMateriaEnum.RESMAT.name,
+      subject: SubjectEnum.RESMAT.name,
       activityName: 'Equação de Bernoulli',
       delivered: true,
       date: '22/07/2021',
       hour: '23:59',
     ),
     ActivityModel(
-      subject: TipoMateriaEnum.CALC2.name,
+      subject: SubjectEnum.CALC2.name,
       activityName: 'Equação de Bernoulli',
       delivered: false,
       date: '23/07/2021',
       hour: '23:57',
     ),
     ActivityModel(
-      subject: TipoMateriaEnum.CALC2.name,
+      subject: SubjectEnum.CALC2.name,
       activityName: 'Equação de Bernoulli gigante de mais aaaaa aaaaa aaaa',
       delivered: true,
       date: '24/07/2021',

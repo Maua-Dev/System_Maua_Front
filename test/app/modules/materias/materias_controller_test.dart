@@ -13,8 +13,8 @@ void main() {
   IMateriasRepository repository = MockIMateriasRepository();
   late MateriasController materiasController;
   var materiasTeste = [
-    MateriasModel(nome: TipoMateriaEnum.ACADEMIATALENTOS, progresso: 0.9),
-    MateriasModel(nome: TipoMateriaEnum.CALC1, progresso: 0.4),
+    MateriasModel(nome: SubjectEnum.ACADEMIATALENTOS, progresso: 0.9),
+    MateriasModel(nome: SubjectEnum.CALC1, progresso: 0.4),
   ];
 
   setUpAll(() {

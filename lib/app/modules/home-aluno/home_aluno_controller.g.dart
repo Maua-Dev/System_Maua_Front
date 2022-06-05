@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'home_aluno_controller.dart';
+part of 'home_student_controller.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -9,55 +9,56 @@ part of 'home_aluno_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
-  final _$alunoAtom = Atom(name: 'HomeAlunoControllerBase.aluno');
+  final _$studentAtom = Atom(name: 'HomeAlunoControllerBase.student');
 
   @override
-  AlunoModel get aluno {
-    _$alunoAtom.reportRead();
-    return super.aluno;
+  StudentModel get student {
+    _$studentAtom.reportRead();
+    return super.student;
   }
 
   @override
-  set aluno(AlunoModel value) {
-    _$alunoAtom.reportWrite(value, super.aluno, () {
-      super.aluno = value;
+  set student(StudentModel value) {
+    _$studentAtom.reportWrite(value, super.student, () {
+      super.student = value;
     });
   }
 
-  final _$aulaAtom = Atom(name: 'HomeAlunoControllerBase.aula');
+  final _$classesOfDayAtom = Atom(name: 'HomeAlunoControllerBase.classesOfDay');
 
   @override
-  AulaModel get aula {
-    _$aulaAtom.reportRead();
-    return super.aula;
+  List<ClassesModel> get classesOfDay {
+    _$classesOfDayAtom.reportRead();
+    return super.classesOfDay;
   }
 
   @override
-  set aula(AulaModel value) {
-    _$aulaAtom.reportWrite(value, super.aula, () {
-      super.aula = value;
+  set classesOfDay(List<ClassesModel> value) {
+    _$classesOfDayAtom.reportWrite(value, super.classesOfDay, () {
+      super.classesOfDay = value;
     });
   }
 
-  final _$getAlunoAsyncAction = AsyncAction('HomeAlunoControllerBase.getAluno');
+  final _$getStudentAsyncAction =
+      AsyncAction('HomeAlunoControllerBase.getStudent');
 
   @override
-  Future<void> getAluno() {
-    return _$getAlunoAsyncAction.run(() => super.getAluno());
+  Future<void> getStudent() {
+    return _$getStudentAsyncAction.run(() => super.getStudent());
   }
 
-  final _$getAulaAsyncAction = AsyncAction('HomeAlunoControllerBase.getAula');
+  final _$getClassAsyncAction = AsyncAction('HomeAlunoControllerBase.getClass');
 
   @override
-  Future<void> getAula() {
-    return _$getAulaAsyncAction.run(() => super.getAula());
+  Future<void> getClass() {
+    return _$getClassAsyncAction.run(() => super.getClass());
   }
 
   @override
   String toString() {
     return '''
-aluno: ${aluno},
-aula: ${aula}
+student: ${student},
+classesOfDay: ${classesOfDay}
     ''';
   }
 }
