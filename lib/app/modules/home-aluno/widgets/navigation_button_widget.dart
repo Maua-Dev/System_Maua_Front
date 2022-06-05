@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
+import '../../../shared/components/dialogs/custom_alert_dialog_widget.dart';
+
 class NavigationButtonWidget extends StatelessWidget {
   final String title;
   final IconData icon;
@@ -13,16 +15,34 @@ class NavigationButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       child: InkWell(
-        onTap: onTap,
+        onTap: onTap ?? () {
+          showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return const CustomAlertDialogWidget(
+                        title: 'Conteúdo indisponível!',
+                        content: 'Aguarde novas atualizações.',
+                      );
+                    },
+                  );
+        },
         child: Container(
           height: MediaQuery.of(context).size.height * 0.12,
           decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(width: 1, color: AppColors.shape),
-              boxShadow: [AppColors.shadow]),
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(width: 1, color: AppColors.shape),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 2,
+                blurRadius: 10,
+                offset: Offset(0, 3), // changes position of shadow
+              ),
+            ],
+            color: AppColors.white,
+          ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Row(

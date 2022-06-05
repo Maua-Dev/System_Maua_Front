@@ -10,11 +10,23 @@ class HomeStudentRepository implements IHomeStudentRepository {
     ra: '15.01310-3',
   );
 
-  var lecture = ClassesModel(
+  var lectures = [
+    ClassesModel(
       local: 'H101',
       subjectEnum: SubjectEnum.RESMAT,
       startHour: DateTime.now(),
-    );
+    ),
+    ClassesModel(
+      local: 'U14',
+      subjectEnum: SubjectEnum.CALC2,
+      startHour: DateTime.now(),
+    ),
+    ClassesModel(
+      local: 'U18',
+      subjectEnum: SubjectEnum.FT,
+      startHour: DateTime.now(),
+    ),
+  ];
 
   @override
   Future<StudentModel> getStudent() {
@@ -24,6 +36,6 @@ class HomeStudentRepository implements IHomeStudentRepository {
   @override
   Future<List<ClassesModel>> getClass() async {
     await Future.delayed(Duration(seconds: 1));
-    return Future.value([lecture, lecture]);
+    return Future.value(lectures);
   }
 }

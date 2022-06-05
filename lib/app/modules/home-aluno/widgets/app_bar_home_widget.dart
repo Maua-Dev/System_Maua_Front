@@ -6,15 +6,13 @@ import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 class AppBarHomeWidget extends StatelessWidget {
   final String user;
   final String ra;
-  // final List<ClassesModel> classesOfDay;
   final void Function()? onTap;
 
-  const AppBarHomeWidget(
-      {required this.user,
-      required this.ra,
-      required this.onTap,
-      // required this.classesOfDay
-      });
+  const AppBarHomeWidget({
+    required this.user,
+    required this.ra,
+    required this.onTap,
+  });
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -81,6 +79,11 @@ class AppBarHomeWidget extends StatelessWidget {
             ),
           ),
         ),
+        Positioned(
+       right: 10.0,
+       top: 10.0,
+       child: Icon(Icons.notifications, color: AppColors.white,)
+      ),
       ],
     );
   }

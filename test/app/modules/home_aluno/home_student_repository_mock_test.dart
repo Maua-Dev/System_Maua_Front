@@ -13,6 +13,6 @@ void main() {
   });
 
   test('[TEST] - getAula', () {
-    expect(homeAlunoRepository.lecture.local.isNotEmpty, true);
+    expect(homeAlunoRepository.lectures.isNotEmpty, true);
   });
 }

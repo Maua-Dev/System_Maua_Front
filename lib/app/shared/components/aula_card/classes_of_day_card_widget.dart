@@ -17,8 +17,9 @@ class ClassesOfDayWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
       child: Container(
+          alignment: Alignment.center,
           constraints: BoxConstraints(minWidth: 10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
@@ -32,25 +33,25 @@ class ClassesOfDayWidget extends StatelessWidget {
             ],
             color: AppColors.white,
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                          '${WeekdaysEnum.values[classesOfDay[0].startHour.weekday - 1].name}',
-                          style: TextStyle(
-                              color: AppColors.brandingBlue,
-                              fontWeight: FontWeight.bold)),
-                    ),
-                  ],
-                ),
-                ListView.builder(
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 12.0, vertical: 8),
+                    child: Text(
+                        '${WeekdaysEnum.values[classesOfDay[0].startHour.weekday - 1].name}',
+                        style: TextStyle(
+                            color: AppColors.brandingBlue,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 24)),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                child: ListView.builder(
                   physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: classesOfDay.length,
@@ -59,6 +60,7 @@ class ClassesOfDayWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
                               height: 15,
@@ -70,56 +72,71 @@ class ClassesOfDayWidget extends StatelessWidget {
                             SizedBox(
                               width: 20,
                             ),
-                            Text(
-                              '${classesOfDay[0].subjectEnum?.name ?? ''}',
-                              style: TextStyle(
-                                color: AppColors.brandingBlue,
-                                fontWeight: FontWeight.bold,
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.75,
+                              child: Flexible(
+                                child: Text(
+                                  '${classesOfDay[index].subjectEnum?.name ?? ''}',
+                                  style: TextStyle(
+                                      color: AppColors.brandingBlue,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 22),
+                                ),
                               ),
                             ),
                           ],
                         ),
-                        Row(
-                          children: [
-                            SizedBox(
-                              width: 45,
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  width: 45,
+                                ),
+                                Icon(
+                                  Icons.alarm,
+                                  size: MediaQuery.of(context).size.width < 350
+                                      ? 22
+                                      : 32,
+                                  color: AppColors.lightLetter,
+                                ),
+                                Text(
+                                  '${DateFormat('HH:mm').format(classesOfDay[index].startHour)}',
+                                  style: AppTextStyles.cardH3,
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Icon(
+                                  Icons.room_rounded,
+                                  size: MediaQuery.of(context).size.width < 350
+                                      ? 22
+                                      : 32,
+                                  color: AppColors.lightLetter,
+                                ),
+                                Text(
+                                  classesOfDay[index].local,
+                                  style: AppTextStyles.cardH3,
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                )
+                              ],
                             ),
-                            Icon(
-                              Icons.alarm,
-                              size: MediaQuery.of(context).size.width < 350
-                                  ? 22
-                                  : 32,
-                              color: AppColors.lightLetter,
-                            ),
-                            Text(
-                              '${DateFormat('HH:mm').format(classesOfDay[index].startHour)}',
-                              style: AppTextStyles.cardH3,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Icon(
-                              Icons.room_rounded,
-                              size: MediaQuery.of(context).size.width < 350
-                                  ? 22
-                                  : 32,
-                              color: AppColors.lightLetter,
-                            ),
-                            Text(
-                              classesOfDay[0].local,
-                              style: AppTextStyles.cardH3,
-                            ),
-                            SizedBox(
-                              height: 10,
-                            )
-                          ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
                         )
                       ],
                     );
                   },
-                )
-              ],
-            ),
+                ),
+              )
+            ],
           )),
     );
   }
