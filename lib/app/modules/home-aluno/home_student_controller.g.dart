@@ -8,8 +8,8 @@ part of 'home_student_controller.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
-mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
-  final _$studentAtom = Atom(name: 'HomeAlunoControllerBase.student');
+mixin _$HomeStudentController on HomeStudentControllerBase, Store {
+  final _$studentAtom = Atom(name: 'HomeStudentControllerBase.student');
 
   @override
   StudentModel get student {
@@ -24,7 +24,8 @@ mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
     });
   }
 
-  final _$classesOfDayAtom = Atom(name: 'HomeAlunoControllerBase.classesOfDay');
+  final _$classesOfDayAtom =
+      Atom(name: 'HomeStudentControllerBase.classesOfDay');
 
   @override
   List<ClassesModel> get classesOfDay {
@@ -40,14 +41,15 @@ mixin _$HomeAlunoController on HomeAlunoControllerBase, Store {
   }
 
   final _$getStudentAsyncAction =
-      AsyncAction('HomeAlunoControllerBase.getStudent');
+      AsyncAction('HomeStudentControllerBase.getStudent');
 
   @override
   Future<void> getStudent() {
     return _$getStudentAsyncAction.run(() => super.getStudent());
   }
 
-  final _$getClassAsyncAction = AsyncAction('HomeAlunoControllerBase.getClass');
+  final _$getClassAsyncAction =
+      AsyncAction('HomeStudentControllerBase.getClass');
 
   @override
   Future<void> getClass() {

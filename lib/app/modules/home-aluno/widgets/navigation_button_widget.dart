@@ -15,7 +15,7 @@ class NavigationButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
       child: InkWell(
         onTap: onTap ??
             () {
@@ -30,22 +30,15 @@ class NavigationButtonWidget extends StatelessWidget {
               );
             },
         child: Container(
-          height: MediaQuery.of(context).size.height * 0.12,
+          height: 80,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             border: Border.all(width: 1, color: AppColors.shape),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 2,
-                blurRadius: 10,
-                offset: Offset(0, 3), // changes position of shadow
-              ),
-            ],
+            boxShadow: [AppColors.clickShadow],
             color: AppColors.white,
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 24),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -60,8 +53,8 @@ class NavigationButtonWidget extends StatelessWidget {
                 Text(
                   title,
                   style: AppTextStyles.cardH3.copyWith(
-                      fontSize:
-                          MediaQuery.of(context).size.width < 350 ? 16 : 18),
+                    fontSize: MediaQuery.of(context).size.width < 350 ? 16 : 18,
+                  ),
                 ),
               ],
             ),

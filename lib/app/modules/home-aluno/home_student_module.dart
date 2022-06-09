@@ -9,7 +9,7 @@ import 'repositories/home_student_repository_interface.dart';
 class HomeAlunoModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.lazySingleton((i) => HomeAlunoController(i())),
+    Bind.lazySingleton((i) => HomeStudentController(i())),
     Bind.lazySingleton<IHomeStudentRepository>((i) => HomeStudentRepository()),
   ];
 

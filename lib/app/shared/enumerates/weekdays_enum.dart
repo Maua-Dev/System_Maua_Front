@@ -14,15 +14,15 @@ extension WeekdaysEnumExtension on WeekdaysEnum {
   String get name {
     switch (this) {
       case WeekdaysEnum.SEGUNDA:
-        return 'Segunda';
+        return 'Segunda-feira';
       case WeekdaysEnum.TERCA:
-        return 'Terça';
+        return 'Terça-feira';
       case WeekdaysEnum.QUARTA:
-        return 'Quarta';
+        return 'Quarta-feira';
       case WeekdaysEnum.QUINTA:
-        return 'Quinta';
+        return 'Quinta-feira';
       case WeekdaysEnum.SEXTA:
-        return 'Sexta';
+        return 'Sexta-feira';
       case WeekdaysEnum.SABADO:
         return 'Sábado';
       case WeekdaysEnum.DOMINGO:

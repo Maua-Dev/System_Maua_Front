@@ -30,7 +30,7 @@ class _IcDescricaoPageState extends State<IcDescricaoPage> {
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-                boxShadow: [AppColors.shadow],
+                boxShadow: [AppColors.clickShadow],
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10)),
             child: Column(

@@ -4,14 +4,15 @@ import 'package:system_maua_front/app/shared/models/student_model.dart';
 
 import '../../shared/models/classes_model.dart';
 
-part 'home_aluno_controller.g.dart';
+part 'home_student_controller.g.dart';
 
-class HomeAlunoController = HomeAlunoControllerBase with _$HomeAlunoController;
+class HomeStudentController = HomeStudentControllerBase
+    with _$HomeStudentController;
 
-abstract class HomeAlunoControllerBase with Store {
+abstract class HomeStudentControllerBase with Store {
   final IHomeStudentRepository repository;
 
-  HomeAlunoControllerBase(this.repository) {
+  HomeStudentControllerBase(this.repository) {
     getStudent();
     getClass();
   }

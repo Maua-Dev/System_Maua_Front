@@ -19,7 +19,7 @@ class IcCardCustomWidget extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: Colors.white,
-              boxShadow: [AppColors.shadow],
+              boxShadow: [AppColors.clickShadow],
               border: Border.all(color: AppColors.shape, width: 2)),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 16),

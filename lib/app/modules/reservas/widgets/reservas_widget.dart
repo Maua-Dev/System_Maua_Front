@@ -22,7 +22,7 @@ class ReservasCard extends StatelessWidget {
         onTap: onTap,
         child: Container(
           decoration: BoxDecoration(
-              boxShadow: [AppColors.shadow],
+              boxShadow: [AppColors.clickShadow],
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
               border: Border.all(

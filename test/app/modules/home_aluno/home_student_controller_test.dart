@@ -12,18 +12,17 @@ import 'home_student_controller_test.mocks.dart';
 @GenerateMocks([IHomeStudentRepository])
 void main() {
   IHomeStudentRepository repository = MockIHomeStudentRepository();
-  late HomeAlunoController homeAlunoController;
+  late HomeStudentController homeAlunoController;
   var alunoTeste = StudentModel(name: 'Gabriel', ra: '17.00163-3');
-  var aulaTeste = [ClassesModel(
-      subjectEnum: SubjectEnum.FT,
-      startHour: DateTime.now(),
-      local: 'H201')
-      ];
+  var aulaTeste = [
+    ClassesModel(
+        subjectEnum: SubjectEnum.FT, startHour: DateTime.now(), local: 'H201')
+  ];
 
   setUpAll(() {
     when(repository.getStudent()).thenAnswer((_) async => alunoTeste);
     when(repository.getClass()).thenAnswer((_) async => aulaTeste);
-    homeAlunoController = HomeAlunoController(repository);
+    homeAlunoController = HomeStudentController(repository);
   });
 
   test('[TEST] - getAluno', () async {

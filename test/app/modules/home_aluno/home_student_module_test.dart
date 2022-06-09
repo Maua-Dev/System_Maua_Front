@@ -9,11 +9,12 @@ void main() {
   initModule(HomeAlunoModule());
 
   test('[TEST] - Injeção do HomeAlunoController', () {
-    var homeAlunoController = Modular.get<HomeAlunoController>();
-    expect(homeAlunoController.repository, isInstanceOf<HomeStudentRepository>());
+    var homeAlunoController = Modular.get<HomeStudentController>();
+    expect(
+        homeAlunoController.repository, isInstanceOf<HomeStudentRepository>());
   });
 
   test('[TEST] - Injeção do HomeAlunoRepository', () {
-    Modular.get<HomeAlunoController>();
+    Modular.get<HomeStudentController>();
   });
 }

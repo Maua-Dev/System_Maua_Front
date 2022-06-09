@@ -3,7 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/home-aluno/widgets/app_bar_home_widget.dart';
 import 'package:system_maua_front/app/modules/home-aluno/widgets/navigation_button_widget.dart';
-import 'package:system_maua_front/app/shared/components/aula_card/classes_of_day_card_widget.dart';
+import 'package:system_maua_front/app/modules/home-aluno/widgets/classes_of_day_card_widget.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 import 'home_student_controller.dart';
 
@@ -15,7 +15,7 @@ class HomeStudentPage extends StatefulWidget {
 }
 
 class _HomeStudentPageState
-    extends ModularState<HomeStudentPage, HomeAlunoController> {
+    extends ModularState<HomeStudentPage, HomeStudentController> {
   var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
   @override
   Widget build(BuildContext context) {

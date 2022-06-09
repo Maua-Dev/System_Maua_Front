@@ -13,7 +13,7 @@ class HelpEstagioCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        boxShadow: [AppColors.shadow],
+        boxShadow: [AppColors.clickShadow],
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
       ),
