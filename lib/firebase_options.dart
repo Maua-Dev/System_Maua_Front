@@ -70,8 +70,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '54912975934',
     projectId: 'mauapp-dev-4e68c',
     storageBucket: 'mauapp-dev-4e68c.appspot.com',
-    iosClientId:
-        '54912975934-nse86c2eauebhbd5juvavfbv61gs7o5a.apps.googleusercontent.com',
+    iosClientId: '54912975934-nse86c2eauebhbd5juvavfbv61gs7o5a.apps.googleusercontent.com',
     iosBundleId: 'com.example.systemMauaFront',
   );
 }
