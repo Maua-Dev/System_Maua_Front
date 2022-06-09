@@ -80,10 +80,12 @@ class AppBarHomeWidget extends StatelessWidget {
           ),
         ),
         Positioned(
-       right: 10.0,
-       top: 10.0,
-       child: Icon(Icons.notifications, color: AppColors.white,)
-      ),
+            right: 10.0,
+            top: 10.0,
+            child: Icon(
+              Icons.notifications,
+              color: AppColors.white,
+            )),
       ],
     );
   }

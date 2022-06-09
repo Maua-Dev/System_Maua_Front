@@ -8,11 +8,10 @@ class ClassesModel {
   ClassesModel(
       {required this.subjectEnum,
       required this.local,
-      required this.startHour
-    });
+      required this.startHour});
 
   factory ClassesModel.newInstance() {
     return ClassesModel(
-      subjectEnum: null, local: '', startHour: DateTime.now());
+        subjectEnum: null, local: '', startHour: DateTime.now());
   }
 }

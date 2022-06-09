@@ -17,17 +17,18 @@ class NavigationButtonWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       child: InkWell(
-        onTap: onTap ?? () {
-          showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return const CustomAlertDialogWidget(
-                        title: 'Conteúdo indisponível!',
-                        content: 'Aguarde novas atualizações.',
-                      );
-                    },
+        onTap: onTap ??
+            () {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return const CustomAlertDialogWidget(
+                    title: 'Conteúdo indisponível!',
+                    content: 'Aguarde novas atualizações.',
                   );
-        },
+                },
+              );
+            },
         child: Container(
           height: MediaQuery.of(context).size.height * 0.12,
           decoration: BoxDecoration(

@@ -81,8 +81,9 @@ class ClassesOfDayWidget extends StatelessWidget {
                               ),
                               ConstrainedBox(
                                 constraints: BoxConstraints(
-                                  maxHeight: index == classesOfDay.length - 1 ? 42 : 54
-                                ),
+                                    maxHeight: index == classesOfDay.length - 1
+                                        ? 42
+                                        : 54),
                                 child: VerticalDivider(
                                   color: AppColors.brandingBlue,
                                   thickness: 2,
@@ -106,11 +107,12 @@ class ClassesOfDayWidget extends StatelessWidget {
                                       style: TextStyle(
                                           color: AppColors.brandingBlue,
                                           fontWeight: FontWeight.bold,
-                                          fontSize:
-                                              MediaQuery.of(context).size.width <=
-                                                      376
-                                                  ? 16
-                                                  : 22),
+                                          fontSize: MediaQuery.of(context)
+                                                      .size
+                                                      .width <=
+                                                  376
+                                              ? 16
+                                              : 22),
                                       overflow: TextOverflow.fade,
                                       softWrap: false,
                                       maxLines: 1,
@@ -123,49 +125,54 @@ class ClassesOfDayWidget extends StatelessWidget {
                                     width:
                                         MediaQuery.of(context).size.width * 0.8,
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       children: [
                                         SizedBox(
                                           width: 45,
                                         ),
                                         Icon(
                                           Icons.alarm,
-                                          size:
-                                              MediaQuery.of(context).size.width <
-                                                      350
-                                                  ? 22
-                                                  : 32,
+                                          size: MediaQuery.of(context)
+                                                      .size
+                                                      .width <
+                                                  350
+                                              ? 22
+                                              : 32,
                                           color: AppColors.lightLetter,
                                         ),
                                         Text(
                                           '${DateFormat('HH:mm').format(classesOfDay[index].startHour)}',
-                                          style:
-                                              MediaQuery.of(context).size.width <=
-                                                      376
-                                                  ? AppTextStyles.cardH3
-                                                      .copyWith(fontSize: 16)
-                                                  : AppTextStyles.cardH3,
+                                          style: MediaQuery.of(context)
+                                                      .size
+                                                      .width <=
+                                                  376
+                                              ? AppTextStyles.cardH3
+                                                  .copyWith(fontSize: 16)
+                                              : AppTextStyles.cardH3,
                                         ),
                                         SizedBox(
                                           width: 10,
                                         ),
                                         Icon(
                                           Icons.room_rounded,
-                                          size:
-                                              MediaQuery.of(context).size.width <
-                                                      350
-                                                  ? 22
-                                                  : 32,
+                                          size: MediaQuery.of(context)
+                                                      .size
+                                                      .width <
+                                                  350
+                                              ? 22
+                                              : 32,
                                           color: AppColors.lightLetter,
                                         ),
                                         Text(
                                           classesOfDay[index].local,
-                                          style:
-                                              MediaQuery.of(context).size.width <=
-                                                      376
-                                                  ? AppTextStyles.cardH3
-                                                      .copyWith(fontSize: 16)
-                                                  : AppTextStyles.cardH3,
+                                          style: MediaQuery.of(context)
+                                                      .size
+                                                      .width <=
+                                                  376
+                                              ? AppTextStyles.cardH3
+                                                  .copyWith(fontSize: 16)
+                                              : AppTextStyles.cardH3,
                                         ),
                                       ],
                                     ),

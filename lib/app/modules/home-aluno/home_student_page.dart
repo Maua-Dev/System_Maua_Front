@@ -26,14 +26,14 @@ class _HomeStudentPageState
             children: [
               Observer(builder: (_) {
                 return AppBarHomeWidget(
-                    onTap: () {
-                      Modular.to.pushNamed(
-                        '/configuracoes-usuario?nomeAluno=${controller.student.name}&raAluno=${controller.student.ra}&fotoALuno=https://avatars.githubusercontent.com/u/24724451?v=4',
-                      );
-                    },
-                    user: controller.student.name,
-                    ra: controller.student.ra,
+                  onTap: () {
+                    Modular.to.pushNamed(
+                      '/configuracoes-usuario?nomeAluno=${controller.student.name}&raAluno=${controller.student.ra}&fotoALuno=https://avatars.githubusercontent.com/u/24724451?v=4',
                     );
+                  },
+                  user: controller.student.name,
+                  ra: controller.student.ra,
+                );
               }),
             ],
           ),
@@ -43,11 +43,10 @@ class _HomeStudentPageState
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.18,
               ),
-              Observer(
-                builder: (context) {
-                  return ClassesOfDayWidget(classesOfDay: controller.classesOfDay);
-                }
-              ),
+              Observer(builder: (context) {
+                return ClassesOfDayWidget(
+                    classesOfDay: controller.classesOfDay);
+              }),
               NavigationButtonWidget(
                 title: 'Entregas da semana',
                 icon: Icons.playlist_add_check,
