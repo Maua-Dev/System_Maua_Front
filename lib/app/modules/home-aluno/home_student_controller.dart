@@ -21,6 +21,9 @@ abstract class HomeStudentControllerBase with Store {
   StudentModel student = StudentModel.newInstance();
 
   @observable
+  bool isLoading = false;
+
+  @observable
   List<ClassesModel> classesOfDay = [ClassesModel.newInstance()];
 
   @action
@@ -29,7 +32,14 @@ abstract class HomeStudentControllerBase with Store {
   }
 
   @action
+  void setIsLoading(bool value) {
+    isLoading = value;
+  }
+
+  @action
   Future<void> getClass() async {
+    setIsLoading(true);
     classesOfDay = await repository.getClass();
+    setIsLoading(false);
   }
 }

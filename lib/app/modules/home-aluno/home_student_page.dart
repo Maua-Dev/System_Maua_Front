@@ -45,7 +45,9 @@ class _HomeStudentPageState
               ),
               Observer(builder: (context) {
                 return ClassesOfDayWidget(
-                    classesOfDay: controller.classesOfDay);
+                  classesOfDay: controller.classesOfDay,
+                  isLoading: controller.isLoading,
+                );
               }),
               NavigationButtonWidget(
                 title: 'Entregas da semana',
