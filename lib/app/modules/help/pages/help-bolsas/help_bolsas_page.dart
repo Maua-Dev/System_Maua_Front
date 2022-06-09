@@ -33,7 +33,7 @@ class _HelpBolsasPageState extends State<HelpBolsasPage> {
                   height: MediaQuery.of(context).size.height * 0.095,
                   width: MediaQuery.of(context).size.width * 0.8,
                   decoration: BoxDecoration(
-                    boxShadow: [AppColors.shadow],
+                    boxShadow: [AppColors.clickShadow],
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
                   ),

@@ -23,7 +23,7 @@ class IconesNavegacaoWidget extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(color: AppColors.shape, width: 1),
-          boxShadow: [AppColors.shadow]),
+          boxShadow: [AppColors.clickShadow]),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(

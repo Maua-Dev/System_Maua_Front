@@ -35,7 +35,7 @@ class _IcPageState extends ModularState<IcPage, IcController> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white,
-                      boxShadow: [AppColors.shadow],
+                      boxShadow: [AppColors.clickShadow],
                       border: Border.all(color: AppColors.shape, width: 2)),
                   child: Column(
                     children: [
@@ -68,7 +68,7 @@ class _IcPageState extends ModularState<IcPage, IcController> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white,
-                      boxShadow: [AppColors.shadow],
+                      boxShadow: [AppColors.clickShadow],
                       border: Border.all(color: AppColors.shape)),
                   child: Column(
                     children: [

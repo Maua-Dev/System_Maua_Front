@@ -31,46 +31,10 @@
               "client_type": 3
             },
             {
-              "client_id": "54912975934-uo3mu98phltv55jf35b3s383dcphu0q0.apps.googleusercontent.com",
+              "client_id": "54912975934-nse86c2eauebhbd5juvavfbv61gs7o5a.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.devcommunity.maua.app"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:54912975934:android:9f75c608bf503b5008bd6f",
-        "android_client_info": {
-          "package_name": "com.example.system_maua_front"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "54912975934-ibe23mdgs8i7jlttmqv136ijd2boqmaq.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCBR1RXAInT9k0vD802W2-AhKo1wZOZ2m0"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "54912975934-ibe23mdgs8i7jlttmqv136ijd2boqmaq.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "54912975934-uo3mu98phltv55jf35b3s383dcphu0q0.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.devcommunity.maua.app"
+                "bundle_id": "com.example.systemMauaFront"
               }
             }
           ]

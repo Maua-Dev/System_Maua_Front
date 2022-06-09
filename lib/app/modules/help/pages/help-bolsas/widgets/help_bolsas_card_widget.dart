@@ -16,7 +16,7 @@ class HelpBolsasCardWidget extends StatelessWidget {
     return Card(
       child: Container(
         decoration: BoxDecoration(
-          boxShadow: [AppColors.shadow],
+          boxShadow: [AppColors.clickShadow],
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
         ),

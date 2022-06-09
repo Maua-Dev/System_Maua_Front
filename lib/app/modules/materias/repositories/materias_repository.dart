@@ -6,29 +6,29 @@ import 'materias_repository_interface.dart';
 class MateriasRepository implements IMateriasRepository {
   var listaMaterias = [
     MateriasModel(
-      nome: TipoMateriaEnum.ACADEMIATALENTOS,
+      nome: SubjectEnum.ACADEMIATALENTOS,
       progresso: 0.9,
     ),
-    MateriasModel(nome: TipoMateriaEnum.CALC1, progresso: 0.4),
-    MateriasModel(nome: TipoMateriaEnum.RESMAT, progresso: 0.0),
+    MateriasModel(nome: SubjectEnum.CALC1, progresso: 0.4),
+    MateriasModel(nome: SubjectEnum.RESMAT, progresso: 0.0),
     MateriasModel(
-      nome: TipoMateriaEnum.ACADEMIATALENTOS,
+      nome: SubjectEnum.ACADEMIATALENTOS,
       progresso: 0.9,
     ),
-    MateriasModel(nome: TipoMateriaEnum.CALC1, progresso: 0.4),
-    MateriasModel(nome: TipoMateriaEnum.RESMAT, progresso: 0.0),
+    MateriasModel(nome: SubjectEnum.CALC1, progresso: 0.4),
+    MateriasModel(nome: SubjectEnum.RESMAT, progresso: 0.0),
     MateriasModel(
-      nome: TipoMateriaEnum.ACADEMIATALENTOS,
+      nome: SubjectEnum.ACADEMIATALENTOS,
       progresso: 0.9,
     ),
-    MateriasModel(nome: TipoMateriaEnum.CALC1, progresso: 0.4),
-    MateriasModel(nome: TipoMateriaEnum.RESMAT, progresso: 0.0),
+    MateriasModel(nome: SubjectEnum.CALC1, progresso: 0.4),
+    MateriasModel(nome: SubjectEnum.RESMAT, progresso: 0.0),
     MateriasModel(
-      nome: TipoMateriaEnum.ACADEMIATALENTOS,
+      nome: SubjectEnum.ACADEMIATALENTOS,
       progresso: 0.9,
     ),
-    MateriasModel(nome: TipoMateriaEnum.CALC1, progresso: 0.4),
-    MateriasModel(nome: TipoMateriaEnum.RESMAT, progresso: 1),
+    MateriasModel(nome: SubjectEnum.CALC1, progresso: 0.4),
+    MateriasModel(nome: SubjectEnum.RESMAT, progresso: 1),
   ];
 
   @override

@@ -9,8 +9,9 @@ class AppColors {
   static final shape = Color(0xFFE1E1E5);
   static final white = Colors.white;
 
-  static final BoxShadow shadow = BoxShadow(
-      color: Colors.grey.withOpacity(0.2),
-      blurRadius: 15.0,
-      offset: Offset(0.0, 0.75));
+  static final BoxShadow clickShadow = BoxShadow(
+    color: Colors.black.withOpacity(0.3),
+    blurRadius: 4,
+    offset: Offset(0.0, 4),
+  );
 }

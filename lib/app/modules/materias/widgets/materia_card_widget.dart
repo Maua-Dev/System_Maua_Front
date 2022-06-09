@@ -18,7 +18,7 @@ class MateriaCardWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 26),
         child: Container(
           decoration: BoxDecoration(
-              boxShadow: [AppColors.shadow],
+              boxShadow: [AppColors.clickShadow],
               borderRadius: BorderRadius.circular(10),
               color: AppColors.lightBlue),
           child: Padding(
