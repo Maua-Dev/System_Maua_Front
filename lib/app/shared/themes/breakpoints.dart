@@ -1,2 +1,3 @@
-const mobileBreakpoint = 700;
-const tabletBreakpoint = 1200;
+const double smallMobileBreakpoint = 390;
+const double mobileBreakpoint = 600;
+const double tabletBreakpoint = 1200;
