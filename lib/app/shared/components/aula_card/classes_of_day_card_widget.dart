@@ -56,82 +56,126 @@ class ClassesOfDayWidget extends StatelessWidget {
                   shrinkWrap: true,
                   itemCount: classesOfDay.length,
                   itemBuilder: (context, index) {
-                    return Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              height: 15,
-                              width: 15,
-                              decoration: BoxDecoration(
+                    return ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxHeight: 80,
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Column(
+                            children: [
+                              SizedBox(
+                                height: 10,
+                                child: VerticalDivider(
                                   color: AppColors.brandingBlue,
-                                  borderRadius: BorderRadius.circular(7.5)),
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * 0.75,
-                              child: Flexible(
-                                child: Text(
-                                  '${classesOfDay[index].subjectEnum?.name ?? ''}',
-                                  style: TextStyle(
-                                      color: AppColors.brandingBlue,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 22),
+                                  thickness: 2,
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.8,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                SizedBox(
-                                  width: 45,
+                              Container(
+                                height: 16,
+                                width: 16,
+                                decoration: BoxDecoration(
+                                    color: AppColors.brandingBlue,
+                                    borderRadius: BorderRadius.circular(8)),
+                              ),
+                              ConstrainedBox(
+                                constraints: BoxConstraints(
+                                  maxHeight: index == classesOfDay.length - 1 ? 42 : 54
                                 ),
-                                Icon(
-                                  Icons.alarm,
-                                  size: MediaQuery.of(context).size.width < 350
-                                      ? 22
-                                      : 32,
-                                  color: AppColors.lightLetter,
+                                child: VerticalDivider(
+                                  color: AppColors.brandingBlue,
+                                  thickness: 2,
                                 ),
-                                Text(
-                                  '${DateFormat('HH:mm').format(classesOfDay[index].startHour)}',
-                                  style: AppTextStyles.cardH3,
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Icon(
-                                  Icons.room_rounded,
-                                  size: MediaQuery.of(context).size.width < 350
-                                      ? 22
-                                      : 32,
-                                  color: AppColors.lightLetter,
-                                ),
-                                Text(
-                                  classesOfDay[index].local,
-                                  style: AppTextStyles.cardH3,
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                )
-                              ],
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: ConstrainedBox(
+                              constraints: BoxConstraints(
+                                maxWidth:
+                                    MediaQuery.of(context).size.width * 0.82,
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  SizedBox(
+                                    child: Text(
+                                      '${classesOfDay[index].subjectEnum?.name ?? ''}',
+                                      style: TextStyle(
+                                          color: AppColors.brandingBlue,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              MediaQuery.of(context).size.width <=
+                                                      376
+                                                  ? 16
+                                                  : 22),
+                                      overflow: TextOverflow.fade,
+                                      softWrap: false,
+                                      maxLines: 1,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 8,
+                                  ),
+                                  SizedBox(
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.8,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: [
+                                        SizedBox(
+                                          width: 45,
+                                        ),
+                                        Icon(
+                                          Icons.alarm,
+                                          size:
+                                              MediaQuery.of(context).size.width <
+                                                      350
+                                                  ? 22
+                                                  : 32,
+                                          color: AppColors.lightLetter,
+                                        ),
+                                        Text(
+                                          '${DateFormat('HH:mm').format(classesOfDay[index].startHour)}',
+                                          style:
+                                              MediaQuery.of(context).size.width <=
+                                                      376
+                                                  ? AppTextStyles.cardH3
+                                                      .copyWith(fontSize: 16)
+                                                  : AppTextStyles.cardH3,
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Icon(
+                                          Icons.room_rounded,
+                                          size:
+                                              MediaQuery.of(context).size.width <
+                                                      350
+                                                  ? 22
+                                                  : 32,
+                                          color: AppColors.lightLetter,
+                                        ),
+                                        Text(
+                                          classesOfDay[index].local,
+                                          style:
+                                              MediaQuery.of(context).size.width <=
+                                                      376
+                                                  ? AppTextStyles.cardH3
+                                                      .copyWith(fontSize: 16)
+                                                  : AppTextStyles.cardH3,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        )
-                      ],
+                        ],
+                      ),
                     );
                   },
                 ),
