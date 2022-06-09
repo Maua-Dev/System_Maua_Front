@@ -24,6 +24,21 @@ mixin _$HomeStudentController on HomeStudentControllerBase, Store {
     });
   }
 
+  final _$isLoadingAtom = Atom(name: 'HomeStudentControllerBase.isLoading');
+
+  @override
+  bool get isLoading {
+    _$isLoadingAtom.reportRead();
+    return super.isLoading;
+  }
+
+  @override
+  set isLoading(bool value) {
+    _$isLoadingAtom.reportWrite(value, super.isLoading, () {
+      super.isLoading = value;
+    });
+  }
+
   final _$classesOfDayAtom =
       Atom(name: 'HomeStudentControllerBase.classesOfDay');
 
@@ -56,10 +71,25 @@ mixin _$HomeStudentController on HomeStudentControllerBase, Store {
     return _$getClassAsyncAction.run(() => super.getClass());
   }
 
+  final _$HomeStudentControllerBaseActionController =
+      ActionController(name: 'HomeStudentControllerBase');
+
+  @override
+  void setIsLoading(bool value) {
+    final _$actionInfo = _$HomeStudentControllerBaseActionController
+        .startAction(name: 'HomeStudentControllerBase.setIsLoading');
+    try {
+      return super.setIsLoading(value);
+    } finally {
+      _$HomeStudentControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''
 student: ${student},
+isLoading: ${isLoading},
 classesOfDay: ${classesOfDay}
     ''';
   }
