@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:intl/intl.dart';
 import 'package:system_maua_front/app/shared/enumerates/weekdays_enum.dart';
 import 'package:system_maua_front/app/shared/models/classes_model.dart';
