@@ -1,2 +1,2 @@
-var tablet = 600;
-var mobile = 380;
+const mobileBreakpoint = 700;
+const tabletBreakpoint = 1200;
