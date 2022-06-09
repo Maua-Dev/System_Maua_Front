@@ -21,13 +21,15 @@ void main() {
   ]);
 
   setUpAll(() {
-    when(mockRepository.getStudent())
-        .thenAnswer((_) async => StudentModel(name: 'Ronaldo', ra: '15.01310-3'));
-    when(mockRepository.getClass()).thenAnswer((_) async => [ClassesModel(
-        subjectEnum: SubjectEnum.CALC1,
-        local: 'H201',
-        startHour: DateTime.now(),
-      )]);
+    when(mockRepository.getStudent()).thenAnswer(
+        (_) async => StudentModel(name: 'Ronaldo', ra: '15.01310-3'));
+    when(mockRepository.getClass()).thenAnswer((_) async => [
+          ClassesModel(
+            subjectEnum: SubjectEnum.CALC1,
+            local: 'H201',
+            startHour: DateTime.now(),
+          )
+        ]);
   });
 
   // testWidgets('[TEST] [home aluno page] - find title user',
