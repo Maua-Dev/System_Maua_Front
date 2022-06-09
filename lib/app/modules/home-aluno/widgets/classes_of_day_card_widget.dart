@@ -80,14 +80,14 @@ class ClassesOfDayWidget extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16.0, top: 8),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SizedBox(
-                                  width: 302,
-                                  child: Text(
+                          Flexible(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 16.0, top: 8),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
                                     '${classesOfDay[index].subjectEnum?.name ?? ''}',
                                     style: AppTextStyles.titleH2.copyWith(
                                       color: AppColors.brandingBlue,
@@ -96,53 +96,53 @@ class ClassesOfDayWidget extends StatelessWidget {
                                     softWrap: false,
                                     maxLines: 1,
                                   ),
-                                ),
-                                SizedBox(
-                                  height: 4,
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Icon(
-                                      Icons.alarm,
-                                      size: 28,
-                                      color: AppColors.lightLetter,
-                                    ),
-                                    SizedBox(
-                                      width: 8,
-                                    ),
-                                    Text(
-                                      '${DateFormat('HH:mm').format(classesOfDay[index].startHour)}',
-                                      style:
-                                          MediaQuery.of(context).size.width <=
-                                                  376
-                                              ? AppTextStyles.cardH3
-                                                  .copyWith(fontSize: 16)
-                                              : AppTextStyles.cardH3,
-                                    ),
-                                    SizedBox(
-                                      width: 16,
-                                    ),
-                                    Icon(
-                                      Icons.location_on,
-                                      size: 28,
-                                      color: AppColors.lightLetter,
-                                    ),
-                                    SizedBox(
-                                      width: 8,
-                                    ),
-                                    Text(
-                                      classesOfDay[index].local,
-                                      style:
-                                          MediaQuery.of(context).size.width <=
-                                                  376
-                                              ? AppTextStyles.cardH3
-                                                  .copyWith(fontSize: 16)
-                                              : AppTextStyles.cardH3,
-                                    ),
-                                  ],
-                                ),
-                              ],
+                                  SizedBox(
+                                    height: 4,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.alarm,
+                                        size: 28,
+                                        color: AppColors.lightLetter,
+                                      ),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      Text(
+                                        '${DateFormat('HH:mm').format(classesOfDay[index].startHour)}',
+                                        style:
+                                            MediaQuery.of(context).size.width <=
+                                                    376
+                                                ? AppTextStyles.cardH3
+                                                    .copyWith(fontSize: 16)
+                                                : AppTextStyles.cardH3,
+                                      ),
+                                      SizedBox(
+                                        width: 16,
+                                      ),
+                                      Icon(
+                                        Icons.location_on,
+                                        size: 28,
+                                        color: AppColors.lightLetter,
+                                      ),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      Text(
+                                        classesOfDay[index].local,
+                                        style:
+                                            MediaQuery.of(context).size.width <=
+                                                    376
+                                                ? AppTextStyles.cardH3
+                                                    .copyWith(fontSize: 16)
+                                                : AppTextStyles.cardH3,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ],
