@@ -26,12 +26,14 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
               Observer(builder: (_) {
                 return AppBarHomeWidget(
                   onTap: () {
-                    Modular.to.pushNamed(
-                      '/configuracoes-usuario?nomeAluno=${controller.student.name}&raAluno=${controller.student.ra}&fotoALuno=https://avatars.githubusercontent.com/u/24724451?v=4',
-                    );
+                    Modular.to.pushNamed('/configuracoes-usuario', arguments: [
+                      controller.user.name,
+                      controller.user.ra,
+                      'https://avatars.githubusercontent.com/u/24724451?v=4'
+                    ]);
                   },
-                  user: controller.student.name,
-                  ra: controller.student.ra,
+                  user: controller.user.name,
+                  ra: controller.user.ra,
                 );
               }),
             ],

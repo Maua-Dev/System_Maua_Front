@@ -11,9 +11,9 @@ class UserConfigurationModule extends Module {
     ChildRoute(
       Modular.initialRoute,
       child: (_, args) => UserConfigurationPage(
-        username: args.queryParams['username'] as String,
-        userRa: args.queryParams['userRa'] as String,
-        userPhoto: args.queryParams['userPhoto'] as String,
+        username: args.data[0] as String,
+        userRa: args.data[1] as String,
+        userPhoto: args.data[2] as String,
       ),
     ),
   ];

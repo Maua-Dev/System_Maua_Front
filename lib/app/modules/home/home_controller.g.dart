@@ -9,18 +9,18 @@ part of 'home_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$HomeController on HomeControllerBase, Store {
-  final _$studentAtom = Atom(name: 'HomeControllerBase.student');
+  final _$userAtom = Atom(name: 'HomeControllerBase.user');
 
   @override
-  StudentModel get student {
-    _$studentAtom.reportRead();
-    return super.student;
+  StudentModel get user {
+    _$userAtom.reportRead();
+    return super.user;
   }
 
   @override
-  set student(StudentModel value) {
-    _$studentAtom.reportWrite(value, super.student, () {
-      super.student = value;
+  set user(StudentModel value) {
+    _$userAtom.reportWrite(value, super.user, () {
+      super.user = value;
     });
   }
 
@@ -85,7 +85,7 @@ mixin _$HomeController on HomeControllerBase, Store {
   @override
   String toString() {
     return '''
-student: ${student},
+user: ${user},
 isLoading: ${isLoading},
 classesOfDay: ${classesOfDay}
     ''';

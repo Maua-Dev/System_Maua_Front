@@ -27,7 +27,7 @@ void main() {
 
   test('[TEST] - getUser', () async {
     await homeController.getUser();
-    expect(homeController.student, userMock);
+    expect(homeController.user, userMock);
   });
 
   test('[TEST] - setIsLoading', () {

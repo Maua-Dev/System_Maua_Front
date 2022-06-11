@@ -17,7 +17,7 @@ abstract class HomeControllerBase with Store {
   }
 
   @observable
-  StudentModel student = StudentModel.newInstance();
+  StudentModel user = StudentModel.newInstance();
 
   @observable
   bool isLoading = false;
@@ -27,7 +27,7 @@ abstract class HomeControllerBase with Store {
 
   @action
   Future<void> getUser() async {
-    student = await repository.getUser();
+    user = await repository.getUser();
   }
 
   @action
