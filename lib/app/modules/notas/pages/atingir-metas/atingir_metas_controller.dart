@@ -18,7 +18,6 @@ abstract class _AtingirMetasControllerBase with Store {
 
   @computed
   String get notaComputada =>
-      'Nota parcial: ' +
       materia.notaParcial.toStringAsFixed(1).replaceAll('.', ',');
 
   @observable

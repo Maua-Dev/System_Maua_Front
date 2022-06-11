@@ -13,7 +13,7 @@ import 'home_aluno_controller_test.mocks.dart';
 void main() {
   IHomeAlunoRepository repository = MockIHomeAlunoRepository();
   late HomeAlunoController homeAlunoController;
-  var alunoTeste = AlunoModel(nome: 'Gabriel', ra: '17.00163-3');
+  var alugradeste = AlunoModel(nome: 'Gabriel', ra: '17.00163-3');
   var aulaTeste = AulaModel(
       tipoMateriaEnum: TipoMateriaEnum.FT,
       horario: '12:00',
@@ -21,14 +21,14 @@ void main() {
       local: 'H201');
 
   setUpAll(() {
-    when(repository.getAluno()).thenAnswer((_) async => alunoTeste);
+    when(repository.getAluno()).thenAnswer((_) async => alugradeste);
     when(repository.getAula()).thenAnswer((_) async => aulaTeste);
     homeAlunoController = HomeAlunoController(repository);
   });
 
   test('[TEST] - getAluno', () async {
     await homeAlunoController.getAluno();
-    expect(homeAlunoController.aluno, alunoTeste);
+    expect(homeAlunoController.aluno, alugradeste);
   });
 
   test('[TEST] - getAula', () async {
