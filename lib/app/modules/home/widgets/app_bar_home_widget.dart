@@ -19,12 +19,12 @@ class AppBarHomeWidget extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Container(
-          height: MediaQuery.of(context).size.height * 0.24,
+          height: MediaQuery.of(context).size.height / 4,
           padding: const EdgeInsets.symmetric(horizontal: 16),
           decoration: BoxDecoration(gradient: AppGradients.blueGradient),
           child: Padding(
             padding: EdgeInsets.only(
-                bottom: MediaQuery.of(context).size.height * 0.042),
+                bottom: MediaQuery.of(context).size.height / 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
