@@ -16,7 +16,7 @@ void main() {
     Bind.lazySingleton<AuthController>((i) => MockAuthController())
   ]);
 
-  test('[TEST] - Injeção do LoginController', () {
+  test('[TEST] - LoginController Injection', () {
     var loginController = Modular.get<LoginController>();
     expect(loginController.authController, isInstanceOf<AuthController>());
   });

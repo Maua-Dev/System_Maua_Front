@@ -40,8 +40,8 @@ class _CalendarioCustomWidgetState extends State<CalendarioCustomWidget> {
       daysTextStyle: TextStyle(color: Colors.black),
       nextDaysTextStyle: TextStyle(color: Colors.grey),
       prevDaysTextStyle: TextStyle(color: Colors.grey),
-      weekdayTextStyle: AppTextStyles.titleH1
-          .copyWith(color: AppColors.generalLetter, fontSize: 18),
+      weekdayTextStyle:
+          AppTextStyles.titleH1.copyWith(color: AppColors.generalLetter),
       height: MediaQuery.of(context).size.height < 600 ? 330 : 380,
       selectedDateTime: widget.selectedDateTime,
       markedDatesMap: widget.markedDateMap,

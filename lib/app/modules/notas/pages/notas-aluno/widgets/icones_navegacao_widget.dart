@@ -42,7 +42,7 @@ class IconesNavegacaoWidget extends StatelessWidget {
                 )),
             Text(
               titulo,
-              style: AppTextStyles.cardH3.copyWith(fontSize: 15),
+              style: AppTextStyles.cardH3,
             )
           ],
         ),

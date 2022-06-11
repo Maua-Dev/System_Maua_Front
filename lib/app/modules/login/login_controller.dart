@@ -18,7 +18,7 @@ abstract class _LoginController with Store {
   bool passwordVisibility = true;
 
   @observable
-  String erros = '';
+  String errors = '';
 
   @observable
   String email = '';
@@ -54,7 +54,7 @@ abstract class _LoginController with Store {
         Modular.to.navigate('/home');
       }
     } on Failure catch (e) {
-      erros = e.message;
+      errors = e.message;
     }
   }
 

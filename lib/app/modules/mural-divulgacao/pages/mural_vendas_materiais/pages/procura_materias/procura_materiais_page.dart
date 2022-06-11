@@ -28,7 +28,7 @@ class _ProcuraMateriaisPageState
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
             child: TypeAheadFieldWidget(
               list: controller.nomesMateriais,
-              titulo: 'Procurar material',
+              title: 'Procurar material',
               onChanged: controller.setMaterial,
               value: controller.material,
               listaMateriais: controller.listaMateriais,

@@ -4,14 +4,14 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:system_maua_front/app/modules/mural-divulgacao/pages/mural_vendas_materiais/enumerates/materiais_enum.dart';
 
 class TypeAheadFieldWidget extends StatelessWidget {
-  final String? titulo;
+  final String? title;
   final List<String> list;
   final String? value;
   final void Function(String value)? onChanged;
   final List<MateriaisEnum>? listaMateriais;
   const TypeAheadFieldWidget({
     Key? key,
-    this.titulo,
+    this.title,
     required this.list,
     this.value,
     this.onChanged,
@@ -29,7 +29,7 @@ class TypeAheadFieldWidget extends StatelessWidget {
           fontSize: 20,
         ),
         decoration: InputDecoration(
-          labelText: titulo,
+          labelText: title,
           labelStyle: TextStyle(
             fontSize: 22,
           ),

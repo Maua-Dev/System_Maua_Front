@@ -49,12 +49,12 @@ mixin _$BottomNavigationBarController
     return _$alternatePageAsyncAction.run(() => super.alternatePage(index));
   }
 
-  final _$trocaOpenAsyncAction =
-      AsyncAction('BottomNavigationBarControllerBase.trocaOpen');
+  final _$changeOpenAsyncAction =
+      AsyncAction('BottomNavigationBarControllerBase.changeOpen');
 
   @override
-  Future<void> trocaOpen() {
-    return _$trocaOpenAsyncAction.run(() => super.trocaOpen());
+  Future<void> changeOpen() {
+    return _$changeOpenAsyncAction.run(() => super.changeOpen());
   }
 
   @override

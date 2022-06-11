@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ExpansionPanelListCustomWidget extends StatelessWidget {
-  final String titulo;
+  final String title;
   final void Function()? onPressed;
   final bool isOpen;
   final Widget? body;
 
   const ExpansionPanelListCustomWidget(
       {Key? key,
-      required this.titulo,
+      required this.title,
       this.onPressed,
       required this.isOpen,
       this.body})
@@ -32,7 +32,7 @@ class ExpansionPanelListCustomWidget extends StatelessWidget {
                 ),
                 Expanded(
                   child: Text(
-                    titulo,
+                    title,
                     style: TextStyle(color: Colors.black),
                   ),
                 ),

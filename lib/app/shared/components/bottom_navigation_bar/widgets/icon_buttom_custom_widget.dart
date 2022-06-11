@@ -21,7 +21,7 @@ class IconButtonCustomWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(icon, color: Colors.white, size: size ?? 32),
+          Icon(icon, color: Colors.white, size: size ?? 28),
           isClicked
               ? Container(
                   width: 5,

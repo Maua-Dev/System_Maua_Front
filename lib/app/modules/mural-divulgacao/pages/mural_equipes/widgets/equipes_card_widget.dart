@@ -23,7 +23,7 @@ class EquipesCardWidget extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: ExpansionPanelListCustomWidget(
         isOpen: isOpen,
-        titulo: titulo,
+        title: titulo,
         onPressed: onPressed,
         body: (descricao == null || contato == null)
             ? SizedBox.shrink()
