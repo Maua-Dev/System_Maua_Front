@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class FaqCard extends StatefulWidget {
-  final String titulo;
-  final String descricao;
+  final String title;
+  final String description;
   final bool isOpen;
   final Function()? onPressed;
 
   const FaqCard(
       {Key? key,
-      required this.titulo,
-      required this.descricao,
+      required this.title,
+      required this.description,
       required this.isOpen,
       this.onPressed})
       : super(key: key);
@@ -41,7 +41,7 @@ class _FaqCardState extends State<FaqCard> {
                       ),
                       Expanded(
                         child: Text(
-                          widget.titulo,
+                          widget.title,
                           style: TextStyle(color: Colors.black),
                         ),
                       ),
@@ -57,7 +57,7 @@ class _FaqCardState extends State<FaqCard> {
                     Expanded(
                       flex: 14,
                       child: Text(
-                        widget.descricao,
+                        widget.description,
                         style: TextStyle(
                           fontSize: 16,
                         ),
