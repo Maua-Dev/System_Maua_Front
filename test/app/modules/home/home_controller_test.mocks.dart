@@ -31,8 +31,8 @@ class MockIHomeRepository extends _i1.Mock implements _i3.IHomeRepository {
   }
 
   @override
-  _i4.Future<_i2.StudentModel> getStudent() => (super.noSuchMethod(
-          Invocation.method(#getStudent, []),
+  _i4.Future<_i2.StudentModel> getUser() => (super.noSuchMethod(
+          Invocation.method(#getUser, []),
           returnValue: Future<_i2.StudentModel>.value(_FakeStudentModel_0()))
       as _i4.Future<_i2.StudentModel>);
   @override

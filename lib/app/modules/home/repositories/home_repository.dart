@@ -29,7 +29,7 @@ class HomeRepository implements IHomeRepository {
   ];
 
   @override
-  Future<StudentModel> getStudent() {
+  Future<StudentModel> getUser() {
     return Future.value(student);
   }
 

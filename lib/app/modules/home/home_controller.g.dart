@@ -54,11 +54,11 @@ mixin _$HomeController on HomeControllerBase, Store {
     });
   }
 
-  final _$getStudentAsyncAction = AsyncAction('HomeControllerBase.getStudent');
+  final _$getUserAsyncAction = AsyncAction('HomeControllerBase.getUser');
 
   @override
-  Future<void> getStudent() {
-    return _$getStudentAsyncAction.run(() => super.getStudent());
+  Future<void> getUser() {
+    return _$getUserAsyncAction.run(() => super.getUser());
   }
 
   final _$getClassAsyncAction = AsyncAction('HomeControllerBase.getClass');

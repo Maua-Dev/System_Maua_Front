@@ -30,8 +30,8 @@ class MockISubjectRepository extends _i1.Mock
   }
 
   @override
-  _i3.Future<List<_i4.SubjectModel>> getsubject() =>
-      (super.noSuchMethod(Invocation.method(#getsubject, []),
+  _i3.Future<List<_i4.SubjectModel>> getSubject() =>
+      (super.noSuchMethod(Invocation.method(#getSubject, []),
               returnValue:
                   Future<List<_i4.SubjectModel>>.value(<_i4.SubjectModel>[]))
           as _i3.Future<List<_i4.SubjectModel>>);

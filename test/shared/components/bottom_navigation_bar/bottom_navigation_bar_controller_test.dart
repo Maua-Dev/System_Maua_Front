@@ -8,13 +8,13 @@ void main() {
     controllerNavigationBar = BottomNavigationBarController();
   });
 
-  test('[TEST] - Injeção do BottomNavigationBarController', () {
-    expect(
-        controllerNavigationBar, isInstanceOf<BottomNavigationBarController>());
+  test('[TEST] - alternatePage', () {
+    controllerNavigationBar.alternatePage(1);
+    expect(controllerNavigationBar.currentIndex, 1);
   });
 
-  test('[TEST] - trocaOpen', () {
-    controllerNavigationBar.trocaOpen();
+  test('[TEST] - changeOpen', () {
+    controllerNavigationBar.changeOpen();
     expect(controllerNavigationBar.isOpen, true);
   });
 }

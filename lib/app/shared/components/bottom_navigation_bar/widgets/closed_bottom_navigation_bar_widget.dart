@@ -39,7 +39,7 @@ class ClosedBottomNavigationBar extends StatelessWidget {
                       ? Icons.keyboard_arrow_down
                       : Icons.keyboard_arrow_up,
                   onPressed: () {
-                    controllerNavigationBar.trocaOpen();
+                    controllerNavigationBar.changeOpen();
                   }),
               IconButtonCustomWidget(
                   isClicked: controllerNavigationBar.currentIndex == 3,

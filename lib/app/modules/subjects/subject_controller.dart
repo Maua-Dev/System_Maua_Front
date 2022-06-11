@@ -19,6 +19,6 @@ abstract class SubjectControllerBase with Store {
 
   @action
   Future<void> getSubjects() async {
-    subject = await repository.getsubject();
+    subject = await repository.getSubject();
   }
 }

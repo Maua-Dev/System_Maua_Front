@@ -8,12 +8,12 @@ import 'package:system_maua_front/app/modules/home/repositories/home_repository.
 void main() {
   initModule(HomeModule());
 
-  test('[TEST] - Injeção do HomeAlunoController', () {
-    var homeAlunoController = Modular.get<HomeController>();
-    expect(homeAlunoController.repository, isInstanceOf<HomeRepository>());
+  test('[TEST] - HomeController Injection', () {
+    var homeController = Modular.get<HomeController>();
+    expect(homeController.repository, isInstanceOf<HomeRepository>());
   });
 
-  test('[TEST] - Injeção do HomeAlunoRepository', () {
+  test('[TEST] - HomeRepository Injection', () {
     Modular.get<HomeController>();
   });
 }

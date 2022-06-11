@@ -21,7 +21,7 @@ void main() {
   ]);
 
   setUpAll(() {
-    when(mockRepository.getStudent()).thenAnswer(
+    when(mockRepository.getUser()).thenAnswer(
         (_) async => StudentModel(name: 'Ronaldo', ra: '15.01310-3'));
     when(mockRepository.getClass()).thenAnswer((_) async => [
           ClassesModel(

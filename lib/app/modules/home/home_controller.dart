@@ -12,7 +12,7 @@ abstract class HomeControllerBase with Store {
   final IHomeRepository repository;
 
   HomeControllerBase(this.repository) {
-    getStudent();
+    getUser();
     getClass();
   }
 
@@ -26,8 +26,8 @@ abstract class HomeControllerBase with Store {
   List<ClassesModel> classesOfDay = [ClassesModel.newInstance()];
 
   @action
-  Future<void> getStudent() async {
-    student = await repository.getStudent();
+  Future<void> getUser() async {
+    student = await repository.getUser();
   }
 
   @action

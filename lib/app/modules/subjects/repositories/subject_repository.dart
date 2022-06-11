@@ -4,7 +4,7 @@ import '../models/subject_model.dart';
 import 'subject_repository_interface.dart';
 
 class SubjectRepository implements ISubjectRepository {
-  var listasubject = [
+  var subsjectsMock = [
     SubjectModel(
       name: SubjectEnum.ACADEMIATALENTOS,
       progress: 0.9,
@@ -32,7 +32,7 @@ class SubjectRepository implements ISubjectRepository {
   ];
 
   @override
-  Future<List<SubjectModel>> getsubject() {
-    return Future.value(listasubject);
+  Future<List<SubjectModel>> getSubject() {
+    return Future.value(subsjectsMock);
   }
 }

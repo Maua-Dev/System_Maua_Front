@@ -10,19 +10,19 @@ import 'subject_controller_test.mocks.dart';
 @GenerateMocks([ISubjectRepository])
 void main() {
   ISubjectRepository repository = MockISubjectRepository();
-  late SubjectController materiasController;
+  late SubjectController subjectController;
   var mockSubjects = [
     SubjectModel(name: SubjectEnum.ACADEMIATALENTOS, progress: 0.9),
     SubjectModel(name: SubjectEnum.CALC1, progress: 0.4),
   ];
 
   setUpAll(() {
-    when(repository.getsubject()).thenAnswer((_) async => mockSubjects);
-    materiasController = SubjectController(repository);
+    when(repository.getSubject()).thenAnswer((_) async => mockSubjects);
+    subjectController = SubjectController(repository);
   });
 
-  test('[TEST] - getAluno', () async {
-    await materiasController.getSubjects();
-    expect(materiasController.subject, mockSubjects);
+  test('[TEST] - getSubjects', () async {
+    await subjectController.getSubjects();
+    expect(subjectController.subject, mockSubjects);
   });
 }

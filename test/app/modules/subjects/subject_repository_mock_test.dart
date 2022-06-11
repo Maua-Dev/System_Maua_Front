@@ -8,7 +8,7 @@ void main() {
     subjectRepository = SubjectRepository();
   });
 
-  test('[TEST] - getsubject', () {
-    expect(subjectRepository.listasubject.isNotEmpty, true);
+  test('[TEST] - getSubject', () {
+    expect(subjectRepository.subsjectsMock.isNotEmpty, true);
   });
 }

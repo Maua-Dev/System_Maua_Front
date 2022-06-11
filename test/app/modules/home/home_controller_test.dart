@@ -12,26 +12,31 @@ import 'home_controller_test.mocks.dart';
 @GenerateMocks([IHomeRepository])
 void main() {
   IHomeRepository repository = MockIHomeRepository();
-  late HomeController homeAlunoController;
-  var alunoTeste = StudentModel(name: 'Gabriel', ra: '17.00163-3');
-  var aulaTeste = [
+  late HomeController homeController;
+  var userMock = StudentModel(name: 'Gabriel', ra: '17.00163-3');
+  var classMock = [
     ClassesModel(
         subjectEnum: SubjectEnum.FT, startHour: DateTime.now(), local: 'H201')
   ];
 
   setUpAll(() {
-    when(repository.getStudent()).thenAnswer((_) async => alunoTeste);
-    when(repository.getClass()).thenAnswer((_) async => aulaTeste);
-    homeAlunoController = HomeController(repository);
+    when(repository.getUser()).thenAnswer((_) async => userMock);
+    when(repository.getClass()).thenAnswer((_) async => classMock);
+    homeController = HomeController(repository);
   });
 
-  test('[TEST] - getAluno', () async {
-    await homeAlunoController.getStudent();
-    expect(homeAlunoController.student, alunoTeste);
+  test('[TEST] - getUser', () async {
+    await homeController.getUser();
+    expect(homeController.student, userMock);
   });
 
-  test('[TEST] - getAula', () async {
-    await homeAlunoController.getClass();
-    expect(homeAlunoController.classesOfDay, aulaTeste);
+  test('[TEST] - setIsLoading', () {
+    homeController.setIsLoading(true);
+    expect(homeController.isLoading, true);
+  });
+
+  test('[TEST] - getClass', () async {
+    await homeController.getClass();
+    expect(homeController.classesOfDay, classMock);
   });
 }

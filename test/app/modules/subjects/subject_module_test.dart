@@ -8,12 +8,12 @@ import 'package:system_maua_front/app/modules/subjects/subject_module.dart';
 void main() {
   initModule(SubjectModule());
 
-  test('[TEST] - Injeção do subjectController', () {
+  test('[TEST] - SubjectController Injection', () {
     var subjectController = Modular.get<SubjectController>();
     expect(subjectController.repository, isInstanceOf<SubjectRepository>());
   });
 
-  test('[TEST] - Injeção do subjectRepository', () {
+  test('[TEST] - SubjectRepository Injection', () {
     Modular.get<SubjectController>();
   });
 }
