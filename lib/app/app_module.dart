@@ -9,7 +9,6 @@ import 'app_guard.dart';
 import 'modules/auth/auth_guard.dart';
 import 'modules/auth/auth_module.dart';
 import 'modules/landing/landing_module.dart';
-import 'modules/notas/pages/medias/widgets/filtro_ano/filtro_controller.dart';
 
 class AppModule extends Module {
   @override
@@ -18,7 +17,6 @@ class AppModule extends Module {
   final List<Bind> binds = [
     Bind.lazySingleton((i) => BottomNavigationBarController()),
     Bind.lazySingleton((i) => FirebaseAnalyticsService()),
-    Bind.lazySingleton((i) => FiltroController()),
     Bind.lazySingleton((i) => Dio(mauaOptions))
   ];
 

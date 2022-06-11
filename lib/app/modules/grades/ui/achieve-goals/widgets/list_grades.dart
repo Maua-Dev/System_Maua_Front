@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
-class ListGrades extends StatelessWidget {
+class ListGradesCard extends StatelessWidget {
   final String nameActivity;
   final double? finalGrade;
   final double heft;
   final Function()? onTap;
 
-  const ListGrades({
+  const ListGradesCard({
     Key? key,
     required this.nameActivity,
     this.finalGrade,

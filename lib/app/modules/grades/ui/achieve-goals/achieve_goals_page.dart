@@ -4,8 +4,8 @@ import 'package:system_maua_front/app/modules/grades/controllers/achieve_goals_c
 import 'package:system_maua_front/app/modules/grades/enumerates/grades_enum.dart';
 import 'package:system_maua_front/app/modules/grades/ui/achieve-goals/widgets/container_notes.dart';
 import 'package:system_maua_front/app/modules/grades/ui/achieve-goals/widgets/row_navigator_notes_widget.dart';
-import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/list_grades.dart';
 import 'package:system_maua_front/app/modules/grades/ui/achieve-goals/widgets/container_name_card.dart';
+import 'package:system_maua_front/app/modules/grades/ui/achieve-goals/widgets/list_grades.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 
 class AchieveGoalsPage extends StatefulWidget {
@@ -58,7 +58,7 @@ class AchieveGoalsPageState
                       shrinkWrap: true,
                       itemCount: controller.average.tests.length,
                       itemBuilder: (context, index) {
-                        return ListGrades(
+                        return ListGradesCard(
                           nameActivity:
                               controller.average.tests[index].grade.name,
                           heft: controller.average.tests[index].heft ?? 1.0,
@@ -80,7 +80,7 @@ class AchieveGoalsPageState
                       shrinkWrap: true,
                       itemCount: controller.average.tasks.length,
                       itemBuilder: (context, index) {
-                        return ListGrades(
+                        return ListGradesCard(
                           nameActivity:
                               controller.average.tasks[index].grade.name,
                           heft: controller.average.tasks[index].heft ?? 1.0,
