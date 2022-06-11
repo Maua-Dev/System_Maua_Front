@@ -17,7 +17,7 @@ class LandingPage extends StatelessWidget {
           return BottomNavigationBarWidget(
             isOpen: controllerNavigationBar.isOpen,
             onPressed: () {
-              controllerNavigationBar.trocaOpen();
+              controllerNavigationBar.changeOpen();
             },
           );
         }),

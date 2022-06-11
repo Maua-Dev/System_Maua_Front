@@ -65,7 +65,7 @@ class _EventCardWidgetState extends State<EventCardWidget> {
                       const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                   child: Text(
                     widget.descricao,
-                    style: AppTextStyles.cardH3.copyWith(fontSize: 16),
+                    style: AppTextStyles.cardH3,
                     textAlign: TextAlign.left,
                   ),
                 ),

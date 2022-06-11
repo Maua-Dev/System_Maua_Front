@@ -11,11 +11,11 @@ import 'login_controller_test.mocks.dart';
 void main() {
   late LoginController controller;
 
-  var navegador = MockIModularNavigator();
-  Modular.navigatorDelegate = navegador;
+  var navigator = MockIModularNavigator();
+  Modular.navigatorDelegate = navigator;
   var mockAuth = MockAuthController();
-  var emailTeste = 'email';
-  var senhaTeste = 'senha';
+  var emailMock = 'email';
+  var pwMock = 'senha';
 
   setUpAll(() {
     controller = LoginController(mockAuth);
@@ -28,25 +28,25 @@ void main() {
   });
 
   test('[TEST] - setEmail', () async {
-    controller.setEmail(emailTeste);
+    controller.setEmail(emailMock);
     expect(controller.email, 'email');
   });
 
   test('[TEST] - setPassword', () async {
-    controller.setPassword(senhaTeste);
+    controller.setPassword(pwMock);
     expect(controller.password, 'senha');
   });
 
   test('[TEST] - login', () async {
     when(mockAuth.loginWithEmail(any, any, any)).thenAnswer((_) async {});
     when(mockAuth.isLogged).thenReturn(true);
-    when(navegador.navigate('/home')).thenAnswer((_) async => {});
+    when(navigator.navigate('/home')).thenAnswer((_) async => {});
     await (controller.login());
-    verify(navegador.navigate('/home')).called(1);
+    verify(navigator.navigate('/home')).called(1);
     expect(mockAuth.isLogged, true);
   });
 
-  test('[TEST] - PasswordVisibility', () async {
+  test('[TEST] - changePasswordVisibility', () async {
     controller.changePasswordVisibility();
     expect(controller.passwordVisibility, false);
   });

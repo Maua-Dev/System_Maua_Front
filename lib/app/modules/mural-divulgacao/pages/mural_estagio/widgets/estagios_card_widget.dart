@@ -23,7 +23,7 @@ class EstagiosCardWidget extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: ExpansionPanelListCustomWidget(
         isOpen: isOpen,
-        titulo: titulo + ' - ' + data,
+        title: titulo + ' - ' + data,
         onPressed: onPressed,
         body: (descricao == null)
             ? SizedBox.shrink()

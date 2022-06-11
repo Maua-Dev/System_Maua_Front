@@ -18,7 +18,7 @@ abstract class BottomNavigationBarControllerBase with Store {
   }
 
   @action
-  Future<void> trocaOpen() async {
+  Future<void> changeOpen() async {
     isOpen = !isOpen;
   }
 }
