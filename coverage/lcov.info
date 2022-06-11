@@ -1203,7 +1203,7 @@ DA:20,0
 LF:11
 LH:0
 end_of_record
-SF:lib\app\modules\materias\materias_module.dart
+SF:lib\app\modules\subject\subject_module.dart
 DA:11,3
 DA:12,2
 DA:19,0
@@ -1480,7 +1480,7 @@ DA:24,0
 LF:10
 LH:0
 end_of_record
-SF:lib\app\modules\materias\materias_controller.g.dart
+SF:lib\app\modules\subject\subject_controller.g.dart
 DA:14,1
 DA:16,2
 DA:17,1
@@ -1495,7 +1495,7 @@ DA:39,0
 LF:11
 LH:8
 end_of_record
-SF:lib\app\modules\materias\materias_controller.dart
+SF:lib\app\modules\subject\subject_controller.dart
 DA:12,2
 DA:13,2
 DA:20,2
@@ -1503,18 +1503,18 @@ DA:21,8
 LF:4
 LH:4
 end_of_record
-SF:lib\app\modules\materias\models\materias_model.dart
+SF:lib\app\modules\subject\models\subject_model.dart
 DA:7,3
 LF:1
 LH:1
 end_of_record
-SF:lib\app\modules\materias\repositories\materias_repository.dart
+SF:lib\app\modules\subject\repositories\subject_repository.dart
 DA:34,1
 DA:36,2
 LF:2
 LH:2
 end_of_record
-SF:lib\app\modules\materias\materias_page.dart
+SF:lib\app\modules\subject\subject_page.dart
 DA:10,0
 DA:12,0
 DA:13,0
@@ -1537,7 +1537,7 @@ DA:45,0
 LF:19
 LH:0
 end_of_record
-SF:lib\app\modules\materias\widgets\materia_card_widget.dart
+SF:lib\app\modules\subject\widgets\materia_card_widget.dart
 DA:7,0
 DA:11,0
 DA:13,0
@@ -3643,7 +3643,7 @@ DA:56,0
 LF:17
 LH:8
 end_of_record
-SF:lib\app\modules\mural-divulgacao\pages\mural_vendas_materiais\pages\procura_materias\procura_materiais_controller.g.dart
+SF:lib\app\modules\mural-divulgacao\pages\mural_vendas_materiais\pages\procura_subject\procura_materiais_controller.g.dart
 DA:14,1
 DA:16,2
 DA:17,1
@@ -3680,7 +3680,7 @@ DA:90,0
 LF:33
 LH:25
 end_of_record
-SF:lib\app\modules\mural-divulgacao\pages\mural_vendas_materiais\pages\procura_materias\procura_materiais_controller.dart
+SF:lib\app\modules\mural-divulgacao\pages\mural_vendas_materiais\pages\procura_subject\procura_materiais_controller.dart
 DA:10,1
 DA:11,1
 DA:23,1

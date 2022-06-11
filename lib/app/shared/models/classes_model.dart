@@ -1,4 +1,4 @@
-import 'package:system_maua_front/app/shared/enumerates/tipo_materia_enum.dart';
+import 'package:system_maua_front/app/shared/enumerates/subject_enum.dart';
 
 class ClassesModel {
   final SubjectEnum? subjectEnum;

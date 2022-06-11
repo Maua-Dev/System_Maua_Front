@@ -25,18 +25,18 @@ mixin _$LoginController on _LoginController, Store {
     });
   }
 
-  final _$errosAtom = Atom(name: '_LoginController.erros');
+  final _$errorsAtom = Atom(name: '_LoginController.errors');
 
   @override
-  String get erros {
-    _$errosAtom.reportRead();
-    return super.erros;
+  String get errors {
+    _$errorsAtom.reportRead();
+    return super.errors;
   }
 
   @override
-  set erros(String value) {
-    _$errosAtom.reportWrite(value, super.erros, () {
-      super.erros = value;
+  set errors(String value) {
+    _$errorsAtom.reportWrite(value, super.errors, () {
+      super.errors = value;
     });
   }
 
@@ -144,7 +144,7 @@ mixin _$LoginController on _LoginController, Store {
   String toString() {
     return '''
 passwordVisibility: ${passwordVisibility},
-erros: ${erros},
+errors: ${errors},
 email: ${email},
 password: ${password},
 loginModalIsOpen: ${loginModalIsOpen}

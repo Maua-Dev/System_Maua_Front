@@ -145,7 +145,7 @@ class LoginPageState extends ModularState<LoginPage, LoginController> {
                             Observer(builder: (_) {
                               return Center(
                                 child: Text(
-                                  controller.erros,
+                                  controller.errors,
                                   style: TextStyle(color: Colors.red),
                                 ),
                               );

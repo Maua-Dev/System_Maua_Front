@@ -30,7 +30,7 @@ class ClosedBottomNavigationBar extends StatelessWidget {
                   icon: Icons.library_books,
                   onPressed: () {
                     controllerNavigationBar.alternatePage(1);
-                    Modular.to.navigate('/materias');
+                    Modular.to.navigate('/subject');
                   }),
               IconButtonCustomWidget(
                   isClicked: false,
