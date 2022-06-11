@@ -31,12 +31,12 @@ class NavigatorIconWidget extends StatelessWidget {
               },
               icon: Icon(
                 icon,
-                color: AppColors.buttonBrandingBlue,
+                color: AppColors.brandingBlue,
                 size: 34,
               )),
           Text(
             title,
-            style: AppTextStyles.body.copyWith(fontSize: 15),
+            style: AppTextStyles.bodyH4.copyWith(fontSize: 15),
           )
         ],
       ),

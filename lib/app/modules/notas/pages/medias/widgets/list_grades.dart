@@ -28,7 +28,7 @@ class ListGrades extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.4,
             height: 120,
             decoration: BoxDecoration(
-              boxShadow: [AppColors.shadow],
+              boxShadow: [AppColors.clickShadow],
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
             ),
@@ -41,13 +41,13 @@ class ListGrades extends StatelessWidget {
                     children: [
                       Text(
                         'Peso:',
-                        style: AppTextStyles.body.copyWith(
+                        style: AppTextStyles.bodyH4.copyWith(
                           fontSize: 12,
                           color: Color.fromRGBO(2, 40, 147, 1),
                         ),
                       ),
                       Text('x $heft',
-                          style: AppTextStyles.body.copyWith(
+                          style: AppTextStyles.bodyH4.copyWith(
                             fontSize: 12,
                             color: Color.fromRGBO(2, 40, 147, 1),
                           )),
@@ -59,12 +59,12 @@ class ListGrades extends StatelessWidget {
                   child: Column(
                     children: [
                       Text('Nota Final:',
-                          style: AppTextStyles.body.copyWith(
+                          style: AppTextStyles.bodyH4.copyWith(
                             fontSize: 16,
                             color: Color.fromRGBO(2, 40, 147, 1),
                           )),
                       Text('$finalGrade',
-                          style: AppTextStyles.body.copyWith(
+                          style: AppTextStyles.bodyH4.copyWith(
                             fontSize: 36,
                             color: Color.fromRGBO(2, 40, 147, 1),
                           )),
@@ -77,7 +77,7 @@ class ListGrades extends StatelessWidget {
           //Container de cima que vai ser o nome da atividade
           Container(
             decoration: BoxDecoration(
-              boxShadow: [AppColors.shadow],
+              boxShadow: [AppColors.clickShadow],
               color: Color.fromRGBO(2, 90, 203, 1),
               borderRadius: BorderRadius.circular(10),
             ),

@@ -14,7 +14,7 @@ class ContainerNameCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        boxShadow: [AppColors.shadow],
+        boxShadow: [AppColors.clickShadow],
         color: Color.fromRGBO(2, 90, 203, 1),
         borderRadius: BorderRadius.circular(10),
       ),
@@ -22,7 +22,7 @@ class ContainerNameCard extends StatelessWidget {
       height: 60,
       child: Center(
         child: Text('$name',
-            style: AppTextStyles.bodyBold.copyWith(
+            style: AppTextStyles.bodyH4.copyWith(
               fontSize: 21,
               color: Colors.white,
             )),

@@ -17,7 +17,7 @@ class FeedbackContainerCard extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-            boxShadow: [AppColors.shadow],
+            boxShadow: [AppColors.clickShadow],
             color: Color.fromRGBO(2, 90, 203, 1),
             borderRadius: BorderRadius.circular(10),
           ),
@@ -25,7 +25,7 @@ class FeedbackContainerCard extends StatelessWidget {
           height: 48,
           child: Center(
             child: Text('$subjectName',
-                style: AppTextStyles.bodyBold.copyWith(
+                style: AppTextStyles.bodyH4.copyWith(
                   fontSize: 21,
                   color: Colors.white,
                 )),
@@ -33,7 +33,7 @@ class FeedbackContainerCard extends StatelessWidget {
         ),
         Container(
           decoration: BoxDecoration(
-            boxShadow: [AppColors.shadow],
+            boxShadow: [AppColors.clickShadow],
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
           ),

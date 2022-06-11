@@ -27,7 +27,7 @@ class CardGrades extends StatelessWidget {
               Container(
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  boxShadow: [AppColors.shadow],
+                  boxShadow: [AppColors.clickShadow],
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -46,7 +46,7 @@ class CardGrades extends StatelessWidget {
               ),
               Container(
                 decoration: BoxDecoration(
-                  boxShadow: [AppColors.shadow],
+                  boxShadow: [AppColors.clickShadow],
                   color: Color.fromRGBO(2, 90, 203, 1),
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -54,7 +54,7 @@ class CardGrades extends StatelessWidget {
                 height: 44,
                 child: Center(
                   child: Text('$subjectName',
-                      style: AppTextStyles.bodyBold.copyWith(
+                      style: AppTextStyles.bodyH4.copyWith(
                         fontSize: 16,
                         color: Colors.white,
                       )),
