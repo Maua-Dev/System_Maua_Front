@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:system_maua_front/app/shared/components/aula_card/aula_card_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class AppBarHomeWidget extends StatelessWidget {
-  final String usuario;
+  final String user;
   final String ra;
-  final String materia;
-  final String duracao;
-  final String local;
   final void Function()? onTap;
 
-  const AppBarHomeWidget(
-      {required this.usuario,
-      required this.ra,
-      required this.materia,
-      required this.duracao,
-      required this.onTap,
-      required this.local});
+  const AppBarHomeWidget({
+    required this.user,
+    required this.ra,
+    required this.onTap,
+  });
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -38,8 +32,7 @@ class AppBarHomeWidget extends StatelessWidget {
                   width: MediaQuery.of(context).size.height * 0.13,
                   height: MediaQuery.of(context).size.height * 0.13,
                   decoration: BoxDecoration(
-                    border:
-                        Border.all(width: 2, color: AppColors.textButtonCollor),
+                    border: Border.all(width: 2, color: AppColors.white),
                     borderRadius: BorderRadius.circular(100),
                   ),
                   child: Padding(
@@ -65,17 +58,20 @@ class AppBarHomeWidget extends StatelessWidget {
                     Text.rich(
                       TextSpan(
                           text: 'Olá, ',
-                          style: AppTextStyles.appBarHomeBody,
+                          style: AppTextStyles.titleH1
+                              .copyWith(color: AppColors.white),
                           children: [
                             TextSpan(
-                                text: usuario,
-                                style: AppTextStyles.appBarHomeTitle),
+                                text: user,
+                                style: AppTextStyles.titleH1
+                                    .copyWith(color: AppColors.white)),
                           ]),
                       key: ValueKey('titleUser'),
                     ),
                     Text(
                       ra,
-                      style: AppTextStyles.appBarHomeBody,
+                      style: AppTextStyles.titleH2
+                          .copyWith(color: AppColors.white),
                     )
                   ],
                 ),
@@ -84,15 +80,12 @@ class AppBarHomeWidget extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: MediaQuery.of(context).size.height * 0.18,
-          right: 0,
-          left: 0,
-          child: AulaCardWidget(
-            materia: materia,
-            duracao: duracao,
-            local: local,
-          ),
-        )
+            right: 10.0,
+            top: 10.0,
+            child: Icon(
+              Icons.notifications,
+              color: AppColors.white,
+            )),
       ],
     );
   }

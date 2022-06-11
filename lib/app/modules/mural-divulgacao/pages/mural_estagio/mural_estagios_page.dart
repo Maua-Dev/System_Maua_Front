@@ -30,7 +30,7 @@ class _MuralEstagiosPageState
                 padding: const EdgeInsets.symmetric(vertical: 8),
                 child: Text(
                   'Programas de estágio',
-                  style: AppTextStyles.bodyBold,
+                  style: AppTextStyles.bodyBoldH4,
                 ),
               ),
             ),

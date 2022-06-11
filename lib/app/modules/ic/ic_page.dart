@@ -35,7 +35,7 @@ class _IcPageState extends ModularState<IcPage, IcController> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white,
-                      boxShadow: [AppColors.shadow],
+                      boxShadow: [AppColors.clickShadow],
                       border: Border.all(color: AppColors.shape, width: 2)),
                   child: Column(
                     children: [
@@ -43,7 +43,7 @@ class _IcPageState extends ModularState<IcPage, IcController> {
                         padding: const EdgeInsets.only(top: 8),
                         child: Text(
                           'O que é?',
-                          style: AppTextStyles.body
+                          style: AppTextStyles.cardH3
                               .copyWith(fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -68,7 +68,7 @@ class _IcPageState extends ModularState<IcPage, IcController> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.white,
-                      boxShadow: [AppColors.shadow],
+                      boxShadow: [AppColors.clickShadow],
                       border: Border.all(color: AppColors.shape)),
                   child: Column(
                     children: [
@@ -100,7 +100,7 @@ class _IcPageState extends ModularState<IcPage, IcController> {
                                   child: Text(
                                     controller.listaTitulosIc[index],
                                     textAlign: TextAlign.center,
-                                    style: AppTextStyles.textButton,
+                                    style: AppTextStyles.bodyBoldH4,
                                   )),
                             );
                           },

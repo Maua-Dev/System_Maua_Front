@@ -19,7 +19,7 @@ class TextoCustomWidget extends StatelessWidget {
               child: Text(
                 texto!,
                 textAlign: TextAlign.left,
-                style: AppTextStyles.body.copyWith(
+                style: AppTextStyles.cardH3.copyWith(
                     color: corTexto ?? Colors.black, fontSize: fontsize),
               ),
             ),

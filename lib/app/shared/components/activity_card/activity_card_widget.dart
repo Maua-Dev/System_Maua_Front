@@ -49,14 +49,12 @@ class ActivityCard extends StatelessWidget {
                       decoration: BoxDecoration(
                         border: Border.all(width: 1, color: AppColors.shape),
                         borderRadius: BorderRadius.circular(10),
-                        color: AppColors.textButtonCollor,
+                        color: AppColors.white,
                       ),
                       child: Center(
                         child: Text(
                           subject,
-                          style: AppTextStyles.bodyBold.copyWith(
-                            fontSize: 20,
-                          ),
+                          style: AppTextStyles.bodyBoldH4,
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -69,14 +67,14 @@ class ActivityCard extends StatelessWidget {
                     decoration: BoxDecoration(
                       border: Border.all(width: 1, color: AppColors.shape),
                       borderRadius: BorderRadius.circular(10),
-                      color: AppColors.textButtonCollor,
+                      color: AppColors.white,
                     ),
                     child: Center(
                       child: Text(
                         activityName.length < 45
                             ? activityName
                             : activityName.substring(0, 25) + '...',
-                        style: AppTextStyles.body.copyWith(
+                        style: AppTextStyles.cardH3.copyWith(
                           fontSize: 20,
                         ),
                         textAlign: TextAlign.center,
@@ -93,7 +91,7 @@ class ActivityCard extends StatelessWidget {
                       decoration: BoxDecoration(
                         border: Border.all(width: 1, color: AppColors.shape),
                         borderRadius: BorderRadius.circular(10),
-                        color: AppColors.textButtonCollor,
+                        color: AppColors.white,
                       ),
                       child: Center(
                         child: Visibility(
@@ -103,7 +101,7 @@ class ActivityCard extends StatelessWidget {
                             children: [
                               Text(
                                 '$date - $hour',
-                                style: AppTextStyles.body.copyWith(
+                                style: AppTextStyles.cardH3.copyWith(
                                   fontSize: 20,
                                 ),
                               ),
@@ -130,7 +128,7 @@ class ActivityCard extends StatelessWidget {
                               Text(
                                 'Entregue',
                                 style:
-                                    AppTextStyles.body.copyWith(fontSize: 20),
+                                    AppTextStyles.cardH3.copyWith(fontSize: 20),
                               ),
                             ],
                           ),

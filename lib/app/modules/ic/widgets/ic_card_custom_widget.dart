@@ -19,13 +19,13 @@ class IcCardCustomWidget extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: Colors.white,
-              boxShadow: [AppColors.shadow],
+              boxShadow: [AppColors.clickShadow],
               border: Border.all(color: AppColors.shape, width: 2)),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 16),
             child: Text(
               titulo,
-              style: AppTextStyles.body.copyWith(
+              style: AppTextStyles.cardH3.copyWith(
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,

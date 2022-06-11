@@ -1,17 +1,17 @@
-enum TipoMateriaEnum { RESMAT, CALC1, CALC2, FT, ACADEMIATALENTOS }
+enum SubjectEnum { RESMAT, CALC1, CALC2, FT, ACADEMIATALENTOS }
 
-extension TipoMateriaEnumExtension on TipoMateriaEnum {
+extension SubjectEnumExtension on SubjectEnum {
   String get name {
     switch (this) {
-      case TipoMateriaEnum.RESMAT:
+      case SubjectEnum.RESMAT:
         return 'Resistência dos Materiais';
-      case TipoMateriaEnum.CALC1:
+      case SubjectEnum.CALC1:
         return 'Cálculo Diferencial e Integral I';
-      case TipoMateriaEnum.CALC2:
+      case SubjectEnum.CALC2:
         return 'Cálculo Diferencial e Integral II';
-      case TipoMateriaEnum.FT:
+      case SubjectEnum.FT:
         return 'Fenômenos de Transporte';
-      case TipoMateriaEnum.ACADEMIATALENTOS:
+      case SubjectEnum.ACADEMIATALENTOS:
         return 'Academia de Talentos';
     }
   }

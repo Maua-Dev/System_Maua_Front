@@ -16,7 +16,7 @@ class HelpBolsasCardWidget extends StatelessWidget {
     return Card(
       child: Container(
         decoration: BoxDecoration(
-          boxShadow: [AppColors.shadow],
+          boxShadow: [AppColors.clickShadow],
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
         ),
@@ -27,9 +27,7 @@ class HelpBolsasCardWidget extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 8, top: 8),
               child: Text(
                 '$titulo',
-                style: AppTextStyles.bodyBold.copyWith(
-                  fontSize: 22,
-                ),
+                style: AppTextStyles.titleH2,
               ),
             ),
             Text(

@@ -30,14 +30,14 @@ class _IcDescricaoPageState extends State<IcDescricaoPage> {
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-                boxShadow: [AppColors.shadow],
+                boxShadow: [AppColors.clickShadow],
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10)),
             child: Column(
               children: [
                 Text(
                   model.tituloIc,
-                  style: AppTextStyles.bodyBold,
+                  style: AppTextStyles.bodyBoldH4,
                   textAlign: TextAlign.center,
                 ),
                 IcDescricaoCardWidget(
@@ -95,7 +95,7 @@ class _IcDescricaoPageState extends State<IcDescricaoPage> {
                                             child: TextButton(
                                               child: Text(
                                                 e.tituloArquivo,
-                                                style: AppTextStyles.textButton,
+                                                style: AppTextStyles.bodyBoldH4,
                                               ),
                                               onPressed: () {},
                                             ),

@@ -1,12 +1,18 @@
+import '../../shared/services/firebase/firebase_analytics_service.dart';
 import 'repositories/auth_repository_interface.dart';
 import 'repositories/secure_storage_interface.dart';
 
 class AuthController {
   final IAuthRepository repository;
   final ISecureStorage storage;
+  final FirebaseAnalyticsService analytics;
+
   bool _loggedIn = false;
 
-  AuthController({required this.repository, required this.storage});
+  AuthController(
+      {required this.analytics,
+      required this.repository,
+      required this.storage});
 
   bool get isLogged => _loggedIn;
 
@@ -16,6 +22,7 @@ class AuthController {
     if (persistence) {
       await storage.saveToken(token);
     }
+    await analytics.setUserProperties('');
     _loggedIn = true;
   }
 

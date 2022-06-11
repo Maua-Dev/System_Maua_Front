@@ -4,50 +4,32 @@ import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 
 class AppTextStyles {
-  static final TextStyle appBarTitle = GoogleFonts.notoSans(
-    color: AppColors.textButtonCollor,
-    fontSize: 20,
-    fontWeight: FontWeight.w400,
-  );
-
-  static final TextStyle appBarHomeTitle = GoogleFonts.notoSans(
-    color: AppColors.textButtonCollor,
+  static final TextStyle titleH1 = GoogleFonts.notoSans(
+    color: AppColors.generalLetter,
     fontSize: 24,
     fontWeight: FontWeight.bold,
   );
 
-  static final TextStyle appBarHomeBody = GoogleFonts.notoSans(
-      color: AppColors.textButtonCollor,
+  static final TextStyle titleH2 = GoogleFonts.notoSans(
+      color: AppColors.generalLetter,
       fontSize: 22,
-      fontWeight: FontWeight.w100);
+      fontWeight: FontWeight.bold);
 
-  static final TextStyle bodyBold = GoogleFonts.notoSans(
+  static final TextStyle cardH3 = GoogleFonts.notoSans(
     color: AppColors.generalLetter,
     fontSize: 18,
-    fontWeight: FontWeight.w600,
-  );
-
-  static final TextStyle body = GoogleFonts.notoSans(
-    color: AppColors.lightLetter,
-    fontSize: 18,
     fontWeight: FontWeight.normal,
   );
 
-  static final TextStyle lightBody = GoogleFonts.notoSans(
-    color: AppColors.lightLetter,
-    fontSize: 18,
+  static final TextStyle bodyH4 = GoogleFonts.notoSans(
+    color: AppColors.generalLetter,
+    fontSize: 16,
     fontWeight: FontWeight.normal,
   );
 
-  static final TextStyle button = GoogleFonts.notoSans(
-    color: AppColors.textButtonCollor,
-    fontSize: 18,
-    fontWeight: FontWeight.normal,
-  );
-
-  static final TextStyle textButton = GoogleFonts.notoSans(
-    color: AppColors.textButtonCollor,
-    fontSize: 14,
-    fontWeight: FontWeight.normal,
+  static final TextStyle bodyBoldH4 = GoogleFonts.notoSans(
+    color: AppColors.generalLetter,
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
   );
 }

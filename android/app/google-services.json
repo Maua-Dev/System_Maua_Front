@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "580800729057",
-    "project_id": "system-maua",
-    "storage_bucket": "system-maua.appspot.com"
+    "project_number": "54912975934",
+    "project_id": "mauapp-dev-4e68c",
+    "storage_bucket": "mauapp-dev-4e68c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:580800729057:android:a121eb210a633edf7a0ca0",
+        "mobilesdk_app_id": "1:54912975934:android:47bbcfdb6b40f22508bd6f",
         "android_client_info": {
           "package_name": "com.devcommunity.maua.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "580800729057-erd7a58epeo56o8c1ob88eshghv2u4ag.apps.googleusercontent.com",
+          "client_id": "54912975934-ibe23mdgs8i7jlttmqv136ijd2boqmaq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB0x6nrQORFSmnqheCyDG0VUAbPauF9aWU"
+          "current_key": "AIzaSyCBR1RXAInT9k0vD802W2-AhKo1wZOZ2m0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "580800729057-erd7a58epeo56o8c1ob88eshghv2u4ag.apps.googleusercontent.com",
+              "client_id": "54912975934-ibe23mdgs8i7jlttmqv136ijd2boqmaq.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "54912975934-nse86c2eauebhbd5juvavfbv61gs7o5a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.systemMauaFront"
+              }
             }
           ]
         }

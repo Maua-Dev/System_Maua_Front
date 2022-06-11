@@ -2,13 +2,16 @@
 // in system_maua_front/test/app/modules/auth/auth_controller_test.dart.
 // Do not manually edit this file.
 
-import 'dart:async' as _i3;
+import 'dart:async' as _i4;
 
+import 'package:firebase_analytics/firebase_analytics.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:system_maua_front/app/modules/auth/repositories/auth_repository_interface.dart'
-    as _i2;
+    as _i3;
 import 'package:system_maua_front/app/modules/auth/repositories/secure_storage_interface.dart'
-    as _i4;
+    as _i5;
+import 'package:system_maua_front/app/shared/services/firebase/firebase_analytics_service.dart'
+    as _i6;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -20,44 +23,94 @@ import 'package:system_maua_front/app/modules/auth/repositories/secure_storage_i
 // ignore_for_file: unnecessary_parenthesis
 // ignore_for_file: camel_case_types
 
+class _FakeFirebaseAnalytics_0 extends _i1.Fake
+    implements _i2.FirebaseAnalytics {}
+
+class _FakeFirebaseAnalyticsObserver_1 extends _i1.Fake
+    implements _i2.FirebaseAnalyticsObserver {}
+
 /// A class which mocks [IAuthRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockIAuthRepository extends _i1.Mock implements _i2.IAuthRepository {
+class MockIAuthRepository extends _i1.Mock implements _i3.IAuthRepository {
   MockIAuthRepository() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i3.Future<String> loginWithEmail(String? email, String? password) =>
+  _i4.Future<String> loginWithEmail(String? email, String? password) =>
       (super.noSuchMethod(Invocation.method(#loginWithEmail, [email, password]),
-          returnValue: Future<String>.value('')) as _i3.Future<String>);
+          returnValue: Future<String>.value('')) as _i4.Future<String>);
   @override
-  _i3.Future<String> refreshToken(String? token) =>
+  _i4.Future<String> refreshToken(String? token) =>
       (super.noSuchMethod(Invocation.method(#refreshToken, [token]),
-          returnValue: Future<String>.value('')) as _i3.Future<String>);
+          returnValue: Future<String>.value('')) as _i4.Future<String>);
 }
 
 /// A class which mocks [ISecureStorage].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockISecureStorage extends _i1.Mock implements _i4.ISecureStorage {
+class MockISecureStorage extends _i1.Mock implements _i5.ISecureStorage {
   MockISecureStorage() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i3.Future<void> saveToken(String? token) =>
+  _i4.Future<void> saveToken(String? token) =>
       (super.noSuchMethod(Invocation.method(#saveToken, [token]),
           returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future<void>.value()) as _i3.Future<void>);
+          returnValueForMissingStub: Future<void>.value()) as _i4.Future<void>);
   @override
-  _i3.Future<String?> getToken() =>
+  _i4.Future<String?> getToken() =>
       (super.noSuchMethod(Invocation.method(#getToken, []),
-          returnValue: Future<String?>.value()) as _i3.Future<String?>);
+          returnValue: Future<String?>.value()) as _i4.Future<String?>);
   @override
-  _i3.Future<void> cleanToken() =>
+  _i4.Future<void> cleanToken() =>
       (super.noSuchMethod(Invocation.method(#cleanToken, []),
           returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future<void>.value()) as _i3.Future<void>);
+          returnValueForMissingStub: Future<void>.value()) as _i4.Future<void>);
+}
+
+/// A class which mocks [FirebaseAnalyticsService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockFirebaseAnalyticsService extends _i1.Mock
+    implements _i6.FirebaseAnalyticsService {
+  MockFirebaseAnalyticsService() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.FirebaseAnalytics get analytics =>
+      (super.noSuchMethod(Invocation.getter(#analytics),
+          returnValue: _FakeFirebaseAnalytics_0()) as _i2.FirebaseAnalytics);
+  @override
+  _i2.FirebaseAnalyticsObserver getAnalyticsObserver() =>
+      (super.noSuchMethod(Invocation.method(#getAnalyticsObserver, []),
+              returnValue: _FakeFirebaseAnalyticsObserver_1())
+          as _i2.FirebaseAnalyticsObserver);
+  @override
+  _i4.Future<dynamic> setUserProperties(String? userId) =>
+      (super.noSuchMethod(Invocation.method(#setUserProperties, [userId]),
+          returnValue: Future<dynamic>.value()) as _i4.Future<dynamic>);
+  @override
+  _i4.Future<dynamic> logLogin() =>
+      (super.noSuchMethod(Invocation.method(#logLogin, []),
+          returnValue: Future<dynamic>.value()) as _i4.Future<dynamic>);
+  @override
+  _i4.Future<dynamic> logSignUp() =>
+      (super.noSuchMethod(Invocation.method(#logSignUp, []),
+          returnValue: Future<dynamic>.value()) as _i4.Future<dynamic>);
+  @override
+  _i4.Future<dynamic> logViewActivity(String? activityCode) =>
+      (super.noSuchMethod(Invocation.method(#logViewActivity, [activityCode]),
+          returnValue: Future<dynamic>.value()) as _i4.Future<dynamic>);
+  @override
+  _i4.Future<dynamic> logChangePassword() =>
+      (super.noSuchMethod(Invocation.method(#logChangePassword, []),
+          returnValue: Future<dynamic>.value()) as _i4.Future<dynamic>);
+  @override
+  _i4.Future<dynamic> logFaq(int? id) =>
+      (super.noSuchMethod(Invocation.method(#logFaq, [id]),
+          returnValue: Future<dynamic>.value()) as _i4.Future<dynamic>);
 }

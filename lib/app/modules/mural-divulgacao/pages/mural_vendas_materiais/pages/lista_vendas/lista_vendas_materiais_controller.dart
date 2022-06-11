@@ -11,11 +11,11 @@ class ListaVendasMateriaisController = _ListaVendasMateriaisControllerBase
     with _$ListaVendasMateriaisController;
 
 abstract class _ListaVendasMateriaisControllerBase with Store {
-  final IMuralVendasMateriaisRepository? repository;
+  final IMuralVendasMateriaisRepository repository;
   final MateriaisEnum idMaterial;
 
   _ListaVendasMateriaisControllerBase(
-      {this.repository, required this.idMaterial}) {
+      {required this.repository, required this.idMaterial}) {
     getVendas();
   }
 
@@ -24,7 +24,7 @@ abstract class _ListaVendasMateriaisControllerBase with Store {
 
   @action
   Future<void> getVendas() async {
-    listaVendas = await repository!.getVendas(idMaterial);
+    listaVendas = await repository.getVendas(idMaterial);
   }
 
   @action

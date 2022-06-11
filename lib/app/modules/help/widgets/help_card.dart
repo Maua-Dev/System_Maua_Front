@@ -20,11 +20,11 @@ class HelpCard extends StatelessWidget {
           child: ElevatedButton(
             onPressed: onPressed,
             style: ElevatedButton.styleFrom(
-              primary: AppColors.textButtonCollor,
+              primary: AppColors.white,
             ),
             child: Text(
               '$title',
-              style: AppTextStyles.body,
+              style: AppTextStyles.cardH3,
             ),
           ),
         ),

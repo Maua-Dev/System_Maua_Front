@@ -74,7 +74,7 @@ class _AvisosCardState extends State<AvisosCard> {
                   padding: EdgeInsets.symmetric(horizontal: 8),
                   child: Text(
                     widget.descricao,
-                    style: AppTextStyles.lightBody.copyWith(fontSize: 16),
+                    style: AppTextStyles.bodyH4,
                     textAlign: TextAlign.left,
                   ),
                 ),
