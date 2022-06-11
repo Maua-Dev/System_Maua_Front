@@ -23,11 +23,6 @@ class _ActivitiesPageState
       child: Scaffold(
         appBar: AppBarWidget(
           title: 'Entregas',
-          leadingWidget: BackButton(
-            onPressed: () {
-              Modular.to.navigate('/home');
-            },
-          ),
           icon: Icons.playlist_add_check,
         ),
         body: Container(

@@ -74,9 +74,7 @@ class ActivityCard extends StatelessWidget {
                         activityName.length < 45
                             ? activityName
                             : activityName.substring(0, 25) + '...',
-                        style: AppTextStyles.cardH3.copyWith(
-                          fontSize: 20,
-                        ),
+                        style: AppTextStyles.cardH3,
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -127,8 +125,7 @@ class ActivityCard extends StatelessWidget {
                               ),
                               Text(
                                 'Entregue',
-                                style:
-                                    AppTextStyles.cardH3.copyWith(fontSize: 20),
+                                style: AppTextStyles.cardH3,
                               ),
                             ],
                           ),

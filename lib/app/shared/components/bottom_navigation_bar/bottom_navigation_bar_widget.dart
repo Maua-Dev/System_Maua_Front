@@ -18,12 +18,8 @@ class BottomNavigationBarWidget extends StatelessWidget {
       curve: Curves.easeInOut,
       duration: Duration(milliseconds: 300),
       height: isOpen
-          ? (MediaQuery.of(context).size.height > 760
-              ? MediaQuery.of(context).size.height * 0.35
-              : MediaQuery.of(context).size.height * 0.4)
-          : (MediaQuery.of(context).size.height > 760
-              ? MediaQuery.of(context).size.height * 0.09
-              : MediaQuery.of(context).size.height * 0.1),
+          ? MediaQuery.of(context).size.height * 0.35
+          : MediaQuery.of(context).size.height * 0.08,
       child: BottomAppBar(
         shape: CircularNotchedRectangle(),
         child: Container(
@@ -32,89 +28,95 @@ class BottomNavigationBarWidget extends StatelessWidget {
                 ? ListView(
                     children: [
                       Container(
-                          height: MediaQuery.of(context).size.height < 650
-                              ? MediaQuery.of(context).size.height * 0.11
-                              : MediaQuery.of(context).size.height * 0.09,
+                          height: MediaQuery.of(context).size.height * 0.08,
                           child: ClosedBottomNavigationBar()),
                       Container(
-                          height: MediaQuery.of(context).size.height * 0.31,
-                          padding: const EdgeInsets.symmetric(horizontal: 24),
-                          child: GridView.count(
-                            childAspectRatio: 1.8,
-                            shrinkWrap: true,
-                            physics: NeverScrollableScrollPhysics(),
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 48,
-                            mainAxisSpacing: 24,
-                            children: [
-                              NavigationBarButtonsWidget(
-                                titulo: 'Calendário',
-                                icon: Icons.calendar_month,
-                                onTap: () {
-                                  showDialog(
-                                    context: context,
-                                    builder: (BuildContext context) {
-                                      return const CustomAlertDialogWidget(
-                                        title: 'Conteúdo indisponível!',
-                                        content: 'Aguarde novas atualizações.',
-                                      );
-                                    },
-                                  );
-                                  onPressed!();
-                                },
-                              ),
-                              NavigationBarButtonsWidget(
-                                titulo: 'Mural',
-                                icon: Icons.language,
-                                onTap: () {
-                                  // Modular.to.navigate('/mural');
-                                  showDialog(
-                                    context: context,
-                                    builder: (BuildContext context) {
-                                      return const CustomAlertDialogWidget(
-                                        title: 'Conteúdo indisponível!',
-                                        content: 'Aguarde novas atualizações.',
-                                      );
-                                    },
-                                  );
-                                  onPressed!();
-                                },
-                              ),
-                              NavigationBarButtonsWidget(
-                                titulo: 'ICs',
-                                icon: Icons.biotech_rounded,
-                                onTap: () {
-                                  // Modular.to.navigate('/ic');
-                                  showDialog(
-                                    context: context,
-                                    builder: (BuildContext context) {
-                                      return const CustomAlertDialogWidget(
-                                        title: 'Conteúdo indisponível!',
-                                        content: 'Aguarde novas atualizações.',
-                                      );
-                                    },
-                                  );
-                                  onPressed!();
-                                },
-                              ),
-                              NavigationBarButtonsWidget(
-                                titulo: 'Reservas',
-                                icon: FontAwesome.calendar,
-                                onTap: () {
-                                  // Modular.to.navigate('/reservas');
-                                  showDialog(
-                                    context: context,
-                                    builder: (BuildContext context) {
-                                      return const CustomAlertDialogWidget(
-                                        title: 'Conteúdo indisponível!',
-                                        content: 'Aguarde novas atualizações.',
-                                      );
-                                    },
-                                  );
-                                  onPressed!();
-                                },
-                              ),
-                            ],
+                          height: MediaQuery.of(context).size.height * 0.27,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 24,
+                          ),
+                          child: Center(
+                            child: GridView.count(
+                              childAspectRatio: 2,
+                              shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              crossAxisCount: 2,
+                              crossAxisSpacing: 16,
+                              mainAxisSpacing: 16,
+                              children: [
+                                NavigationBarButtonsWidget(
+                                  titulo: 'Calendário',
+                                  icon: Icons.calendar_month,
+                                  onTap: () {
+                                    showDialog(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return const CustomAlertDialogWidget(
+                                          title: 'Conteúdo indisponível!',
+                                          content:
+                                              'Aguarde novas atualizações.',
+                                        );
+                                      },
+                                    );
+                                    onPressed!();
+                                  },
+                                ),
+                                NavigationBarButtonsWidget(
+                                  titulo: 'Mural',
+                                  icon: Icons.language,
+                                  onTap: () {
+                                    // Modular.to.navigate('/mural');
+                                    showDialog(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return const CustomAlertDialogWidget(
+                                          title: 'Conteúdo indisponível!',
+                                          content:
+                                              'Aguarde novas atualizações.',
+                                        );
+                                      },
+                                    );
+                                    onPressed!();
+                                  },
+                                ),
+                                NavigationBarButtonsWidget(
+                                  titulo: 'ICs',
+                                  icon: Icons.biotech_rounded,
+                                  onTap: () {
+                                    // Modular.to.navigate('/ic');
+                                    showDialog(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return const CustomAlertDialogWidget(
+                                          title: 'Conteúdo indisponível!',
+                                          content:
+                                              'Aguarde novas atualizações.',
+                                        );
+                                      },
+                                    );
+                                    onPressed!();
+                                  },
+                                ),
+                                NavigationBarButtonsWidget(
+                                  titulo: 'Reservas',
+                                  icon: FontAwesome.calendar,
+                                  onTap: () {
+                                    // Modular.to.navigate('/reservas');
+                                    showDialog(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return const CustomAlertDialogWidget(
+                                          title: 'Conteúdo indisponível!',
+                                          content:
+                                              'Aguarde novas atualizações.',
+                                        );
+                                      },
+                                    );
+                                    onPressed!();
+                                  },
+                                ),
+                              ],
+                            ),
                           )),
                     ],
                   )

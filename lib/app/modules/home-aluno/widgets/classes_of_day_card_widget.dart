@@ -4,8 +4,6 @@ import 'package:system_maua_front/app/shared/enumerates/weekdays_enum.dart';
 import 'package:system_maua_front/app/shared/models/classes_model.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
-import 'package:system_maua_front/app/shared/themes/breakpoints.dart';
-
 import '../../../shared/enumerates/tipo_materia_enum.dart';
 
 class ClassesOfDayWidget extends StatelessWidget {
@@ -59,7 +57,7 @@ class ClassesOfDayWidget extends StatelessWidget {
                           itemBuilder: (context, index) {
                             return ConstrainedBox(
                               constraints: BoxConstraints(
-                                maxHeight: 80,
+                                maxHeight: 72,
                               ),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -74,8 +72,8 @@ class ClassesOfDayWidget extends StatelessWidget {
                                         ),
                                       ),
                                       Container(
-                                        height: 16,
-                                        width: 16,
+                                        height: 12,
+                                        width: 12,
                                         decoration: BoxDecoration(
                                             color: AppColors.brandingBlue,
                                             borderRadius:
@@ -83,7 +81,7 @@ class ClassesOfDayWidget extends StatelessWidget {
                                       ),
                                       ConstrainedBox(
                                         constraints:
-                                            BoxConstraints(maxHeight: 48),
+                                            BoxConstraints(maxHeight: 44),
                                         child: VerticalDivider(
                                           color: AppColors.brandingBlue,
                                           thickness: 1.5,
@@ -94,23 +92,19 @@ class ClassesOfDayWidget extends StatelessWidget {
                                   Flexible(
                                     child: Padding(
                                       padding: const EdgeInsets.only(
-                                          left: 16.0, top: 8),
+                                          left: 16.0, top: 10),
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             '${classesOfDay[index].subjectEnum?.name ?? ''}',
-                                            style:
-                                                AppTextStyles.titleH2.copyWith(
-                                              color: AppColors.brandingBlue,
-                                              fontSize: MediaQuery.of(context)
-                                                          .size
-                                                          .width <=
-                                                      smallMobileBreakpoint
-                                                  ? 20
-                                                  : 22,
-                                            ),
+                                            style: AppTextStyles.cardH3
+                                                .copyWith(
+                                                    color:
+                                                        AppColors.brandingBlue,
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                             overflow: TextOverflow.fade,
                                             softWrap: false,
                                             maxLines: 1,
@@ -122,7 +116,7 @@ class ClassesOfDayWidget extends StatelessWidget {
                                             children: [
                                               Icon(
                                                 Icons.alarm,
-                                                size: 28,
+                                                size: 24,
                                                 color: AppColors.lightLetter,
                                               ),
                                               SizedBox(
@@ -130,34 +124,22 @@ class ClassesOfDayWidget extends StatelessWidget {
                                               ),
                                               Text(
                                                 '${DateFormat('HH:mm').format(classesOfDay[index].startHour)}',
-                                                style: MediaQuery.of(context)
-                                                            .size
-                                                            .width <=
-                                                        376
-                                                    ? AppTextStyles.cardH3
-                                                        .copyWith(fontSize: 16)
-                                                    : AppTextStyles.cardH3,
+                                                style: AppTextStyles.cardH3,
                                               ),
                                               SizedBox(
                                                 width: 16,
                                               ),
                                               Icon(
                                                 Icons.location_on,
-                                                size: 28,
+                                                size: 24,
                                                 color: AppColors.lightLetter,
                                               ),
                                               SizedBox(
-                                                width: 8,
+                                                width: 6,
                                               ),
                                               Text(
                                                 classesOfDay[index].local,
-                                                style: MediaQuery.of(context)
-                                                            .size
-                                                            .width <=
-                                                        376
-                                                    ? AppTextStyles.cardH3
-                                                        .copyWith(fontSize: 16)
-                                                    : AppTextStyles.cardH3,
+                                                style: AppTextStyles.cardH3,
                                               ),
                                             ],
                                           ),

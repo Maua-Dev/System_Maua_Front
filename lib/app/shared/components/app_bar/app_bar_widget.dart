@@ -1,56 +1,46 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
+import '../bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final double? toolbarHeight;
-  final Widget? leadingWidget;
   final IconData? icon;
-  final Widget? actionWidget;
+  final IconData? actionIcon;
+  final Function()? iconFunction;
 
   const AppBarWidget({
     Key? key,
     required this.title,
-    this.leadingWidget,
     this.icon,
-    this.actionWidget,
+    this.actionIcon,
     this.toolbarHeight,
+    this.iconFunction,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
+
     return AppBar(
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          if (leadingWidget == null)
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.07,
-            ),
-          Container(
-            child: Icon(icon),
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          Container(
-            child: Text(title),
-          ),
-        ],
+      title: Align(alignment: Alignment.centerLeft, child: Text(title)),
+      leading: IconButton(
+        icon: Icon(Icons.adaptive.arrow_back),
+        onPressed: () {
+          controllerNavigationBar.alternatePage(0);
+          Modular.to.navigate('/home');
+        },
       ),
-      leading: leadingWidget,
-      actions: <Widget>[
-        if (actionWidget != null)
-          Container(
-            child: actionWidget,
-          )
-        else
-          Padding(
-            padding:
-                EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.15),
-            child: Container(
-              child: actionWidget,
+      actions: [
+        if (actionIcon != null)
+          IconButton(
+            icon: Icon(
+              actionIcon,
+              color: AppColors.white,
             ),
+            onPressed: iconFunction,
           )
       ],
       flexibleSpace: Container(

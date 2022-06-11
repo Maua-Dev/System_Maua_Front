@@ -80,11 +80,16 @@ class AppBarHomeWidget extends StatelessWidget {
           ),
         ),
         Positioned(
-            right: 10.0,
-            top: 10.0,
-            child: Icon(
-              Icons.notifications,
-              color: AppColors.white,
+            right: 12,
+            top: 12,
+            child: PopupMenuButton(
+              itemBuilder: (context) {
+                return [PopupMenuItem(child: Text('Sem notificações'))];
+              },
+              child: Icon(
+                Icons.notifications,
+                color: AppColors.white,
+              ),
             )),
       ],
     );
