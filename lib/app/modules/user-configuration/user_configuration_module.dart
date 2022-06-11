@@ -15,6 +15,7 @@ class UserConfigurationModule extends Module {
         userRa: args.data[1] as String,
         userPhoto: args.data[2] as String,
       ),
+      transition: TransitionType.fadeIn,
     ),
   ];
 }
