@@ -1,5 +1,4 @@
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/widgets/grid_avaliacao_widget.dart';
 import 'package:system_maua_front/app/modules/notas/pages/notas-aluno/widgets/row_navegacao_notas_widget.dart';
@@ -7,6 +6,7 @@ import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.d
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
+import '../../../../injection_container.dart';
 import 'notas_aluno_controller.dart';
 
 class NotasAlunoPage extends StatefulWidget {
@@ -15,10 +15,10 @@ class NotasAlunoPage extends StatefulWidget {
   NotasAlunoPageState createState() => NotasAlunoPageState();
 }
 
-class NotasAlunoPageState
-    extends ModularState<NotasAlunoPage, NotasAlunoController> {
+class NotasAlunoPageState extends State<NotasAlunoPage> {
   @override
   Widget build(BuildContext context) {
+    var controller = serviceLocator<NotasAlunoController>();
     return SafeArea(
       child: Scaffold(
         appBar: AppBarWidget(
@@ -33,7 +33,7 @@ class NotasAlunoPageState
                 child: Column(
                   children: [
                     RowNavegacaoNotasWidget(
-                      nomeMateria: Modular.args!.data as String,
+                      nomeMateria: 'dado',
                     ),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.02,
@@ -63,7 +63,7 @@ class NotasAlunoPageState
                                   padding: EdgeInsets.only(
                                       right: 16.0, left: 16, top: 8),
                                   child: Text(
-                                    Modular.args!.data as String,
+                                    'dado',
                                     style: AppTextStyles.bodyBoldH4,
                                     textAlign: TextAlign.center,
                                   ),

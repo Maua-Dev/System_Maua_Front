@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/login/login_controller.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
 import 'package:system_maua_front/app/shared/themes/breakpoints.dart';
+import '../../injection_container.dart';
 import 'login_controller.dart';
 import 'widgets/entrar_button_widget.dart';
 
@@ -16,9 +16,10 @@ class LoginPage extends StatefulWidget {
   LoginPageState createState() => LoginPageState();
 }
 
-class LoginPageState extends ModularState<LoginPage, LoginController> {
+class LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    var controller = serviceLocator<LoginController>();
     var emailController = TextEditingController(text: controller.email);
     var passwordController = TextEditingController(text: controller.password);
     return LayoutBuilder(builder: (context, constraints) {

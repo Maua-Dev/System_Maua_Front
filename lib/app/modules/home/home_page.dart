@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:get/get.dart';
 import 'package:system_maua_front/app/modules/home/widgets/app_bar_home_widget.dart';
 import 'package:system_maua_front/app/modules/home/widgets/classes_of_day_card_widget.dart';
 import 'package:system_maua_front/app/modules/home/widgets/navigation_button_widget.dart';
-import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
+import '../../injection_container.dart';
 import 'home_controller.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,10 +14,10 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends ModularState<HomePage, HomeController> {
-  var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    var controller = serviceLocator<HomeController>();
     return SingleChildScrollView(
       child: Stack(
         children: [
@@ -26,7 +26,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
               Observer(builder: (_) {
                 return AppBarHomeWidget(
                   onTap: () {
-                    Modular.to.pushNamed('/configuracoes-usuario', arguments: [
+                    Get.toNamed('/home/configuracoes-usuario', arguments: [
                       controller.user.name,
                       controller.user.ra,
                       'https://avatars.githubusercontent.com/u/24724451?v=4'

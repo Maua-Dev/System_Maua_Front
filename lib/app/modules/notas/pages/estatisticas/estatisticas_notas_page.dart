@@ -1,14 +1,13 @@
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_modular/flutter_modular.dart';
-
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/estatisticas_notas_controller.dart';
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/widgets/grafico_barras_widget.dart';
 import 'package:system_maua_front/app/modules/notas/pages/estatisticas/widgets/media_row_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
+import '../../../../injection_container.dart';
 import 'models/dados_grafico_de_barras_model.dart';
 
 class EstatisticasNotasPage extends StatefulWidget {
@@ -18,10 +17,11 @@ class EstatisticasNotasPage extends StatefulWidget {
   _EstatisticasNotasPageState createState() => _EstatisticasNotasPageState();
 }
 
-class _EstatisticasNotasPageState
-    extends ModularState<EstatisticasNotasPage, EstatisticasController> {
+class _EstatisticasNotasPageState extends State<EstatisticasNotasPage> {
   @override
   Widget build(BuildContext context) {
+    var controller = serviceLocator<EstatisticasController>();
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBarWidget(title: 'Estatísticas', icon: Icons.fact_check),
@@ -38,7 +38,7 @@ class _EstatisticasNotasPageState
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          Modular.args!.data as String,
+                          'dado',
                           style: AppTextStyles.bodyBoldH4,
                           textAlign: TextAlign.center,
                         ),

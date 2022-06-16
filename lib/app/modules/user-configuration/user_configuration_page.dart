@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:get/get.dart';
 import 'package:system_maua_front/app/modules/auth/auth_controller.dart';
 import 'package:system_maua_front/app/modules/user-configuration/widgets/app_bar_user_configuration_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
+import '../../injection_container.dart';
 import 'widgets/navigation_widget.dart';
 
 class UserConfigurationPage extends StatefulWidget {
@@ -22,10 +23,10 @@ class UserConfigurationPage extends StatefulWidget {
   _UserConfigurationPageState createState() => _UserConfigurationPageState();
 }
 
-class _UserConfigurationPageState
-    extends ModularState<UserConfigurationPage, AuthController> {
+class _UserConfigurationPageState extends State<UserConfigurationPage> {
   @override
   Widget build(BuildContext context) {
+    var controller = serviceLocator<AuthController>();
     return SafeArea(
       child: Scaffold(
         body: Column(
@@ -46,7 +47,7 @@ class _UserConfigurationPageState
               child: ElevatedButton(
                 onPressed: () async {
                   await controller.logout();
-                  Modular.to.navigate('/login');
+                  await Get.toNamed('/login');
                 },
                 style: ElevatedButton.styleFrom(
                   fixedSize: Size(MediaQuery.of(context).size.width * .7, 50),

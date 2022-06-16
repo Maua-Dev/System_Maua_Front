@@ -1,4 +1,4 @@
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:get/get.dart';
 import 'package:mobx/mobx.dart';
 import 'package:system_maua_front/app/modules/auth/auth_controller.dart';
 import 'package:system_maua_front/app/modules/auth/errors/errors.dart';
@@ -51,7 +51,7 @@ abstract class _LoginController with Store {
     try {
       await authController.loginWithEmail(email, password, true);
       if (authController.isLogged) {
-        Modular.to.navigate('/home');
+        await Get.toNamed('/home');
       }
     } on Failure catch (e) {
       errors = e.message;

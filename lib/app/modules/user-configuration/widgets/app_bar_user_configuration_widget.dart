@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:get/get.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
@@ -42,7 +42,7 @@ class AppBarUserConfiguration extends StatelessWidget {
                       padding: const EdgeInsets.all(3),
                       child: GestureDetector(
                         onTap: () {
-                          Modular.to.pop();
+                          Get.back();
                         },
                         child: Container(
                             width: MediaQuery.of(context).size.height * 0.115,

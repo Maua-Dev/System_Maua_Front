@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:get/get.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_gradients.dart';
+import '../../../injection_container.dart';
 import '../bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
@@ -22,15 +23,15 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
-
+    var controllerNavigationBar =
+        serviceLocator<BottomNavigationBarController>();
     return AppBar(
       title: Align(alignment: Alignment.centerLeft, child: Text(title)),
       leading: IconButton(
         icon: Icon(Icons.adaptive.arrow_back),
         onPressed: () {
           controllerNavigationBar.alternatePage(0);
-          Modular.to.navigate('/home');
+          Get.toNamed('/home');
         },
       ),
       actions: [

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:get/get.dart';
 import 'package:system_maua_front/app/shared/themes/app_colors.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
@@ -30,7 +30,7 @@ class IconesNavegacaoWidget extends StatelessWidget {
           children: [
             IconButton(
                 onPressed: () {
-                  Modular.to.pushNamed(
+                  Get.toNamed(
                     route,
                     arguments: nomeMateria,
                   );

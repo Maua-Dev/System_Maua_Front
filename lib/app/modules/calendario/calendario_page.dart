@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/calendario/calendario_controller.dart';
 import 'package:system_maua_front/app/modules/calendario/widgets/calendario_custom_widget.dart';
 import 'package:system_maua_front/app/modules/calendario/widgets/event_card_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
+import '../../injection_container.dart';
 import 'enumerates/evento_enum.dart';
 
 class CalendarioPage extends StatefulWidget {
@@ -16,10 +16,10 @@ class CalendarioPage extends StatefulWidget {
   _CalendarioPageState createState() => _CalendarioPageState();
 }
 
-class _CalendarioPageState
-    extends ModularState<CalendarioPage, CalendarioController> {
+class _CalendarioPageState extends State<CalendarioPage> {
   @override
   Widget build(BuildContext context) {
+    var controller = serviceLocator<CalendarioController>();
     return SafeArea(
         child: Scaffold(
       appBar: AppBarWidget(

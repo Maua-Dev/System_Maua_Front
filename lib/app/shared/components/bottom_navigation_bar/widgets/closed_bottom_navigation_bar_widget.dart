@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:get/get.dart';
+import '../../../../injection_container.dart';
 import '../../dialogs/custom_alert_dialog_widget.dart';
 import '../bottom_navigation_bar_controller.dart';
 import 'icon_buttom_custom_widget.dart';
@@ -10,7 +11,8 @@ class ClosedBottomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var controllerNavigationBar = Modular.get<BottomNavigationBarController>();
+    var controllerNavigationBar =
+        serviceLocator<BottomNavigationBarController>();
     return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Observer(builder: (_) {
@@ -23,14 +25,14 @@ class ClosedBottomNavigationBar extends StatelessWidget {
                   icon: Icons.home,
                   onPressed: () {
                     controllerNavigationBar.alternatePage(0);
-                    Modular.to.navigate('/home');
+                    Get.toNamed('/home');
                   }),
               IconButtonCustomWidget(
                   isClicked: controllerNavigationBar.currentIndex == 1,
                   icon: Icons.library_books,
                   onPressed: () {
                     controllerNavigationBar.alternatePage(1);
-                    Modular.to.navigate('/subject');
+                    Get.toNamed('/subject');
                   }),
               IconButtonCustomWidget(
                   isClicked: false,
@@ -46,7 +48,7 @@ class ClosedBottomNavigationBar extends StatelessWidget {
                   icon: Icons.library_add_check,
                   onPressed: () {
                     controllerNavigationBar.alternatePage(3);
-                    Modular.to.navigate('/medias');
+                    Get.toNamed('/medias');
                   }),
               IconButtonCustomWidget(
                   icon: Icons.help_outline_outlined,

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:get/get.dart';
 import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/coeficiente-rendimento/coeficiente_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
+import '../../../../injection_container.dart';
 import '../../../../shared/components/lista_notas/lista_notas_widget.dart';
 import 'medias_controller.dart';
 
@@ -14,9 +15,10 @@ class MediasPage extends StatefulWidget {
   _MediasPageState createState() => _MediasPageState();
 }
 
-class _MediasPageState extends ModularState<MediasPage, MediasController> {
+class _MediasPageState extends State<MediasPage> {
   @override
   Widget build(BuildContext context) {
+    var controller = serviceLocator<MediasController>();
     return SafeArea(
       child: Scaffold(
         appBar: AppBarWidget(title: 'Médias', icon: Icons.fact_check),
@@ -72,7 +74,7 @@ class _MediasPageState extends ModularState<MediasPage, MediasController> {
                         padding: const EdgeInsets.all(8.0),
                         child: ListaNotasCard(
                           onTap: () => {
-                            Modular.to.pushNamed(
+                            Get.toNamed(
                               '/medias/notas',
                               arguments:
                                   controller.medias.medias[index].materia,

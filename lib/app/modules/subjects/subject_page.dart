@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:system_maua_front/app/modules/subjects/subject_controller.dart';
 import 'package:system_maua_front/app/modules/subjects/widgets/subject_card_widget.dart';
 import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.dart';
 import 'package:system_maua_front/app/shared/enumerates/subject_enum.dart';
+
+import '../../injection_container.dart';
 
 class SubjectPage extends StatefulWidget {
   SubjectPage({Key? key}) : super(key: key);
@@ -13,9 +14,10 @@ class SubjectPage extends StatefulWidget {
   _SubjectPageState createState() => _SubjectPageState();
 }
 
-class _SubjectPageState extends ModularState<SubjectPage, SubjectController> {
+class _SubjectPageState extends State<SubjectPage> {
   @override
   Widget build(BuildContext context) {
+    var controller = serviceLocator<SubjectController>();
     return SafeArea(
       child: Scaffold(
         appBar: AppBarWidget(
