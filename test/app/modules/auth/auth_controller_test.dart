@@ -24,8 +24,7 @@ void main() {
 
   setUpAll(() async {
     await Firebase.initializeApp();
-    controller = AuthController(
-        repository: mockRepo, storage: mockStorage, analytics: analytics);
+    controller = AuthController(repository: mockRepo, analytics: analytics);
     when(analytics.setUserProperties('')).thenAnswer((_) async => null);
   });
 

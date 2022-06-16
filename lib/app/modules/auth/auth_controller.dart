@@ -1,20 +1,25 @@
+import 'package:flutter_modular/flutter_modular.dart';
+
 import '../../shared/services/firebase/firebase_analytics_service.dart';
 import 'repositories/auth_repository_interface.dart';
 import 'repositories/secure_storage_interface.dart';
 
 class AuthController {
   final IAuthRepository repository;
-  final ISecureStorage storage;
+  late ISecureStorage storage;
   final FirebaseAnalyticsService analytics;
 
   bool _loggedIn = false;
 
-  AuthController(
-      {required this.analytics,
-      required this.repository,
-      required this.storage});
+  AuthController({required this.analytics, required this.repository}) {
+    init();
+  }
 
   bool get isLogged => _loggedIn;
+
+  Future init() async {
+    storage = await Modular.getAsync<ISecureStorage>();
+  }
 
   Future<void> loginWithEmail(
       String email, String password, bool persistence) async {
