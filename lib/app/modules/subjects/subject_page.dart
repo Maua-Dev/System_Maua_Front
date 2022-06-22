@@ -6,6 +6,8 @@ import 'package:system_maua_front/app/shared/components/app_bar/app_bar_widget.d
 import 'package:system_maua_front/app/shared/enumerates/subject_enum.dart';
 
 import '../../injection_container.dart';
+import '../../shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
+import '../../shared/components/bottom_navigation_bar/bottom_navigation_bar_widget.dart';
 
 class SubjectPage extends StatefulWidget {
   SubjectPage({Key? key}) : super(key: key);
@@ -17,6 +19,8 @@ class SubjectPage extends StatefulWidget {
 class _SubjectPageState extends State<SubjectPage> {
   @override
   Widget build(BuildContext context) {
+    var controllerNavigationBar =
+        serviceLocator<BottomNavigationBarController>();
     var controller = serviceLocator<SubjectController>();
     return SafeArea(
       child: Scaffold(
@@ -24,6 +28,14 @@ class _SubjectPageState extends State<SubjectPage> {
           title: 'Matérias',
           icon: Icons.library_books,
         ),
+        bottomNavigationBar: Observer(builder: (_) {
+          return BottomNavigationBarWidget(
+            isOpen: controllerNavigationBar.isOpen,
+            onPressed: () {
+              controllerNavigationBar.changeOpen();
+            },
+          );
+        }),
         body: SingleChildScrollView(
           child: Column(
             children: [

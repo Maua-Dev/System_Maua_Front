@@ -57,9 +57,15 @@ class AppWidget extends StatelessWidget {
       home: const LoginPage(),
       getPages: [
         GetPage(name: '/login', page: () => const LoginPage()),
-        GetPage(name: '/home', page: () => const HomePage()),
+        GetPage(
+          name: '/home',
+          page: () => const HomePage(),
+        ),
         GetPage(name: '/medias', page: () => const NotasAlunoPage()),
-        GetPage(name: '/subject', page: () => SubjectPage()),
+        GetPage(
+          name: '/subject',
+          page: () => SubjectPage(),
+        ),
         GetPage(
           name: '/configuracoes-usuario',
           page: () => UserConfigurationPage(

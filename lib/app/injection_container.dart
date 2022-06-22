@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 import 'package:system_maua_front/app/shared/services/firebase/firebase_analytics_service.dart';
 
 import 'modules/auth/auth_controller.dart';
@@ -35,6 +36,10 @@ Future<void> init() async {
   //login
   serviceLocator.registerLazySingleton<LoginController>(
       () => LoginController(serviceLocator()));
+
+  //landing
+  serviceLocator.registerLazySingleton<BottomNavigationBarController>(
+      () => BottomNavigationBarController());
 
   //home
   serviceLocator.registerLazySingleton<HomeController>(
