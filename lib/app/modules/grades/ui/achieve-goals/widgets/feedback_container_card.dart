@@ -4,11 +4,14 @@ import 'package:system_maua_front/app/shared/themes/app_text_styles.dart';
 
 class FeedbackContainerCard extends StatelessWidget {
   final String subjectName;
-  final double? currentNote;
-  final double? parcialNote;
+  final double currentNote;
+  final double parcialNote;
 
   const FeedbackContainerCard(
-      {Key? key, required this.subjectName, this.currentNote, this.parcialNote})
+      {Key? key,
+      required this.subjectName,
+      required this.currentNote,
+      required this.parcialNote})
       : super(key: key);
 
   @override
@@ -42,19 +45,45 @@ class FeedbackContainerCard extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text(
-                'Nota Final: $currentNote',
-                style: TextStyle(
-                  color: Color.fromRGBO(2, 40, 147, 1),
-                  fontSize: 16,
-                ),
+              Row(
+                children: [
+                  Text(
+                    'Nota Final: ',
+                    style: TextStyle(
+                      color: Color.fromRGBO(2, 40, 147, 1),
+                      fontSize: 16,
+                    ),
+                  ),
+                  Text(
+                    '$currentNote',
+                    style: TextStyle(
+                      color: currentNote >= 6.0
+                          ? Color.fromRGBO(225, 218, 41, 1)
+                          : Colors.red,
+                      fontSize: 16,
+                    ),
+                  )
+                ],
               ),
-              Text(
-                'Nota Parcial: $parcialNote',
-                style: TextStyle(
-                  color: Color.fromRGBO(2, 40, 147, 1),
-                  fontSize: 16,
-                ),
+              Row(
+                children: [
+                  Text(
+                    'Nota Parcial: ',
+                    style: TextStyle(
+                      color: Color.fromRGBO(2, 40, 147, 1),
+                      fontSize: 16,
+                    ),
+                  ),
+                  Text(
+                    '$parcialNote',
+                    style: TextStyle(
+                      color: parcialNote >= 6
+                      ? Color.fromRGBO(2, 40, 147, 1)
+                      : Colors.red,
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

@@ -19,7 +19,7 @@ class ContainerNameCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       width: MediaQuery.of(context).size.width * 0.9,
-      height: 60,
+      height: 50,
       child: Center(
         child: Text('$name',
             style: AppTextStyles.bodyH4.copyWith(

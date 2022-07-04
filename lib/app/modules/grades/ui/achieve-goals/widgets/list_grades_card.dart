@@ -63,7 +63,7 @@ class ListGradesCard extends StatelessWidget {
                             fontSize: 16,
                             color: Color.fromRGBO(2, 40, 147, 1),
                           )),
-                      Text('$finalGrade',
+                      Text(finalGrade != null ? '$finalGrade' : '_',
                           style: AppTextStyles.bodyH4.copyWith(
                             fontSize: 36,
                             color: Color.fromRGBO(2, 40, 147, 1),
