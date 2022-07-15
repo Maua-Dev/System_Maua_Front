@@ -52,16 +52,7 @@ class ClosedBottomNavigationBar extends StatelessWidget {
                   icon: Icons.help_outline_outlined,
                   isClicked: false,
                   onPressed: () {
-                    // Modular.to.navigate('/help');
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return const CustomAlertDialogWidget(
-                          title: 'Conteúdo indisponível!',
-                          content: 'Aguarde novas atualizações.',
-                        );
-                      },
-                    );
+                    Modular.to.navigate('/help');
                   }),
             ],
           );

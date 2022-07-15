@@ -6,6 +6,7 @@ class AppColors {
   static final background = Color(0xFFFFFFFF);
   static final generalLetter = Color(0xFF151A27);
   static final lightLetter = Color(0xFF494950);
+  static final lightPurple = Color(0xFFF5F5FA);
   static final shape = Color(0xFFE1E1E5);
   static final white = Colors.white;
 
