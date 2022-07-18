@@ -7,6 +7,8 @@ class AveragesModel {
   final List<GradesModel> tests;
   final List<GradesModel> tasks;
   final double globalAverage;
+  final double testHint;
+  final double taskHint;
 
   AveragesModel({
     required this.subject,
@@ -15,6 +17,8 @@ class AveragesModel {
     required this.tasks,
     required this.tests,
     required this.globalAverage,
+    required this.testHint,
+    required this.taskHint
   });
 
   String mediaComputada(String value) {
@@ -31,6 +35,8 @@ class AveragesModel {
       tasks: json['tasks'] as List<GradesModel>,
       tests: json['tests'] as List<GradesModel>,
       globalAverage: json['globalAverage'] as double,
+      testHint: json['testHint'] as double,
+      taskHint: json['taskHint'] as double
     );
   }
 }
