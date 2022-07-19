@@ -7,30 +7,35 @@ class AveragesModel {
   final List<GradesModel> tests;
   final List<GradesModel> tasks;
   final double globalAverage;
+  final double testHint;
+  final double taskHint;
 
-  AveragesModel({
-    required this.subject,
-    required this.parcialAverage,
-    required this.currentNote,
-    required this.tasks,
-    required this.tests,
-    required this.globalAverage,
-  });
+  AveragesModel(
+      {required this.subject,
+      required this.parcialAverage,
+      required this.currentNote,
+      required this.tasks,
+      required this.tests,
+      required this.globalAverage,
+      required this.testHint,
+      required this.taskHint});
 
   String mediaComputada(String value) {
     return '${value.replaceAll('.', ',')}';
   }
 
-  String get getMediaComputada => mediaComputada(parcialAverage.toStringAsFixed(1));
+  String get getMediaComputada =>
+      mediaComputada(parcialAverage.toStringAsFixed(1));
 
   factory AveragesModel.fromJson(Map<String, dynamic> json) {
     return AveragesModel(
-      subject: json['materia'] as String,
-      parcialAverage: json['media'] as double,
-      currentNote: json['currentNote'] as double,
-      tasks: json['tasks'] as List<GradesModel>,
-      tests: json['tests'] as List<GradesModel>,
-      globalAverage: json['globalAverage'] as double,
-    );
+        subject: json['materia'] as String,
+        parcialAverage: json['media'] as double,
+        currentNote: json['currentNote'] as double,
+        tasks: json['tasks'] as List<GradesModel>,
+        tests: json['tests'] as List<GradesModel>,
+        globalAverage: json['globalAverage'] as double,
+        testHint: json['testHint'] as double,
+        taskHint: json['taskHint'] as double);
   }
 }
