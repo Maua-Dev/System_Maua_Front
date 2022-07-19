@@ -15,21 +15,21 @@ void main() {
   IAverageRepository repository = MockIAverageRepository();
   late AchieveGoalsController achieveGoalsController;
   var mockGrades = AveragesModel(
-        subject: 'Resistência dos Materiais',
-        parcialAverage: 5.5,
-        currentNote: 5.5,
-        globalAverage: 8.8,
-        testHint: 0.6,
-        taskHint: 0.4,
-        tests: [
-          GradesModel(grade: GradesEnum.P1, value: 3.5, heft: 2),
-          GradesModel(grade: GradesEnum.P2, value: null, heft: 3)
-        ],
-        tasks: [
-          GradesModel(grade: GradesEnum.T1, value: 4.0, heft: 1),
-          GradesModel(grade: GradesEnum.T2, value: 10, heft: 1)
-        ],
-      );
+    subject: 'Resistência dos Materiais',
+    parcialAverage: 5.5,
+    currentNote: 5.5,
+    globalAverage: 8.8,
+    testHint: 0.6,
+    taskHint: 0.4,
+    tests: [
+      GradesModel(grade: GradesEnum.P1, value: 3.5, heft: 2),
+      GradesModel(grade: GradesEnum.P2, value: null, heft: 3)
+    ],
+    tasks: [
+      GradesModel(grade: GradesEnum.T1, value: 4.0, heft: 1),
+      GradesModel(grade: GradesEnum.T2, value: 10, heft: 1)
+    ],
+  );
 
   var gradesMock = AverageModel(
     graduationName: 'Engenharia de Computação',
@@ -129,9 +129,9 @@ void main() {
     achieveGoalsController = AchieveGoalsController(mockGrades);
   });
 
-
   test('[TEST] - calculateAchieveGoals', () async {
-    var achieveGoal = await achieveGoalsController.calculateAchieveGoals(mockGrades);
+    var achieveGoal =
+        await achieveGoalsController.calculateAchieveGoals(mockGrades);
     expect(achieveGoal, 5.44);
   });
 }
