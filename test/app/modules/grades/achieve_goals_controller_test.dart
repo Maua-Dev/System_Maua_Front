@@ -132,6 +132,6 @@ void main() {
   test('[TEST] - calculateAchieveGoals', () async {
     var achieveGoal =
         await achieveGoalsController.calculateAchieveGoals(mockGrades);
-    expect(achieveGoal, 5.44);
+    expect(achieveGoal, 6.555555555555556);
   });
 }
