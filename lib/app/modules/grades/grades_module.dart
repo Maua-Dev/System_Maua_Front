@@ -15,7 +15,7 @@ class GradesModule extends Module {
     Bind.lazySingleton<IAverageRepository>((i) => AverageRepository()),
     Bind.lazySingleton(
         (i) => AchieveGoalsController(i.args!.data as AveragesModel)),
-        Bind.lazySingleton((i) => NavigatorController())
+    Bind.lazySingleton((i) => NavigatorController())
   ];
 
   @override

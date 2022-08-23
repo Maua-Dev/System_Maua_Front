@@ -1,5 +1,4 @@
 import 'package:mobx/mobx.dart';
-import 'package:system_maua_front/app/modules/grades/models/average_model.dart';
 import 'package:system_maua_front/app/modules/grades/models/averages_model.dart';
 
 part 'achieve_goals_controller.g.dart';

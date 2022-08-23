@@ -7,11 +7,12 @@ import 'navigator_icon_widget.dart';
 
 class RowNavigatorGradesWidget extends StatelessWidget {
   final String? subjectName;
-  const RowNavigatorGradesWidget({Key? key, this.subjectName}) : super(key: key);
+  const RowNavigatorGradesWidget({Key? key, this.subjectName})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var controller = Modular.get <NavigatorController> (); 
+    var controller = Modular.get<NavigatorController>();
     return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -36,7 +37,6 @@ class RowNavigatorGradesWidget extends StatelessWidget {
               controller.toggleIndex(2);
               Modular.to.pushNamed('/medias/achieve-goals');
             },
-            
             actualIndex: controller.indexToShow,
           ),
           NavigatorIconWidget(

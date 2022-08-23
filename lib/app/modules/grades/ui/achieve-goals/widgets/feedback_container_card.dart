@@ -78,8 +78,8 @@ class FeedbackContainerCard extends StatelessWidget {
                     '$parcialNote',
                     style: TextStyle(
                       color: parcialNote >= 6
-                      ? Color.fromRGBO(2, 40, 147, 1)
-                      : Colors.red,
+                          ? Color.fromRGBO(2, 40, 147, 1)
+                          : Colors.red,
                       fontSize: 16,
                     ),
                   ),

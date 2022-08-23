@@ -21,7 +21,8 @@ class AveragesModel {
     return '${value.replaceAll('.', ',')}';
   }
 
-  String get getMediaComputada => mediaComputada(parcialAverage.toStringAsFixed(1));
+  String get getMediaComputada =>
+      mediaComputada(parcialAverage.toStringAsFixed(1));
 
   factory AveragesModel.fromJson(Map<String, dynamic> json) {
     return AveragesModel(

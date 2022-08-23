@@ -34,10 +34,9 @@ class NavigatorIconWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(60),
                     border: Border.all(
-                      color: 
-                      actualIndex == myIndex
-                      ?AppColors.brandingBlue
-                      : AppColors.lightLetter,
+                      color: actualIndex == myIndex
+                          ? AppColors.brandingBlue
+                          : AppColors.lightLetter,
                       width: 3,
                     )),
                 child: IconButton(
