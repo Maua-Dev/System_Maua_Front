@@ -4,7 +4,6 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_modular_test/flutter_modular_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:system_maua_front/app/app_module.dart';
-import 'package:system_maua_front/app/modules/notas/pages/medias/widgets/filtro_ano/filtro_controller.dart';
 import 'package:system_maua_front/app/shared/components/bottom_navigation_bar/bottom_navigation_bar_controller.dart';
 import 'package:system_maua_front/app/shared/services/firebase/firebase_analytics_service.dart';
 
@@ -26,11 +25,6 @@ void main() {
   test('[TEST] - FirebaseAnalyticsService Injection', () {
     var injection = Modular.get<FirebaseAnalyticsService>();
     expect(injection, isInstanceOf<FirebaseAnalyticsService>());
-  });
-
-  test('[TEST] - FiltroController Injection', () {
-    var injection = Modular.get<FiltroController>();
-    expect(injection, isInstanceOf<FiltroController>());
   });
 
   test('[TEST] - Dio Injection', () {
